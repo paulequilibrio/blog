@@ -1,0 +1,23 @@
+html {
+  /* Palette */
+  --blog-dark-title: hsl(200, 7%, 19%);
+  --blog-dark-main: hsl(200, 8%, 15%);
+  --blog-dark-side: hsl(200, 8%, 18%);
+  --blog-dark-light: hsl(195, 7%, 22%);
+  --blog-black: #0b0c0c;
+  --blog-white: #c0c1c2;
+  --blog-gray: #898b8b;
+  /* Generic colors */
+  --light-text-color: #FFFFFF;
+  --dark-text-color: #000000;
+  --light-background-color: #FFFFFF;
+  --dark-background-color: #000000;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", "Noto", sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  background-color: var(--blog-dark-main);
+}

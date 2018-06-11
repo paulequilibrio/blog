@@ -119,21 +119,6 @@ export class BlogMain extends LitElement {
           --secondary-color: hsl(var(--secondary-hue), var(--secondary-saturation), 50%);
           --app-drawer-width: 256px;
 
-          /* Palette */
-          --blog-dark-title:          hsl(200, 7%, 19%);
-          --blog-dark-main:           hsl(200, 8%, 15%);
-          --blog-dark-side:           hsl(200, 8%, 18%);
-          --blog-dark-light:          hsl(195, 7%, 22%);
-          --blog-black:               #0b0c0c;
-          --blog-white:               #c0c1c2;
-          --blog-gray:                #898b8b;
-
-          /* Generic colors */
-          --light-text-color:         #FFFFFF;
-          --dark-text-color:          #000000;
-          --light-background-color:   #FFFFFF;
-          --dark-background-color:    #000000;
-
           /* Theme Specific Colors */
           --drawer-toolbar-background-color:     var(--blog-dark-side);
           --drawer-toolbar-color:                var(--light-text-color);
