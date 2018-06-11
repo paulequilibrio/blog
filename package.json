@@ -1,0 +1,36 @@
+{
+  "name": "blog",
+  "version": "0.1.0",
+  "description": "",
+  "main": "blog-main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "polymer build && rm -rf ./docs && cp -r ./build/es5-bundled ./docs && git add ./docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulequilibrio/blog.git"
+  },
+  "keywords": [],
+  "author": "Paulo Alexandre <paulequilibrio@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paulequilibrio/blog/issues"
+  },
+  "homepage": "https://blog.pauloalexandre.com",
+  "dependencies": {
+    "@polymer/app-layout": "^3.0.0-pre.19",
+    "@polymer/app-route": "^3.0.0-pre.19",
+    "@polymer/iron-icons": "^3.0.0-pre.19",
+    "@polymer/iron-list": "^3.0.0-pre.19",
+    "@polymer/iron-pages": "^3.0.0-pre.19",
+    "@polymer/lit-element": "^0.5.1",
+    "@polymer/paper-icon-button": "^3.0.0-pre.19",
+    "@polymer/polymer": "^3.0.2",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "moment": "^2.22.2"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3"
+  }
+}

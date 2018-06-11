@@ -1,0 +1,59 @@
+<h1 id="instalando-docker-no-arch-linux">Instalando Docker no Arch Linux</h1>
+<p>Fala galera! \o</p>
+<p>Vamos falar um pouquinho sobre Docker. Segundo o <a href="https://www.docker.com/">site oficial</a>, Docker é uma plataforma de containerização de software.</p>
+<p>Containerizar um software, significa empacotar o software e suas dependências dentro de um container. Uma vez que você tenha containerizado um software com Docker, esse software estará pronto para rodar em qualquer ambiente que possua Docker instalado.</p>
+<p>A portabilidade obtida com Docker é surpreendente, pois você só precisa configurar seu software uma única vez e ele já estará pronto para ser replicado quantas vezes você quiser, nos mais diversos ambientes, sem a necessidade de nenhum ajuste. E tudo isso com poucos comandos.</p>
+<p>Nesse post vou falar apenas sobre como instalar Docker no Arch Linux (para outras distribuições o processo é bem parecido). Em futuros posts irei falar sobre como usar Docker.</p>
+<h2 id="instala-o">Instalação</h2>
+<p>Para instalar Docker em seu Arch Linux, use o comando</p>
+<pre><code class="lang-shell"><span class="hljs-variable">$ </span>sudo pacman -S docker
+</code></pre>
+<p>Após sua confirmação e a finalização dessa instalação, basta você inicializar o serviço <code>docker.service</code></p>
+<pre><code class="lang-shell">$ sudo systemctl <span class="hljs-literal">start</span> docker.service
+</code></pre>
+<p>e você já poderá começar a usar o comando <code>docker</code>. Entretanto, você só poderá usa-lo como <code>root</code>. Mais adiante ensinarei como você poderá utiliza-lo sem a necessidade de <code>sudo</code>. Por enquanto, para testar se sua instalação ocorreu corretamente, use o comando abaixo. Se tudo deu certo, a saída deve ser algo parecido com isto</p>
+<pre><code class="lang-shell">$ sudo docker -v
+Docker version <span class="hljs-number">1.12</span><span class="hljs-number">.3</span>, build <span class="hljs-number">6</span>b644ec
+</code></pre>
+<h2 id="configura-o-do-servi-o">Configuração do serviço</h2>
+<p>Se desejar que o serviço docker inicie automaticamente sempre que você efetuar o seu login, use o comando</p>
+<pre><code class="lang-shell">$ sudo systemctl <span class="hljs-built_in">enable</span> docker.service
+</code></pre>
+<p>Se depois você quiser desabilitar esse início automático você pode usar o comando</p>
+<pre><code class="lang-shell">$ sudo systemctl <span class="hljs-built_in">disable</span> docker.service
+</code></pre>
+<p>Sempre que quiser, você pode verificar se o início automático do serviço está habilitado com o comando</p>
+<pre><code class="lang-shell">$ sudo systemctl status docker.service
+ ● docker.service - Docker Application Container Engine
+<span class="hljs-symbol">   Loaded:</span> loaded (<span class="hljs-meta-keyword">/usr/</span>lib<span class="hljs-meta-keyword">/systemd/</span>system/docker.service; enabled; vendor preset: disabled)
+   ...
+</code></pre>
+<p>Na segunda linha da saída desse comando, <b>antes</b> de <code>vendor preset</code>, estará o status do início automático, que pode ser <code>enabled</code> ou <code>disabled</code>. Pela saída mostrada acima, podemos notar que na minha máquina o início automático do serviço docker está ativado.</p>
+<h2 id="uso-sem-sudo">Uso sem sudo</h2>
+<p>Para poder usar o comando <code>docker</code> com seu usuário normal, sem a necessidade de usar <code>sudo</code>, você deve adicionar o seu usuário ao grupo <code>docker</code>.</p>
+<p>Para listar os grupos dos quais você faz parte, use o comando</p>
+<pre><code class="lang-shell"><span class="hljs-variable">$ </span>groups <span class="hljs-variable">$USER</span>
+</code></pre>
+<p>Se você já pertencer ao grupo <code>docker</code>, não precisa fazer mais nada. Caso contrário, você pode ingressar nesse grupo com o comando</p>
+<pre><code class="lang-shell">$ sudo gpasswd -a $<span class="hljs-keyword">USER</span> <span class="hljs-title">docker</span>
+</code></pre>
+<p>Verifique se funcionou, listando os seus grupos novamente</p>
+<pre><code class="lang-shell"><span class="hljs-variable">$ </span>groups <span class="hljs-variable">$USER</span>
+</code></pre>
+<p>e observando se agora <code>docker</code> é um deles.</p>
+<p>Uma vez que seu usuário tenha sido adicionado ao grupo <code>docker</code>, essa alteração só terá efeito a partir do seu próximo login. Assim, para poder usar o comando <code>docker</code> sem <code>sudo</code> pela primeira vez, você deverá se deslogar da máquina e fazer um novo login.</p>
+<h2 id="docker-compose">Docker Compose</h2>
+<p>Quando você começar a criar containers para suas aplicações, irá surgir a necessidade de um container &quot;conversar&quot; com outro(s). É aí que o Docker Compose pode lhe ajudar. Segundo o <a href="https://www.docker.com/products/docker-compose">site oficial</a>, Docker Compose permite que você defina sua aplicação, que pode usar vários containers, em um único arquivo. Assim você poderá iniciar sua aplicação com um único comando.</p>
+<p>Para instala-la no Arch Linux, use o comando</p>
+<pre><code class="lang-shell"><span class="hljs-variable">$ </span>sudo pacman -S docker-compose
+</code></pre>
+<p>Você pode verificar a instalação usando o comando</p>
+<pre><code class="lang-shell">$ docker-compose -v
+docker-compose version <span class="hljs-number">1.9</span><span class="hljs-number">.0</span>, build <span class="hljs-number">2585387</span>
+</code></pre>
+<p>Pronto, se seguiu todos os passos até aqui, agora você tem um ambiente Docker instalado e pronto para ser usado em seu Arch Linux.</p>
+<p>Você pode fazer um test-drive em sua instalação rodando o comando</p>
+<pre><code class="lang-shell">$ docker <span class="hljs-keyword">run</span><span class="bash"> hello-world</span>
+</code></pre>
+<p>Em outros posts irei falar sobre como usar <code>docker</code> e <code>docker-compose</code> para containerizar suas aplicações.</p>
+<p>Até mais galera! o/</p>

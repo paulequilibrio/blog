@@ -1,0 +1,41 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/blog-main.js",
+  "sources": [
+    "src/**/*",
+    "posts/**/*",
+    "images/**/*",
+    "CNAME"
+  ],
+  "extraDependencies": [
+    "node_modules/@webcomponents/webcomponentsjs/*.js",
+    "!node_modules/@webcomponents/webcomponentsjs/gulpfile.js",
+    "node_modules/@webcomponents/webcomponentsjs/bundles/*.js",
+    "node_modules/moment/min/moment-with-locales.min.js"
+  ],
+  "builds": [
+    {
+      "name": "es5-bundled",
+      "js": {
+        "minify": false,
+        "compile": true,
+        "transformModulesToAmd": true
+      },
+      "css": {
+        "minify": false
+      },
+      "html": {
+        "minify": false
+      },
+      "bundle": true,
+      "addServiceWorker": false
+    }
+  ],
+  "moduleResolution": "node",
+  "npm": true,
+  "lint": {
+    "rules": [
+      "polymer-3"
+    ]
+  }
+}
