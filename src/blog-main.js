@@ -15,11 +15,20 @@ import '@polymer/paper-icon-button/paper-icon-button.js'
 import './post-list.js'
 import './post-view.js'
 import './blog-about.js'
+import './not-found.js'
 
 export class BlogMain extends LitElement {
   constructor () {
     super()
     setPassiveTouchGestures(true)
+  }
+
+  goHome (event) {
+    this.appLocation.path = '/post-list'
+  }
+
+  reload (event) {
+    window.location.reload(true)
   }
 
   setRoute () {
@@ -97,27 +106,25 @@ export class BlogMain extends LitElement {
     }
   }
 
-  setHues (primaryHue, secondaryHue) {
-    this.style.setProperty('--primary-hue', primaryHue)
-    this.style.setProperty('--secondary-hue', secondaryHue)
-  }
-
-  setSaturations (primarySaturation, secondarySaturation) {
-    this.style.setProperty('--primary-saturation', `${primarySaturation}%`)
-    this.style.setProperty('--secondary-saturation', `${secondarySaturation}%`)
-  }
-
   _render ({page, posts, slug}) {
     return html`
       <style>
         :host {
-          --primary-hue: 60;
-          --secondary-hue: 120;
-          --primary-saturation: 100%;
-          --secondary-saturation: 100%;
-          --primary-color: hsl(var(--primary-hue), var(--primary-saturation), 50%);
-          --secondary-color: hsl(var(--secondary-hue), var(--secondary-saturation), 50%);
           --app-drawer-width: 256px;
+
+          /* Palette */
+          --blog-dark-title: hsl(200, 8%, 19%);
+          --blog-dark-main: hsl(200, 8%, 15%);
+          --blog-dark-side: hsl(200, 8%, 18%);
+          --blog-dark-light: hsl(200, 8%, 22%);
+          --blog-black: #0b0c0c;
+          --blog-white: #c0c1c2;
+          --blog-gray: #898b8b;
+          /* Generic colors */
+          --light-text-color: #00FF00;
+          --dark-text-color: #000000;
+          --light-background-color: #FFFFFF;
+          --dark-background-color: #000000;
 
           /* Theme Specific Colors */
           --drawer-toolbar-background-color:     var(--blog-dark-side);
@@ -128,7 +135,7 @@ export class BlogMain extends LitElement {
           --header-toolbar-color:                var(--light-text-color);
           --header-background-color:             var(--blog-dark-main);
 
-          --menu-item-color:                     var(--blog-white);
+          --menu-item-color:                     var(--light-text-color);
           --menu-item-selected-color:            var(--light-text-color);
           --menu-item-selected-background-color: var(--blog-dark-main);
           --menu-item-hover-color:               var(--blog-dark-light);
@@ -171,13 +178,13 @@ export class BlogMain extends LitElement {
 
         app-header-layout {
           background-color: var(--header-background-color);
+          height: fit-content;
         }
 
         app-drawer {
           --app-drawer-content-container: {
             background-color: var(--drawer-background-color);
             border-right: 1px solid var(--border-layout-color);
-            overflow-y: auto;
           };
         }
 
@@ -225,7 +232,13 @@ export class BlogMain extends LitElement {
           border-radius: 5px;
           background-color: var(--card-background-color);
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-          overflow-y: auto;
+          /* overflow-y: auto; */
+        }
+
+        #appIcon {
+          width: 40px;
+          height: 40px;
+          margin-right: 10px;
         }
       </style>
 
@@ -234,13 +247,10 @@ export class BlogMain extends LitElement {
 
       <app-drawer-layout fullbleed>
         <app-drawer id="drawer" slot="drawer" swipe-open no-focus-trap>
-          <app-toolbar>Menu</app-toolbar>
-<!--
           <app-toolbar id="drawerToolbar">
-            <iron-icon id="appIcon" src="images/manifest/icon-96x96.png"></iron-icon>
-            <span>Blog</span>
+            <iron-icon id="appIcon" src="images/manifest/icon-512x512.png"></iron-icon>
+            <span>Menu</span>
           </app-toolbar>
--->
           <div id="drawerContent">
             <iron-selector attr-for-selected="page" id="ironSelector" role="navigation" class="drawer-list">
               <a page="post-list"  href="#/post-list"><iron-icon icon="store"></iron-icon>Início</a>
@@ -249,12 +259,12 @@ export class BlogMain extends LitElement {
           </div>
         </app-drawer>
         <app-header-layout>
-          <app-header slot="header" condenses fixed>
-            <app-toolbar sticky>
+          <app-header slot="header" fixed>
+            <app-toolbar>
               <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
               <div main-title>Blog Paulo Alexandre</div>
-              <paper-icon-button icon="home" on-tap="goHome" title="Ir para o início"></paper-icon-button>
-              <paper-icon-button icon="refresh" on-tap="reload" title="Recarregar"></paper-icon-button>
+              <paper-icon-button icon="home" on-tap="${(e) => this.goHome(e)}" title="Ir para o início"></paper-icon-button>
+              <paper-icon-button icon="refresh" on-tap="${(e) => this.reload(e)}" title="Recarregar"></paper-icon-button>
             </app-toolbar>
           </app-header>
           <div class="card">
@@ -264,7 +274,7 @@ export class BlogMain extends LitElement {
               fallback-selection="not-found"
               role="main">
               <post-list page="post-list" posts="${posts}"></post-list>
-              <post-view page="post-view" post=""></post-view>
+              <post-view page="post-view"></post-view>
               <blog-about page="blog-about"></blog-about>
               <not-found  page="not-found"></not-found>
             </iron-pages>

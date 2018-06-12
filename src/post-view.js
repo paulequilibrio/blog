@@ -1,56 +1,49 @@
 import { LitElement, html } from '@polymer/lit-element/lit-element.js'
 import '@polymer/app-layout/app-toolbar/app-toolbar.js'
 import '@polymer/iron-icon/iron-icon.js'
+import '@polymer/paper-spinner/paper-spinner.js'
 
 export class PostView extends LitElement {
-  constructor () {
-    super()
-  }
-
-  connectedCallback () {
-    super.connectedCallback()
-  }
-
-  disconnectedCallback () {
-    super.disconnectedCallback()
-  }
-
   static get properties () {
     return {
-      post: Object,
       content: String
     }
   }
 
-  static get observedAttributes () {
-    return ['slug', 'post']
+  dateFormat (date) {
+    return window.moment(date).format('LL')
   }
 
-  attributeChangedCallback (name, b, c) {
-    super.attributeChangedCallback()
-    // console.log(name, b, c)
-  }
-
-  loadHtml (post) {
-    if (post && post.filename) {
-      return new Promise((resolve, reject) => {
-        window.fetch(`posts/${post.filename}`)
-          .then(response => response.text())
-          .then(content => {
-            // console.log(content)
-            this.content = html([content])
-            resolve(content)
-          })
-          .catch(e => reject(e))
+  set post (value) {
+    const loading = html([`
+      <div id="loading">
+        <p>Carregando...</p>
+        <paper-spinner alt="procurando..." active></paper-spinner>
+      </div>
+      `])
+    this.content = loading
+    this._post = value
+    const p = value
+    window.fetch(`posts/${p.filename}`)
+      .then(response => response.text())
+      .then(content => {
+        const header = `
+          <header>
+            <h1 class="title">${p.title}</h1>
+            <div class="meta">
+              <p class="author">Escrito por ${p.author}</p>
+              <p class="release">Publicado em ${this.dateFormat(p.releaseDate)}</p>
+              <p class="update">Atualizado em ${this.dateFormat(p.lastUpdate)}</p>
+            </div>
+          </header>
+        `
+        this.content = html([header, content])
       })
-    }
+      .catch(e => console.error(e))
   }
 
-  _shouldRender (props, changedProps, prevProps) {
-    if (changedProps && 'post' in changedProps) {
-      this.loadHtml(changedProps.post)
-    }
-    return true
+  get post () {
+    return this._post
   }
 
   _render (props) {
@@ -59,8 +52,51 @@ export class PostView extends LitElement {
         a {
           color: var(--light-text-color);
         }
+
+        #loading {
+          width: 100%;
+          text-align: center;
+          color: var(--light-text-color);
+        }
+
+        paper-spinner {
+          height: 100px;
+          width: 100px;
+          --paper-spinner-layer-1-color: var(--light-text-color);
+          --paper-spinner-layer-2-color: var(--light-text-color);
+          --paper-spinner-layer-3-color: var(--light-text-color);
+          --paper-spinner-layer-4-color: var(--light-text-color);
+          --paper-spinner-stroke-width: 10px;
+        }
+
+        pre {
+          background-color: var(--blog-dark-main);
+          padding: 10px 20px;
+          overflow: auto;
+        }
+
+        header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .meta {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .meta > p {
+          font-size: small;
+          margin: 0;
+          text-align: right;
+        }
+
+        .title {
+          display: flex;
+        }
       </style>
-      <div id="content">${props.content}</div>
+      <article id="content">${props.content}</article>
     `
   }
 }

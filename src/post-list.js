@@ -4,18 +4,6 @@ import '@polymer/iron-icon/iron-icon.js'
 import '@polymer/iron-list/iron-list.js'
 
 export class PostList extends LitElement {
-  constructor () {
-    super()
-  }
-
-  connectedCallback () {
-    super.connectedCallback()
-  }
-
-  disconnectedCallback () {
-    super.disconnectedCallback()
-  }
-
   static get properties () {
     return {
       posts: Object

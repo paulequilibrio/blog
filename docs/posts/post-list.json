@@ -3,8 +3,9 @@
     "title": "Instalando Docker no Arch Linux",
     "slug": "instalando-docker-no-arch-linux",
     "filename": "instalando-docker-no-arch-linux.html",
-    "releaseDate": "2018-06-07",
-    "lastUpdate": "2018-06-07",
+    "author": "Paulo Alexandre",
+    "releaseDate": "2016-12-23",
+    "lastUpdate": "2017-02-24",
     "tags": [
       "Arch Linux",
       "Docker",
@@ -16,6 +17,7 @@
     "title": "Entendendo carregamento de página",
     "slug": "entendendo-carregamento-de-pagina",
     "filename": "entendendo-carregamento-de-pagina.html",
+    "author": "Paulo Alexandre",
     "releaseDate": "2018-06-07",
     "lastUpdate": "2018-06-07",
     "tags": [

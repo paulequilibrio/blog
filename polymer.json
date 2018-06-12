@@ -5,7 +5,6 @@
     "src/**/*",
     "posts/**/*",
     "images/**/*",
-    "palette.css",
     "CNAME"
   ],
   "extraDependencies": [

@@ -24,8 +24,8 @@ export class BlogAbout extends LitElement {
     return html`
       <h2>Sobre</h2>
       <p>Aqui compartilho o que vou aprendendo.</p>
+      <p>@paulequilibrio</p>
     `
-    // <p>Última modificação em ${moment('2018-06-11').format('LL')}.</p>
   }
 }
 
