@@ -83,7 +83,6 @@ export class BlogMain extends LitElement {
     this.postView = this.shadowRoot.querySelector('post-view')
     this.appLocation.addEventListener('path-changed', this.setRoute.bind(this))
     this.ironPages.addEventListener('iron-select', this.load.bind(this))
-    setInterval(this.update, 1000, this)
     if (!this.appRoute.data.page) {
       this.setRoute()
     }
@@ -179,6 +178,7 @@ export class BlogMain extends LitElement {
         app-header-layout {
           background-color: var(--header-background-color);
           height: fit-content;
+          padding-bottom: 1px;
         }
 
         app-drawer {

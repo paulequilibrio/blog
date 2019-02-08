@@ -4,6 +4,7 @@
   "description": "",
   "main": "blog-main.js",
   "scripts": {
+    "start": "polymer serve",
     "test": "echo \"Error: no test specified\" && exit 1",
     "precommit": "polymer build && rm -rf ./docs && cp -r ./build/es5-bundled ./docs && git add ./docs"
   },
@@ -29,9 +30,11 @@
     "@polymer/paper-spinner": "^3.0.0-pre.19",
     "@polymer/polymer": "^3.0.2",
     "@webcomponents/webcomponentsjs": "^2.0.0",
-    "moment": "^2.22.2"
+    "moment": "^2.22.2",
+    "prismjs": "^1.14.0"
   },
   "devDependencies": {
-    "husky": "^0.14.3"
+    "husky": "^0.14.3",
+    "polymer-cli": "^1.9.6"
   }
 }

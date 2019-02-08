@@ -4,6 +4,11 @@ import '@polymer/iron-icon/iron-icon.js'
 import '@polymer/paper-spinner/paper-spinner.js'
 
 export class PostView extends LitElement {
+  connectedCallback () {
+    super.connectedCallback()
+    this.article = this.shadowRoot.querySelector('#content')
+  }
+
   static get properties () {
     return {
       content: String
@@ -46,8 +51,17 @@ export class PostView extends LitElement {
     return this._post
   }
 
+  _didRender () {
+    if (this.article) {
+      window.Prism.highlightAllUnder(this.article, false)
+    }
+  }
+
   _render (props) {
     return html`
+      <link href="../node_modules/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+      <link href="../node_modules/prismjs/plugins/line-numbers/prism-line-numbers.css" rel="stylesheet" />
+      <link href="../node_modules/prismjs/plugins/unescaped-markup/prism-unescaped-markup.css" rel="stylesheet" />
       <style>
         a {
           color: var(--light-text-color);
@@ -69,11 +83,11 @@ export class PostView extends LitElement {
           --paper-spinner-stroke-width: 10px;
         }
 
-        pre {
+        /* pre {
           background-color: var(--blog-dark-main);
           padding: 10px 20px;
           overflow: auto;
-        }
+        } */
 
         header {
           display: flex;
@@ -94,6 +108,14 @@ export class PostView extends LitElement {
 
         .title {
           display: flex;
+        }
+
+        pre, code {
+          font-size: small;
+        }
+
+        pre.line-numbers {
+          white-space: pre-wrap;
         }
       </style>
       <article id="content">${props.content}</article>

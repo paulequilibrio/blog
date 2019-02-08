@@ -6,7 +6,7 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-*/'use strict';Object.defineProperty(_exports,"__esModule",{value:true});_exports.renderAttributes=renderAttributes;_exports.classString=classString;_exports.styleString=styleString;_exports.mixinBehaviors=mixinBehaviors;_exports.register=register;_exports.dumpRegistrations=dumpRegistrations;_exports.calculateSplices=calculateSplices;_exports.dashToCamelCase=dashToCamelCase;_exports.camelToDashCase=camelToDashCase;_exports.deepTargetFind=deepTargetFind;_exports.addListener=addListener;_exports.removeListener=removeListener;_exports.register$1=register$1;_exports.setTouchAction=setTouchAction;_exports.prevent=_prevent2;_exports.resetMouseCanceller=resetMouseCanceller;_exports.isPath=isPath;_exports.root=root;_exports.isAncestor=isAncestor;_exports.isDescendant=isDescendant;_exports.translate=translate;_exports.matches=matches;_exports.normalize=normalize;_exports.split=split;_exports.get=_get;_exports.set=_set;_exports.beforeNextRender=beforeNextRender;_exports.afterNextRender=afterNextRender;_exports.flush$2=flush;_exports.resolveUrl=_resolveUrl;_exports.resolveCss=resolveCss;_exports.pathFromUrl=pathFromUrl;_exports.stylesFromModules=stylesFromModules;_exports.stylesFromModule=stylesFromModule;_exports.stylesFromTemplate=stylesFromTemplate;_exports.stylesFromModuleImports=stylesFromModuleImports;_exports.cssFromModules=cssFromModules;_exports.cssFromModule=cssFromModule;_exports.cssFromTemplate=cssFromTemplate;_exports.cssFromModuleImports=cssFromModuleImports;_exports.templatize=_templatize;_exports.modelForElement=_modelForElement;_exports.invalidate=invalidate;_exports.invalidateTemplate=invalidateTemplate;_exports.isValid=isValid;_exports.templateIsValid=templateIsValid;_exports.isValidating=isValidating;_exports.templateIsValidating=templateIsValidating;_exports.startValidating=startValidating;_exports.startValidatingTemplate=startValidatingTemplate;_exports.elementsAreInvalid=elementsAreInvalid;_exports.updateNativeProperties=updateNativeProperties;_exports.getComputedStyleValue=_getComputedStyleValue;_exports.detectMixin=_detectMixin;_exports.parse=parse;_exports.stringify=stringify;_exports.removeCustomPropAssignment=removeCustomPropAssignment;_exports.$documentWaitDefault=documentWait;_exports.toCssText=toCssText;_exports.rulesForStyle=rulesForStyle;_exports.isKeyframesSelector=isKeyframesSelector;_exports.forEachRule=forEachRule;_exports.applyCss=applyCss;_exports.createScopeStyle=createScopeStyle;_exports.applyStylePlaceHolder=applyStylePlaceHolder;_exports.applyStyle=applyStyle;_exports.isTargetedBuild=isTargetedBuild;_exports.getCssBuildType=getCssBuildType;_exports.processVariableAndFallback=processVariableAndFallback;_exports.setElementClassRaw=setElementClassRaw;_exports.getIsExtends=getIsExtends;_exports.gatherStyleText=gatherStyleText;_exports.processUnscopedStyle=processUnscopedStyle;_exports.isUnscopedStyle=isUnscopedStyle;_exports.render$2=_exports.render=render;_exports.render$1=render$1;_exports.defaultTemplateFactory=defaultTemplateFactory;_exports.PaperRippleBehavior=_exports.PaperInkyFocusBehavior=_exports.PaperInkyFocusBehaviorImpl=_exports.LitElement=_exports.html$4=_exports.html=_exports.IronSelection=_exports.IronSelectableBehavior=_exports.IronMultiSelectableBehavior=_exports.IronMultiSelectableBehaviorImpl=_exports.IronScrollTargetBehavior=_exports.IronResizableBehavior=_exports.IronMeta=_exports.IronControlState=_exports.IronButtonState=_exports.IronButtonStateImpl=_exports.IronA11yKeysBehavior=_exports.AppRouteConverterBehavior=_exports.scroll=_exports.queryAllRoot=_exports.registerEffect=_exports.scrollTimingFunction=_exports._scrollTimer=_exports._scrollEffects=_exports.AppScrollEffectsBehavior=_exports.AppLayoutBehavior=_exports.$postView=_exports.$postList=_exports.$notFound=_exports.$blogMain=_exports.$blogAbout=_exports.$litHtml=_exports.$shadyRender=_exports.$litExtended=_exports.$unscopedStyleHandler=_exports.$templateMap=_exports.$styleUtil=_exports.$styleSettings=_exports.$documentWait=_exports.$customStyleInterface$1=_exports.$cssParse=_exports.$commonUtils=_exports.$commonRegex=_exports.$applyShim$1=_exports.$applyShimUtils=_exports.$polymerLegacy=_exports.$polymerElement=_exports.$templatize=_exports.$styleGather=_exports.$settings=_exports.$resolveUrl=_exports.$renderStatus=_exports.$path=_exports.$mixin=_exports.$htmlTag=_exports.$gestures=_exports.$flush=_exports.$flattenedNodesObserver=_exports.$debounce=_exports.$caseMap=_exports.$async=_exports.$arraySplice=_exports.$templateStamp=_exports.$propertyEffects=_exports.$propertyAccessors=_exports.$propertiesMixin=_exports.$propertiesChanged=_exports.$mutableData=_exports.$gestureEventListeners=_exports.$elementMixin=_exports.$dirMixin=_exports.$templatizerBehavior=_exports.$polymerDom=_exports.$polymerFn=_exports.$mutableDataBehavior=_exports.$legacyElementMixin=_exports.$class=_exports.$domRepeat=_exports.$domModule=_exports.$domIf=_exports.$domBind=_exports.$customStyle=_exports.$arraySelector=_exports.$paperSpinnerBehavior=_exports.$paperRippleBehavior=_exports.$paperInkyFocusBehavior=_exports.$litElement=_exports.$ironSelection=_exports.$ironSelectable=_exports.$ironMultiSelectable=_exports.$ironScrollTargetBehavior=_exports.$ironResizableBehavior=_exports.$ironMeta=_exports.$ironControlState=_exports.$ironButtonState=_exports.$ironA11yKeysBehavior=_exports.$appRouteConverterBehavior=_exports.$helpers=_exports.$appScrollEffectsBehavior=_exports.$appLayoutBehavior=void 0;_exports.directive=_exports.getValue=_exports.Template=_exports.TemplatePart=_exports.SVGTemplateResult=_exports.templateCaches=_exports.TemplateResult$1=_exports.TemplateResult=_exports.svg$2=_exports.svg$1=_exports.html$6=_exports.html$5=_exports.EventPart=_exports.PropertyPart=_exports.BooleanAttributePart=_exports.extendedPartCallback=_exports.svg=_exports.scopingAttribute=_exports.$templateMapDefault=_exports.nativeCssVariables=_exports.nativeShadow=_exports.CustomStyleInterfaceInterface=_exports.$customStyleInterfaceDefault=_exports.CustomStyleProvider=_exports.types=_exports.StyleNode=_exports.HOST_SUFFIX=_exports.HOST_PREFIX=_exports.BRACKETED=_exports.IS_VAR=_exports.MEDIA_MATCH=_exports.ANIMATION_MATCH=_exports.VAR_CONSUMED=_exports.MIXIN_MATCH=_exports.VAR_ASSIGN=_exports.$applyShimDefault=_exports.Base=_exports.PolymerElement=_exports.TemplateInstanceBase=_exports.setPassiveTouchGestures=_exports.passiveTouchGestures=_exports.setSanitizeDOMValue=_exports.sanitizeDOMValue=_exports.setRootPath=_exports.rootPath=_exports.useNativeCustomElements=_exports.useNativeCSSProperties=_exports.useShadow=_exports.isDeep=_exports.dedupingMixin=_exports.htmlLiteral=_exports.html$3=_exports.html$2=_exports.html$1=_exports.remove=_exports.add=_exports.findOriginalTarget=_exports.recognizers=_exports.gestures=_exports.FlattenedNodesObserver=_exports.Debouncer=_exports.microTask=_exports.idlePeriod=_exports.animationFrame=_exports.timeOut=_exports.TemplateStamp=_exports.PropertyEffects=_exports.PropertyAccessors=_exports.PropertiesMixin=_exports.PropertiesChanged=_exports.OptionalMutableData=_exports.MutableData=_exports.GestureEventListeners=_exports.updateStyles=_exports.registrations=_exports.instanceCount=_exports.ElementMixin=_exports.DirMixin=_exports.Templatizer=_exports.enqueueDebouncer=_exports.addDebouncer=_exports.flush$1=_exports.flush=_exports.dom=_exports.DomApi=_exports.matchesSelector=_exports.Polymer$1=_exports.Polymer=_exports.OptionalMutableDataBehavior=_exports.MutableDataBehavior=_exports.LegacyElementMixin=_exports.Class=_exports.DomRepeat=_exports.DomModule=_exports.DomIf=_exports.DomBind=_exports.CustomStyle=_exports.ArraySelector=_exports.ArraySelectorMixin=_exports.PaperSpinnerBehavior=void 0;_exports.PostView=_exports.PostList=_exports.NotFound=_exports.BlogMain=_exports.BlogAbout=_exports.removeNodes=_exports.reparentNodes=_exports.TemplateInstance=_exports.defaultPartCallback=_exports.NodePart=_exports.AttributePart=_exports.directiveValue=void 0;meta=babelHelpers.interopRequireWildcard(meta);var _templateObject_d2a108606de411e888c72fe2f0a2f265=/*#__PURE__*/babelHelpers.taggedTemplateLiteral(["\n    <style>\n      :host {\n        display: block;\n        /**\n         * Force app-drawer-layout to have its own stacking context so that its parent can\n         * control the stacking of it relative to other elements.\n         */\n        position: relative;\n        z-index: 0;\n      }\n\n      :host ::slotted([slot=drawer]) {\n        z-index: 1;\n      }\n\n      :host([fullbleed]) {\n        @apply --layout-fit;\n      }\n\n      #contentContainer {\n        /* Create a stacking context here so that all children appear below the header. */\n        position: relative;\n        z-index: 0;\n        height: 100%;\n        transition: var(--app-drawer-layout-content-transition, none);\n      }\n\n      #contentContainer[drawer-position=left] {\n        margin-left: var(--app-drawer-width, 256px);\n      }\n\n      #contentContainer[drawer-position=right] {\n        margin-right: var(--app-drawer-width, 256px);\n      }\n    </style>\n\n    <slot id=\"drawerSlot\" name=\"drawer\"></slot>\n\n    <div id=\"contentContainer\" drawer-position$=\"[[_drawerPosition]]\">\n      <slot></slot>\n    </div>\n\n    <iron-media-query query=\"[[_computeMediaQuery(forceNarrow, responsiveWidth)]]\" on-query-matches-changed=\"_onQueryMatchesChanged\"></iron-media-query>\n"],["\n    <style>\n      :host {\n        display: block;\n        /**\n         * Force app-drawer-layout to have its own stacking context so that its parent can\n         * control the stacking of it relative to other elements.\n         */\n        position: relative;\n        z-index: 0;\n      }\n\n      :host ::slotted([slot=drawer]) {\n        z-index: 1;\n      }\n\n      :host([fullbleed]) {\n        @apply --layout-fit;\n      }\n\n      #contentContainer {\n        /* Create a stacking context here so that all children appear below the header. */\n        position: relative;\n        z-index: 0;\n        height: 100%;\n        transition: var(--app-drawer-layout-content-transition, none);\n      }\n\n      #contentContainer[drawer-position=left] {\n        margin-left: var(--app-drawer-width, 256px);\n      }\n\n      #contentContainer[drawer-position=right] {\n        margin-right: var(--app-drawer-width, 256px);\n      }\n    </style>\n\n    <slot id=\"drawerSlot\" name=\"drawer\"></slot>\n\n    <div id=\"contentContainer\" drawer-position\\$=\"[[_drawerPosition]]\">\n      <slot></slot>\n    </div>\n\n    <iron-media-query query=\"[[_computeMediaQuery(forceNarrow, responsiveWidth)]]\" on-query-matches-changed=\"_onQueryMatchesChanged\"></iron-media-query>\n"]),_templateObject2_d2a108606de411e888c72fe2f0a2f265=/*#__PURE__*/babelHelpers.taggedTemplateLiteral(["\n    <style>\n      :host {\n        position: fixed;\n        top: -120px;\n        right: 0;\n        bottom: -120px;\n        left: 0;\n\n        visibility: hidden;\n\n        transition-property: visibility;\n      }\n\n      :host([opened]) {\n        visibility: visible;\n      }\n\n      :host([persistent]) {\n        width: var(--app-drawer-width, 256px);\n      }\n\n      :host([persistent][position=left]) {\n        right: auto;\n      }\n\n      :host([persistent][position=right]) {\n        left: auto;\n      }\n\n      #contentContainer {\n        position: absolute;\n        top: 0;\n        bottom: 0;\n        left: 0;\n\n        width: var(--app-drawer-width, 256px);\n        padding: 120px 0;\n\n        transition-property: -webkit-transform;\n        transition-property: transform;\n        -webkit-transform: translate3d(-100%, 0, 0);\n        transform: translate3d(-100%, 0, 0);\n\n        background-color: #FFF;\n\n        @apply --app-drawer-content-container;\n      }\n\n      #contentContainer[persistent] {\n        width: 100%;\n      }\n\n      #contentContainer[position=right] {\n        right: 0;\n        left: auto;\n\n        -webkit-transform: translate3d(100%, 0, 0);\n        transform: translate3d(100%, 0, 0);\n      }\n\n      #contentContainer[swipe-open]::after {\n        position: fixed;\n        top: 0;\n        bottom: 0;\n        left: 100%;\n\n        visibility: visible;\n\n        width: 20px;\n\n        content: '';\n      }\n\n      #contentContainer[swipe-open][position=right]::after {\n        right: 100%;\n        left: auto;\n      }\n\n      #contentContainer[opened] {\n        -webkit-transform: translate3d(0, 0, 0);\n        transform: translate3d(0, 0, 0);\n      }\n\n      #scrim {\n        position: absolute;\n        top: 0;\n        right: 0;\n        bottom: 0;\n        left: 0;\n\n        transition-property: opacity;\n        -webkit-transform: translateZ(0);\n        transform:  translateZ(0);\n\n        opacity: 0;\n        background: var(--app-drawer-scrim-background, rgba(0, 0, 0, 0.5));\n      }\n\n      #scrim.visible {\n        opacity: 1;\n      }\n\n      :host([no-transition]) #contentContainer {\n        transition-property: none;\n      }\n    </style>\n\n    <div id=\"scrim\" on-click=\"close\"></div>\n\n    <!-- HACK(keanulee): Bind attributes here (in addition to :host) for styling to workaround Safari\n    bug. https://bugs.webkit.org/show_bug.cgi?id=170762 -->\n    <div id=\"contentContainer\" opened$=\"[[opened]]\" persistent$=\"[[persistent]]\" position$=\"[[position]]\" swipe-open$=\"[[swipeOpen]]\">\n      <slot></slot>\n    </div>\n"],["\n    <style>\n      :host {\n        position: fixed;\n        top: -120px;\n        right: 0;\n        bottom: -120px;\n        left: 0;\n\n        visibility: hidden;\n\n        transition-property: visibility;\n      }\n\n      :host([opened]) {\n        visibility: visible;\n      }\n\n      :host([persistent]) {\n        width: var(--app-drawer-width, 256px);\n      }\n\n      :host([persistent][position=left]) {\n        right: auto;\n      }\n\n      :host([persistent][position=right]) {\n        left: auto;\n      }\n\n      #contentContainer {\n        position: absolute;\n        top: 0;\n        bottom: 0;\n        left: 0;\n\n        width: var(--app-drawer-width, 256px);\n        padding: 120px 0;\n\n        transition-property: -webkit-transform;\n        transition-property: transform;\n        -webkit-transform: translate3d(-100%, 0, 0);\n        transform: translate3d(-100%, 0, 0);\n\n        background-color: #FFF;\n\n        @apply --app-drawer-content-container;\n      }\n\n      #contentContainer[persistent] {\n        width: 100%;\n      }\n\n      #contentContainer[position=right] {\n        right: 0;\n        left: auto;\n\n        -webkit-transform: translate3d(100%, 0, 0);\n        transform: translate3d(100%, 0, 0);\n      }\n\n      #contentContainer[swipe-open]::after {\n        position: fixed;\n        top: 0;\n        bottom: 0;\n        left: 100%;\n\n        visibility: visible;\n\n        width: 20px;\n\n        content: '';\n      }\n\n      #contentContainer[swipe-open][position=right]::after {\n        right: 100%;\n        left: auto;\n      }\n\n      #contentContainer[opened] {\n        -webkit-transform: translate3d(0, 0, 0);\n        transform: translate3d(0, 0, 0);\n      }\n\n      #scrim {\n        position: absolute;\n        top: 0;\n        right: 0;\n        bottom: 0;\n        left: 0;\n\n        transition-property: opacity;\n        -webkit-transform: translateZ(0);\n        transform:  translateZ(0);\n\n        opacity: 0;\n        background: var(--app-drawer-scrim-background, rgba(0, 0, 0, 0.5));\n      }\n\n      #scrim.visible {\n        opacity: 1;\n      }\n\n      :host([no-transition]) #contentContainer {\n        transition-property: none;\n      }\n    </style>\n\n    <div id=\"scrim\" on-click=\"close\"></div>\n\n    <!-- HACK(keanulee): Bind attributes here (in addition to :host) for styling to workaround Safari\n    bug. https://bugs.webkit.org/show_bug.cgi?id=170762 -->\n    <div id=\"contentContainer\" opened\\$=\"[[opened]]\" persistent\\$=\"[[persistent]]\" position\\$=\"[[position]]\" swipe-open\\$=\"[[swipeOpen]]\">\n      <slot></slot>\n    </div>\n"]),_templateObject3_d2a108606de411e888c72fe2f0a2f265=/*#__PURE__*/babelHelpers.taggedTemplateLiteral(["\n    <style>\n      :host {\n        display: block;\n        /**\n         * Force app-header-layout to have its own stacking context so that its parent can\n         * control the stacking of it relative to other elements (e.g. app-drawer-layout).\n         * This could be done using `isolation: isolate`, but that's not well supported\n         * across browsers.\n         */\n        position: relative;\n        z-index: 0;\n      }\n\n      #wrapper ::slotted([slot=header]) {\n        @apply --layout-fixed-top;\n        z-index: 1;\n      }\n\n      #wrapper.initializing ::slotted([slot=header]) {\n        position: relative;\n      }\n\n      :host([has-scrolling-region]) {\n        height: 100%;\n      }\n\n      :host([has-scrolling-region]) #wrapper ::slotted([slot=header]) {\n        position: absolute;\n      }\n\n      :host([has-scrolling-region]) #wrapper.initializing ::slotted([slot=header]) {\n        position: relative;\n      }\n\n      :host([has-scrolling-region]) #wrapper #contentContainer {\n        @apply --layout-fit;\n        overflow-y: auto;\n        -webkit-overflow-scrolling: touch;\n      }\n\n      :host([has-scrolling-region]) #wrapper.initializing #contentContainer {\n        position: relative;\n      }\n\n      :host([fullbleed]) {\n        @apply --layout-vertical;\n        @apply --layout-fit;\n      }\n\n      :host([fullbleed]) #wrapper,\n      :host([fullbleed]) #wrapper #contentContainer {\n        @apply --layout-vertical;\n        @apply --layout-flex;\n      }\n\n      #contentContainer {\n        /* Create a stacking context here so that all children appear below the header. */\n        position: relative;\n        z-index: 0;\n      }\n\n      @media print {\n        :host([has-scrolling-region]) #wrapper #contentContainer {\n          overflow-y: visible;\n        }\n      }\n\n    </style>\n\n    <div id=\"wrapper\" class=\"initializing\">\n      <slot id=\"headerSlot\" name=\"header\"></slot>\n\n      <div id=\"contentContainer\">\n        <slot></slot>\n      </div>\n    </div>\n"],["\n    <style>\n      :host {\n        display: block;\n        /**\n         * Force app-header-layout to have its own stacking context so that its parent can\n         * control the stacking of it relative to other elements (e.g. app-drawer-layout).\n         * This could be done using \\`isolation: isolate\\`, but that's not well supported\n         * across browsers.\n         */\n        position: relative;\n        z-index: 0;\n      }\n\n      #wrapper ::slotted([slot=header]) {\n        @apply --layout-fixed-top;\n        z-index: 1;\n      }\n\n      #wrapper.initializing ::slotted([slot=header]) {\n        position: relative;\n      }\n\n      :host([has-scrolling-region]) {\n        height: 100%;\n      }\n\n      :host([has-scrolling-region]) #wrapper ::slotted([slot=header]) {\n        position: absolute;\n      }\n\n      :host([has-scrolling-region]) #wrapper.initializing ::slotted([slot=header]) {\n        position: relative;\n      }\n\n      :host([has-scrolling-region]) #wrapper #contentContainer {\n        @apply --layout-fit;\n        overflow-y: auto;\n        -webkit-overflow-scrolling: touch;\n      }\n\n      :host([has-scrolling-region]) #wrapper.initializing #contentContainer {\n        position: relative;\n      }\n\n      :host([fullbleed]) {\n        @apply --layout-vertical;\n        @apply --layout-fit;\n      }\n\n      :host([fullbleed]) #wrapper,\n      :host([fullbleed]) #wrapper #contentContainer {\n        @apply --layout-vertical;\n        @apply --layout-flex;\n      }\n\n      #contentContainer {\n        /* Create a stacking context here so that all children appear below the header. */\n        position: relative;\n        z-index: 0;\n      }\n\n      @media print {\n        :host([has-scrolling-region]) #wrapper #contentContainer {\n          overflow-y: visible;\n        }\n      }\n\n    </style>\n\n    <div id=\"wrapper\" class=\"initializing\">\n      <slot id=\"headerSlot\" name=\"header\"></slot>\n\n      <div id=\"contentContainer\">\n        <slot></slot>\n      </div>\n    </div>\n"]),_templateObject4_d2a108606de411e888c72fe2f0a2f265=/*#__PURE__*/babelHelpers.taggedTemplateLiteral(["\n    <style>\n      :host {\n        position: relative;\n        display: block;\n        transition-timing-function: linear;\n        transition-property: -webkit-transform;\n        transition-property: transform;\n      }\n\n      :host::before {\n        position: absolute;\n        right: 0px;\n        bottom: -5px;\n        left: 0px;\n        width: 100%;\n        height: 5px;\n        content: \"\";\n        transition: opacity 0.4s;\n        pointer-events: none;\n        opacity: 0;\n        box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.4);\n        will-change: opacity;\n        @apply --app-header-shadow;\n      }\n\n      :host([shadow])::before {\n        opacity: 1;\n      }\n\n      #background {\n        @apply --layout-fit;\n        overflow: hidden;\n      }\n\n      #backgroundFrontLayer,\n      #backgroundRearLayer {\n        @apply --layout-fit;\n        height: 100%;\n        pointer-events: none;\n        background-size: cover;\n      }\n\n      #backgroundFrontLayer {\n        @apply --app-header-background-front-layer;\n      }\n\n      #backgroundRearLayer {\n        opacity: 0;\n        @apply --app-header-background-rear-layer;\n      }\n\n      #contentContainer {\n        position: relative;\n        width: 100%;\n        height: 100%;\n      }\n\n      :host([disabled]),\n      :host([disabled])::after,\n      :host([disabled]) #backgroundFrontLayer,\n      :host([disabled]) #backgroundRearLayer,\n      /* Silent scrolling should not run CSS transitions */\n      :host([silent-scroll]),\n      :host([silent-scroll])::after,\n      :host([silent-scroll]) #backgroundFrontLayer,\n      :host([silent-scroll]) #backgroundRearLayer {\n        transition: none !important;\n      }\n\n      :host([disabled]) ::slotted(app-toolbar:first-of-type),\n      :host([disabled]) ::slotted([sticky]),\n      /* Silent scrolling should not run CSS transitions */\n      :host([silent-scroll]) ::slotted(app-toolbar:first-of-type),\n      :host([silent-scroll]) ::slotted([sticky]) {\n        transition: none !important;\n      }\n\n    </style>\n    <div id=\"contentContainer\">\n      <slot id=\"slot\"></slot>\n    </div>\n"]),_templateObject5_d2a108606de411e888c72fe2f0a2f265=/*#__PURE__*/babelHelpers.taggedTemplateLiteral(["\n    <style>\n\n      :host {\n        @apply --layout-horizontal;\n        @apply --layout-center;\n        position: relative;\n        height: 64px;\n        padding: 0 16px;\n        pointer-events: none;\n        font-size: var(--app-toolbar-font-size, 20px);\n      }\n\n      :host ::slotted(*) {\n        pointer-events: auto;\n      }\n\n      :host ::slotted(paper-icon-button) {\n        /* paper-icon-button/issues/33 */\n        font-size: 0;\n      }\n\n      :host ::slotted([main-title]),\n      :host ::slotted([condensed-title]) {\n        pointer-events: none;\n        @apply --layout-flex;\n      }\n\n      :host ::slotted([bottom-item]) {\n        position: absolute;\n        right: 0;\n        bottom: 0;\n        left: 0;\n      }\n\n      :host ::slotted([top-item]) {\n        position: absolute;\n        top: 0;\n        right: 0;\n        left: 0;\n      }\n\n      :host ::slotted([spacer]) {\n        margin-left: 64px;\n      }\n    </style>\n\n    <slot></slot>\n"]),_templateObject6_d2a108606de411e888c72fe2f0a2f265=/*#__PURE__*/babelHelpers.taggedTemplateLiteral(["\n    <iron-query-params params-string=\"{{__query}}\" params-object=\"{{queryParams}}\">\n    </iron-query-params>\n    <iron-location path=\"{{__path}}\" query=\"{{__query}}\" hash=\"{{__hash}}\" url-space-regex=\"[[urlSpaceRegex]]\" dwell-time=\"[[dwellTime]]\">\n    </iron-location>\n"]),_templateObject7_d2a108606de411e888c72fe2f0a2f265=/*#__PURE__*/babelHelpers.taggedTemplateLiteral(["\n    <style>\n      :host {\n        @apply --layout-inline;\n        @apply --layout-center-center;\n        position: relative;\n\n        vertical-align: middle;\n\n        fill: var(--iron-icon-fill-color, currentcolor);\n        stroke: var(--iron-icon-stroke-color, none);\n\n        width: var(--iron-icon-width, 24px);\n        height: var(--iron-icon-height, 24px);\n        @apply --iron-icon;\n      }\n\n      :host([hidden]) {\n        display: none;\n      }\n    </style>\n"]),_templateObject8_d2a108606de411e888c72fe2f0a2f265=/*#__PURE__*/babelHelpers.taggedTemplateLiteral(["\n    <style>\n      :host {\n        display: block;\n      }\n\n      @media only screen and (-webkit-max-device-pixel-ratio: 1) {\n        :host {\n          will-change: transform;\n        }\n      }\n\n      #items {\n        @apply --iron-list-items-container;\n        position: relative;\n      }\n\n      :host(:not([grid])) #items > ::slotted(*) {\n        width: 100%;\n      }\n\n      #items > ::slotted(*) {\n        box-sizing: border-box;\n        margin: 0;\n        position: absolute;\n        top: 0;\n        will-change: transform;\n      }\n    </style>\n\n    <array-selector id=\"selector\" items=\"{{items}}\" selected=\"{{selectedItems}}\" selected-item=\"{{selectedItem}}\"></array-selector>\n\n    <div id=\"items\">\n      <slot></slot>\n    </div>\n"]),_templateObject9_d2a108606de411e888c72fe2f0a2f265=/*#__PURE__*/babelHelpers.taggedTemplateLiteral(["\n    <style>\n      :host {\n        display: block;\n      }\n\n      :host > ::slotted(:not(slot):not(.iron-selected)) {\n        display: none !important;\n      }\n    </style>\n\n    <slot></slot>\n"]),_templateObject10_d2a108606de411e888c72fe2f0a2f265=/*#__PURE__*/babelHelpers.taggedTemplateLiteral(["\n    <style>\n      :host {\n        display: block;\n        position: absolute;\n        border-radius: inherit;\n        overflow: hidden;\n        top: 0;\n        left: 0;\n        right: 0;\n        bottom: 0;\n\n        /* See PolymerElements/paper-behaviors/issues/34. On non-Chrome browsers,\n         * creating a node (with a position:absolute) in the middle of an event\n         * handler \"interrupts\" that event handler (which happens when the\n         * ripple is created on demand) */\n        pointer-events: none;\n      }\n\n      :host([animating]) {\n        /* This resolves a rendering issue in Chrome (as of 40) where the\n           ripple is not properly clipped by its parent (which may have\n           rounded corners). See: http://jsbin.com/temexa/4\n\n           Note: We only apply this style conditionally. Otherwise, the browser\n           will create a new compositing layer for every ripple element on the\n           page, and that would be bad. */\n        -webkit-transform: translate(0, 0);\n        transform: translate3d(0, 0, 0);\n      }\n\n      #background,\n      #waves,\n      .wave-container,\n      .wave {\n        pointer-events: none;\n        position: absolute;\n        top: 0;\n        left: 0;\n        width: 100%;\n        height: 100%;\n      }\n\n      #background,\n      .wave {\n        opacity: 0;\n      }\n\n      #waves,\n      .wave {\n        overflow: hidden;\n      }\n\n      .wave-container,\n      .wave {\n        border-radius: 50%;\n      }\n\n      :host(.circle) #background,\n      :host(.circle) #waves {\n        border-radius: 50%;\n      }\n\n      :host(.circle) .wave-container {\n        overflow: hidden;\n      }\n    </style>\n\n    <div id=\"background\"></div>\n    <div id=\"waves\"></div>\n"]),_templateObject11_d2a108606de411e888c72fe2f0a2f265=/*#__PURE__*/babelHelpers.taggedTemplateLiteral(["\n      <h2>Sobre</h2>\n      <p>Aqui compartilho o que vou aprendendo.</p>\n      <p>@paulequilibrio</p>\n    "]),_templateObject12_d2a108606de411e888c72fe2f0a2f265=/*#__PURE__*/babelHelpers.taggedTemplateLiteral(["\n      <style>\n        :host { display: block; }\n        a {\n          color: var(--light-text-color);\n          text-decoration: none;\n        }\n      </style>\n      <div class=\"card\">\n        <h2>Posts</h2>\n        <ul>\n          <iron-list items=\"","\" as=\"post\">\n            <template>\n                <li><a href=\"#/post-view/[[post.slug]]\">\u2022 [[post.title]]</a></li>\n            </template>\n          </iron-list>\n        </ul>\n      </div>\n    "]),_templateObject13_d2a108606de411e888c72fe2f0a2f265=/*#__PURE__*/babelHelpers.taggedTemplateLiteral(["\n      <style>\n        a {\n          color: var(--light-text-color);\n        }\n\n        #loading {\n          width: 100%;\n          text-align: center;\n          color: var(--light-text-color);\n        }\n\n        paper-spinner {\n          height: 100px;\n          width: 100px;\n          --paper-spinner-layer-1-color: var(--light-text-color);\n          --paper-spinner-layer-2-color: var(--light-text-color);\n          --paper-spinner-layer-3-color: var(--light-text-color);\n          --paper-spinner-layer-4-color: var(--light-text-color);\n          --paper-spinner-stroke-width: 10px;\n        }\n\n        pre {\n          background-color: var(--blog-dark-main);\n          padding: 10px 20px;\n          overflow: auto;\n        }\n\n        header {\n          display: flex;\n          justify-content: space-between;\n          align-items: center;\n        }\n\n        .meta {\n          display: flex;\n          flex-direction: column;\n        }\n\n        .meta > p {\n          font-size: small;\n          margin: 0;\n          text-align: right;\n        }\n\n        .title {\n          display: flex;\n        }\n      </style>\n      <article id=\"content\">","</article>\n    "]),_templateObject14_d2a108606de411e888c72fe2f0a2f265=/*#__PURE__*/babelHelpers.taggedTemplateLiteral(["\n      <style>\n        p {\n          font-weight: bold;\n          text-align: center;\n          color: var(--light-text-color);\n        }\n        img {\n          width: 90%;\n          display: block;\n          margin: 0 auto;\n        }\n        a {\n          color: var(--light-text-color);\n          text-decoration: none;\n        }\n      </style>\n      <a href=\"#/post-list\">\n        <p>Voc\xEA encontrou um Link morto</p>\n        <img src=\"/images/dead-link.png\" alt=\"link morto\">\n        <p>Clique para voltar ao in\xEDcio</p>\n      </a>\n    "]),_templateObject15_d2a108606de411e888c72fe2f0a2f265=/*#__PURE__*/babelHelpers.taggedTemplateLiteral(["\n      <style>\n        :host {\n          --app-drawer-width: 256px;\n\n          /* Palette */\n          --blog-dark-title: hsl(200, 8%, 19%);\n          --blog-dark-main: hsl(200, 8%, 15%);\n          --blog-dark-side: hsl(200, 8%, 18%);\n          --blog-dark-light: hsl(200, 8%, 22%);\n          --blog-black: #0b0c0c;\n          --blog-white: #c0c1c2;\n          --blog-gray: #898b8b;\n          /* Generic colors */\n          --light-text-color: #00FF00;\n          --dark-text-color: #000000;\n          --light-background-color: #FFFFFF;\n          --dark-background-color: #000000;\n\n          /* Theme Specific Colors */\n          --drawer-toolbar-background-color:     var(--blog-dark-side);\n          --drawer-toolbar-color:                var(--light-text-color);\n          --drawer-background-color:             var(--blog-dark-side);\n\n          --header-toolbar-background-color:     var(--blog-dark-title);\n          --header-toolbar-color:                var(--light-text-color);\n          --header-background-color:             var(--blog-dark-main);\n\n          --menu-item-color:                     var(--light-text-color);\n          --menu-item-selected-color:            var(--light-text-color);\n          --menu-item-selected-background-color: var(--blog-dark-main);\n          --menu-item-hover-color:               var(--blog-dark-light);\n\n          --card-background-color:               var(--blog-dark-light);\n          --border-layout-color:                 var(--blog-black);\n          --ink-color:                           var(--blog-white);\n          --icon-color:                          var(--blog-white);\n\n          --table-row-odd:                       #FAFAFA;\n          --table-row-even:                      #FFFFFF;\n          --table-row-hover:                     #CCCCCC;\n        }\n\n        app-drawer-layout:not([narrow]) [drawer-toggle] { display: none; }\n\n        app-drawer-layout {\n          background-color: var(--blog-dark-main);\n          color: var(--light-text-color);\n        }\n\n        a paper-icon-button,\n        a:active paper-icon-button,\n        a:link paper-icon-button,\n        a:visited paper-icon-button {\n          color: var(--light-text-color);\n        }\n\n        app-header app-toolbar {\n          color: var(--header-toolbar-color);\n          background-color: var(--header-toolbar-background-color);\n          border-bottom: 1px solid var(--border-layout-color);\n          /*box-shadow: 100px 20px 50px 20px #888;*/\n          /*background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));*/\n        }\n\n        app-header paper-icon-button {\n          --paper-icon-button-ink-color: var(--ink-color);\n        }\n\n        app-header-layout {\n          background-color: var(--header-background-color);\n          height: fit-content;\n        }\n\n        app-drawer {\n          --app-drawer-content-container: {\n            background-color: var(--drawer-background-color);\n            border-right: 1px solid var(--border-layout-color);\n          };\n        }\n\n        app-drawer app-toolbar {\n          color: var(--drawer-toolbar-color);\n          background-color: var(--drawer-toolbar-background-color);\n        }\n\n        .drawer-list {\n          margin: 0 20px;\n          color: red;\n        }\n\n        .drawer-list a {\n          display: block;\n          padding: 0 16px;\n          margin: 5px 0;\n          text-decoration: none;\n          color: var(--menu-item-color);\n          line-height: 40px;\n        }\n\n        .drawer-list a.iron-selected, a.iron-selected iron-icon {\n          font-weight: bold;\n          color: var(--menu-item-selected-color);\n          background-color: var(--menu-item-selected-background-color);\n        }\n\n        .drawer-list a:hover, .drawer-list a:hover iron-icon {\n          background-color: var(--menu-item-hover-color);\n        }\n\n        .drawer-list a:focus {\n          outline: none;\n        }\n\n        .drawer-list iron-icon {\n          padding-bottom: 3px;\n          padding-right: 5px;\n        }\n\n        .card {\n          margin: 20px;\n          padding: 20px;\n          border-radius: 5px;\n          background-color: var(--card-background-color);\n          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);\n          /* overflow-y: auto; */\n        }\n\n        #appIcon {\n          width: 40px;\n          height: 40px;\n          margin-right: 10px;\n        }\n      </style>\n\n      <app-location use-hash-as-path></app-location>\n      <app-route pattern=\"/:page\"></app-route>\n\n      <app-drawer-layout fullbleed>\n        <app-drawer id=\"drawer\" slot=\"drawer\" swipe-open no-focus-trap>\n          <app-toolbar id=\"drawerToolbar\">\n            <iron-icon id=\"appIcon\" src=\"images/manifest/icon-512x512.png\"></iron-icon>\n            <span>Menu</span>\n          </app-toolbar>\n          <div id=\"drawerContent\">\n            <iron-selector attr-for-selected=\"page\" id=\"ironSelector\" role=\"navigation\" class=\"drawer-list\">\n              <a page=\"post-list\"  href=\"#/post-list\"><iron-icon icon=\"store\"></iron-icon>In\xEDcio</a>\n              <a page=\"blog-about\" href=\"#/blog-about\"><iron-icon icon=\"info\"></iron-icon>Sobre</a>\n            </iron-selector>\n          </div>\n        </app-drawer>\n        <app-header-layout>\n          <app-header slot=\"header\" fixed>\n            <app-toolbar>\n              <paper-icon-button icon=\"menu\" drawer-toggle></paper-icon-button>\n              <div main-title>Blog Paulo Alexandre</div>\n              <paper-icon-button icon=\"home\" on-tap=\"","\" title=\"Ir para o in\xEDcio\"></paper-icon-button>\n              <paper-icon-button icon=\"refresh\" on-tap=\"","\" title=\"Recarregar\"></paper-icon-button>\n            </app-toolbar>\n          </app-header>\n          <div class=\"card\">\n            <iron-pages id=\"ironPages\"\n              selected=\"","\"\n              attr-for-selected=\"page\"\n              fallback-selection=\"not-found\"\n              role=\"main\">\n              <post-list page=\"post-list\" posts=\"","\"></post-list>\n              <post-view page=\"post-view\"></post-view>\n              <blog-about page=\"blog-about\"></blog-about>\n              <not-found  page=\"not-found\"></not-found>\n            </iron-pages>\n          </div>\n        </app-header-layout>\n      </app-drawer-layout>\n    "]);var nativeShadow=!(window['ShadyDOM']&&window['ShadyDOM']['inUse']);_exports.nativeShadow=nativeShadow;var nativeCssVariables_;/**
+*/'use strict';Object.defineProperty(_exports,"__esModule",{value:true});_exports.renderAttributes=renderAttributes;_exports.classString=classString;_exports.styleString=styleString;_exports.mixinBehaviors=mixinBehaviors;_exports.register=register;_exports.dumpRegistrations=dumpRegistrations;_exports.calculateSplices=calculateSplices;_exports.dashToCamelCase=dashToCamelCase;_exports.camelToDashCase=camelToDashCase;_exports.deepTargetFind=deepTargetFind;_exports.addListener=addListener;_exports.removeListener=removeListener;_exports.register$1=register$1;_exports.setTouchAction=setTouchAction;_exports.prevent=_prevent2;_exports.resetMouseCanceller=resetMouseCanceller;_exports.isPath=isPath;_exports.root=root;_exports.isAncestor=isAncestor;_exports.isDescendant=isDescendant;_exports.translate=translate;_exports.matches=matches;_exports.normalize=normalize;_exports.split=split;_exports.get=_get;_exports.set=_set;_exports.beforeNextRender=beforeNextRender;_exports.afterNextRender=afterNextRender;_exports.flush$2=flush;_exports.resolveUrl=_resolveUrl;_exports.resolveCss=resolveCss;_exports.pathFromUrl=pathFromUrl;_exports.stylesFromModules=stylesFromModules;_exports.stylesFromModule=stylesFromModule;_exports.stylesFromTemplate=stylesFromTemplate;_exports.stylesFromModuleImports=stylesFromModuleImports;_exports.cssFromModules=cssFromModules;_exports.cssFromModule=cssFromModule;_exports.cssFromTemplate=cssFromTemplate;_exports.cssFromModuleImports=cssFromModuleImports;_exports.templatize=_templatize;_exports.modelForElement=_modelForElement;_exports.invalidate=invalidate;_exports.invalidateTemplate=invalidateTemplate;_exports.isValid=isValid;_exports.templateIsValid=templateIsValid;_exports.isValidating=isValidating;_exports.templateIsValidating=templateIsValidating;_exports.startValidating=startValidating;_exports.startValidatingTemplate=startValidatingTemplate;_exports.elementsAreInvalid=elementsAreInvalid;_exports.updateNativeProperties=updateNativeProperties;_exports.getComputedStyleValue=_getComputedStyleValue;_exports.detectMixin=_detectMixin;_exports.parse=parse;_exports.stringify=stringify;_exports.removeCustomPropAssignment=removeCustomPropAssignment;_exports.$documentWaitDefault=documentWait;_exports.toCssText=toCssText;_exports.rulesForStyle=rulesForStyle;_exports.isKeyframesSelector=isKeyframesSelector;_exports.forEachRule=forEachRule;_exports.applyCss=applyCss;_exports.createScopeStyle=createScopeStyle;_exports.applyStylePlaceHolder=applyStylePlaceHolder;_exports.applyStyle=applyStyle;_exports.isTargetedBuild=isTargetedBuild;_exports.getCssBuildType=getCssBuildType;_exports.processVariableAndFallback=processVariableAndFallback;_exports.setElementClassRaw=setElementClassRaw;_exports.getIsExtends=getIsExtends;_exports.gatherStyleText=gatherStyleText;_exports.processUnscopedStyle=processUnscopedStyle;_exports.isUnscopedStyle=isUnscopedStyle;_exports.render$2=_exports.render=render;_exports.render$1=render$1;_exports.defaultTemplateFactory=defaultTemplateFactory;_exports.PaperRippleBehavior=_exports.PaperInkyFocusBehavior=_exports.PaperInkyFocusBehaviorImpl=_exports.LitElement=_exports.html$4=_exports.html=_exports.IronSelection=_exports.IronSelectableBehavior=_exports.IronMultiSelectableBehavior=_exports.IronMultiSelectableBehaviorImpl=_exports.IronScrollTargetBehavior=_exports.IronResizableBehavior=_exports.IronMeta=_exports.IronControlState=_exports.IronButtonState=_exports.IronButtonStateImpl=_exports.IronA11yKeysBehavior=_exports.AppRouteConverterBehavior=_exports.scroll=_exports.queryAllRoot=_exports.registerEffect=_exports.scrollTimingFunction=_exports._scrollTimer=_exports._scrollEffects=_exports.AppScrollEffectsBehavior=_exports.AppLayoutBehavior=_exports.$postView=_exports.$postList=_exports.$notFound=_exports.$blogMain=_exports.$blogAbout=_exports.$litHtml=_exports.$shadyRender=_exports.$litExtended=_exports.$unscopedStyleHandler=_exports.$templateMap=_exports.$styleUtil=_exports.$styleSettings=_exports.$documentWait=_exports.$customStyleInterface$1=_exports.$cssParse=_exports.$commonUtils=_exports.$commonRegex=_exports.$applyShim$1=_exports.$applyShimUtils=_exports.$polymerLegacy=_exports.$polymerElement=_exports.$templatize=_exports.$styleGather=_exports.$settings=_exports.$resolveUrl=_exports.$renderStatus=_exports.$path=_exports.$mixin=_exports.$htmlTag=_exports.$gestures=_exports.$flush=_exports.$flattenedNodesObserver=_exports.$debounce=_exports.$caseMap=_exports.$async=_exports.$arraySplice=_exports.$templateStamp=_exports.$propertyEffects=_exports.$propertyAccessors=_exports.$propertiesMixin=_exports.$propertiesChanged=_exports.$mutableData=_exports.$gestureEventListeners=_exports.$elementMixin=_exports.$dirMixin=_exports.$templatizerBehavior=_exports.$polymerDom=_exports.$polymerFn=_exports.$mutableDataBehavior=_exports.$legacyElementMixin=_exports.$class=_exports.$domRepeat=_exports.$domModule=_exports.$domIf=_exports.$domBind=_exports.$customStyle=_exports.$arraySelector=_exports.$paperSpinnerBehavior=_exports.$paperRippleBehavior=_exports.$paperInkyFocusBehavior=_exports.$litElement=_exports.$ironSelection=_exports.$ironSelectable=_exports.$ironMultiSelectable=_exports.$ironScrollTargetBehavior=_exports.$ironResizableBehavior=_exports.$ironMeta=_exports.$ironControlState=_exports.$ironButtonState=_exports.$ironA11yKeysBehavior=_exports.$appRouteConverterBehavior=_exports.$helpers=_exports.$appScrollEffectsBehavior=_exports.$appLayoutBehavior=void 0;_exports.directive=_exports.getValue=_exports.Template=_exports.TemplatePart=_exports.SVGTemplateResult=_exports.templateCaches=_exports.TemplateResult$1=_exports.TemplateResult=_exports.svg$2=_exports.svg$1=_exports.html$6=_exports.html$5=_exports.EventPart=_exports.PropertyPart=_exports.BooleanAttributePart=_exports.extendedPartCallback=_exports.svg=_exports.scopingAttribute=_exports.$templateMapDefault=_exports.nativeCssVariables=_exports.nativeShadow=_exports.CustomStyleInterfaceInterface=_exports.$customStyleInterfaceDefault=_exports.CustomStyleProvider=_exports.types=_exports.StyleNode=_exports.HOST_SUFFIX=_exports.HOST_PREFIX=_exports.BRACKETED=_exports.IS_VAR=_exports.MEDIA_MATCH=_exports.ANIMATION_MATCH=_exports.VAR_CONSUMED=_exports.MIXIN_MATCH=_exports.VAR_ASSIGN=_exports.$applyShimDefault=_exports.Base=_exports.PolymerElement=_exports.TemplateInstanceBase=_exports.setPassiveTouchGestures=_exports.passiveTouchGestures=_exports.setSanitizeDOMValue=_exports.sanitizeDOMValue=_exports.setRootPath=_exports.rootPath=_exports.useNativeCustomElements=_exports.useNativeCSSProperties=_exports.useShadow=_exports.isDeep=_exports.dedupingMixin=_exports.htmlLiteral=_exports.html$3=_exports.html$2=_exports.html$1=_exports.remove=_exports.add=_exports.findOriginalTarget=_exports.recognizers=_exports.gestures=_exports.FlattenedNodesObserver=_exports.Debouncer=_exports.microTask=_exports.idlePeriod=_exports.animationFrame=_exports.timeOut=_exports.TemplateStamp=_exports.PropertyEffects=_exports.PropertyAccessors=_exports.PropertiesMixin=_exports.PropertiesChanged=_exports.OptionalMutableData=_exports.MutableData=_exports.GestureEventListeners=_exports.updateStyles=_exports.registrations=_exports.instanceCount=_exports.ElementMixin=_exports.DirMixin=_exports.Templatizer=_exports.enqueueDebouncer=_exports.addDebouncer=_exports.flush$1=_exports.flush=_exports.dom=_exports.DomApi=_exports.matchesSelector=_exports.Polymer$1=_exports.Polymer=_exports.OptionalMutableDataBehavior=_exports.MutableDataBehavior=_exports.LegacyElementMixin=_exports.Class=_exports.DomRepeat=_exports.DomModule=_exports.DomIf=_exports.DomBind=_exports.CustomStyle=_exports.ArraySelector=_exports.ArraySelectorMixin=_exports.PaperSpinnerBehavior=void 0;_exports.PostView=_exports.PostList=_exports.NotFound=_exports.BlogMain=_exports.BlogAbout=_exports.removeNodes=_exports.reparentNodes=_exports.TemplateInstance=_exports.defaultPartCallback=_exports.NodePart=_exports.AttributePart=_exports.directiveValue=void 0;meta=babelHelpers.interopRequireWildcard(meta);function _templateObject15_da5be4e02b3411e9984959bc9413e8f2(){var data=babelHelpers.taggedTemplateLiteral(["\n      <style>\n        :host {\n          --app-drawer-width: 256px;\n\n          /* Palette */\n          --blog-dark-title: hsl(200, 8%, 19%);\n          --blog-dark-main: hsl(200, 8%, 15%);\n          --blog-dark-side: hsl(200, 8%, 18%);\n          --blog-dark-light: hsl(200, 8%, 22%);\n          --blog-black: #0b0c0c;\n          --blog-white: #c0c1c2;\n          --blog-gray: #898b8b;\n          /* Generic colors */\n          --light-text-color: #00FF00;\n          --dark-text-color: #000000;\n          --light-background-color: #FFFFFF;\n          --dark-background-color: #000000;\n\n          /* Theme Specific Colors */\n          --drawer-toolbar-background-color:     var(--blog-dark-side);\n          --drawer-toolbar-color:                var(--light-text-color);\n          --drawer-background-color:             var(--blog-dark-side);\n\n          --header-toolbar-background-color:     var(--blog-dark-title);\n          --header-toolbar-color:                var(--light-text-color);\n          --header-background-color:             var(--blog-dark-main);\n\n          --menu-item-color:                     var(--light-text-color);\n          --menu-item-selected-color:            var(--light-text-color);\n          --menu-item-selected-background-color: var(--blog-dark-main);\n          --menu-item-hover-color:               var(--blog-dark-light);\n\n          --card-background-color:               var(--blog-dark-light);\n          --border-layout-color:                 var(--blog-black);\n          --ink-color:                           var(--blog-white);\n          --icon-color:                          var(--blog-white);\n\n          --table-row-odd:                       #FAFAFA;\n          --table-row-even:                      #FFFFFF;\n          --table-row-hover:                     #CCCCCC;\n        }\n\n        app-drawer-layout:not([narrow]) [drawer-toggle] { display: none; }\n\n        app-drawer-layout {\n          background-color: var(--blog-dark-main);\n          color: var(--light-text-color);\n        }\n\n        a paper-icon-button,\n        a:active paper-icon-button,\n        a:link paper-icon-button,\n        a:visited paper-icon-button {\n          color: var(--light-text-color);\n        }\n\n        app-header app-toolbar {\n          color: var(--header-toolbar-color);\n          background-color: var(--header-toolbar-background-color);\n          border-bottom: 1px solid var(--border-layout-color);\n          /*box-shadow: 100px 20px 50px 20px #888;*/\n          /*background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));*/\n        }\n\n        app-header paper-icon-button {\n          --paper-icon-button-ink-color: var(--ink-color);\n        }\n\n        app-header-layout {\n          background-color: var(--header-background-color);\n          height: fit-content;\n          padding-bottom: 1px;\n        }\n\n        app-drawer {\n          --app-drawer-content-container: {\n            background-color: var(--drawer-background-color);\n            border-right: 1px solid var(--border-layout-color);\n          };\n        }\n\n        app-drawer app-toolbar {\n          color: var(--drawer-toolbar-color);\n          background-color: var(--drawer-toolbar-background-color);\n        }\n\n        .drawer-list {\n          margin: 0 20px;\n          color: red;\n        }\n\n        .drawer-list a {\n          display: block;\n          padding: 0 16px;\n          margin: 5px 0;\n          text-decoration: none;\n          color: var(--menu-item-color);\n          line-height: 40px;\n        }\n\n        .drawer-list a.iron-selected, a.iron-selected iron-icon {\n          font-weight: bold;\n          color: var(--menu-item-selected-color);\n          background-color: var(--menu-item-selected-background-color);\n        }\n\n        .drawer-list a:hover, .drawer-list a:hover iron-icon {\n          background-color: var(--menu-item-hover-color);\n        }\n\n        .drawer-list a:focus {\n          outline: none;\n        }\n\n        .drawer-list iron-icon {\n          padding-bottom: 3px;\n          padding-right: 5px;\n        }\n\n        .card {\n          margin: 20px;\n          padding: 20px;\n          border-radius: 5px;\n          background-color: var(--card-background-color);\n          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);\n          /* overflow-y: auto; */\n        }\n\n        #appIcon {\n          width: 40px;\n          height: 40px;\n          margin-right: 10px;\n        }\n      </style>\n\n      <app-location use-hash-as-path></app-location>\n      <app-route pattern=\"/:page\"></app-route>\n\n      <app-drawer-layout fullbleed>\n        <app-drawer id=\"drawer\" slot=\"drawer\" swipe-open no-focus-trap>\n          <app-toolbar id=\"drawerToolbar\">\n            <iron-icon id=\"appIcon\" src=\"images/manifest/icon-512x512.png\"></iron-icon>\n            <span>Menu</span>\n          </app-toolbar>\n          <div id=\"drawerContent\">\n            <iron-selector attr-for-selected=\"page\" id=\"ironSelector\" role=\"navigation\" class=\"drawer-list\">\n              <a page=\"post-list\"  href=\"#/post-list\"><iron-icon icon=\"store\"></iron-icon>In\xEDcio</a>\n              <a page=\"blog-about\" href=\"#/blog-about\"><iron-icon icon=\"info\"></iron-icon>Sobre</a>\n            </iron-selector>\n          </div>\n        </app-drawer>\n        <app-header-layout>\n          <app-header slot=\"header\" fixed>\n            <app-toolbar>\n              <paper-icon-button icon=\"menu\" drawer-toggle></paper-icon-button>\n              <div main-title>Blog Paulo Alexandre</div>\n              <paper-icon-button icon=\"home\" on-tap=\"","\" title=\"Ir para o in\xEDcio\"></paper-icon-button>\n              <paper-icon-button icon=\"refresh\" on-tap=\"","\" title=\"Recarregar\"></paper-icon-button>\n            </app-toolbar>\n          </app-header>\n          <div class=\"card\">\n            <iron-pages id=\"ironPages\"\n              selected=\"","\"\n              attr-for-selected=\"page\"\n              fallback-selection=\"not-found\"\n              role=\"main\">\n              <post-list page=\"post-list\" posts=\"","\"></post-list>\n              <post-view page=\"post-view\"></post-view>\n              <blog-about page=\"blog-about\"></blog-about>\n              <not-found  page=\"not-found\"></not-found>\n            </iron-pages>\n          </div>\n        </app-header-layout>\n      </app-drawer-layout>\n    "]);_templateObject15_da5be4e02b3411e9984959bc9413e8f2=function _templateObject15_da5be4e02b3411e9984959bc9413e8f2(){return data;};return data;}function _templateObject14_da5be4e02b3411e9984959bc9413e8f2(){var data=babelHelpers.taggedTemplateLiteral(["\n      <style>\n        p {\n          font-weight: bold;\n          text-align: center;\n          color: var(--light-text-color);\n        }\n        img {\n          width: 90%;\n          display: block;\n          margin: 0 auto;\n        }\n        a {\n          color: var(--light-text-color);\n          text-decoration: none;\n        }\n      </style>\n      <a href=\"#/post-list\">\n        <p>Voc\xEA encontrou um Link morto</p>\n        <img src=\"/images/dead-link.png\" alt=\"link morto\">\n        <p>Clique para voltar ao in\xEDcio</p>\n      </a>\n    "]);_templateObject14_da5be4e02b3411e9984959bc9413e8f2=function _templateObject14_da5be4e02b3411e9984959bc9413e8f2(){return data;};return data;}function _templateObject13_da5be4e02b3411e9984959bc9413e8f2(){var data=babelHelpers.taggedTemplateLiteral(["\n      <link href=\"../node_modules/prismjs/themes/prism-tomorrow.css\" rel=\"stylesheet\" />\n      <link href=\"../node_modules/prismjs/plugins/line-numbers/prism-line-numbers.css\" rel=\"stylesheet\" />\n      <link href=\"../node_modules/prismjs/plugins/unescaped-markup/prism-unescaped-markup.css\" rel=\"stylesheet\" />\n      <style>\n        a {\n          color: var(--light-text-color);\n        }\n\n        #loading {\n          width: 100%;\n          text-align: center;\n          color: var(--light-text-color);\n        }\n\n        paper-spinner {\n          height: 100px;\n          width: 100px;\n          --paper-spinner-layer-1-color: var(--light-text-color);\n          --paper-spinner-layer-2-color: var(--light-text-color);\n          --paper-spinner-layer-3-color: var(--light-text-color);\n          --paper-spinner-layer-4-color: var(--light-text-color);\n          --paper-spinner-stroke-width: 10px;\n        }\n\n        /* pre {\n          background-color: var(--blog-dark-main);\n          padding: 10px 20px;\n          overflow: auto;\n        } */\n\n        header {\n          display: flex;\n          justify-content: space-between;\n          align-items: center;\n        }\n\n        .meta {\n          display: flex;\n          flex-direction: column;\n        }\n\n        .meta > p {\n          font-size: small;\n          margin: 0;\n          text-align: right;\n        }\n\n        .title {\n          display: flex;\n        }\n\n        pre, code {\n          font-size: small;\n        }\n\n        pre.line-numbers {\n          white-space: pre-wrap;\n        }\n      </style>\n      <article id=\"content\">","</article>\n    "]);_templateObject13_da5be4e02b3411e9984959bc9413e8f2=function _templateObject13_da5be4e02b3411e9984959bc9413e8f2(){return data;};return data;}function _templateObject12_da5be4e02b3411e9984959bc9413e8f2(){var data=babelHelpers.taggedTemplateLiteral(["\n      <style>\n        :host { display: block; }\n        a {\n          color: var(--light-text-color);\n          text-decoration: none;\n        }\n      </style>\n      <div class=\"card\">\n        <h2>Posts</h2>\n        <ul>\n          <iron-list items=\"","\" as=\"post\">\n            <template>\n                <li><a href=\"#/post-view/[[post.slug]]\">\u2022 [[post.title]]</a></li>\n            </template>\n          </iron-list>\n        </ul>\n      </div>\n    "]);_templateObject12_da5be4e02b3411e9984959bc9413e8f2=function _templateObject12_da5be4e02b3411e9984959bc9413e8f2(){return data;};return data;}function _templateObject11_da5be4e02b3411e9984959bc9413e8f2(){var data=babelHelpers.taggedTemplateLiteral(["\n      <h2>Sobre</h2>\n      <p>Aqui compartilho o que vou aprendendo.</p>\n      <p>@paulequilibrio</p>\n    "]);_templateObject11_da5be4e02b3411e9984959bc9413e8f2=function _templateObject11_da5be4e02b3411e9984959bc9413e8f2(){return data;};return data;}function _templateObject10_da5be4e02b3411e9984959bc9413e8f2(){var data=babelHelpers.taggedTemplateLiteral(["\n    <style>\n      :host {\n        display: block;\n        position: absolute;\n        border-radius: inherit;\n        overflow: hidden;\n        top: 0;\n        left: 0;\n        right: 0;\n        bottom: 0;\n\n        /* See PolymerElements/paper-behaviors/issues/34. On non-Chrome browsers,\n         * creating a node (with a position:absolute) in the middle of an event\n         * handler \"interrupts\" that event handler (which happens when the\n         * ripple is created on demand) */\n        pointer-events: none;\n      }\n\n      :host([animating]) {\n        /* This resolves a rendering issue in Chrome (as of 40) where the\n           ripple is not properly clipped by its parent (which may have\n           rounded corners). See: http://jsbin.com/temexa/4\n\n           Note: We only apply this style conditionally. Otherwise, the browser\n           will create a new compositing layer for every ripple element on the\n           page, and that would be bad. */\n        -webkit-transform: translate(0, 0);\n        transform: translate3d(0, 0, 0);\n      }\n\n      #background,\n      #waves,\n      .wave-container,\n      .wave {\n        pointer-events: none;\n        position: absolute;\n        top: 0;\n        left: 0;\n        width: 100%;\n        height: 100%;\n      }\n\n      #background,\n      .wave {\n        opacity: 0;\n      }\n\n      #waves,\n      .wave {\n        overflow: hidden;\n      }\n\n      .wave-container,\n      .wave {\n        border-radius: 50%;\n      }\n\n      :host(.circle) #background,\n      :host(.circle) #waves {\n        border-radius: 50%;\n      }\n\n      :host(.circle) .wave-container {\n        overflow: hidden;\n      }\n    </style>\n\n    <div id=\"background\"></div>\n    <div id=\"waves\"></div>\n"]);_templateObject10_da5be4e02b3411e9984959bc9413e8f2=function _templateObject10_da5be4e02b3411e9984959bc9413e8f2(){return data;};return data;}function _templateObject9_da5be4e02b3411e9984959bc9413e8f2(){var data=babelHelpers.taggedTemplateLiteral(["\n    <style>\n      :host {\n        display: block;\n      }\n\n      :host > ::slotted(:not(slot):not(.iron-selected)) {\n        display: none !important;\n      }\n    </style>\n\n    <slot></slot>\n"]);_templateObject9_da5be4e02b3411e9984959bc9413e8f2=function _templateObject9_da5be4e02b3411e9984959bc9413e8f2(){return data;};return data;}function _templateObject8_da5be4e02b3411e9984959bc9413e8f2(){var data=babelHelpers.taggedTemplateLiteral(["\n    <style>\n      :host {\n        display: block;\n      }\n\n      @media only screen and (-webkit-max-device-pixel-ratio: 1) {\n        :host {\n          will-change: transform;\n        }\n      }\n\n      #items {\n        @apply --iron-list-items-container;\n        position: relative;\n      }\n\n      :host(:not([grid])) #items > ::slotted(*) {\n        width: 100%;\n      }\n\n      #items > ::slotted(*) {\n        box-sizing: border-box;\n        margin: 0;\n        position: absolute;\n        top: 0;\n        will-change: transform;\n      }\n    </style>\n\n    <array-selector id=\"selector\" items=\"{{items}}\" selected=\"{{selectedItems}}\" selected-item=\"{{selectedItem}}\"></array-selector>\n\n    <div id=\"items\">\n      <slot></slot>\n    </div>\n"]);_templateObject8_da5be4e02b3411e9984959bc9413e8f2=function _templateObject8_da5be4e02b3411e9984959bc9413e8f2(){return data;};return data;}function _templateObject7_da5be4e02b3411e9984959bc9413e8f2(){var data=babelHelpers.taggedTemplateLiteral(["\n    <style>\n      :host {\n        @apply --layout-inline;\n        @apply --layout-center-center;\n        position: relative;\n\n        vertical-align: middle;\n\n        fill: var(--iron-icon-fill-color, currentcolor);\n        stroke: var(--iron-icon-stroke-color, none);\n\n        width: var(--iron-icon-width, 24px);\n        height: var(--iron-icon-height, 24px);\n        @apply --iron-icon;\n      }\n\n      :host([hidden]) {\n        display: none;\n      }\n    </style>\n"]);_templateObject7_da5be4e02b3411e9984959bc9413e8f2=function _templateObject7_da5be4e02b3411e9984959bc9413e8f2(){return data;};return data;}function _templateObject6_da5be4e02b3411e9984959bc9413e8f2(){var data=babelHelpers.taggedTemplateLiteral(["\n    <iron-query-params params-string=\"{{__query}}\" params-object=\"{{queryParams}}\">\n    </iron-query-params>\n    <iron-location path=\"{{__path}}\" query=\"{{__query}}\" hash=\"{{__hash}}\" url-space-regex=\"[[urlSpaceRegex]]\" dwell-time=\"[[dwellTime]]\">\n    </iron-location>\n"]);_templateObject6_da5be4e02b3411e9984959bc9413e8f2=function _templateObject6_da5be4e02b3411e9984959bc9413e8f2(){return data;};return data;}function _templateObject5_da5be4e02b3411e9984959bc9413e8f2(){var data=babelHelpers.taggedTemplateLiteral(["\n    <style>\n\n      :host {\n        @apply --layout-horizontal;\n        @apply --layout-center;\n        position: relative;\n        height: 64px;\n        padding: 0 16px;\n        pointer-events: none;\n        font-size: var(--app-toolbar-font-size, 20px);\n      }\n\n      :host ::slotted(*) {\n        pointer-events: auto;\n      }\n\n      :host ::slotted(paper-icon-button) {\n        /* paper-icon-button/issues/33 */\n        font-size: 0;\n      }\n\n      :host ::slotted([main-title]),\n      :host ::slotted([condensed-title]) {\n        pointer-events: none;\n        @apply --layout-flex;\n      }\n\n      :host ::slotted([bottom-item]) {\n        position: absolute;\n        right: 0;\n        bottom: 0;\n        left: 0;\n      }\n\n      :host ::slotted([top-item]) {\n        position: absolute;\n        top: 0;\n        right: 0;\n        left: 0;\n      }\n\n      :host ::slotted([spacer]) {\n        margin-left: 64px;\n      }\n    </style>\n\n    <slot></slot>\n"]);_templateObject5_da5be4e02b3411e9984959bc9413e8f2=function _templateObject5_da5be4e02b3411e9984959bc9413e8f2(){return data;};return data;}function _templateObject4_da5be4e02b3411e9984959bc9413e8f2(){var data=babelHelpers.taggedTemplateLiteral(["\n    <style>\n      :host {\n        position: relative;\n        display: block;\n        transition-timing-function: linear;\n        transition-property: -webkit-transform;\n        transition-property: transform;\n      }\n\n      :host::before {\n        position: absolute;\n        right: 0px;\n        bottom: -5px;\n        left: 0px;\n        width: 100%;\n        height: 5px;\n        content: \"\";\n        transition: opacity 0.4s;\n        pointer-events: none;\n        opacity: 0;\n        box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.4);\n        will-change: opacity;\n        @apply --app-header-shadow;\n      }\n\n      :host([shadow])::before {\n        opacity: 1;\n      }\n\n      #background {\n        @apply --layout-fit;\n        overflow: hidden;\n      }\n\n      #backgroundFrontLayer,\n      #backgroundRearLayer {\n        @apply --layout-fit;\n        height: 100%;\n        pointer-events: none;\n        background-size: cover;\n      }\n\n      #backgroundFrontLayer {\n        @apply --app-header-background-front-layer;\n      }\n\n      #backgroundRearLayer {\n        opacity: 0;\n        @apply --app-header-background-rear-layer;\n      }\n\n      #contentContainer {\n        position: relative;\n        width: 100%;\n        height: 100%;\n      }\n\n      :host([disabled]),\n      :host([disabled])::after,\n      :host([disabled]) #backgroundFrontLayer,\n      :host([disabled]) #backgroundRearLayer,\n      /* Silent scrolling should not run CSS transitions */\n      :host([silent-scroll]),\n      :host([silent-scroll])::after,\n      :host([silent-scroll]) #backgroundFrontLayer,\n      :host([silent-scroll]) #backgroundRearLayer {\n        transition: none !important;\n      }\n\n      :host([disabled]) ::slotted(app-toolbar:first-of-type),\n      :host([disabled]) ::slotted([sticky]),\n      /* Silent scrolling should not run CSS transitions */\n      :host([silent-scroll]) ::slotted(app-toolbar:first-of-type),\n      :host([silent-scroll]) ::slotted([sticky]) {\n        transition: none !important;\n      }\n\n    </style>\n    <div id=\"contentContainer\">\n      <slot id=\"slot\"></slot>\n    </div>\n"]);_templateObject4_da5be4e02b3411e9984959bc9413e8f2=function _templateObject4_da5be4e02b3411e9984959bc9413e8f2(){return data;};return data;}function _templateObject3_da5be4e02b3411e9984959bc9413e8f2(){var data=babelHelpers.taggedTemplateLiteral(["\n    <style>\n      :host {\n        display: block;\n        /**\n         * Force app-header-layout to have its own stacking context so that its parent can\n         * control the stacking of it relative to other elements (e.g. app-drawer-layout).\n         * This could be done using `isolation: isolate`, but that's not well supported\n         * across browsers.\n         */\n        position: relative;\n        z-index: 0;\n      }\n\n      #wrapper ::slotted([slot=header]) {\n        @apply --layout-fixed-top;\n        z-index: 1;\n      }\n\n      #wrapper.initializing ::slotted([slot=header]) {\n        position: relative;\n      }\n\n      :host([has-scrolling-region]) {\n        height: 100%;\n      }\n\n      :host([has-scrolling-region]) #wrapper ::slotted([slot=header]) {\n        position: absolute;\n      }\n\n      :host([has-scrolling-region]) #wrapper.initializing ::slotted([slot=header]) {\n        position: relative;\n      }\n\n      :host([has-scrolling-region]) #wrapper #contentContainer {\n        @apply --layout-fit;\n        overflow-y: auto;\n        -webkit-overflow-scrolling: touch;\n      }\n\n      :host([has-scrolling-region]) #wrapper.initializing #contentContainer {\n        position: relative;\n      }\n\n      :host([fullbleed]) {\n        @apply --layout-vertical;\n        @apply --layout-fit;\n      }\n\n      :host([fullbleed]) #wrapper,\n      :host([fullbleed]) #wrapper #contentContainer {\n        @apply --layout-vertical;\n        @apply --layout-flex;\n      }\n\n      #contentContainer {\n        /* Create a stacking context here so that all children appear below the header. */\n        position: relative;\n        z-index: 0;\n      }\n\n      @media print {\n        :host([has-scrolling-region]) #wrapper #contentContainer {\n          overflow-y: visible;\n        }\n      }\n\n    </style>\n\n    <div id=\"wrapper\" class=\"initializing\">\n      <slot id=\"headerSlot\" name=\"header\"></slot>\n\n      <div id=\"contentContainer\">\n        <slot></slot>\n      </div>\n    </div>\n"],["\n    <style>\n      :host {\n        display: block;\n        /**\n         * Force app-header-layout to have its own stacking context so that its parent can\n         * control the stacking of it relative to other elements (e.g. app-drawer-layout).\n         * This could be done using \\`isolation: isolate\\`, but that's not well supported\n         * across browsers.\n         */\n        position: relative;\n        z-index: 0;\n      }\n\n      #wrapper ::slotted([slot=header]) {\n        @apply --layout-fixed-top;\n        z-index: 1;\n      }\n\n      #wrapper.initializing ::slotted([slot=header]) {\n        position: relative;\n      }\n\n      :host([has-scrolling-region]) {\n        height: 100%;\n      }\n\n      :host([has-scrolling-region]) #wrapper ::slotted([slot=header]) {\n        position: absolute;\n      }\n\n      :host([has-scrolling-region]) #wrapper.initializing ::slotted([slot=header]) {\n        position: relative;\n      }\n\n      :host([has-scrolling-region]) #wrapper #contentContainer {\n        @apply --layout-fit;\n        overflow-y: auto;\n        -webkit-overflow-scrolling: touch;\n      }\n\n      :host([has-scrolling-region]) #wrapper.initializing #contentContainer {\n        position: relative;\n      }\n\n      :host([fullbleed]) {\n        @apply --layout-vertical;\n        @apply --layout-fit;\n      }\n\n      :host([fullbleed]) #wrapper,\n      :host([fullbleed]) #wrapper #contentContainer {\n        @apply --layout-vertical;\n        @apply --layout-flex;\n      }\n\n      #contentContainer {\n        /* Create a stacking context here so that all children appear below the header. */\n        position: relative;\n        z-index: 0;\n      }\n\n      @media print {\n        :host([has-scrolling-region]) #wrapper #contentContainer {\n          overflow-y: visible;\n        }\n      }\n\n    </style>\n\n    <div id=\"wrapper\" class=\"initializing\">\n      <slot id=\"headerSlot\" name=\"header\"></slot>\n\n      <div id=\"contentContainer\">\n        <slot></slot>\n      </div>\n    </div>\n"]);_templateObject3_da5be4e02b3411e9984959bc9413e8f2=function _templateObject3_da5be4e02b3411e9984959bc9413e8f2(){return data;};return data;}function _templateObject2_da5be4e02b3411e9984959bc9413e8f2(){var data=babelHelpers.taggedTemplateLiteral(["\n    <style>\n      :host {\n        position: fixed;\n        top: -120px;\n        right: 0;\n        bottom: -120px;\n        left: 0;\n\n        visibility: hidden;\n\n        transition-property: visibility;\n      }\n\n      :host([opened]) {\n        visibility: visible;\n      }\n\n      :host([persistent]) {\n        width: var(--app-drawer-width, 256px);\n      }\n\n      :host([persistent][position=left]) {\n        right: auto;\n      }\n\n      :host([persistent][position=right]) {\n        left: auto;\n      }\n\n      #contentContainer {\n        position: absolute;\n        top: 0;\n        bottom: 0;\n        left: 0;\n\n        width: var(--app-drawer-width, 256px);\n        padding: 120px 0;\n\n        transition-property: -webkit-transform;\n        transition-property: transform;\n        -webkit-transform: translate3d(-100%, 0, 0);\n        transform: translate3d(-100%, 0, 0);\n\n        background-color: #FFF;\n\n        @apply --app-drawer-content-container;\n      }\n\n      #contentContainer[persistent] {\n        width: 100%;\n      }\n\n      #contentContainer[position=right] {\n        right: 0;\n        left: auto;\n\n        -webkit-transform: translate3d(100%, 0, 0);\n        transform: translate3d(100%, 0, 0);\n      }\n\n      #contentContainer[swipe-open]::after {\n        position: fixed;\n        top: 0;\n        bottom: 0;\n        left: 100%;\n\n        visibility: visible;\n\n        width: 20px;\n\n        content: '';\n      }\n\n      #contentContainer[swipe-open][position=right]::after {\n        right: 100%;\n        left: auto;\n      }\n\n      #contentContainer[opened] {\n        -webkit-transform: translate3d(0, 0, 0);\n        transform: translate3d(0, 0, 0);\n      }\n\n      #scrim {\n        position: absolute;\n        top: 0;\n        right: 0;\n        bottom: 0;\n        left: 0;\n\n        transition-property: opacity;\n        -webkit-transform: translateZ(0);\n        transform:  translateZ(0);\n\n        opacity: 0;\n        background: var(--app-drawer-scrim-background, rgba(0, 0, 0, 0.5));\n      }\n\n      #scrim.visible {\n        opacity: 1;\n      }\n\n      :host([no-transition]) #contentContainer {\n        transition-property: none;\n      }\n    </style>\n\n    <div id=\"scrim\" on-click=\"close\"></div>\n\n    <!-- HACK(keanulee): Bind attributes here (in addition to :host) for styling to workaround Safari\n    bug. https://bugs.webkit.org/show_bug.cgi?id=170762 -->\n    <div id=\"contentContainer\" opened$=\"[[opened]]\" persistent$=\"[[persistent]]\" position$=\"[[position]]\" swipe-open$=\"[[swipeOpen]]\">\n      <slot></slot>\n    </div>\n"],["\n    <style>\n      :host {\n        position: fixed;\n        top: -120px;\n        right: 0;\n        bottom: -120px;\n        left: 0;\n\n        visibility: hidden;\n\n        transition-property: visibility;\n      }\n\n      :host([opened]) {\n        visibility: visible;\n      }\n\n      :host([persistent]) {\n        width: var(--app-drawer-width, 256px);\n      }\n\n      :host([persistent][position=left]) {\n        right: auto;\n      }\n\n      :host([persistent][position=right]) {\n        left: auto;\n      }\n\n      #contentContainer {\n        position: absolute;\n        top: 0;\n        bottom: 0;\n        left: 0;\n\n        width: var(--app-drawer-width, 256px);\n        padding: 120px 0;\n\n        transition-property: -webkit-transform;\n        transition-property: transform;\n        -webkit-transform: translate3d(-100%, 0, 0);\n        transform: translate3d(-100%, 0, 0);\n\n        background-color: #FFF;\n\n        @apply --app-drawer-content-container;\n      }\n\n      #contentContainer[persistent] {\n        width: 100%;\n      }\n\n      #contentContainer[position=right] {\n        right: 0;\n        left: auto;\n\n        -webkit-transform: translate3d(100%, 0, 0);\n        transform: translate3d(100%, 0, 0);\n      }\n\n      #contentContainer[swipe-open]::after {\n        position: fixed;\n        top: 0;\n        bottom: 0;\n        left: 100%;\n\n        visibility: visible;\n\n        width: 20px;\n\n        content: '';\n      }\n\n      #contentContainer[swipe-open][position=right]::after {\n        right: 100%;\n        left: auto;\n      }\n\n      #contentContainer[opened] {\n        -webkit-transform: translate3d(0, 0, 0);\n        transform: translate3d(0, 0, 0);\n      }\n\n      #scrim {\n        position: absolute;\n        top: 0;\n        right: 0;\n        bottom: 0;\n        left: 0;\n\n        transition-property: opacity;\n        -webkit-transform: translateZ(0);\n        transform:  translateZ(0);\n\n        opacity: 0;\n        background: var(--app-drawer-scrim-background, rgba(0, 0, 0, 0.5));\n      }\n\n      #scrim.visible {\n        opacity: 1;\n      }\n\n      :host([no-transition]) #contentContainer {\n        transition-property: none;\n      }\n    </style>\n\n    <div id=\"scrim\" on-click=\"close\"></div>\n\n    <!-- HACK(keanulee): Bind attributes here (in addition to :host) for styling to workaround Safari\n    bug. https://bugs.webkit.org/show_bug.cgi?id=170762 -->\n    <div id=\"contentContainer\" opened\\$=\"[[opened]]\" persistent\\$=\"[[persistent]]\" position\\$=\"[[position]]\" swipe-open\\$=\"[[swipeOpen]]\">\n      <slot></slot>\n    </div>\n"]);_templateObject2_da5be4e02b3411e9984959bc9413e8f2=function _templateObject2_da5be4e02b3411e9984959bc9413e8f2(){return data;};return data;}function _templateObject_da5be4e02b3411e9984959bc9413e8f2(){var data=babelHelpers.taggedTemplateLiteral(["\n    <style>\n      :host {\n        display: block;\n        /**\n         * Force app-drawer-layout to have its own stacking context so that its parent can\n         * control the stacking of it relative to other elements.\n         */\n        position: relative;\n        z-index: 0;\n      }\n\n      :host ::slotted([slot=drawer]) {\n        z-index: 1;\n      }\n\n      :host([fullbleed]) {\n        @apply --layout-fit;\n      }\n\n      #contentContainer {\n        /* Create a stacking context here so that all children appear below the header. */\n        position: relative;\n        z-index: 0;\n        height: 100%;\n        transition: var(--app-drawer-layout-content-transition, none);\n      }\n\n      #contentContainer[drawer-position=left] {\n        margin-left: var(--app-drawer-width, 256px);\n      }\n\n      #contentContainer[drawer-position=right] {\n        margin-right: var(--app-drawer-width, 256px);\n      }\n    </style>\n\n    <slot id=\"drawerSlot\" name=\"drawer\"></slot>\n\n    <div id=\"contentContainer\" drawer-position$=\"[[_drawerPosition]]\">\n      <slot></slot>\n    </div>\n\n    <iron-media-query query=\"[[_computeMediaQuery(forceNarrow, responsiveWidth)]]\" on-query-matches-changed=\"_onQueryMatchesChanged\"></iron-media-query>\n"],["\n    <style>\n      :host {\n        display: block;\n        /**\n         * Force app-drawer-layout to have its own stacking context so that its parent can\n         * control the stacking of it relative to other elements.\n         */\n        position: relative;\n        z-index: 0;\n      }\n\n      :host ::slotted([slot=drawer]) {\n        z-index: 1;\n      }\n\n      :host([fullbleed]) {\n        @apply --layout-fit;\n      }\n\n      #contentContainer {\n        /* Create a stacking context here so that all children appear below the header. */\n        position: relative;\n        z-index: 0;\n        height: 100%;\n        transition: var(--app-drawer-layout-content-transition, none);\n      }\n\n      #contentContainer[drawer-position=left] {\n        margin-left: var(--app-drawer-width, 256px);\n      }\n\n      #contentContainer[drawer-position=right] {\n        margin-right: var(--app-drawer-width, 256px);\n      }\n    </style>\n\n    <slot id=\"drawerSlot\" name=\"drawer\"></slot>\n\n    <div id=\"contentContainer\" drawer-position\\$=\"[[_drawerPosition]]\">\n      <slot></slot>\n    </div>\n\n    <iron-media-query query=\"[[_computeMediaQuery(forceNarrow, responsiveWidth)]]\" on-query-matches-changed=\"_onQueryMatchesChanged\"></iron-media-query>\n"]);_templateObject_da5be4e02b3411e9984959bc9413e8f2=function _templateObject_da5be4e02b3411e9984959bc9413e8f2(){return data;};return data;}var nativeShadow=!(window['ShadyDOM']&&window['ShadyDOM']['inUse']);_exports.nativeShadow=nativeShadow;var nativeCssVariables_;/**
                           * @param {(ShadyCSSOptions | ShadyCSSInterface)=} settings
                           */function calcCssVariables(settings){if(settings&&settings['shimcssproperties']){nativeCssVariables_=false;}else{// chrome 49 has semi-working css vars, check if box-shadow works
 // safari 9.1 has a recalc bug: https://bugs.webkit.org/show_bug.cgi?id=155782
@@ -29,11 +29,10 @@ var nativeCssVariables=/** @type {boolean} */nativeCssVariables_;_exports.native
    */ /*
       Extremely simple css parser. Intended to be not more than what we need
       and definitely not necessarily correct =).
-      */_exports.$styleSettings=styleSettings;'use strict';/** @unrestricted */var StyleNode=function StyleNode(){babelHelpers.classCallCheck(this,StyleNode);/** @type {number} */this['start']=0;/** @type {number} */this['end']=0;/** @type {StyleNode} */this['previous']=null;/** @type {StyleNode} */this['parent']=null;/** @type {Array<StyleNode>} */this['rules']=null;/** @type {string} */this['parsedCssText']='';/** @type {string} */this['cssText']='';/** @type {boolean} */this['atRule']=false;/** @type {number} */this['type']=0;/** @type {string} */this['keyframesName']='';/** @type {string} */this['selector']='';/** @type {string} */this['parsedSelector']='';};// given a string of css, return a simple rule tree
-/**
- * @param {string} text
- * @return {StyleNode}
- */_exports.StyleNode=StyleNode;function parse(text){text=clean(text);return parseCss(lex(text),text);}// remove stuff we don't care about that may hinder parsing
+      */_exports.$styleSettings=styleSettings;'use strict';/** @unrestricted */var StyleNode=function StyleNode(){babelHelpers.classCallCheck(this,StyleNode);/** @type {number} */this['start']=0;/** @type {number} */this['end']=0;/** @type {StyleNode} */this['previous']=null;/** @type {StyleNode} */this['parent']=null;/** @type {Array<StyleNode>} */this['rules']=null;/** @type {string} */this['parsedCssText']='';/** @type {string} */this['cssText']='';/** @type {boolean} */this['atRule']=false;/** @type {number} */this['type']=0;/** @type {string} */this['keyframesName']='';/** @type {string} */this['selector']='';/** @type {string} */this['parsedSelector']='';};/**
+   * @param {string} text
+   * @return {StyleNode}
+   */_exports.StyleNode=StyleNode;function parse(text){text=clean(text);return parseCss(lex(text),text);}// remove stuff we don't care about that may hinder parsing
 /**
  * @param {string} cssText
  * @return {string}
@@ -92,11 +91,11 @@ var RX={comments:/\/\*[^*]*\*+([^/*][^*]*\*+)*\//gim,port:/@import[^;]*;/gim,cus
    Code distributed by Google as part of the polymer project is also
    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
    */_exports.$commonRegex=commonRegex;'use strict';/** @type {!Set<string>} */var styleTextSet=new Set();var scopingAttribute='shady-unscoped';/**
-                                            * Add a specifically-marked style to the document directly, and only one copy of that style.
-                                            *
-                                            * @param {!HTMLStyleElement} style
-                                            * @return {undefined}
-                                            */_exports.scopingAttribute=scopingAttribute;function processUnscopedStyle(style){var text=style.textContent;if(!styleTextSet.has(text)){styleTextSet.add(text);var newStyle=style.cloneNode(true);document.head.appendChild(newStyle);}}/**
+                                                   * Add a specifically-marked style to the document directly, and only one copy of that style.
+                                                   *
+                                                   * @param {!HTMLStyleElement} style
+                                                   * @return {undefined}
+                                                   */_exports.scopingAttribute=scopingAttribute;function processUnscopedStyle(style){var text=style.textContent;if(!styleTextSet.has(text)){styleTextSet.add(text);var newStyle=style.cloneNode(true);document.head.appendChild(newStyle);}}/**
    * Check if a style is supposed to be unscoped
    * @param {!HTMLStyleElement} style
    * @return {boolean} true if the style has the unscoping attribute
@@ -108,11 +107,7 @@ var RX={comments:/\/\*[^*]*\*+([^/*][^*]*\*+)*\//gim,port:/@import[^;]*;/gim,cus
    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
    Code distributed by Google as part of the polymer project is also
    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$unscopedStyleHandler=unscopedStyleHandler;'use strict';/**
-               * @param {string|StyleNode} rules
-               * @param {function(StyleNode)=} callback
-               * @return {string}
-               */function toCssText(rules,callback){if(!rules){return'';}if(typeof rules==='string'){rules=parse(rules);}if(callback){forEachRule(rules,callback);}return stringify(rules,nativeCssVariables);}/**
+   */_exports.$unscopedStyleHandler=unscopedStyleHandler;'use strict';function toCssText(rules,callback){if(!rules){return'';}if(typeof rules==='string'){rules=parse(rules);}if(callback){forEachRule(rules,callback);}return stringify(rules,nativeCssVariables);}/**
    * @param {HTMLStyleElement} style
    * @return {StyleNode}
    */function rulesForStyle(style){if(!style['__cssRules']&&style.textContent){style['__cssRules']=parse(style.textContent);}return style['__cssRules']||null;}// Tests if a rule is a keyframes selector, which looks almost exactly
@@ -193,10 +188,7 @@ if(nativeShadow){element.setAttribute('class',value);}else{window['ShadyDOM']['n
    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
    Code distributed by Google as part of the polymer project is also
    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$styleUtil=styleUtil;'use strict';/**
-               * @param {Element} element
-               * @param {Object=} properties
-               */function updateNativeProperties(element,properties){// remove previous properties
+   */_exports.$styleUtil=styleUtil;'use strict';function updateNativeProperties(element,properties){// remove previous properties
 for(var _p2 in properties){// NOTE: for bc with shim, don't apply null values.
 if(_p2===null){element.style.removeProperty(_p2);}else{element.style.setProperty(_p2,properties[_p2]);}}}/**
    * @param {Element} element
@@ -485,9 +477,7 @@ template[CURRENT_VERSION]=template[NEXT_VERSION];template._validating=false;});}
    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
    Code distributed by Google as part of the polymer project is also
    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$documentWait=documentWait$1;'use strict';/**
-               * @typedef {HTMLStyleElement | {getStyle: function():HTMLStyleElement}}
-               */var CustomStyleProvider;_exports.CustomStyleProvider=CustomStyleProvider;var SEEN_MARKER='__seenByShadyCSS';var CACHED_STYLE='__shadyCSSCachedStyle';/** @type {?function(!HTMLStyleElement)} */var transformFn=null;/** @type {?function()} */var validateFn=null;/**
+   */_exports.$documentWait=documentWait$1;'use strict';var CustomStyleProvider;_exports.CustomStyleProvider=CustomStyleProvider;var SEEN_MARKER='__seenByShadyCSS';var CACHED_STYLE='__shadyCSSCachedStyle';/** @type {?function(!HTMLStyleElement)} */var transformFn=null;/** @type {?function()} */var validateFn=null;/**
                        This interface is provided to add document-level <style> elements to ShadyCSS for processing.
                        These styles must be processed by ShadyCSS to simulate ShadowRoot upper-bound encapsulation from outside styles
                        In addition, these styles may also need to be processed for @apply rules and CSS Custom Properties
@@ -531,7 +521,7 @@ var styleToTransform=/** @type {!HTMLStyleElement} */_style3['__appliedElement']
    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
    Code distributed by Google as part of the polymer project is also
    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$customStyleInterface$1=customStyleInterface;'use strict';/** @const {ApplyShim} */var applyShim$1=new ApplyShim();var ApplyShimInterface=/*#__PURE__*/function(){function ApplyShimInterface(){babelHelpers.classCallCheck(this,ApplyShimInterface);/** @type {?CustomStyleInterfaceInterface} */this.customStyleInterface=null;applyShim$1['invalidCallback']=invalidate;}babelHelpers.createClass(ApplyShimInterface,[{key:"ensure",value:function ensure(){var _this5=this;if(this.customStyleInterface){return;}this.customStyleInterface=window.ShadyCSS.CustomStyleInterface;if(this.customStyleInterface){this.customStyleInterface['transformCallback']=function(style){applyShim$1.transformCustomStyle(style);};this.customStyleInterface['validateCallback']=function(){requestAnimationFrame(function(){if(_this5.customStyleInterface['enqueued']){_this5.flushCustomStyles();}});};}}/**
+   */_exports.$customStyleInterface$1=customStyleInterface;'use strict';var applyShim$1=new ApplyShim();var ApplyShimInterface=/*#__PURE__*/function(){function ApplyShimInterface(){babelHelpers.classCallCheck(this,ApplyShimInterface);/** @type {?CustomStyleInterfaceInterface} */this.customStyleInterface=null;applyShim$1['invalidCallback']=invalidate;}babelHelpers.createClass(ApplyShimInterface,[{key:"ensure",value:function ensure(){var _this5=this;if(this.customStyleInterface){return;}this.customStyleInterface=window.ShadyCSS.CustomStyleInterface;if(this.customStyleInterface){this.customStyleInterface['transformCallback']=function(style){applyShim$1.transformCustomStyle(style);};this.customStyleInterface['validateCallback']=function(){requestAnimationFrame(function(){if(_this5.customStyleInterface['enqueued']){_this5.flushCustomStyles();}});};}}/**
      * @param {!HTMLTemplateElement} template
      * @param {string} elementName
      */},{key:"prepareTemplate",value:function prepareTemplate(template,elementName){this.ensure();templateMap[elementName]=template;var ast=applyShim$1.transformTemplate(template,elementName);// save original style ast to use for revalidating instances
@@ -569,15 +559,7 @@ applyShimInterface.flushCustomStyles();applyShimInterface.prepareTemplate(templa
                                          The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
                                          Code distributed by Google as part of the polymer project is also
                                          subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-                                         */window.JSCompiler_renameProperty=function(prop){return prop;};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */var CSS_URL_RX=/(url\()([^)]*)(\))/g;var ABS_URL=/(^\/)|(^#)|(^[\w-\d]*:)/;var workingURL;var resolveDoc;/**
+                                         */window.JSCompiler_renameProperty=function(prop){return prop;};var CSS_URL_RX=/(url\()([^)]*)(\))/g;var ABS_URL=/(^\/)|(^#)|(^[\w-\d]*:)/;var workingURL;var resolveDoc;/**
                  * Resolves the given URL against the provided `baseUri'.
                  *
                  * Note that this function performs no resolution for URLs that start
@@ -603,28 +585,20 @@ if(!resolveDoc){resolveDoc=document.implementation.createHTMLDocument('temp');re
    *
    * @param {string} url Input URL to transform
    * @return {string} resolved path
-   */function pathFromUrl(url){return url.substring(0,url.lastIndexOf('/')+1);}var resolveUrl$1={resolveUrl:_resolveUrl,resolveCss:resolveCss,pathFromUrl:pathFromUrl};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$resolveUrl=resolveUrl$1;var useShadow=!window.ShadyDOM;_exports.useShadow=useShadow;var useNativeCSSProperties=Boolean(!window.ShadyCSS||window.ShadyCSS.nativeCss);_exports.useNativeCSSProperties=useNativeCSSProperties;var useNativeCustomElements=!window.customElements.polyfillWrapFlushCallback;/**
-                                                                                   * Globally settable property that is automatically assigned to
-                                                                                   * `ElementMixin` instances, useful for binding in templates to
-                                                                                   * make URL's relative to an application's root.  Defaults to the main
-                                                                                   * document URL, but can be overridden by users.  It may be useful to set
-                                                                                   * `rootPath` to provide a stable application mount path when
-                                                                                   * using client side routing.
-                                                                                   */_exports.useNativeCustomElements=useNativeCustomElements;var rootPath=undefined||pathFromUrl(document.baseURI||window.location.href);/**
-                                                                                    * Sets the global rootPath property used by `ElementMixin` and
-                                                                                    * available via `rootPath`.
-                                                                                    *
-                                                                                    * @param {string} path The new root path
-                                                                                    * @return {void}
-                                                                                    */_exports.rootPath=rootPath;var setRootPath=function setRootPath(path){_exports.rootPath=rootPath=path;};/**
+   */function pathFromUrl(url){return url.substring(0,url.lastIndexOf('/')+1);}var resolveUrl$1={resolveUrl:_resolveUrl,resolveCss:resolveCss,pathFromUrl:pathFromUrl};_exports.$resolveUrl=resolveUrl$1;var useShadow=!window.ShadyDOM;_exports.useShadow=useShadow;var useNativeCSSProperties=Boolean(!window.ShadyCSS||window.ShadyCSS.nativeCss);_exports.useNativeCSSProperties=useNativeCSSProperties;var useNativeCustomElements=!window.customElements.polyfillWrapFlushCallback;/**
+                                                                                          * Globally settable property that is automatically assigned to
+                                                                                          * `ElementMixin` instances, useful for binding in templates to
+                                                                                          * make URL's relative to an application's root.  Defaults to the main
+                                                                                          * document URL, but can be overridden by users.  It may be useful to set
+                                                                                          * `rootPath` to provide a stable application mount path when
+                                                                                          * using client side routing.
+                                                                                          */_exports.useNativeCustomElements=useNativeCustomElements;var rootPath=undefined||pathFromUrl(document.baseURI||window.location.href);/**
+                                                                                           * Sets the global rootPath property used by `ElementMixin` and
+                                                                                           * available via `rootPath`.
+                                                                                           *
+                                                                                           * @param {string} path The new root path
+                                                                                           * @return {void}
+                                                                                           */_exports.rootPath=rootPath;var setRootPath=function setRootPath(path){_exports.rootPath=rootPath=path;};/**
     * A global callback used to sanitize any value before inserting it into the DOM. The callback signature is:
     *
     *     Polymer = {
@@ -640,31 +614,22 @@ if(!resolveDoc){resolveDoc=document.implementation.createHTMLDocument('temp');re
     *
     * @type {(function(*,string,string,Node):*)|undefined}
     */_exports.setRootPath=setRootPath;var sanitizeDOMValue=undefined;/**
-                                   * Sets the global sanitizeDOMValue available via this module's exported
-                                   * `sanitizeDOMValue` variable.
-                                   *
-                                   * @param {(function(*,string,string,Node):*)|undefined} newSanitizeDOMValue the global sanitizeDOMValue callback
-                                   * @return {void}
-                                   */_exports.sanitizeDOMValue=sanitizeDOMValue;var setSanitizeDOMValue=function setSanitizeDOMValue(newSanitizeDOMValue){_exports.sanitizeDOMValue=sanitizeDOMValue=newSanitizeDOMValue;};/**
+                                          * Sets the global sanitizeDOMValue available via this module's exported
+                                          * `sanitizeDOMValue` variable.
+                                          *
+                                          * @param {(function(*,string,string,Node):*)|undefined} newSanitizeDOMValue the global sanitizeDOMValue callback
+                                          * @return {void}
+                                          */_exports.sanitizeDOMValue=sanitizeDOMValue;var setSanitizeDOMValue=function setSanitizeDOMValue(newSanitizeDOMValue){_exports.sanitizeDOMValue=sanitizeDOMValue=newSanitizeDOMValue;};/**
     * Globally settable property to make Polymer Gestures use passive TouchEvent listeners when recognizing gestures.
     * When set to `true`, gestures made from touch will not be able to prevent scrolling, allowing for smoother
     * scrolling performance.
     * Defaults to `false` for backwards compatibility.
     */_exports.setSanitizeDOMValue=setSanitizeDOMValue;var passiveTouchGestures=false;/**
-                                   * Sets `passiveTouchGestures` globally for all elements using Polymer Gestures.
-                                   *
-                                   * @param {boolean} usePassive enable or disable passive touch gestures globally
-                                   * @return {void}
-                                   */_exports.passiveTouchGestures=passiveTouchGestures;var setPassiveTouchGestures=function setPassiveTouchGestures(usePassive){_exports.passiveTouchGestures=passiveTouchGestures=usePassive;};_exports.setPassiveTouchGestures=setPassiveTouchGestures;var settings={useShadow:useShadow,useNativeCSSProperties:useNativeCSSProperties,useNativeCustomElements:useNativeCustomElements,get rootPath(){return rootPath;},setRootPath:setRootPath,get sanitizeDOMValue(){return sanitizeDOMValue;},setSanitizeDOMValue:setSanitizeDOMValue,get passiveTouchGestures(){return passiveTouchGestures;},setPassiveTouchGestures:setPassiveTouchGestures};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ // unique global id for deduping mixins.
-_exports.$settings=settings;var dedupeId=0;/**
+                                          * Sets `passiveTouchGestures` globally for all elements using Polymer Gestures.
+                                          *
+                                          * @param {boolean} usePassive enable or disable passive touch gestures globally
+                                          * @return {void}
+                                          */_exports.passiveTouchGestures=passiveTouchGestures;var setPassiveTouchGestures=function setPassiveTouchGestures(usePassive){_exports.passiveTouchGestures=passiveTouchGestures=usePassive;};_exports.setPassiveTouchGestures=setPassiveTouchGestures;var settings={useShadow:useShadow,useNativeCSSProperties:useNativeCSSProperties,useNativeCustomElements:useNativeCustomElements,get rootPath(){return rootPath;},setRootPath:setRootPath,get sanitizeDOMValue(){return sanitizeDOMValue;},setSanitizeDOMValue:setSanitizeDOMValue,get passiveTouchGestures(){return passiveTouchGestures;},setPassiveTouchGestures:setPassiveTouchGestures};_exports.$settings=settings;var dedupeId=0;/**
                    * @constructor
                    * @extends {Function}
                    */function MixinFunction(){}/** @type {(WeakMap | undefined)} */MixinFunction.prototype.__mixinApplications;/** @type {(Object | undefined)} */MixinFunction.prototype.__mixinSet;/* eslint-disable valid-jsdoc */ /**
@@ -680,15 +645,7 @@ _exports.$settings=settings;var dedupeId=0;/**
 var mixinDedupeId=dedupeId++;function dedupingMixin(base){var baseSet=/** @type {!MixinFunction} */base.__mixinSet;if(baseSet&&baseSet[mixinDedupeId]){return base;}var map=mixinApplications;var extended=map.get(base);if(!extended){extended=/** @type {!Function} */mixin(base);map.set(base,extended);}// copy inherited mixin set from the extended class, or the base class
 // NOTE: we avoid use of Set here because some browser (IE11)
 // cannot extend a base Set via the constructor.
-var mixinSet=Object.create(/** @type {!MixinFunction} */extended.__mixinSet||baseSet||null);mixinSet[mixinDedupeId]=true;/** @type {!MixinFunction} */extended.__mixinSet=mixinSet;return extended;}return(/** @type {T} */dedupingMixin);};/* eslint-enable valid-jsdoc */_exports.dedupingMixin=dedupingMixin;var mixin={dedupingMixin:dedupingMixin};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$mixin=mixin;var MODULE_STYLE_LINK_SELECTOR='link[rel=import][type~=css]';var INCLUDE_ATTR='include';var SHADY_UNSCOPED_ATTR='shady-unscoped';function importModule(moduleId){var/** DomModule */PolymerDomModule=customElements.get('dom-module');if(!PolymerDomModule){return null;}return PolymerDomModule.import(moduleId);}function styleForImport(importDoc){// NOTE: polyfill affordance.
+var mixinSet=Object.create(/** @type {!MixinFunction} */extended.__mixinSet||baseSet||null);mixinSet[mixinDedupeId]=true;/** @type {!MixinFunction} */extended.__mixinSet=mixinSet;return extended;}return(/** @type {T} */dedupingMixin);};/* eslint-enable valid-jsdoc */_exports.dedupingMixin=dedupingMixin;var mixin={dedupingMixin:dedupingMixin};_exports.$mixin=mixin;var MODULE_STYLE_LINK_SELECTOR='link[rel=import][type~=css]';var INCLUDE_ATTR='include';var SHADY_UNSCOPED_ATTR='shady-unscoped';function importModule(moduleId){var/** DomModule */PolymerDomModule=customElements.get('dom-module');if(!PolymerDomModule){return null;}return PolymerDomModule.import(moduleId);}function styleForImport(importDoc){// NOTE: polyfill affordance.
 // under the HTMLImports polyfill, there will be no 'body',
 // but the import pseudo-doc can be used directly.
 var container=importDoc.body?importDoc.body:importDoc;var importCss=resolveCss(container.textContent,importDoc.baseURI);var style=document.createElement('style');style.textContent=importCss;return style;}/** @typedef {{assetpath: string}} */var templateWithAssetPath;// eslint-disable-line no-unused-vars
@@ -789,15 +746,7 @@ for(var i=0;i<e$.length;i++){var e=e$[i];if(e.parentNode){e.parentNode.removeChi
    * @this {StyleGather}
    * @param {!HTMLElement} module dom-module element that could contain `<link rel="import" type="css">` styles
    * @return {string} Concatenated CSS content from links in the dom-module
-   */function _cssFromModuleImports(module){var cssText='';var styles=_stylesFromModuleImports(module);for(var i=0;i<styles.length;i++){cssText+=styles[i].textContent;}return cssText;}var styleGather={stylesFromModules:stylesFromModules,stylesFromModule:stylesFromModule,stylesFromTemplate:stylesFromTemplate,stylesFromModuleImports:stylesFromModuleImports,cssFromModules:cssFromModules,cssFromModule:cssFromModule,cssFromTemplate:cssFromTemplate,cssFromModuleImports:cssFromModuleImports};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$styleGather=styleGather;var modules={};var lcModules={};function findModule(id){return modules[id]||lcModules[id.toLowerCase()];}function styleOutsideTemplateCheck(inst){if(inst.querySelector('style')){console.warn('dom-module %s has style outside template',inst.id);}}/**
+   */function _cssFromModuleImports(module){var cssText='';var styles=_stylesFromModuleImports(module);for(var i=0;i<styles.length;i++){cssText+=styles[i].textContent;}return cssText;}var styleGather={stylesFromModules:stylesFromModules,stylesFromModule:stylesFromModule,stylesFromTemplate:stylesFromTemplate,stylesFromModuleImports:stylesFromModuleImports,cssFromModules:cssFromModules,cssFromModule:cssFromModule,cssFromTemplate:cssFromTemplate,cssFromModuleImports:cssFromModuleImports};_exports.$styleGather=styleGather;var modules={};var lcModules={};function findModule(id){return modules[id]||lcModules[id.toLowerCase()];}function styleOutsideTemplateCheck(inst){if(inst.querySelector('style')){console.warn('dom-module %s has style outside template',inst.id);}}/**
    * The `dom-module` element registers the dom it contains to the name given
    * by the module's id attribute. It provides a unified database of dom
    * accessible via its static `import` API.
@@ -821,7 +770,7 @@ for(var i=0;i<e$.length;i++){var e=e$[i];if(e.parentNode){e.parentNode.removeChi
    * @summary Custom element that provides a registry of relocatable DOM content
    *   by `id` that is agnostic to bundling.
    * @unrestricted
-   */var DomModule=/*#__PURE__*/function(_HTMLElement){babelHelpers.inherits(DomModule,_HTMLElement);function DomModule(){babelHelpers.classCallCheck(this,DomModule);return babelHelpers.possibleConstructorReturn(this,(DomModule.__proto__||Object.getPrototypeOf(DomModule)).apply(this,arguments));}babelHelpers.createClass(DomModule,[{key:"attributeChangedCallback",/* eslint-disable no-unused-vars */ /**
+   */var DomModule=/*#__PURE__*/function(_HTMLElement){babelHelpers.inherits(DomModule,_HTMLElement);function DomModule(){babelHelpers.classCallCheck(this,DomModule);return babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(DomModule).apply(this,arguments));}babelHelpers.createClass(DomModule,[{key:"attributeChangedCallback",/* eslint-disable no-unused-vars */ /**
                                          * @param {string} name Name of attribute.
                                          * @param {?string} old Old value of attribute.
                                          * @param {?string} value Current value of attribute.
@@ -856,19 +805,7 @@ var owner=window.HTMLImports&&HTMLImports.importForElement?HTMLImports.importFor
      * @param {string=} selector The css selector by which to find the element.
      * @return {Element} Returns the element which matches `selector` in the
      * module registered at the specified `id`.
-     */value:function _import(id,selector){if(id){var m=findModule(id);if(m&&selector){return m.querySelector(selector);}return m;}return null;}},{key:"observedAttributes",get:function get(){return['id'];}}]);return DomModule;}(HTMLElement);_exports.DomModule=DomModule;DomModule.prototype['modules']=modules;customElements.define('dom-module',DomModule);var domModule={DomModule:DomModule};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ /**
-       * Module with utilities for manipulating structured data path strings.
-       *
-       * @summary Module with utilities for manipulating structured data path strings.
-       */_exports.$domModule=domModule;"TODO(modulizer): A namespace named Polymer.Path was\ndeclared here. The surrounding comments should be reviewed,\nand this string can then be deleted";/**
+     */value:function _import(id,selector){if(id){var m=findModule(id);if(m&&selector){return m.querySelector(selector);}return m;}return null;}},{key:"observedAttributes",get:function get(){return['id'];}}]);return DomModule;}(babelHelpers.wrapNativeSuper(HTMLElement));_exports.DomModule=DomModule;DomModule.prototype['modules']=modules;customElements.define('dom-module',DomModule);var domModule={DomModule:DomModule};_exports.$domModule=domModule;"TODO(modulizer): A namespace named Polymer.Path was\ndeclared here. The surrounding comments should be reviewed,\nand this string can then be deleted";/**
                                        * Returns true if the given string is a structured data path (has dots).
                                        *
                                        * Example:
@@ -1011,15 +948,7 @@ prop[path]=value;}return parts.join('.');}/**
    * @deprecated
    * @param {string} path Path string
    * @return {boolean} True if the string contained one or more dots
-   */var isDeep=isPath;_exports.isDeep=isDeep;var path={isPath:isPath,root:root,isAncestor:isAncestor,isDescendant:isDescendant,translate:translate,matches:matches,normalize:normalize,split:split,get:_get,set:_set,isDeep:isDeep};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$path=path;var caseMap={};var DASH_TO_CAMEL=/-[a-z]/g;var CAMEL_TO_DASH=/([A-Z])/g;/**
+   */var isDeep=isPath;_exports.isDeep=isDeep;var path={isPath:isPath,root:root,isAncestor:isAncestor,isDescendant:isDescendant,translate:translate,matches:matches,normalize:normalize,split:split,get:_get,set:_set,isDeep:isDeep};_exports.$path=path;var caseMap={};var DASH_TO_CAMEL=/-[a-z]/g;var CAMEL_TO_DASH=/([A-Z])/g;/**
                                    * Module with utilities for converting between "dash-case" and "camelCase"
                                    * identifiers.
                                    *
@@ -1037,16 +966,7 @@ prop[path]=value;}return parts.join('.');}/**
    *
    * @param {string} camel Camel-case identifier
    * @return {string} Dash-case representation of the identifier
-   */function camelToDashCase(camel){return caseMap[camel]||(caseMap[camel]=camel.replace(CAMEL_TO_DASH,'-$1').toLowerCase());}var caseMap$1={dashToCamelCase:dashToCamelCase,camelToDashCase:camelToDashCase};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ // Microtask implemented using Mutation Observer
-_exports.$caseMap=caseMap$1;var microtaskCurrHandle=0;var microtaskLastHandle=0;var microtaskCallbacks=[];var microtaskNodeContent=0;var microtaskNode=document.createTextNode('');new window.MutationObserver(microtaskFlush).observe(microtaskNode,{characterData:true});function microtaskFlush(){var len=microtaskCallbacks.length;for(var i=0;i<len;i++){var cb=microtaskCallbacks[i];if(cb){try{cb();}catch(e){setTimeout(function(){throw e;});}}}microtaskCallbacks.splice(0,len);microtaskLastHandle+=len;}/**
+   */function camelToDashCase(camel){return caseMap[camel]||(caseMap[camel]=camel.replace(CAMEL_TO_DASH,'-$1').toLowerCase());}var caseMap$1={dashToCamelCase:dashToCamelCase,camelToDashCase:camelToDashCase};_exports.$caseMap=caseMap$1;var microtaskCurrHandle=0;var microtaskLastHandle=0;var microtaskCallbacks=[];var microtaskNodeContent=0;var microtaskNode=document.createTextNode('');new window.MutationObserver(microtaskFlush).observe(microtaskNode,{characterData:true});function microtaskFlush(){var len=microtaskCallbacks.length;for(var i=0;i<len;i++){var cb=microtaskCallbacks[i];if(cb){try{cb();}catch(e){setTimeout(function(){throw e;});}}}microtaskCallbacks.splice(0,len);microtaskLastHandle+=len;}/**
    * Async interface wrapper around `setTimeout`.
    *
    * @namespace
@@ -1071,12 +991,7 @@ _exports.$caseMap=caseMap$1;var microtaskCurrHandle=0;var microtaskLastHandle=0;
    * @memberof timeOut
    * @param {number} handle Handle returned from `run` of callback to cancel
    * @return {void}
-   */cancel:function cancel(handle){window.clearTimeout(handle);}};/**
-    * Async interface wrapper around `requestAnimationFrame`.
-    *
-    * @namespace
-    * @summary Async interface wrapper around `requestAnimationFrame`.
-    */_exports.timeOut=timeOut;var animationFrame={/**
+   */cancel:function cancel(handle){window.clearTimeout(handle);}};_exports.timeOut=timeOut;var animationFrame={/**
    * Enqueues a function called at `requestAnimationFrame` timing.
    *
    * @memberof animationFrame
@@ -1088,13 +1003,7 @@ _exports.$caseMap=caseMap$1;var microtaskCurrHandle=0;var microtaskLastHandle=0;
    * @memberof animationFrame
    * @param {number} handle Handle returned from `run` of callback to cancel
    * @return {void}
-   */cancel:function cancel(handle){window.cancelAnimationFrame(handle);}};/**
-    * Async interface wrapper around `requestIdleCallback`.  Falls back to
-    * `setTimeout` on browsers that do not support `requestIdleCallback`.
-    *
-    * @namespace
-    * @summary Async interface wrapper around `requestIdleCallback`.
-    */_exports.animationFrame=animationFrame;var idlePeriod={/**
+   */cancel:function cancel(handle){window.cancelAnimationFrame(handle);}};_exports.animationFrame=animationFrame;var idlePeriod={/**
    * Enqueues a function called at `requestIdleCallback` timing.
    *
    * @memberof idlePeriod
@@ -1106,19 +1015,7 @@ _exports.$caseMap=caseMap$1;var microtaskCurrHandle=0;var microtaskLastHandle=0;
    * @memberof idlePeriod
    * @param {number} handle Handle returned from `run` of callback to cancel
    * @return {void}
-   */cancel:function cancel(handle){window.cancelIdleCallback?window.cancelIdleCallback(handle):window.clearTimeout(handle);}};/**
-    * Async interface for enqueuing callbacks that run at microtask timing.
-    *
-    * Note that microtask timing is achieved via a single `MutationObserver`,
-    * and thus callbacks enqueued with this API will all run in a single
-    * batch, and not interleaved with other microtasks such as promises.
-    * Promises are avoided as an implementation choice for the time being
-    * due to Safari bugs that cause Promises to lack microtask guarantees.
-    *
-    * @namespace
-    * @summary Async interface for enqueuing callbacks that run at microtask
-    *   timing.
-    */_exports.idlePeriod=idlePeriod;var microTask={/**
+   */cancel:function cancel(handle){window.cancelIdleCallback?window.cancelIdleCallback(handle):window.clearTimeout(handle);}};_exports.idlePeriod=idlePeriod;var microTask={/**
    * Enqueues a function called at microtask timing.
    *
    * @memberof microTask
@@ -1130,15 +1027,7 @@ _exports.$caseMap=caseMap$1;var microtaskCurrHandle=0;var microtaskLastHandle=0;
    * @memberof microTask
    * @param {number} handle Handle returned from `run` of callback to cancel
    * @return {void}
-   */cancel:function cancel(handle){var idx=handle-microtaskLastHandle;if(idx>=0){if(!microtaskCallbacks[idx]){throw new Error('invalid async handle: '+handle);}microtaskCallbacks[idx]=null;}}};_exports.microTask=microTask;var async={timeOut:timeOut,animationFrame:animationFrame,idlePeriod:idlePeriod,microTask:microTask};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ /** @const {!AsyncInterface} */_exports.$async=async;var microtask=microTask;/**
+   */cancel:function cancel(handle){var idx=handle-microtaskLastHandle;if(idx>=0){if(!microtaskCallbacks[idx]){throw new Error('invalid async handle: '+handle);}microtaskCallbacks[idx]=null;}}};_exports.microTask=microTask;var async={timeOut:timeOut,animationFrame:animationFrame,idlePeriod:idlePeriod,microTask:microTask};_exports.$async=async;var microtask=microTask;/**
                               * Element class mixin that provides basic meta-programming for creating one
                               * or more property accessors (getter/setter pair) that enqueue an async
                               * (batched) `_propertiesChanged` callback.
@@ -1208,7 +1097,7 @@ if(!(prop in proto)){proto._createPropertyAccessor(prop);}}}/**
        * @param {string} name Name of property
        *
        * @protected
-       */},{key:"typeForProperty",value:function typeForProperty(name){}}]);function PropertiesChanged(){var _this6;babelHelpers.classCallCheck(this,PropertiesChanged);_this6=babelHelpers.possibleConstructorReturn(this,(PropertiesChanged.__proto__||Object.getPrototypeOf(PropertiesChanged)).call(this));_this6.__dataEnabled=false;_this6.__dataReady=false;_this6.__dataInvalid=false;_this6.__data={};_this6.__dataPending=null;_this6.__dataOld=null;_this6.__dataInstanceProps=null;_this6.__serializing=false;_this6._initializeProperties();return _this6;}/**
+       */},{key:"typeForProperty",value:function typeForProperty(name){}}]);function PropertiesChanged(){var _this6;babelHelpers.classCallCheck(this,PropertiesChanged);_this6=babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(PropertiesChanged).call(this));_this6.__dataEnabled=false;_this6.__dataReady=false;_this6.__dataInvalid=false;_this6.__data={};_this6.__dataPending=null;_this6.__dataOld=null;_this6.__dataInstanceProps=null;_this6.__serializing=false;_this6._initializeProperties();return _this6;}/**
        * Lifecycle callback called when properties are enabled via
        * `_enableProperties`.
        *
@@ -1346,7 +1235,7 @@ old===old||value===value));}/**
        * @param {?string} namespace Attribute namespace.
        * @return {void}
        * @suppress {missingProperties} Super may or may not implement the callback
-       */},{key:"attributeChangedCallback",value:function attributeChangedCallback(name,old,value,namespace){if(old!==value){this._attributeToProperty(name,value);}if(babelHelpers.get(PropertiesChanged.prototype.__proto__||Object.getPrototypeOf(PropertiesChanged.prototype),"attributeChangedCallback",this)){babelHelpers.get(PropertiesChanged.prototype.__proto__||Object.getPrototypeOf(PropertiesChanged.prototype),"attributeChangedCallback",this).call(this,name,old,value,namespace);}}/**
+       */},{key:"attributeChangedCallback",value:function attributeChangedCallback(name,old,value,namespace){if(old!==value){this._attributeToProperty(name,value);}if(babelHelpers.get(babelHelpers.getPrototypeOf(PropertiesChanged.prototype),"attributeChangedCallback",this)){babelHelpers.get(babelHelpers.getPrototypeOf(PropertiesChanged.prototype),"attributeChangedCallback",this).call(this,name,old,value,namespace);}}/**
        * Deserializes an attribute to its associated property.
        *
        * This method calls the `_deserializeValue` method to convert the string to
@@ -1399,15 +1288,7 @@ old===old||value===value));}/**
        * @param {?string} value Value to deserialize.
        * @param {*=} type Type to deserialize the string to.
        * @return {*} Typed value deserialized from the provided string.
-       */},{key:"_deserializeValue",value:function _deserializeValue(value,type){switch(type){case Boolean:return value!==null;case Number:return Number(value);default:return value;}}}]);return PropertiesChanged;}(superClass);return PropertiesChanged;});_exports.PropertiesChanged=PropertiesChanged;var propertiesChanged={PropertiesChanged:PropertiesChanged};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$propertiesChanged=propertiesChanged;var caseMap$2=caseMap$1;// Save map of native properties; this forms a blacklist or properties
+       */},{key:"_deserializeValue",value:function _deserializeValue(value,type){switch(type){case Boolean:return value!==null;case Number:return Number(value);default:return value;}}}]);return PropertiesChanged;}(superClass);return PropertiesChanged;});_exports.PropertiesChanged=PropertiesChanged;var propertiesChanged={PropertiesChanged:PropertiesChanged};_exports.$propertiesChanged=propertiesChanged;var caseMap$2=caseMap$1;// Save map of native properties; this forms a blacklist or properties
 // that won't have their values "saved" by `saveAccessorValue`, since
 // reading from an HTMLElement accessor from the context of a prototype throws
 var nativeProperties={};var proto=HTMLElement.prototype;while(proto){var props=Object.getOwnPropertyNames(proto);for(var i=0;i<props.length;i++){nativeProperties[props[i]]=true;}proto=Object.getPrototypeOf(proto);}/**
@@ -1465,14 +1346,14 @@ if(!model.__dataProto){model.__dataProto={};}else if(!model.hasOwnProperty(JSCom
                                                   * @implements {Polymer_PropertyAccessors}
                                                   * @extends {base}
                                                   * @unrestricted
-                                                  */var PropertyAccessors=/*#__PURE__*/function(_base){babelHelpers.inherits(PropertyAccessors,_base);function PropertyAccessors(){babelHelpers.classCallCheck(this,PropertyAccessors);return babelHelpers.possibleConstructorReturn(this,(PropertyAccessors.__proto__||Object.getPrototypeOf(PropertyAccessors)).apply(this,arguments));}babelHelpers.createClass(PropertyAccessors,[{key:"_initializeProperties",/**
+                                                  */var PropertyAccessors=/*#__PURE__*/function(_base){babelHelpers.inherits(PropertyAccessors,_base);function PropertyAccessors(){babelHelpers.classCallCheck(this,PropertyAccessors);return babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(PropertyAccessors).apply(this,arguments));}babelHelpers.createClass(PropertyAccessors,[{key:"_initializeProperties",/**
        * Overrides PropertiesChanged implementation to initialize values for
        * accessors created for values that already existed on the element
        * prototype.
        *
        * @return {void}
        * @protected
-       */value:function _initializeProperties(){if(this.__dataProto){this._initializeProtoProperties(this.__dataProto);this.__dataProto=null;}babelHelpers.get(PropertyAccessors.prototype.__proto__||Object.getPrototypeOf(PropertyAccessors.prototype),"_initializeProperties",this).call(this);}/**
+       */value:function _initializeProperties(){if(this.__dataProto){this._initializeProtoProperties(this.__dataProto);this.__dataProto=null;}babelHelpers.get(babelHelpers.getPrototypeOf(PropertyAccessors.prototype),"_initializeProperties",this).call(this);}/**
        * Called at instance time with bag of properties that were overwritten
        * by accessors on the prototype when accessors were created.
        *
@@ -1498,7 +1379,7 @@ if(!model.__dataProto){model.__dataProto={};}else if(!model.hasOwnProperty(JSCom
        *
        * @param {*} value Property value to serialize.
        * @return {string | undefined} String serialized from the provided property value.
-       */},{key:"_serializeValue",value:function _serializeValue(value){/* eslint-disable no-fallthrough */switch(babelHelpers.typeof(value)){case'object':if(babelHelpers.instanceof(value,Date)){return value.toString();}else if(value){try{return JSON.stringify(value);}catch(x){return'';}}default:return babelHelpers.get(PropertyAccessors.prototype.__proto__||Object.getPrototypeOf(PropertyAccessors.prototype),"_serializeValue",this).call(this,value);}}/**
+       */},{key:"_serializeValue",value:function _serializeValue(value){/* eslint-disable no-fallthrough */switch(babelHelpers.typeof(value)){case'object':if(babelHelpers.instanceof(value,Date)){return value.toString();}else if(value){try{return JSON.stringify(value);}catch(x){return'';}}default:return babelHelpers.get(babelHelpers.getPrototypeOf(PropertyAccessors.prototype),"_serializeValue",this).call(this,value);}}/**
        * Converts a string to a typed JavaScript value.
        *
        * This method is called by Polymer when reading HTML attribute values to
@@ -1515,7 +1396,7 @@ if(!model.__dataProto){model.__dataProto={};}else if(!model.hasOwnProperty(JSCom
        */},{key:"_deserializeValue",value:function _deserializeValue(value,type){/**
        * @type {*}
        */var outValue;switch(type){case Object:try{outValue=JSON.parse(/** @type {string} */value);}catch(x){// allow non-JSON literals like Strings and Numbers
-outValue=value;}break;case Array:try{outValue=JSON.parse(/** @type {string} */value);}catch(x){outValue=null;console.warn("Polymer::Attributes: couldn't decode Array as JSON: ".concat(value));}break;case Date:outValue=isNaN(value)?String(value):Number(value);outValue=new Date(outValue);break;default:outValue=babelHelpers.get(PropertyAccessors.prototype.__proto__||Object.getPrototypeOf(PropertyAccessors.prototype),"_deserializeValue",this).call(this,value,type);break;}return outValue;}/* eslint-enable no-fallthrough */ /**
+outValue=value;}break;case Array:try{outValue=JSON.parse(/** @type {string} */value);}catch(x){outValue=null;console.warn("Polymer::Attributes: couldn't decode Array as JSON: ".concat(value));}break;case Date:outValue=isNaN(value)?String(value):Number(value);outValue=new Date(outValue);break;default:outValue=babelHelpers.get(babelHelpers.getPrototypeOf(PropertyAccessors.prototype),"_deserializeValue",this).call(this,value,type);break;}return outValue;}/* eslint-enable no-fallthrough */ /**
                                           * Overrides PropertiesChanged implementation to save existing prototype
                                           * property value so that it can be reset.
                                           * @param {string} property Name of the property
@@ -1529,7 +1410,7 @@ outValue=value;}break;case Array:try{outValue=JSON.parse(/** @type {string} */va
                                           * for the values to take effect.
                                           * @protected
                                           * @return {void}
-                                          */},{key:"_definePropertyAccessor",value:function _definePropertyAccessor(property,readOnly){saveAccessorValue(this,property);babelHelpers.get(PropertyAccessors.prototype.__proto__||Object.getPrototypeOf(PropertyAccessors.prototype),"_definePropertyAccessor",this).call(this,property,readOnly);}/**
+                                          */},{key:"_definePropertyAccessor",value:function _definePropertyAccessor(property,readOnly){saveAccessorValue(this,property);babelHelpers.get(babelHelpers.getPrototypeOf(PropertyAccessors.prototype),"_definePropertyAccessor",this).call(this,property,readOnly);}/**
        * Returns true if this library created an accessor for the given property.
        *
        * @param {string} property Property name
@@ -1555,16 +1436,7 @@ outValue=value;}break;case Array:try{outValue=JSON.parse(/** @type {string} */va
        * @return {string} Attribute name corresponding to the given property.
        *
        * @protected
-       */},{key:"attributeNameForProperty",value:function attributeNameForProperty(property){return caseMap$2.camelToDashCase(property);}}]);return PropertyAccessors;}(base);return PropertyAccessors;});_exports.PropertyAccessors=PropertyAccessors;var propertyAccessors={PropertyAccessors:PropertyAccessors};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ // 1.x backwards-compatible auto-wrapper for template type extensions
-// This is a clear layering violation and gives favored-nation status to
+       */},{key:"attributeNameForProperty",value:function attributeNameForProperty(property){return caseMap$2.camelToDashCase(property);}}]);return PropertyAccessors;}(base);return PropertyAccessors;});_exports.PropertyAccessors=PropertyAccessors;var propertyAccessors={PropertyAccessors:PropertyAccessors};// This is a clear layering violation and gives favored-nation status to
 // dom-if and dom-repeat templates.  This is a conceit we're choosing to keep
 // a.) to ease 1.x backwards-compatibility due to loss of `is`, and
 // b.) to maintain if/repeat capability in parser-constrained elements
@@ -1595,7 +1467,7 @@ context=context._methodHost||context;var handler=function handler(e){if(context[
    * @polymer
    * @mixinClass
    * @implements {Polymer_TemplateStamp}
-   */var TemplateStamp=/*#__PURE__*/function(_superClass2){babelHelpers.inherits(TemplateStamp,_superClass2);function TemplateStamp(){babelHelpers.classCallCheck(this,TemplateStamp);return babelHelpers.possibleConstructorReturn(this,(TemplateStamp.__proto__||Object.getPrototypeOf(TemplateStamp)).apply(this,arguments));}babelHelpers.createClass(TemplateStamp,[{key:"_stampTemplate",/**
+   */var TemplateStamp=/*#__PURE__*/function(_superClass2){babelHelpers.inherits(TemplateStamp,_superClass2);function TemplateStamp(){babelHelpers.classCallCheck(this,TemplateStamp);return babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(TemplateStamp).apply(this,arguments));}babelHelpers.createClass(TemplateStamp,[{key:"_stampTemplate",/**
        * Clones the provided template content and returns a document fragment
        * containing the cloned dom.
        *
@@ -1804,20 +1676,12 @@ else if(name==='id'){nodeInfo.id=value;return true;}return false;}/**
        *
        * @param {HTMLTemplateElement} template Template to retrieve `content` for
        * @return {DocumentFragment} Content fragment
-       */},{key:"_contentForTemplate",value:function _contentForTemplate(template){var templateInfo=/** @type {HTMLTemplateElementWithInfo} */template._templateInfo;return templateInfo&&templateInfo.content||template.content;}}]);return TemplateStamp;}(superClass);return TemplateStamp;});_exports.TemplateStamp=TemplateStamp;var templateStamp={TemplateStamp:TemplateStamp};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ /** @const {Object} */_exports.$templateStamp=templateStamp;var CaseMap=caseMap$1;// Monotonically increasing unique ID used for de-duping effects triggered
+       */},{key:"_contentForTemplate",value:function _contentForTemplate(template){var templateInfo=/** @type {HTMLTemplateElementWithInfo} */template._templateInfo;return templateInfo&&templateInfo.content||template.content;}}]);return TemplateStamp;}(superClass);return TemplateStamp;});_exports.TemplateStamp=TemplateStamp;var templateStamp={TemplateStamp:TemplateStamp};_exports.$templateStamp=templateStamp;var CaseMap=caseMap$1;// Monotonically increasing unique ID used for de-duping effects triggered
 // from multiple properties in the same turn
 var dedupeId$1=0;/**
-                     * Property effect types; effects are stored on the prototype using these keys
-                     * @enum {string}
-                     */var TYPES={COMPUTE:'__computeEffects',REFLECT:'__reflectEffects',NOTIFY:'__notifyEffects',PROPAGATE:'__propagateEffects',OBSERVE:'__observeEffects',READ_ONLY:'__readOnly'};/** @const {RegExp} */var capitalAttributeRegex=/[A-Z]/;/**
+                    * Property effect types; effects are stored on the prototype using these keys
+                    * @enum {string}
+                    */var TYPES={COMPUTE:'__computeEffects',REFLECT:'__reflectEffects',NOTIFY:'__notifyEffects',PROPAGATE:'__propagateEffects',OBSERVE:'__observeEffects',READ_ONLY:'__readOnly'};/** @const {RegExp} */var capitalAttributeRegex=/[A-Z]/;/**
                                         * @typedef {{
                                         * name: (string | undefined),
                                         * structured: (boolean | undefined),
@@ -2335,13 +2199,13 @@ inst.__data[splicesPath]={indexSplices:null};}/**
                                                                                 * @implements {Polymer_PropertyEffects}
                                                                                 * @extends {propertyEffectsBase}
                                                                                 * @unrestricted
-                                                                                */var PropertyEffects=/*#__PURE__*/function(_propertyEffectsBase){babelHelpers.inherits(PropertyEffects,_propertyEffectsBase);function PropertyEffects(){var _this8;babelHelpers.classCallCheck(this,PropertyEffects);_this8=babelHelpers.possibleConstructorReturn(this,(PropertyEffects.__proto__||Object.getPrototypeOf(PropertyEffects)).call(this));/** @type {boolean} */ // Used to identify users of this mixin, ala instanceof
+                                                                                */var PropertyEffects=/*#__PURE__*/function(_propertyEffectsBase){babelHelpers.inherits(PropertyEffects,_propertyEffectsBase);function PropertyEffects(){var _this8;babelHelpers.classCallCheck(this,PropertyEffects);_this8=babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(PropertyEffects).call(this));/** @type {boolean} */ // Used to identify users of this mixin, ala instanceof
 _this8.__isPropertyEffectsClient=true;/** @type {number} */ // NOTE: used to track re-entrant calls to `_flushProperties`
 // path changes dirty check against `__dataTemp` only during one "turn"
 // and are cleared when `__dataCounter` returns to 0.
 _this8.__dataCounter=0;/** @type {boolean} */_this8.__dataClientsReady;/** @type {Array} */_this8.__dataPendingClients;/** @type {Object} */_this8.__dataToNotify;/** @type {Object} */_this8.__dataLinkedPaths;/** @type {boolean} */_this8.__dataHasPaths;/** @type {Object} */_this8.__dataCompoundStorage;/** @type {Polymer_PropertyEffects} */_this8.__dataHost;/** @type {!Object} */_this8.__dataTemp;/** @type {boolean} */_this8.__dataClientsInitialized;/** @type {!Object} */_this8.__data;/** @type {!Object} */_this8.__dataPending;/** @type {!Object} */_this8.__dataOld;/** @type {Object} */_this8.__computeEffects;/** @type {Object} */_this8.__reflectEffects;/** @type {Object} */_this8.__notifyEffects;/** @type {Object} */_this8.__propagateEffects;/** @type {Object} */_this8.__observeEffects;/** @type {Object} */_this8.__readOnly;/** @type {!TemplateInfo} */_this8.__templateInfo;return _this8;}babelHelpers.createClass(PropertyEffects,[{key:"_initializeProperties",/**
        * @return {void}
-       */value:function _initializeProperties(){babelHelpers.get(PropertyEffects.prototype.__proto__||Object.getPrototypeOf(PropertyEffects.prototype),"_initializeProperties",this).call(this);hostStack.registerHost(this);this.__dataClientsReady=false;this.__dataPendingClients=null;this.__dataToNotify=null;this.__dataLinkedPaths=null;this.__dataHasPaths=false;// May be set on instance prior to upgrade
+       */value:function _initializeProperties(){babelHelpers.get(babelHelpers.getPrototypeOf(PropertyEffects.prototype),"_initializeProperties",this).call(this);hostStack.registerHost(this);this.__dataClientsReady=false;this.__dataPendingClients=null;this.__dataToNotify=null;this.__dataLinkedPaths=null;this.__dataHasPaths=false;// May be set on instance prior to upgrade
 this.__dataCompoundStorage=this.__dataCompoundStorage||null;this.__dataHost=this.__dataHost||null;this.__dataTemp={};this.__dataClientsInitialized=false;}/**
        * Overrides `PropertyAccessors` implementation to provide a
        * more efficient implementation of initializing properties from
@@ -2449,7 +2313,7 @@ var effects=ensureOwnEffectMap(this,type)[property];if(!effects){effects=this[ty
 // already dirty checked at the point of entry and the underlying
 // object has already been updated
 if(!isPathNotification){var old=_get(this,path);path=/** @type {string} */_set(this,path,value);// Use property-accessor's simpler dirty check
-if(!path||!babelHelpers.get(PropertyEffects.prototype.__proto__||Object.getPrototypeOf(PropertyEffects.prototype),"_shouldPropertyChange",this).call(this,path,value,old)){return false;}}this.__dataHasPaths=true;if(this._setPendingProperty(/**@type{string}*/path,value,shouldNotify)){computeLinkedPaths(this,path,value);return true;}}else{if(this.__dataHasAccessor&&this.__dataHasAccessor[path]){return this._setPendingProperty(/**@type{string}*/path,value,shouldNotify);}else{this[path]=value;}}return false;}/**
+if(!path||!babelHelpers.get(babelHelpers.getPrototypeOf(PropertyEffects.prototype),"_shouldPropertyChange",this).call(this,path,value,old)){return false;}}this.__dataHasPaths=true;if(this._setPendingProperty(/**@type{string}*/path,value,shouldNotify)){computeLinkedPaths(this,path,value);return true;}}else{if(this.__dataHasAccessor&&this.__dataHasAccessor[path]){return this._setPendingProperty(/**@type{string}*/path,value,shouldNotify);}else{this[path]=value;}}return false;}/**
        * Applies a value to a non-Polymer element/node's property.
        *
        * The implementation makes a best-effort at binding interop:
@@ -2541,7 +2405,7 @@ if(isPath$$1||this[TYPES.NOTIFY]&&this[TYPES.NOTIFY][property]){this.__dataToNot
        *
        * @return {void}
        * @protected
-       */},{key:"_flushProperties",value:function _flushProperties(){this.__dataCounter++;babelHelpers.get(PropertyEffects.prototype.__proto__||Object.getPrototypeOf(PropertyEffects.prototype),"_flushProperties",this).call(this);this.__dataCounter--;}/**
+       */},{key:"_flushProperties",value:function _flushProperties(){this.__dataCounter++;babelHelpers.get(babelHelpers.getPrototypeOf(PropertyEffects.prototype),"_flushProperties",this).call(this);this.__dataCounter--;}/**
        * Flushes any clients previously enqueued via `_enqueueClient`, causing
        * their `_flushProperties` method to run.
        *
@@ -2977,7 +2841,7 @@ templateInfo=/** @type {!TemplateInfo} */Object.create(templateInfo);templateInf
        * @protected
        */value:function _stampTemplate(template){// Ensures that created dom is `_enqueueClient`'d to this element so
 // that it can be flushed on next call to `_flushProperties`
-hostStack.beginHosting(this);var dom=babelHelpers.get(PropertyEffects.prototype.__proto__||Object.getPrototypeOf(PropertyEffects.prototype),"_stampTemplate",this).call(this,template);hostStack.endHosting(this);var templateInfo=/** @type {!TemplateInfo} */this._bindTemplate(template,true);// Add template-instance-specific data to instanced templateInfo
+hostStack.beginHosting(this);var dom=babelHelpers.get(babelHelpers.getPrototypeOf(PropertyEffects.prototype),"_stampTemplate",this).call(this,template);hostStack.endHosting(this);var templateInfo=/** @type {!TemplateInfo} */this._bindTemplate(template,true);// Add template-instance-specific data to instanced templateInfo
 templateInfo.nodeList=dom.nodeList;// Capture child nodes to allow unstamping of non-prototypical templates
 if(!templateInfo.wasPreBound){var nodes=templateInfo.childNodes=[];for(var n=dom.firstChild;n;n=n.nextSibling){nodes.push(n);}}dom.templateInfo=templateInfo;// Setup compound storage, 2-way listeners, and dataHost for bindings
 setupBindings(this,templateInfo);// Flush properties into template nodes if already booted
@@ -3081,7 +2945,7 @@ var nodes=templateInfo.childNodes;for(var _i15=0;_i15<nodes.length;_i15++){var n
        *   bindings
        * @return {!TemplateInfo} Template metadata object
        * @protected
-       */},{key:"bindTemplate",value:function bindTemplate(template){return this.prototype._bindTemplate(template);}},{key:"_addTemplatePropertyEffect",value:function _addTemplatePropertyEffect(templateInfo,prop,effect){var hostProps=templateInfo.hostProps=templateInfo.hostProps||{};hostProps[prop]=true;var effects=templateInfo.propertyEffects=templateInfo.propertyEffects||{};var propEffects=effects[prop]=effects[prop]||[];propEffects.push(effect);}},{key:"_parseTemplateNode",value:function _parseTemplateNode(node,templateInfo,nodeInfo){var noted=babelHelpers.get(PropertyEffects.__proto__||Object.getPrototypeOf(PropertyEffects),"_parseTemplateNode",this).call(this,node,templateInfo,nodeInfo);if(node.nodeType===Node.TEXT_NODE){var parts=this._parseBindings(node.textContent,templateInfo);if(parts){// Initialize the textContent with any literal parts
+       */},{key:"bindTemplate",value:function bindTemplate(template){return this.prototype._bindTemplate(template);}},{key:"_addTemplatePropertyEffect",value:function _addTemplatePropertyEffect(templateInfo,prop,effect){var hostProps=templateInfo.hostProps=templateInfo.hostProps||{};hostProps[prop]=true;var effects=templateInfo.propertyEffects=templateInfo.propertyEffects||{};var propEffects=effects[prop]=effects[prop]||[];propEffects.push(effect);}},{key:"_parseTemplateNode",value:function _parseTemplateNode(node,templateInfo,nodeInfo){var noted=babelHelpers.get(babelHelpers.getPrototypeOf(PropertyEffects),"_parseTemplateNode",this).call(this,node,templateInfo,nodeInfo);if(node.nodeType===Node.TEXT_NODE){var parts=this._parseBindings(node.textContent,templateInfo);if(parts){// Initialize the textContent with any literal parts
 // NOTE: default to a space here so the textNode remains; some browsers
 // (IE) omit an empty textNode following cloneNode/importNode.
 node.textContent=literalFromParts(parts)||' ';addBinding(this,templateInfo,nodeInfo,'text','textContent',parts);noted=true;}}return noted;}/**
@@ -3116,7 +2980,7 @@ node.removeAttribute(origName);// Case hackery: attributes are lower-case, but b
 // (properties) are case sensitive. Gambit is to map dash-case to
 // camel-case: `foo-bar` becomes `fooBar`.
 // Attribute bindings are excepted.
-if(kind==='property'){name=dashToCamelCase(name);}addBinding(this,templateInfo,nodeInfo,kind,name,parts,literal);return true;}else{return babelHelpers.get(PropertyEffects.__proto__||Object.getPrototypeOf(PropertyEffects),"_parseTemplateNodeAttribute",this).call(this,node,templateInfo,nodeInfo,name,value);}}/**
+if(kind==='property'){name=dashToCamelCase(name);}addBinding(this,templateInfo,nodeInfo,kind,name,parts,literal);return true;}else{return babelHelpers.get(babelHelpers.getPrototypeOf(PropertyEffects),"_parseTemplateNodeAttribute",this).call(this,node,templateInfo,nodeInfo,name,value);}}/**
        * Overrides default `TemplateStamp` implementation to add support for
        * binding the properties that a nested template depends on to the template
        * as `_host_<property>`.
@@ -3129,7 +2993,7 @@ if(kind==='property'){name=dashToCamelCase(name);}addBinding(this,templateInfo,n
        *   metadata to `nodeInfo`
        * @protected
        * @suppress {missingProperties} Interfaces in closure do not inherit statics, but classes do
-       */},{key:"_parseTemplateNestedTemplate",value:function _parseTemplateNestedTemplate(node,templateInfo,nodeInfo){var noted=babelHelpers.get(PropertyEffects.__proto__||Object.getPrototypeOf(PropertyEffects),"_parseTemplateNestedTemplate",this).call(this,node,templateInfo,nodeInfo);// Merge host props into outer template and add bindings
+       */},{key:"_parseTemplateNestedTemplate",value:function _parseTemplateNestedTemplate(node,templateInfo,nodeInfo){var noted=babelHelpers.get(babelHelpers.getPrototypeOf(PropertyEffects),"_parseTemplateNestedTemplate",this).call(this,node,templateInfo,nodeInfo);// Merge host props into outer template and add bindings
 var hostProps=nodeInfo.templateInfo.hostProps;var mode='{';for(var source in hostProps){var parts=[{mode:mode,source:source,dependencies:[source]}];addBinding(this,templateInfo,nodeInfo,'property','_host_'+source,parts);}return noted;}/**
        * Called to parse text in a template (either attribute values or
        * textContent) into binding metadata.
@@ -3232,23 +3096,7 @@ PropertyEffectsType=PropertyEffects;return PropertyEffects;});/**
    * @param {*} inst Instance to end hosting
    * @return {void}
    * @this {hostStack}
-   */endHosting:function endHosting(inst){var stackLen=this.stack.length;if(stackLen&&this.stack[stackLen-1]==inst){this.stack.pop();}}};var propertyEffects={PropertyEffects:PropertyEffects};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ /**
-       * Creates a copy of `props` with each property normalized such that
-       * upgraded it is an object with at least a type property { type: Type}.
-       *
-       * @param {Object} props Properties to normalize
-       * @return {Object} Copy of input `props` with normalized properties that
-       * are in the form {type: Type}
-       * @private
-       */_exports.$propertyEffects=propertyEffects;function normalizeProperties(props){var output={};for(var _p9 in props){var o=props[_p9];output[_p9]=typeof o==='function'?{type:o}:o;}return output;}/**
+   */endHosting:function endHosting(inst){var stackLen=this.stack.length;if(stackLen&&this.stack[stackLen-1]==inst){this.stack.pop();}}};var propertyEffects={PropertyEffects:PropertyEffects};_exports.$propertyEffects=propertyEffects;function normalizeProperties(props){var output={};for(var _p9 in props){var o=props[_p9];output[_p9]=typeof o==='function'?{type:o}:o;}return output;}/**
    * Mixin that provides a minimal starting point to using the PropertiesChanged
    * mixin by providing a mechanism to declare properties in a static
    * getter (e.g. static get properties() { return { foo: String } }). Changes
@@ -3291,22 +3139,22 @@ return babelHelpers.instanceof(superCtor.prototype,PropertiesMixin)?/** @type {P
      * @extends {base}
      * @implements {Polymer_PropertiesMixin}
      * @unrestricted
-     */var PropertiesMixin=/*#__PURE__*/function(_base2){babelHelpers.inherits(PropertiesMixin,_base2);function PropertiesMixin(){babelHelpers.classCallCheck(this,PropertiesMixin);return babelHelpers.possibleConstructorReturn(this,(PropertiesMixin.__proto__||Object.getPrototypeOf(PropertiesMixin)).apply(this,arguments));}babelHelpers.createClass(PropertiesMixin,[{key:"_initializeProperties",/**
+     */var PropertiesMixin=/*#__PURE__*/function(_base2){babelHelpers.inherits(PropertiesMixin,_base2);function PropertiesMixin(){babelHelpers.classCallCheck(this,PropertiesMixin);return babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(PropertiesMixin).apply(this,arguments));}babelHelpers.createClass(PropertiesMixin,[{key:"_initializeProperties",/**
        * Overrides `PropertiesChanged` method and adds a call to
        * `finalize` which lazily configures the element's property accessors.
        * @override
        * @return {void}
-       */value:function _initializeProperties(){this.constructor.finalize();babelHelpers.get(PropertiesMixin.prototype.__proto__||Object.getPrototypeOf(PropertiesMixin.prototype),"_initializeProperties",this).call(this);}/**
+       */value:function _initializeProperties(){this.constructor.finalize();babelHelpers.get(babelHelpers.getPrototypeOf(PropertiesMixin.prototype),"_initializeProperties",this).call(this);}/**
        * Called when the element is added to a document.
        * Calls `_enableProperties` to turn on property system from
        * `PropertiesChanged`.
        * @suppress {missingProperties} Super may or may not implement the callback
        * @return {void}
-       */},{key:"connectedCallback",value:function connectedCallback(){if(babelHelpers.get(PropertiesMixin.prototype.__proto__||Object.getPrototypeOf(PropertiesMixin.prototype),"connectedCallback",this)){babelHelpers.get(PropertiesMixin.prototype.__proto__||Object.getPrototypeOf(PropertiesMixin.prototype),"connectedCallback",this).call(this);}this._enableProperties();}/**
+       */},{key:"connectedCallback",value:function connectedCallback(){if(babelHelpers.get(babelHelpers.getPrototypeOf(PropertiesMixin.prototype),"connectedCallback",this)){babelHelpers.get(babelHelpers.getPrototypeOf(PropertiesMixin.prototype),"connectedCallback",this).call(this);}this._enableProperties();}/**
        * Called when the element is removed from a document
        * @suppress {missingProperties} Super may or may not implement the callback
        * @return {void}
-       */},{key:"disconnectedCallback",value:function disconnectedCallback(){if(babelHelpers.get(PropertiesMixin.prototype.__proto__||Object.getPrototypeOf(PropertiesMixin.prototype),"disconnectedCallback",this)){babelHelpers.get(PropertiesMixin.prototype.__proto__||Object.getPrototypeOf(PropertiesMixin.prototype),"disconnectedCallback",this).call(this);}}}],[{key:"finalize",/**
+       */},{key:"disconnectedCallback",value:function disconnectedCallback(){if(babelHelpers.get(babelHelpers.getPrototypeOf(PropertiesMixin.prototype),"disconnectedCallback",this)){babelHelpers.get(babelHelpers.getPrototypeOf(PropertiesMixin.prototype),"disconnectedCallback",this).call(this);}}}],[{key:"finalize",/**
        * Finalizes an element definition, including ensuring any super classes
        * are also finalized. This includes ensuring property
        * accessors exist on the element prototype. This method calls
@@ -3448,7 +3296,7 @@ if(templateStyle!==_s){_s=_s.cloneNode(true);templateStyle.parentNode.insertBefo
      * @protected
      * @override
      * @suppress {missingProperties} Interfaces in closure do not inherit statics, but classes do
-     */value:function _finalizeClass(){babelHelpers.get(PolymerElement.__proto__||Object.getPrototypeOf(PolymerElement),"_finalizeClass",this).call(this);if(this.hasOwnProperty(JSCompiler_renameProperty('is',this))&&this.is){register(this.prototype);}var observers=ownObservers(this);if(observers){this.createObservers(observers,this._properties);}// note: create "working" template that is finalized at instance time
+     */value:function _finalizeClass(){babelHelpers.get(babelHelpers.getPrototypeOf(PolymerElement),"_finalizeClass",this).call(this);if(this.hasOwnProperty(JSCompiler_renameProperty('is',this))&&this.is){register(this.prototype);}var observers=ownObservers(this);if(observers){this.createObservers(observers,this._properties);}// note: create "working" template that is finalized at instance time
 var template=/** @type {PolymerElementConstructor} */this.template;if(template){if(typeof template==='string'){console.error('template getter must return HTMLTemplateElement');template=null;}else{template=template.cloneNode(true);}}this.prototype._template=template;}/**
        * Override of PropertiesChanged createProperties to create accessors
        * and property effects for all of the properties.
@@ -3522,7 +3370,7 @@ Object.getPrototypeOf(/** @type {PolymerElementConstructor}*/this.prototype).con
        *
        * @return {string} The import path for this element class
        * @suppress {missingProperties}
-       */},{key:"importPath",get:function get(){if(!this.hasOwnProperty(JSCompiler_renameProperty('_importPath',this))){var meta=this.importMeta;if(meta){this._importPath=pathFromUrl(meta.url);}else{var module=DomModule&&DomModule.import(/** @type {PolymerElementConstructor} */this.is);this._importPath=module&&module.assetpath||Object.getPrototypeOf(/** @type {PolymerElementConstructor}*/this.prototype).constructor.importPath;}}return this._importPath;}}]);function PolymerElement(){var _this10;babelHelpers.classCallCheck(this,PolymerElement);_this10=babelHelpers.possibleConstructorReturn(this,(PolymerElement.__proto__||Object.getPrototypeOf(PolymerElement)).call(this));/** @type {HTMLTemplateElement} */_this10._template;/** @type {string} */_this10._importPath;/** @type {string} */_this10.rootPath;/** @type {string} */_this10.importPath;/** @type {StampedTemplate | HTMLElement | ShadowRoot} */_this10.root;/** @type {!Object<string, !Element>} */_this10.$;return _this10;}/**
+       */},{key:"importPath",get:function get(){if(!this.hasOwnProperty(JSCompiler_renameProperty('_importPath',this))){var meta=this.importMeta;if(meta){this._importPath=pathFromUrl(meta.url);}else{var module=DomModule&&DomModule.import(/** @type {PolymerElementConstructor} */this.is);this._importPath=module&&module.assetpath||Object.getPrototypeOf(/** @type {PolymerElementConstructor}*/this.prototype).constructor.importPath;}}return this._importPath;}}]);function PolymerElement(){var _this10;babelHelpers.classCallCheck(this,PolymerElement);_this10=babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(PolymerElement).call(this));/** @type {HTMLTemplateElement} */_this10._template;/** @type {string} */_this10._importPath;/** @type {string} */_this10.rootPath;/** @type {string} */_this10.importPath;/** @type {StampedTemplate | HTMLElement | ShadowRoot} */_this10.root;/** @type {!Object<string, !Element>} */_this10.$;return _this10;}/**
        * Overrides the default `PropertyAccessors` to ensure class
        * metaprogramming related to property accessors and effects has
        * completed (calls `finalize`).
@@ -3535,7 +3383,7 @@ Object.getPrototypeOf(/** @type {PolymerElementConstructor}*/this.prototype).con
        * @suppress {invalidCasts}
        */babelHelpers.createClass(PolymerElement,[{key:"_initializeProperties",value:function _initializeProperties(){_exports.instanceCount=instanceCount=instanceCount+1;this.constructor.finalize();// note: finalize template when we have access to `localName` to
 // avoid dependence on `is` for polyfilling styling.
-this.constructor._finalizeTemplate(/** @type {!HTMLElement} */this.localName);babelHelpers.get(PolymerElement.prototype.__proto__||Object.getPrototypeOf(PolymerElement.prototype),"_initializeProperties",this).call(this);// set path defaults
+this.constructor._finalizeTemplate(/** @type {!HTMLElement} */this.localName);babelHelpers.get(babelHelpers.getPrototypeOf(PolymerElement.prototype),"_initializeProperties",this).call(this);// set path defaults
 this.rootPath=rootPath;this.importPath=this.constructor.importPath;// apply property defaults...
 var p$=propertyDefaults(this.constructor);if(!p$){return;}for(var _p12 in p$){var info=p$[_p12];// Don't set default value if there is already an own property, which
 // happens when a `properties` property with default but no effects had
@@ -3559,12 +3407,12 @@ if(this._hasAccessor(_p12)){this._setPendingProperty(_p12,value,true);}else{this
        *
        * @suppress {missingProperties, invalidCasts} Super may or may not implement the callback
        * @return {void}
-       */value:function connectedCallback(){if(window.ShadyCSS&&this._template){window.ShadyCSS.styleElement(/** @type {!HTMLElement} */this);}babelHelpers.get(PolymerElement.prototype.__proto__||Object.getPrototypeOf(PolymerElement.prototype),"connectedCallback",this).call(this);}/**
+       */value:function connectedCallback(){if(window.ShadyCSS&&this._template){window.ShadyCSS.styleElement(/** @type {!HTMLElement} */this);}babelHelpers.get(babelHelpers.getPrototypeOf(PolymerElement.prototype),"connectedCallback",this).call(this);}/**
        * Stamps the element template.
        *
        * @return {void}
        * @override
-       */},{key:"ready",value:function ready(){if(this._template){this.root=this._stampTemplate(this._template);this.$=this.root.$;}babelHelpers.get(PolymerElement.prototype.__proto__||Object.getPrototypeOf(PolymerElement.prototype),"ready",this).call(this);}/**
+       */},{key:"ready",value:function ready(){if(this._template){this.root=this._stampTemplate(this._template);this.$=this.root.$;}babelHelpers.get(babelHelpers.getPrototypeOf(PolymerElement.prototype),"ready",this).call(this);}/**
        * Implements `PropertyEffects`'s `_readyClients` call. Attaches
        * element dom by calling `_attachDom` with the dom stamped from the
        * element's template via `_stampTemplate`. Note that this allows
@@ -3577,7 +3425,7 @@ if(this._hasAccessor(_p12)){this._setPendingProperty(_p12,value,true);}else{this
 // We must wait to do this until after client dom is created/attached
 // so that this flag can be checked to prevent notifications fired
 // during this process from being handled before clients are ready.
-babelHelpers.get(PolymerElement.prototype.__proto__||Object.getPrototypeOf(PolymerElement.prototype),"_readyClients",this).call(this);}/**
+babelHelpers.get(babelHelpers.getPrototypeOf(PolymerElement.prototype),"_readyClients",this).call(this);}/**
        * Attaches an element's stamped dom to itself. By default,
        * this method creates a `shadowRoot` and adds the dom to it.
        * However, this method may be overridden to allow an element
@@ -3639,7 +3487,7 @@ babelHelpers.get(PolymerElement.prototype.__proto__||Object.getPrototypeOf(Polym
       * @return {void}
       * @protected
       */},{key:"_finalizeTemplate",value:function _finalizeTemplate(is){/** @const {HTMLTemplateElement} */var template=this.prototype._template;if(template&&!template.__polymerFinalized){template.__polymerFinalized=true;var importPath=this.importPath;var baseURI=importPath?_resolveUrl(importPath):'';// e.g. support `include="module-name"`, and ShadyCSS
-processElementStyles(this,template,is,baseURI);this.prototype._bindTemplate(template);}}},{key:"_parseTemplateContent",value:function _parseTemplateContent(template,templateInfo,nodeInfo){templateInfo.dynamicFns=templateInfo.dynamicFns||this._properties;return babelHelpers.get(PolymerElement.__proto__||Object.getPrototypeOf(PolymerElement),"_parseTemplateContent",this).call(this,template,templateInfo,nodeInfo);}}]);return PolymerElement;}(polymerElementBase);return PolymerElement;});/**
+processElementStyles(this,template,is,baseURI);this.prototype._bindTemplate(template);}}},{key:"_parseTemplateContent",value:function _parseTemplateContent(template,templateInfo,nodeInfo){templateInfo.dynamicFns=templateInfo.dynamicFns||this._properties;return babelHelpers.get(babelHelpers.getPrototypeOf(PolymerElement),"_parseTemplateContent",this).call(this,template,templateInfo,nodeInfo);}}]);return PolymerElement;}(polymerElementBase);return PolymerElement;});/**
      * Provides basic tracking of element definitions (registrations) and
      * instance counts.
      *
@@ -3680,17 +3528,7 @@ processElementStyles(this,template,is,baseURI);this.prototype._bindTemplate(temp
    * @param {Object=} props Bag of custom property key/values to
    *   apply to the document.
    * @return {void}
-   */var updateStyles=function updateStyles(props){if(window.ShadyCSS){window.ShadyCSS.styleDocument(props);}};_exports.updateStyles=updateStyles;var elementMixin={ElementMixin:ElementMixin,get instanceCount(){return instanceCount;},registrations:registrations,register:register,dumpRegistrations:dumpRegistrations,updateStyles:updateStyles};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ /**
-       * @summary Collapse multiple callbacks into one invocation after a timer.
-       */_exports.$elementMixin=elementMixin;var Debouncer=/*#__PURE__*/function(){function Debouncer(){babelHelpers.classCallCheck(this,Debouncer);this._asyncModule=null;this._callback=null;this._timer=null;}/**
+   */var updateStyles=function updateStyles(props){if(window.ShadyCSS){window.ShadyCSS.styleDocument(props);}};_exports.updateStyles=updateStyles;var elementMixin={ElementMixin:ElementMixin,get instanceCount(){return instanceCount;},registrations:registrations,register:register,dumpRegistrations:dumpRegistrations,updateStyles:updateStyles};_exports.$elementMixin=elementMixin;var Debouncer=/*#__PURE__*/function(){function Debouncer(){babelHelpers.classCallCheck(this,Debouncer);this._asyncModule=null;this._callback=null;this._timer=null;}/**
      * Sets the scheduler; that is, a module with the Async interface,
      * a callback and optional arguments to be passed to the run function
      * from the async module.
@@ -3743,16 +3581,7 @@ processElementStyles(this,template,is,baseURI);this.prototype._bindTemplate(temp
      * @param {!AsyncInterface} asyncModule Object with Async interface
      * @param {function()} callback Callback to run.
      * @return {!Debouncer} Returns a debouncer object.
-     */}],[{key:"debounce",value:function debounce(debouncer,asyncModule,callback){if(babelHelpers.instanceof(debouncer,Debouncer)){debouncer.cancel();}else{debouncer=new Debouncer();}debouncer.setConfig(asyncModule,callback);return debouncer;}}]);return Debouncer;}();_exports.Debouncer=Debouncer;var debounce={Debouncer:Debouncer};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ // detect native touch action support
-_exports.$debounce=debounce;var HAS_NATIVE_TA=typeof document.head.style.touchAction==='string';var GESTURE_KEY='__polymerGestures';var HANDLED_OBJ='__polymerGesturesHandled';var TOUCH_ACTION='__polymerGesturesTouchAction';// radius for tap and track
+     */}],[{key:"debounce",value:function debounce(debouncer,asyncModule,callback){if(babelHelpers.instanceof(debouncer,Debouncer)){debouncer.cancel();}else{debouncer=new Debouncer();}debouncer.setConfig(asyncModule,callback);return debouncer;}}]);return Debouncer;}();_exports.Debouncer=Debouncer;var debounce={Debouncer:Debouncer};_exports.$debounce=debounce;var HAS_NATIVE_TA=typeof document.head.style.touchAction==='string';var GESTURE_KEY='__polymerGestures';var HANDLED_OBJ='__polymerGesturesHandled';var TOUCH_ACTION='__polymerGesturesTouchAction';// radius for tap and track
 var TAP_DISTANCE=25;var TRACK_DISTANCE=5;// number of last N track positions to keep
 var TRACK_LENGTH=2;// Disabling "mouse" handlers for 2500ms is enough
 var MOUSE_TIMEOUT=2500;var MOUSE_EVENTS=['mousedown','mousemove','mouseup','click'];// an array of bitmask values for mapping MouseEvent.which to MouseEvent.buttons
@@ -3829,16 +3658,16 @@ document.addEventListener('touchend',ignoreMouse,SUPPORTS_PASSIVE?{passive:true}
              *
              * @summary Module for adding cross-platform gesture event listeners.
              */"TODO(modulizer): A namespace named Polymer.Gestures was\ndeclared here. The surrounding comments should be reviewed,\nand this string can then be deleted";var gestures={};_exports.gestures=gestures;var recognizers=[];/**
-                         * Finds the element rendered on the screen at the provided coordinates.
-                         *
-                         * Similar to `document.elementFromPoint`, but pierces through
-                         * shadow roots.
-                         *
-                         * @param {number} x Horizontal pixel coordinate
-                         * @param {number} y Vertical pixel coordinate
-                         * @return {Element} Returns the deepest shadowRoot inclusive element
-                         * found at the screen position given.
-                         */_exports.recognizers=recognizers;function deepTargetFind(x,y){var node=document.elementFromPoint(x,y);var next=node;// this code path is only taken when native ShadowDOM is used
+                                * Finds the element rendered on the screen at the provided coordinates.
+                                *
+                                * Similar to `document.elementFromPoint`, but pierces through
+                                * shadow roots.
+                                *
+                                * @param {number} x Horizontal pixel coordinate
+                                * @param {number} y Vertical pixel coordinate
+                                * @return {Element} Returns the deepest shadowRoot inclusive element
+                                * found at the screen position given.
+                                */_exports.recognizers=recognizers;function deepTargetFind(x,y){var node=document.elementFromPoint(x,y);var next=node;// this code path is only taken when native ShadowDOM is used
 // if there is a shadowroot, it may have a node at x/y
 // if there is not a shadowroot, exit the loop
 while(next&&next.shadowRoot&&!window.ShadyDOM){// if there is a node at x/y in the shadowroot, look deeper
@@ -4039,55 +3868,39 @@ this.info.state='end';this.info.addMove({x:ct.clientX,y:ct.clientY});this._fire(
    */forward:function forward(e,preventer){var dx=Math.abs(e.clientX-this.info.x);var dy=Math.abs(e.clientY-this.info.y);// find original target from `preventer` for TouchEvents, or `e` for MouseEvents
 var t=_findOriginalTarget(preventer||e);if(!t||t.disabled){return;}// dx,dy can be NaN if `click` has been simulated and there was no `down` for `start`
 if(isNaN(dx)||isNaN(dy)||dx<=TAP_DISTANCE&&dy<=TAP_DISTANCE||isSyntheticClick(e)){// prevent taps from being generated if an event has canceled them
-if(!this.info.prevent){_fire2(t,'tap',{x:e.clientX,y:e.clientY,sourceEvent:e,preventer:preventer});}}}});/* eslint-enable valid-jsdoc */ /** @deprecated */var findOriginalTarget=_findOriginalTarget;/** @deprecated */_exports.findOriginalTarget=findOriginalTarget;var add=addListener;/** @deprecated */_exports.add=add;var remove=removeListener;_exports.remove=remove;var gestures$0={gestures:gestures,recognizers:recognizers,deepTargetFind:deepTargetFind,addListener:addListener,removeListener:removeListener,register:register$1,setTouchAction:setTouchAction,prevent:_prevent2,resetMouseCanceller:resetMouseCanceller,findOriginalTarget:findOriginalTarget,add:add,remove:remove};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$gestures=gestures$0;var gestures$1=gestures$0;/**
-                                * Element class mixin that provides API for adding Polymer's cross-platform
-                                * gesture events to nodes.
-                                *
-                                * The API is designed to be compatible with override points implemented
-                                * in `TemplateStamp` such that declarative event listeners in
-                                * templates will support gesture events when this mixin is applied along with
-                                * `TemplateStamp`.
-                                *
-                                * @mixinFunction
-                                * @polymer
-                                * @summary Element class mixin that provides API for adding Polymer's
-                                *   cross-platform
-                                * gesture events to nodes
-                                */var GestureEventListeners=dedupingMixin(function(superClass){/**
+if(!this.info.prevent){_fire2(t,'tap',{x:e.clientX,y:e.clientY,sourceEvent:e,preventer:preventer});}}}});/* eslint-enable valid-jsdoc */ /** @deprecated */var findOriginalTarget=_findOriginalTarget;/** @deprecated */_exports.findOriginalTarget=findOriginalTarget;var add=addListener;/** @deprecated */_exports.add=add;var remove=removeListener;_exports.remove=remove;var gestures$0={gestures:gestures,recognizers:recognizers,deepTargetFind:deepTargetFind,addListener:addListener,removeListener:removeListener,register:register$1,setTouchAction:setTouchAction,prevent:_prevent2,resetMouseCanceller:resetMouseCanceller,findOriginalTarget:findOriginalTarget,add:add,remove:remove};_exports.$gestures=gestures$0;var gestures$1=gestures$0;/**
+                               * Element class mixin that provides API for adding Polymer's cross-platform
+                               * gesture events to nodes.
+                               *
+                               * The API is designed to be compatible with override points implemented
+                               * in `TemplateStamp` such that declarative event listeners in
+                               * templates will support gesture events when this mixin is applied along with
+                               * `TemplateStamp`.
+                               *
+                               * @mixinFunction
+                               * @polymer
+                               * @summary Element class mixin that provides API for adding Polymer's
+                               *   cross-platform
+                               * gesture events to nodes
+                               */var GestureEventListeners=dedupingMixin(function(superClass){/**
    * @polymer
    * @mixinClass
    * @implements {Polymer_GestureEventListeners}
-   */var GestureEventListeners=/*#__PURE__*/function(_superClass3){babelHelpers.inherits(GestureEventListeners,_superClass3);function GestureEventListeners(){babelHelpers.classCallCheck(this,GestureEventListeners);return babelHelpers.possibleConstructorReturn(this,(GestureEventListeners.__proto__||Object.getPrototypeOf(GestureEventListeners)).apply(this,arguments));}babelHelpers.createClass(GestureEventListeners,[{key:"_addEventListenerToNode",/**
+   */var GestureEventListeners=/*#__PURE__*/function(_superClass3){babelHelpers.inherits(GestureEventListeners,_superClass3);function GestureEventListeners(){babelHelpers.classCallCheck(this,GestureEventListeners);return babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(GestureEventListeners).apply(this,arguments));}babelHelpers.createClass(GestureEventListeners,[{key:"_addEventListenerToNode",/**
      * Add the event listener to the node if it is a gestures event.
      *
      * @param {!Node} node Node to add event listener to
      * @param {string} eventName Name of event
      * @param {function(!Event):void} handler Listener function to add
      * @return {void}
-     */value:function _addEventListenerToNode(node,eventName,handler){if(!gestures$1.addListener(node,eventName,handler)){babelHelpers.get(GestureEventListeners.prototype.__proto__||Object.getPrototypeOf(GestureEventListeners.prototype),"_addEventListenerToNode",this).call(this,node,eventName,handler);}}/**
+     */value:function _addEventListenerToNode(node,eventName,handler){if(!gestures$1.addListener(node,eventName,handler)){babelHelpers.get(babelHelpers.getPrototypeOf(GestureEventListeners.prototype),"_addEventListenerToNode",this).call(this,node,eventName,handler);}}/**
        * Remove the event listener to the node if it is a gestures event.
        *
        * @param {!Node} node Node to remove event listener from
        * @param {string} eventName Name of event
        * @param {function(!Event):void} handler Listener function to remove
        * @return {void}
-       */},{key:"_removeEventListenerFromNode",value:function _removeEventListenerFromNode(node,eventName,handler){if(!gestures$1.removeListener(node,eventName,handler)){babelHelpers.get(GestureEventListeners.prototype.__proto__||Object.getPrototypeOf(GestureEventListeners.prototype),"_removeEventListenerFromNode",this).call(this,node,eventName,handler);}}}]);return GestureEventListeners;}(superClass);return GestureEventListeners;});_exports.GestureEventListeners=GestureEventListeners;var gestureEventListeners={GestureEventListeners:GestureEventListeners};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$gestureEventListeners=gestureEventListeners;var HOST_DIR=/:host\(:dir\((ltr|rtl)\)\)/g;var HOST_DIR_REPLACMENT=':host([dir="$1"])';var EL_DIR=/([\s\w-#\.\[\]\*]*):dir\((ltr|rtl)\)/g;var EL_DIR_REPLACMENT=':host([dir="$2"]) $1';/**
+       */},{key:"_removeEventListenerFromNode",value:function _removeEventListenerFromNode(node,eventName,handler){if(!gestures$1.removeListener(node,eventName,handler)){babelHelpers.get(babelHelpers.getPrototypeOf(GestureEventListeners.prototype),"_removeEventListenerFromNode",this).call(this,node,eventName,handler);}}}]);return GestureEventListeners;}(superClass);return GestureEventListeners;});_exports.GestureEventListeners=GestureEventListeners;var gestureEventListeners={GestureEventListeners:GestureEventListeners};_exports.$gestureEventListeners=gestureEventListeners;var HOST_DIR=/:host\(:dir\((ltr|rtl)\)\)/g;var HOST_DIR_REPLACMENT=':host([dir="$1"])';var EL_DIR=/([\s\w-#\.\[\]\*]*):dir\((ltr|rtl)\)/g;var EL_DIR_REPLACMENT=':host([dir="$2"]) $1';/**
                                                    * @type {!Array<!Polymer_DirMixin>}
                                                    */var DIR_INSTANCES=[];/** @type {MutationObserver} */var observer=null;var DOCUMENT_DIR='';function getRTL(){DOCUMENT_DIR=document.documentElement.getAttribute('dir');}/**
    * @param {!Polymer_DirMixin} instance Instance to set RTL status on
@@ -4124,29 +3937,21 @@ if(!this.info.prevent){_fire2(t,'tap',{x:e.clientX,y:e.clientY,sourceEvent:e,pre
                                                 */var Dir=/*#__PURE__*/function(_elementBase){babelHelpers.inherits(Dir,_elementBase);babelHelpers.createClass(Dir,null,[{key:"_processStyleText",/**
      * @override
      * @suppress {missingProperties} Interfaces in closure do not inherit statics, but classes do
-     */value:function _processStyleText(cssText,baseURI){cssText=babelHelpers.get(Dir.__proto__||Object.getPrototypeOf(Dir),"_processStyleText",this).call(this,cssText,baseURI);cssText=this._replaceDirInCssText(cssText);return cssText;}/**
+     */value:function _processStyleText(cssText,baseURI){cssText=babelHelpers.get(babelHelpers.getPrototypeOf(Dir),"_processStyleText",this).call(this,cssText,baseURI);cssText=this._replaceDirInCssText(cssText);return cssText;}/**
        * Replace `:dir` in the given CSS text
        *
        * @param {string} text CSS text to replace DIR
        * @return {string} Modified CSS
-       */},{key:"_replaceDirInCssText",value:function _replaceDirInCssText(text){var replacedText=text;replacedText=replacedText.replace(HOST_DIR,HOST_DIR_REPLACMENT);replacedText=replacedText.replace(EL_DIR,EL_DIR_REPLACMENT);if(text!==replacedText){this.__activateDir=true;}return replacedText;}}]);function Dir(){var _this12;babelHelpers.classCallCheck(this,Dir);_this12=babelHelpers.possibleConstructorReturn(this,(Dir.__proto__||Object.getPrototypeOf(Dir)).call(this));/** @type {boolean} */_this12.__autoDirOptOut=false;return _this12;}/**
+       */},{key:"_replaceDirInCssText",value:function _replaceDirInCssText(text){var replacedText=text;replacedText=replacedText.replace(HOST_DIR,HOST_DIR_REPLACMENT);replacedText=replacedText.replace(EL_DIR,EL_DIR_REPLACMENT);if(text!==replacedText){this.__activateDir=true;}return replacedText;}}]);function Dir(){var _this12;babelHelpers.classCallCheck(this,Dir);_this12=babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(Dir).call(this));/** @type {boolean} */_this12.__autoDirOptOut=false;return _this12;}/**
        * @suppress {invalidCasts} Closure doesn't understand that `this` is an HTMLElement
        * @return {void}
-       */babelHelpers.createClass(Dir,[{key:"ready",value:function ready(){babelHelpers.get(Dir.prototype.__proto__||Object.getPrototypeOf(Dir.prototype),"ready",this).call(this);this.__autoDirOptOut=/** @type {!HTMLElement} */this.hasAttribute('dir');}/**
+       */babelHelpers.createClass(Dir,[{key:"ready",value:function ready(){babelHelpers.get(babelHelpers.getPrototypeOf(Dir.prototype),"ready",this).call(this);this.__autoDirOptOut=/** @type {!HTMLElement} */this.hasAttribute('dir');}/**
        * @suppress {missingProperties} If it exists on elementBase, it can be super'd
        * @return {void}
-       */},{key:"connectedCallback",value:function connectedCallback(){if(elementBase.prototype.connectedCallback){babelHelpers.get(Dir.prototype.__proto__||Object.getPrototypeOf(Dir.prototype),"connectedCallback",this).call(this);}if(this.constructor.__activateDir){takeRecords();DIR_INSTANCES.push(this);setRTL(this);}}/**
+       */},{key:"connectedCallback",value:function connectedCallback(){if(elementBase.prototype.connectedCallback){babelHelpers.get(babelHelpers.getPrototypeOf(Dir.prototype),"connectedCallback",this).call(this);}if(this.constructor.__activateDir){takeRecords();DIR_INSTANCES.push(this);setRTL(this);}}/**
        * @suppress {missingProperties} If it exists on elementBase, it can be super'd
        * @return {void}
-       */},{key:"disconnectedCallback",value:function disconnectedCallback(){if(elementBase.prototype.disconnectedCallback){babelHelpers.get(Dir.prototype.__proto__||Object.getPrototypeOf(Dir.prototype),"disconnectedCallback",this).call(this);}if(this.constructor.__activateDir){var idx=DIR_INSTANCES.indexOf(this);if(idx>-1){DIR_INSTANCES.splice(idx,1);}}}}]);return Dir;}(elementBase);Dir.__activateDir=false;return Dir;});_exports.DirMixin=DirMixin;var dirMixin={DirMixin:DirMixin};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$dirMixin=dirMixin;var scheduled=false;var beforeRenderQueue=[];var afterRenderQueue=[];function schedule(){scheduled=true;// before next render
+       */},{key:"disconnectedCallback",value:function disconnectedCallback(){if(elementBase.prototype.disconnectedCallback){babelHelpers.get(babelHelpers.getPrototypeOf(Dir.prototype),"disconnectedCallback",this).call(this);}if(this.constructor.__activateDir){var idx=DIR_INSTANCES.indexOf(this);if(idx>-1){DIR_INSTANCES.splice(idx,1);}}}}]);return Dir;}(elementBase);Dir.__activateDir=false;return Dir;});_exports.DirMixin=DirMixin;var dirMixin={DirMixin:DirMixin};_exports.$dirMixin=dirMixin;var scheduled=false;var beforeRenderQueue=[];var afterRenderQueue=[];function schedule(){scheduled=true;// before next render
 requestAnimationFrame(function(){scheduled=false;flushQueue(beforeRenderQueue);// after the render
 setTimeout(function(){runQueue(afterRenderQueue);});});}function flushQueue(queue){while(queue.length){callMethod(queue.shift());}}function runQueue(queue){for(var _i30=0,l=queue.length;_i30<l;_i30++){callMethod(queue.shift());}}function callMethod(info){var context=info[0];var callback=info[1];var args=info[2];try{callback.apply(context,args);}catch(e){setTimeout(function(){throw e;});}}function flush(){while(beforeRenderQueue.length||afterRenderQueue.length){flushQueue(beforeRenderQueue);flushQueue(afterRenderQueue);}scheduled=false;}/**
    * Module for scheduling flushable pre-render and post-render tasks.
@@ -4179,7 +3984,12 @@ setTimeout(function(){runQueue(afterRenderQueue);});});}function flushQueue(queu
    * @param {function(...*):void} callback Callback function
    * @param {!Array=} args An array of arguments to call the callback function with
    * @return {void}
-   */function afterNextRender(context,callback,args){if(!scheduled){schedule();}afterRenderQueue.push([context,callback,args]);}var renderStatus={beforeNextRender:beforeNextRender,afterNextRender:afterNextRender,flush:flush};/**
+   */function afterNextRender(context,callback,args){if(!scheduled){schedule();}afterRenderQueue.push([context,callback,args]);}/**
+   * Flushes all `beforeNextRender` tasks, followed by all `afterNextRender`
+   * tasks.
+   *
+   * @return {void}
+   */var renderStatus={beforeNextRender:beforeNextRender,afterNextRender:afterNextRender,flush:flush};/**
    @license
    Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
@@ -4187,15 +3997,7 @@ setTimeout(function(){runQueue(afterRenderQueue);});});}function flushQueue(queu
    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
    Code distributed by Google as part of the polymer project is also
    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$renderStatus=renderStatus;function resolve(){document.body.removeAttribute('unresolved');}if(document.readyState==='interactive'||document.readyState==='complete'){resolve();}else{window.addEventListener('DOMContentLoaded',resolve);}/**
-  @license
-  Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-  This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-  The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-  The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-  Code distributed by Google as part of the polymer project is also
-  subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-  */function newSplice(index,removed,addedCount){return{index:index,removed:removed,addedCount:addedCount};}var EDIT_LEAVE=0;var EDIT_UPDATE=1;var EDIT_ADD=2;var EDIT_DELETE=3;// Note: This function is *based* on the computation of the Levenshtein
+   */_exports.$renderStatus=renderStatus;function resolve(){document.body.removeAttribute('unresolved');}if(document.readyState==='interactive'||document.readyState==='complete'){resolve();}else{window.addEventListener('DOMContentLoaded',resolve);}function newSplice(index,removed,addedCount){return{index:index,removed:removed,addedCount:addedCount};}var EDIT_LEAVE=0;var EDIT_UPDATE=1;var EDIT_ADD=2;var EDIT_DELETE=3;// Note: This function is *based* on the computation of the Levenshtein
 // "edit" distance. The one change is that "updates" are treated as two
 // edits - not one. With Array splices, an update is really a delete
 // followed by an add. By retaining this, we optimize for "keeping" the
@@ -4280,20 +4082,7 @@ function spliceOperationsFromEditDistances(distances){var i=distances.length-1;v
    * contains: `index` the location where the splice occurred; `removed`
    * the array of removed items from this location; `addedCount` the number
    * of items added at this location.
-   */function calculateSplices(current,previous){return calcSplices(current,0,current.length,previous,0,previous.length);}function equals(currentValue,previousValue){return currentValue===previousValue;}var arraySplice={calculateSplices:calculateSplices};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ /**
-       * Returns true if `node` is a slot element
-       * @param {Node} node Node to test.
-       * @return {boolean} Returns true if the given `node` is a slot
-       * @private
-       */_exports.$arraySplice=arraySplice;function isSlot(node){return node.localName==='slot';}/**
+   */function calculateSplices(current,previous){return calcSplices(current,0,current.length,previous,0,previous.length);}function equals(currentValue,previousValue){return currentValue===previousValue;}var arraySplice={calculateSplices:calculateSplices};_exports.$arraySplice=arraySplice;function isSlot(node){return node.localName==='slot';}/**
    * Class that listens for changes (additions or removals) to
    * "flattened nodes" on a given `node`. The list of flattened nodes consists
    * of a node's children and, for any children that are `<slot>` elements,
@@ -4404,15 +4193,7 @@ this._effectiveNodes=newNodes;var didFlush=false;if(info.addedNodes.length||info
      * @param {!Array<Element|Node>|!NodeList<Node>} nodeList Nodes that could change
      * @return {void}
      * @private
-     */},{key:"_unlistenSlots",value:function _unlistenSlots(nodeList){for(var _i39=0;_i39<nodeList.length;_i39++){var n=nodeList[_i39];if(isSlot(n)){n.removeEventListener('slotchange',this._boundSchedule);}}}}]);return FlattenedNodesObserver;}();_exports.FlattenedNodesObserver=FlattenedNodesObserver;var flattenedNodesObserver={FlattenedNodesObserver:FlattenedNodesObserver};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$flattenedNodesObserver=flattenedNodesObserver;var debouncerQueue=[];/**
+     */},{key:"_unlistenSlots",value:function _unlistenSlots(nodeList){for(var _i39=0;_i39<nodeList.length;_i39++){var n=nodeList[_i39];if(isSlot(n)){n.removeEventListener('slotchange',this._boundSchedule);}}}}]);return FlattenedNodesObserver;}();_exports.FlattenedNodesObserver=FlattenedNodesObserver;var flattenedNodesObserver={FlattenedNodesObserver:FlattenedNodesObserver};_exports.$flattenedNodesObserver=flattenedNodesObserver;var debouncerQueue=[];/**
                           * Adds a `Debouncer` to a list of globally flushable tasks.
                           *
                           * @param {!Debouncer} debouncer Debouncer to enqueue
@@ -4423,15 +4204,7 @@ this._effectiveNodes=newNodes;var didFlush=false;if(info.addedNodes.length||info
    * - ShadyDOM distribution
    *
    * @return {void}
-   */var flush$1=function flush$1(){var shadyDOM,debouncers;do{shadyDOM=window.ShadyDOM&&ShadyDOM.flush();if(window.ShadyCSS&&window.ShadyCSS.ScopingShim){window.ShadyCSS.ScopingShim.flush();}debouncers=flushDebouncers();}while(shadyDOM||debouncers);};_exports.flush$1=_exports.flush=flush$1;var flush$2={enqueueDebouncer:enqueueDebouncer,flush:flush$1};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$flush=flush$2;var p=Element.prototype;/**
+   */var flush$1=function flush$1(){var shadyDOM,debouncers;do{shadyDOM=window.ShadyDOM&&ShadyDOM.flush();if(window.ShadyCSS&&window.ShadyCSS.ScopingShim){window.ShadyCSS.ScopingShim.flush();}debouncers=flushDebouncers();}while(shadyDOM||debouncers);};_exports.flush$1=_exports.flush=flush$1;var flush$2={enqueueDebouncer:enqueueDebouncer,flush:flush$1};_exports.$flush=flush$2;var p=Element.prototype;/**
                               * @const {function(this:Node, string): boolean}
                               */var normalizedMatchesSelector=p.matches||p.matchesSelector||p.mozMatchesSelector||p.msMatchesSelector||p.oMatchesSelector||p.webkitMatchesSelector;/**
                                                                                                                                                                    * Cross-platform `element.matches` shim.
@@ -4575,7 +4348,14 @@ n=n.parentNode||n.host;}return n===this.node;}/**
                                     * abstract differences between native Shadow DOM and "Shady DOM."
                                     * @param {(Node|Event)=} obj Node or event to operate on
                                     * @return {!DomApi|!EventApi} Wrapper providing either node API or event API
-                                    */var dom=function dom(obj){obj=obj||document;if(!obj.__domApi){var helper;if(babelHelpers.instanceof(obj,Event)){helper=new EventApi(obj);}else{helper=new DomApi(obj);}obj.__domApi=helper;}return obj.__domApi;};_exports.dom=dom;var polymer_dom={matchesSelector:matchesSelector,DomApi:DomApi,dom:dom,flush:flush$1,addDebouncer:enqueueDebouncer};_exports.$polymerDom=polymer_dom;var bundledImportMeta$1=babelHelpers.objectSpread({},meta,{url:new URL('../node_modules/%40polymer/polymer/lib/legacy/legacy-element-mixin.js',meta.url).href});var styleInterface=window.ShadyCSS;/**
+                                    */var dom=function dom(obj){obj=obj||document;if(!obj.__domApi){var helper;if(babelHelpers.instanceof(obj,Event)){helper=new EventApi(obj);}else{helper=new DomApi(obj);}obj.__domApi=helper;}return obj.__domApi;};/**
+    * Forces several classes of asynchronously queued tasks to flush:
+    * - Debouncers added via `Polymer.enqueueDebouncer`
+    * - ShadyDOM distribution
+    *
+    * This method facades to `Polymer.flush`.
+    *
+    */_exports.dom=dom;var polymer_dom={matchesSelector:matchesSelector,DomApi:DomApi,dom:dom,flush:flush$1,addDebouncer:enqueueDebouncer};_exports.$polymerDom=polymer_dom;var bundledImportMeta$1=babelHelpers.objectSpread({},meta,{url:new URL('../node_modules/%40polymer/polymer/lib/legacy/legacy-element-mixin.js',meta.url).href});var styleInterface=window.ShadyCSS;/**
                                        * Element class mixin that provides Polymer's "legacy" API intended to be
                                        * backward-compatible to the greatest extent possible with the API
                                        * found on the Polymer 1.x `Polymer.Base` prototype applied to all elements
@@ -4603,7 +4383,7 @@ n=n.parentNode||n.host;}return n===this.node;}/**
       * @extends {legacyElementBase}
       * @implements {Polymer_LegacyElementMixin}
       * @unrestricted
-      */var LegacyElement=/*#__PURE__*/function(_legacyElementBase){babelHelpers.inherits(LegacyElement,_legacyElementBase);function LegacyElement(){var _this16;babelHelpers.classCallCheck(this,LegacyElement);_this16=babelHelpers.possibleConstructorReturn(this,(LegacyElement.__proto__||Object.getPrototypeOf(LegacyElement)).call(this));/** @type {boolean} */_this16.isAttached;/** @type {WeakMap<!Element, !Object<string, !Function>>} */_this16.__boundListeners;/** @type {Object<string, Function>} */_this16._debouncers;// Ensure listeners are applied immediately so that they are
+      */var LegacyElement=/*#__PURE__*/function(_legacyElementBase){babelHelpers.inherits(LegacyElement,_legacyElementBase);function LegacyElement(){var _this16;babelHelpers.classCallCheck(this,LegacyElement);_this16=babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(LegacyElement).call(this));/** @type {boolean} */_this16.isAttached;/** @type {WeakMap<!Element, !Object<string, !Function>>} */_this16.__boundListeners;/** @type {Object<string, Function>} */_this16._debouncers;// Ensure listeners are applied immediately so that they are
 // added before declarative event listeners. This allows an element to
 // decorate itself via an event prior to any declarative listeners
 // seeing the event. Note, this ensures compatibility with 1.x ordering.
@@ -4623,7 +4403,7 @@ _this16._applyListeners();return _this16;}/**
                   * which adds Polymer legacy API's `attached` method.
                   * @return {void}
                   * @override
-                  */},{key:"connectedCallback",value:function connectedCallback(){babelHelpers.get(LegacyElement.prototype.__proto__||Object.getPrototypeOf(LegacyElement.prototype),"connectedCallback",this).call(this);this.isAttached=true;this.attached();}/**
+                  */},{key:"connectedCallback",value:function connectedCallback(){babelHelpers.get(babelHelpers.getPrototypeOf(LegacyElement.prototype),"connectedCallback",this).call(this);this.isAttached=true;this.attached();}/**
        * Legacy callback called during `connectedCallback`, for overriding
        * by the user.
        * @return {void}
@@ -4632,7 +4412,7 @@ _this16._applyListeners();return _this16;}/**
                    * which adds Polymer legacy API's `detached` method.
                    * @return {void}
                    * @override
-                   */},{key:"disconnectedCallback",value:function disconnectedCallback(){babelHelpers.get(LegacyElement.prototype.__proto__||Object.getPrototypeOf(LegacyElement.prototype),"disconnectedCallback",this).call(this);this.isAttached=false;this.detached();}/**
+                   */},{key:"disconnectedCallback",value:function disconnectedCallback(){babelHelpers.get(babelHelpers.getPrototypeOf(LegacyElement.prototype),"disconnectedCallback",this).call(this);this.isAttached=false;this.detached();}/**
        * Legacy callback called during `disconnectedCallback`, for overriding
        * by the user.
        * @return {void}
@@ -4645,7 +4425,7 @@ _this16._applyListeners();return _this16;}/**
                    * @param {?string} namespace Attribute namespace.
                    * @return {void}
                    * @override
-                   */},{key:"attributeChangedCallback",value:function attributeChangedCallback(name,old,value,namespace){if(old!==value){babelHelpers.get(LegacyElement.prototype.__proto__||Object.getPrototypeOf(LegacyElement.prototype),"attributeChangedCallback",this).call(this,name,old,value,namespace);this.attributeChanged(name,old,value);}}/**
+                   */},{key:"attributeChangedCallback",value:function attributeChangedCallback(name,old,value,namespace){if(old!==value){babelHelpers.get(babelHelpers.getPrototypeOf(LegacyElement.prototype),"attributeChangedCallback",this).call(this,name,old,value,namespace);this.attributeChanged(name,old,value);}}/**
        * Legacy callback called during `attributeChangedChallback`, for overriding
        * by the user.
        * @param {string} name Name of attribute.
@@ -4661,7 +4441,7 @@ _this16._applyListeners();return _this16;}/**
      * @return {void}
      * @override
      * @suppress {invalidCasts}
-     */},{key:"_initializeProperties",value:function _initializeProperties(){var proto=Object.getPrototypeOf(this);if(!proto.hasOwnProperty('__hasRegisterFinished')){proto.__hasRegisterFinished=true;this._registered();}babelHelpers.get(LegacyElement.prototype.__proto__||Object.getPrototypeOf(LegacyElement.prototype),"_initializeProperties",this).call(this);this.root=/** @type {HTMLElement} */this;this.created();}/**
+     */},{key:"_initializeProperties",value:function _initializeProperties(){var proto=Object.getPrototypeOf(this);if(!proto.hasOwnProperty('__hasRegisterFinished')){proto.__hasRegisterFinished=true;this._registered();}babelHelpers.get(babelHelpers.getPrototypeOf(LegacyElement.prototype),"_initializeProperties",this).call(this);this.root=/** @type {HTMLElement} */this;this.created();}/**
        * Called automatically when an element is initializing.
        * Users may override this method to perform class registration time
        * work. The implementation should ensure the work is performed
@@ -4674,7 +4454,7 @@ _this16._applyListeners();return _this16;}/**
                       *
                       * @return {void}
                       * @override
-                      */},{key:"ready",value:function ready(){this._ensureAttributes();babelHelpers.get(LegacyElement.prototype.__proto__||Object.getPrototypeOf(LegacyElement.prototype),"ready",this).call(this);}/**
+                      */},{key:"ready",value:function ready(){this._ensureAttributes();babelHelpers.get(babelHelpers.getPrototypeOf(LegacyElement.prototype),"ready",this).call(this);}/**
        * Ensures an element has required attributes. Called when the element
        * is being readied via `ready`. Users should override to set the
        * element's required attributes. The implementation should be sure
@@ -5065,15 +4845,7 @@ if(Array.isArray(args)&&args.length===1&&Array.isArray(args[0])){args=args[0];}s
        * @param {...*} args Array of strings or objects to log
        * @return {Array} Array with formatting information for `console`
        *   logging.
-       */},{key:"_logf",value:function _logf(methodName){for(var _len7=arguments.length,args=new Array(_len7>1?_len7-1:0),_key7=1;_key7<_len7;_key7++){args[_key7-1]=arguments[_key7];}return['[%s::%s]',this.is,methodName].concat(args);}},{key:"domHost",get:function get(){var root$$1=this.getRootNode();return babelHelpers.instanceof(root$$1,DocumentFragment)?/** @type {ShadowRoot} */root$$1.host:root$$1;}}],[{key:"importMeta",get:function get(){return this.prototype.importMeta;}}]);return LegacyElement;}(legacyElementBase);LegacyElement.prototype.is='';return LegacyElement;});_exports.LegacyElementMixin=LegacyElementMixin;var legacyElementMixin={LegacyElementMixin:LegacyElementMixin};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$legacyElementMixin=legacyElementMixin;var metaProps={attached:true,detached:true,ready:true,created:true,beforeRegister:true,registered:true,attributeChanged:true,// meta objects
+       */},{key:"_logf",value:function _logf(methodName){for(var _len7=arguments.length,args=new Array(_len7>1?_len7-1:0),_key7=1;_key7<_len7;_key7++){args[_key7-1]=arguments[_key7];}return['[%s::%s]',this.is,methodName].concat(args);}},{key:"domHost",get:function get(){var root$$1=this.getRootNode();return babelHelpers.instanceof(root$$1,DocumentFragment)?/** @type {ShadowRoot} */root$$1.host:root$$1;}}],[{key:"importMeta",get:function get(){return this.prototype.importMeta;}}]);return LegacyElement;}(legacyElementBase);LegacyElement.prototype.is='';return LegacyElement;});_exports.LegacyElementMixin=LegacyElementMixin;var legacyElementMixin={LegacyElementMixin:LegacyElementMixin};_exports.$legacyElementMixin=legacyElementMixin;var metaProps={attached:true,detached:true,ready:true,created:true,beforeRegister:true,registered:true,attributeChanged:true,// meta objects
 behaviors:true};/**
     * Applies a "legacy" behavior or array of behaviors to the provided class.
     *
@@ -5137,11 +4909,11 @@ if(list.indexOf(b)<0&&(!exclude||exclude.indexOf(b)<0)){list.unshift(b);}}}else{
    * @return {function(new:HTMLElement)} Generated class
    * @suppress {checkTypes}
    * @private
-   */function GenerateClassFromInfo(info,Base){var PolymerGenerated=/*#__PURE__*/function(_Base){babelHelpers.inherits(PolymerGenerated,_Base);function PolymerGenerated(){babelHelpers.classCallCheck(this,PolymerGenerated);return babelHelpers.possibleConstructorReturn(this,(PolymerGenerated.__proto__||Object.getPrototypeOf(PolymerGenerated)).apply(this,arguments));}babelHelpers.createClass(PolymerGenerated,[{key:"created",/**
+   */function GenerateClassFromInfo(info,Base){var PolymerGenerated=/*#__PURE__*/function(_Base){babelHelpers.inherits(PolymerGenerated,_Base);function PolymerGenerated(){babelHelpers.classCallCheck(this,PolymerGenerated);return babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(PolymerGenerated).apply(this,arguments));}babelHelpers.createClass(PolymerGenerated,[{key:"created",/**
        * @return {void}
-       */value:function created(){babelHelpers.get(PolymerGenerated.prototype.__proto__||Object.getPrototypeOf(PolymerGenerated.prototype),"created",this).call(this);if(info.created){info.created.call(this);}}/**
+       */value:function created(){babelHelpers.get(babelHelpers.getPrototypeOf(PolymerGenerated.prototype),"created",this).call(this);if(info.created){info.created.call(this);}}/**
        * @return {void}
-       */},{key:"_registered",value:function _registered(){babelHelpers.get(PolymerGenerated.prototype.__proto__||Object.getPrototypeOf(PolymerGenerated.prototype),"_registered",this).call(this);/* NOTE: `beforeRegister` is called here for bc, but the behavior
+       */},{key:"_registered",value:function _registered(){babelHelpers.get(babelHelpers.getPrototypeOf(PolymerGenerated.prototype),"_registered",this).call(this);/* NOTE: `beforeRegister` is called here for bc, but the behavior
                             is different than in 1.x. In 1.0, the method was called *after*
                             mixing prototypes together but *before* processing of meta-objects.
                             However, dynamic effects can still be set here and can be done either
@@ -5149,18 +4921,18 @@ if(list.indexOf(b)<0&&(!exclude||exclude.indexOf(b)<0)){list.unshift(b);}}}else{
                             `is` in `beforeRegister` as you could in 1.x.
                            */if(info.beforeRegister){info.beforeRegister.call(Object.getPrototypeOf(this));}if(info.registered){info.registered.call(Object.getPrototypeOf(this));}}/**
        * @return {void}
-       */},{key:"_applyListeners",value:function _applyListeners(){babelHelpers.get(PolymerGenerated.prototype.__proto__||Object.getPrototypeOf(PolymerGenerated.prototype),"_applyListeners",this).call(this);if(info.listeners){for(var l in info.listeners){this._addMethodEventListenerToNode(this,l,info.listeners[l]);}}}// note: exception to "super then me" rule;
+       */},{key:"_applyListeners",value:function _applyListeners(){babelHelpers.get(babelHelpers.getPrototypeOf(PolymerGenerated.prototype),"_applyListeners",this).call(this);if(info.listeners){for(var l in info.listeners){this._addMethodEventListenerToNode(this,l,info.listeners[l]);}}}// note: exception to "super then me" rule;
 // do work before calling super so that super attributes
 // only apply if not already set.
 /**
      * @return {void}
-     */},{key:"_ensureAttributes",value:function _ensureAttributes(){if(info.hostAttributes){for(var a in info.hostAttributes){this._ensureAttribute(a,info.hostAttributes[a]);}}babelHelpers.get(PolymerGenerated.prototype.__proto__||Object.getPrototypeOf(PolymerGenerated.prototype),"_ensureAttributes",this).call(this);}/**
+     */},{key:"_ensureAttributes",value:function _ensureAttributes(){if(info.hostAttributes){for(var a in info.hostAttributes){this._ensureAttribute(a,info.hostAttributes[a]);}}babelHelpers.get(babelHelpers.getPrototypeOf(PolymerGenerated.prototype),"_ensureAttributes",this).call(this);}/**
        * @return {void}
-       */},{key:"ready",value:function ready(){babelHelpers.get(PolymerGenerated.prototype.__proto__||Object.getPrototypeOf(PolymerGenerated.prototype),"ready",this).call(this);if(info.ready){info.ready.call(this);}}/**
+       */},{key:"ready",value:function ready(){babelHelpers.get(babelHelpers.getPrototypeOf(PolymerGenerated.prototype),"ready",this).call(this);if(info.ready){info.ready.call(this);}}/**
        * @return {void}
-       */},{key:"attached",value:function attached(){babelHelpers.get(PolymerGenerated.prototype.__proto__||Object.getPrototypeOf(PolymerGenerated.prototype),"attached",this).call(this);if(info.attached){info.attached.call(this);}}/**
+       */},{key:"attached",value:function attached(){babelHelpers.get(babelHelpers.getPrototypeOf(PolymerGenerated.prototype),"attached",this).call(this);if(info.attached){info.attached.call(this);}}/**
        * @return {void}
-       */},{key:"detached",value:function detached(){babelHelpers.get(PolymerGenerated.prototype.__proto__||Object.getPrototypeOf(PolymerGenerated.prototype),"detached",this).call(this);if(info.detached){info.detached.call(this);}}/**
+       */},{key:"detached",value:function detached(){babelHelpers.get(babelHelpers.getPrototypeOf(PolymerGenerated.prototype),"detached",this).call(this);if(info.detached){info.detached.call(this);}}/**
        * Implements native Custom Elements `attributeChangedCallback` to
        * set an attribute value to a property via `_attributeToProperty`.
        *
@@ -5168,7 +4940,7 @@ if(list.indexOf(b)<0&&(!exclude||exclude.indexOf(b)<0)){list.unshift(b);}}}else{
        * @param {?string} old Old attribute value
        * @param {?string} value New attribute value
        * @return {void}
-       */},{key:"attributeChanged",value:function attributeChanged(name,old,value){babelHelpers.get(PolymerGenerated.prototype.__proto__||Object.getPrototypeOf(PolymerGenerated.prototype),"attributeChanged",this).call(this,name,old,value);if(info.attributeChanged){info.attributeChanged.call(this,name,old,value);}}}],[{key:"properties",get:function get(){return info.properties;}},{key:"observers",get:function get(){return info.observers;}/**
+       */},{key:"attributeChanged",value:function attributeChanged(name,old,value){babelHelpers.get(babelHelpers.getPrototypeOf(PolymerGenerated.prototype),"attributeChanged",this).call(this,name,old,value);if(info.attributeChanged){info.attributeChanged.call(this,name,old,value);}}}],[{key:"properties",get:function get(){return info.properties;}},{key:"observers",get:function get(){return info.observers;}/**
        * @return {HTMLTemplateElement} template for this class
        */},{key:"template",get:function get(){// get template first from any imperative set in `info._template`
 return info._template||// next look in dom-module associated with this element's is.
@@ -5245,44 +5017,9 @@ if(!(_p13 in metaProps)){var pd=Object.getOwnPropertyDescriptor(info,_p13);if(pd
    * @return {function(new:HTMLElement)} Generated class
    */var Class=function Class(info){if(!info){console.warn("Polymer's Class function requires `info` argument");}var klass=GenerateClassFromInfo(info,info.behaviors?// note: mixinBehaviors ensures `LegacyElementMixin`.
 mixinBehaviors(info.behaviors,HTMLElement):LegacyElementMixin(HTMLElement));// decorate klass with registration info
-klass.is=info.is;return klass;};_exports.Class=Class;var _class={mixinBehaviors:mixinBehaviors,Class:Class};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ /**
-       * Legacy class factory and registration helper for defining Polymer
-       * elements.
-       *
-       * This method is equivalent to
-       *
-       *     import {Class} from '@polymer/polymer/lib/legacy/class.js';
-       *     customElements.define(info.is, Class(info));
-       *
-       * See `Class` for details on valid legacy metadata format for `info`.
-       *
-       * @global
-       * @override
-       * @function
-       * @param {!PolymerInit} info Object containing Polymer metadata and functions
-       *   to become class methods.
-       * @return {function(new: HTMLElement)} Generated class
-       * @suppress {duplicate, invalidCasts, checkTypes}
-       */_exports.$class=_class;var Polymer$1=function Polymer$1(info){// if input is a `class` (aka a function with a prototype), use the prototype
+klass.is=info.is;return klass;};_exports.Class=Class;var _class={mixinBehaviors:mixinBehaviors,Class:Class};_exports.$class=_class;var Polymer$1=function Polymer$1(info){// if input is a `class` (aka a function with a prototype), use the prototype
 // remember that the `constructor` will never be called
-var klass;if(typeof info==='function'){klass=info;}else{klass=Polymer$1.Class(info);}customElements.define(klass.is,/** @type {!HTMLElement} */klass);return klass;};_exports.Polymer$1=_exports.Polymer=Polymer$1;Polymer$1.Class=Class;var polymerFn={Polymer:Polymer$1};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ // Common implementation for mixin & behavior
-_exports.$polymerFn=polymerFn;function mutablePropertyChange(inst,property,value,old,mutableData){var isObject;if(mutableData){isObject=babelHelpers.typeof(value)==='object'&&value!==null;// Pull `old` for Objects from temp cache, but treat `null` as a primitive
+var klass;if(typeof info==='function'){klass=info;}else{klass=Polymer$1.Class(info);}customElements.define(klass.is,/** @type {!HTMLElement} */klass);return klass;};_exports.Polymer$1=_exports.Polymer=Polymer$1;Polymer$1.Class=Class;var polymerFn={Polymer:Polymer$1};_exports.$polymerFn=polymerFn;function mutablePropertyChange(inst,property,value,old,mutableData){var isObject;if(mutableData){isObject=babelHelpers.typeof(value)==='object'&&value!==null;// Pull `old` for Objects from temp cache, but treat `null` as a primitive
 if(isObject){old=inst.__dataTemp[property];}}// Strict equality check, but return false for NaN===NaN
 var shouldChange=old!==value&&(old===old||value===value);// Objects are stored in temporary cache (cleared at end of
 // turn), which is used for dirty-checking
@@ -5328,7 +5065,7 @@ if(isObject&&shouldChange){inst.__dataTemp[property]=value;}return shouldChange;
    * @polymer
    * @mixinClass
    * @implements {Polymer_MutableData}
-   */var MutableData=/*#__PURE__*/function(_superClass4){babelHelpers.inherits(MutableData,_superClass4);function MutableData(){babelHelpers.classCallCheck(this,MutableData);return babelHelpers.possibleConstructorReturn(this,(MutableData.__proto__||Object.getPrototypeOf(MutableData)).apply(this,arguments));}babelHelpers.createClass(MutableData,[{key:"_shouldPropertyChange",/**
+   */var MutableData=/*#__PURE__*/function(_superClass4){babelHelpers.inherits(MutableData,_superClass4);function MutableData(){babelHelpers.classCallCheck(this,MutableData);return babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(MutableData).apply(this,arguments));}babelHelpers.createClass(MutableData,[{key:"_shouldPropertyChange",/**
      * Overrides `PropertyEffects` to provide option for skipping
      * strict equality checking for Objects and Arrays.
      *
@@ -5387,7 +5124,7 @@ if(isObject&&shouldChange){inst.__dataTemp[property]=value;}return shouldChange;
    * @mixinClass
    * @polymer
    * @implements {Polymer_OptionalMutableData}
-   */var OptionalMutableData=/*#__PURE__*/function(_superClass5){babelHelpers.inherits(OptionalMutableData,_superClass5);function OptionalMutableData(){babelHelpers.classCallCheck(this,OptionalMutableData);return babelHelpers.possibleConstructorReturn(this,(OptionalMutableData.__proto__||Object.getPrototypeOf(OptionalMutableData)).apply(this,arguments));}babelHelpers.createClass(OptionalMutableData,[{key:"_shouldPropertyChange",/**
+   */var OptionalMutableData=/*#__PURE__*/function(_superClass5){babelHelpers.inherits(OptionalMutableData,_superClass5);function OptionalMutableData(){babelHelpers.classCallCheck(this,OptionalMutableData);return babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(OptionalMutableData).apply(this,arguments));}babelHelpers.createClass(OptionalMutableData,[{key:"_shouldPropertyChange",/**
        * Overrides `PropertyEffects` to provide option for skipping
        * strict equality checking for Objects and Arrays.
        *
@@ -5409,16 +5146,7 @@ if(isObject&&shouldChange){inst.__dataTemp[property]=value;}return shouldChange;
          * for this element.  When true, Objects and Arrays will skip dirty
          * checking, otherwise strict equality checking will be used.
          */mutableData:Boolean};}}]);return OptionalMutableData;}(superClass);return OptionalMutableData;});// Export for use by legacy behavior
-_exports.OptionalMutableData=OptionalMutableData;MutableData._mutablePropertyChange=mutablePropertyChange;var mutableData={MutableData:MutableData,OptionalMutableData:OptionalMutableData};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ // Base class for HTMLTemplateElement extension that has property effects
-// machinery for propagating host properties to children. This is an ES5
+_exports.OptionalMutableData=OptionalMutableData;MutableData._mutablePropertyChange=mutablePropertyChange;var mutableData={MutableData:MutableData,OptionalMutableData:OptionalMutableData};// machinery for propagating host properties to children. This is an ES5
 // class only because Babel (incorrectly) requires super() in the class
 // constructor even though no `this` is used and it returns an instance.
 _exports.$mutableData=mutableData;var newInstance=null;/**
@@ -5442,8 +5170,8 @@ function upgradeTemplate(template,constructor){newInstance=template;Object.setPr
                                          * @customElement
                                          * @appliesMixin PropertyEffects
                                          * @unrestricted
-                                         */var TemplateInstanceBase=/*#__PURE__*/function(_base3){babelHelpers.inherits(TemplateInstanceBase,_base3);function TemplateInstanceBase(props){var _this17;babelHelpers.classCallCheck(this,TemplateInstanceBase);_this17=babelHelpers.possibleConstructorReturn(this,(TemplateInstanceBase.__proto__||Object.getPrototypeOf(TemplateInstanceBase)).call(this));_this17._configureProperties(props);_this17.root=_this17._stampTemplate(_this17.__dataHost);// Save list of stamped children
-var children=_this17.children=[];for(var n=_this17.root.firstChild;n;n=n.nextSibling){children.push(n);n.__templatizeInstance=babelHelpers.assertThisInitialized(_this17);}if(_this17.__templatizeOwner&&_this17.__templatizeOwner.__hideTemplateChildren__){_this17._showHideChildren(true);}// Flush props only when props are passed if instance props exist
+                                         */var TemplateInstanceBase=/*#__PURE__*/function(_base3){babelHelpers.inherits(TemplateInstanceBase,_base3);function TemplateInstanceBase(props){var _this17;babelHelpers.classCallCheck(this,TemplateInstanceBase);_this17=babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(TemplateInstanceBase).call(this));_this17._configureProperties(props);_this17.root=_this17._stampTemplate(_this17.__dataHost);// Save list of stamped children
+var children=_this17.children=[];for(var n=_this17.root.firstChild;n;n=n.nextSibling){children.push(n);n.__templatizeInstance=babelHelpers.assertThisInitialized(babelHelpers.assertThisInitialized(_this17));}if(_this17.__templatizeOwner&&_this17.__templatizeOwner.__hideTemplateChildren__){_this17._showHideChildren(true);}// Flush props only when props are passed if instance props exist
 // or when there isn't instance props.
 var options=_this17.__templatizeOptions;if(props&&options.instanceProps||!options.instanceProps){_this17._enableProperties();}return _this17;}/**
      * Configure the given `props` by calling `_setPendingProperty`. Also
@@ -5494,7 +5222,7 @@ if(Boolean(hide)!=Boolean(n.__hideTemplateChildren__)){if(n.nodeType===Node.TEXT
      * @param {*} value The value to set
      * @return {void}
      * @protected
-     */},{key:"_setUnmanagedPropertyToNode",value:function _setUnmanagedPropertyToNode(node,prop,value){if(node.__hideTemplateChildren__&&node.nodeType==Node.TEXT_NODE&&prop=='textContent'){node.__polymerTextContent__=value;}else{babelHelpers.get(TemplateInstanceBase.prototype.__proto__||Object.getPrototypeOf(TemplateInstanceBase.prototype),"_setUnmanagedPropertyToNode",this).call(this,node,prop,value);}}/**
+     */},{key:"_setUnmanagedPropertyToNode",value:function _setUnmanagedPropertyToNode(node,prop,value){if(node.__hideTemplateChildren__&&node.nodeType==Node.TEXT_NODE&&prop=='textContent'){node.__polymerTextContent__=value;}else{babelHelpers.get(babelHelpers.getPrototypeOf(TemplateInstanceBase.prototype),"_setUnmanagedPropertyToNode",this).call(this,node,prop,value);}}/**
      * Find the parent model of this template instance.  The parent model
      * is either another templatize instance that had option `parentModel: true`,
      * or else the host element.
@@ -5525,10 +5253,10 @@ var base=options.mutableData?MutableTemplateInstanceBase:TemplateInstanceBase;/*
                                                                                         * @constructor
                                                                                         * @extends {base}
                                                                                         * @private
-                                                                                        */var klass=/*#__PURE__*/function(_base4){babelHelpers.inherits(klass,_base4);function klass(){babelHelpers.classCallCheck(this,klass);return babelHelpers.possibleConstructorReturn(this,(klass.__proto__||Object.getPrototypeOf(klass)).apply(this,arguments));}return klass;}(base);klass.prototype.__templatizeOptions=options;klass.prototype._bindTemplate(template);addNotifyEffects(klass,template,templateInfo,options);return klass;}/**
+                                                                                        */var klass=/*#__PURE__*/function(_base4){babelHelpers.inherits(klass,_base4);function klass(){babelHelpers.classCallCheck(this,klass);return babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(klass).apply(this,arguments));}return klass;}(base);klass.prototype.__templatizeOptions=options;klass.prototype._bindTemplate(template);addNotifyEffects(klass,template,templateInfo,options);return klass;}/**
    * @suppress {missingProperties} class.prototype is not defined for some reason
    */function addPropagateEffects(template,templateInfo,options){var userForwardHostProp=options.forwardHostProp;if(userForwardHostProp){// Provide data API and property effects on memoized template class
-var klass=templateInfo.templatizeTemplateClass;if(!klass){var _base5=options.mutableData?MutableDataTemplate:DataTemplate;klass=templateInfo.templatizeTemplateClass=/*#__PURE__*/function(_base6){babelHelpers.inherits(TemplatizedTemplate,_base6);function TemplatizedTemplate(){babelHelpers.classCallCheck(this,TemplatizedTemplate);return babelHelpers.possibleConstructorReturn(this,(TemplatizedTemplate.__proto__||Object.getPrototypeOf(TemplatizedTemplate)).apply(this,arguments));}return TemplatizedTemplate;}(_base5);// Add template - >instances effects
+var klass=templateInfo.templatizeTemplateClass;if(!klass){var _base5=options.mutableData?MutableDataTemplate:DataTemplate;klass=templateInfo.templatizeTemplateClass=/*#__PURE__*/function(_base6){babelHelpers.inherits(TemplatizedTemplate,_base6);function TemplatizedTemplate(){babelHelpers.classCallCheck(this,TemplatizedTemplate);return babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(TemplatizedTemplate).apply(this,arguments));}return TemplatizedTemplate;}(_base5);// Add template - >instances effects
 // and host <- template effects
 var hostProps=templateInfo.hostProps;for(var prop in hostProps){klass.prototype._addPropertyEffect('_host_'+prop,klass.prototype.PROPERTY_EFFECT_TYPES.PROPAGATE,{fn:createForwardHostPropEffect(prop,userForwardHostProp)});klass.prototype._createNotifyingProperty('_host_'+prop);}}upgradeTemplate(template,klass);// Mix any pre-bound data into __data; no need to flush this to
 // instances since they pull from the template at instance-time
@@ -5651,7 +5379,7 @@ template.__dataTemp={};template.__dataPending=null;template.__dataOld=null;templ
 // includes property effects for binding template & forwarding
 var baseClass=templateInfo.templatizeInstanceClass;if(!baseClass){baseClass=createTemplatizerClass(template,templateInfo,options);templateInfo.templatizeInstanceClass=baseClass;}// Host property forwarding must be installed onto template instance
 addPropagateEffects(template,templateInfo,options);// Subclass base class and add reference for this specific template
-/** @private */var klass=/*#__PURE__*/function(_baseClass){babelHelpers.inherits(TemplateInstance,_baseClass);function TemplateInstance(){babelHelpers.classCallCheck(this,TemplateInstance);return babelHelpers.possibleConstructorReturn(this,(TemplateInstance.__proto__||Object.getPrototypeOf(TemplateInstance)).apply(this,arguments));}return TemplateInstance;}(baseClass);klass.prototype._methodHost=findMethodHost(template);klass.prototype.__dataHost=template;klass.prototype.__templatizeOwner=owner;klass.prototype.__hostProps=templateInfo.hostProps;klass=/** @type {function(new:TemplateInstanceBase)} */klass;//eslint-disable-line no-self-assign
+/** @private */var klass=/*#__PURE__*/function(_baseClass){babelHelpers.inherits(TemplateInstance,_baseClass);function TemplateInstance(){babelHelpers.classCallCheck(this,TemplateInstance);return babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(TemplateInstance).apply(this,arguments));}return TemplateInstance;}(baseClass);klass.prototype._methodHost=findMethodHost(template);klass.prototype.__dataHost=template;klass.prototype.__templatizeOwner=owner;klass.prototype.__hostProps=templateInfo.hostProps;klass=/** @type {function(new:TemplateInstanceBase)} */klass;//eslint-disable-line no-self-assign
 return klass;}/**
    * Returns the template "model" associated with a given element, which
    * serves as the binding scope for the template instance the element is
@@ -5678,15 +5406,7 @@ if(model=node.__templatizeInstance){// Found an element stamped by another templ
 // from its __dataHost
 if(model.__dataHost!=template){node=model.__dataHost;}else{return model;}}else{// Still in a template scope, keep going up until
 // a __templatizeInstance is found
-node=node.parentNode;}}return null;}var templatize$1={templatize:_templatize,modelForElement:_modelForElement,TemplateInstanceBase:TemplateInstanceBase};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$templatize=templatize$1;var TemplateInstanceBase$1=TemplateInstanceBase;// eslint-disable-line
+node=node.parentNode;}}return null;}var templatize$1={templatize:_templatize,modelForElement:_modelForElement,TemplateInstanceBase:TemplateInstanceBase};_exports.$templatize=templatize$1;var TemplateInstanceBase$1=TemplateInstanceBase;// eslint-disable-line
 /**
  * @typedef {{
  *   _templatizerTemplate: HTMLTemplateElement,
@@ -5791,21 +5511,7 @@ node=node.parentNode;}}return null;}var templatize$1={templatize:_templatize,mod
    * @return {TemplateInstanceBase} Model representing the binding scope for
    *   the element.
    * @this {TemplatizerUser}
-   */modelForElement:function modelForElement(el){return _modelForElement(this._templatizerTemplate,el);}};_exports.Templatizer=Templatizer;var templatizerBehavior={Templatizer:Templatizer};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ /**
-       * @constructor
-       * @extends {HTMLElement}
-       * @implements {Polymer_PropertyEffects}
-       * @implements {Polymer_OptionalMutableData}
-       * @implements {Polymer_GestureEventListeners}
-       */_exports.$templatizerBehavior=templatizerBehavior;var domBindBase=GestureEventListeners(OptionalMutableData(PropertyEffects(HTMLElement)));/**
+   */modelForElement:function modelForElement(el){return _modelForElement(this._templatizerTemplate,el);}};_exports.Templatizer=Templatizer;var templatizerBehavior={Templatizer:Templatizer};_exports.$templatizerBehavior=templatizerBehavior;var domBindBase=GestureEventListeners(OptionalMutableData(PropertyEffects(HTMLElement)));/**
                                                                                                * Custom element to allow using Polymer's template features (data binding,
                                                                                                * declarative event listeners, etc.) in the main document without defining
                                                                                                * a new custom element.
@@ -5823,25 +5529,13 @@ node=node.parentNode;}}return null;}var templatize$1={templatize:_templatize,mod
                                                                                                * @extends {domBindBase}
                                                                                                * @summary Custom element to allow using Polymer's template features (data
                                                                                                *   binding, declarative event listeners, etc.) in the main document.
-                                                                                               */var DomBind=/*#__PURE__*/function(_domBindBase){babelHelpers.inherits(DomBind,_domBindBase);babelHelpers.createClass(DomBind,null,[{key:"observedAttributes",get:function get(){return['mutable-data'];}}]);function DomBind(){var _this19;babelHelpers.classCallCheck(this,DomBind);_this19=babelHelpers.possibleConstructorReturn(this,(DomBind.__proto__||Object.getPrototypeOf(DomBind)).call(this));_this19.root=null;_this19.$=null;_this19.__children=null;return _this19;}/** @return {void} */babelHelpers.createClass(DomBind,[{key:"attributeChangedCallback",value:function attributeChangedCallback(){// assumes only one observed attribute
+                                                                                               */var DomBind=/*#__PURE__*/function(_domBindBase){babelHelpers.inherits(DomBind,_domBindBase);babelHelpers.createClass(DomBind,null,[{key:"observedAttributes",get:function get(){return['mutable-data'];}}]);function DomBind(){var _this19;babelHelpers.classCallCheck(this,DomBind);_this19=babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(DomBind).call(this));_this19.root=null;_this19.$=null;_this19.__children=null;return _this19;}/** @return {void} */babelHelpers.createClass(DomBind,[{key:"attributeChangedCallback",value:function attributeChangedCallback(){// assumes only one observed attribute
 this.mutableData=true;}/** @return {void} */},{key:"connectedCallback",value:function connectedCallback(){this.style.display='none';this.render();}/** @return {void} */},{key:"disconnectedCallback",value:function disconnectedCallback(){this.__removeChildren();}},{key:"__insertChildren",value:function __insertChildren(){this.parentNode.insertBefore(this.root,this);}},{key:"__removeChildren",value:function __removeChildren(){if(this.__children){for(var _i50=0;_i50<this.__children.length;_i50++){this.root.appendChild(this.__children[_i50]);}}}/**
      * Forces the element to render its content. This is typically only
      * necessary to call if HTMLImports with the async attribute are used.
      * @return {void}
      */},{key:"render",value:function render(){var _this20=this;var template;if(!this.__children){template=/** @type {HTMLTemplateElement} */template||this.querySelector('template');if(!template){// Wait until childList changes and template should be there by then
-var _observer=new MutationObserver(function(){template=/** @type {HTMLTemplateElement} */_this20.querySelector('template');if(template){_observer.disconnect();_this20.render();}else{throw new Error('dom-bind requires a <template> child');}});_observer.observe(this,{childList:true});return;}this.root=this._stampTemplate(template);this.$=this.root.$;this.__children=[];for(var n=this.root.firstChild;n;n=n.nextSibling){this.__children[this.__children.length]=n;}this._enableProperties();}this.__insertChildren();this.dispatchEvent(new CustomEvent('dom-change',{bubbles:true,composed:true}));}}]);return DomBind;}(domBindBase);_exports.DomBind=DomBind;customElements.define('dom-bind',DomBind);var domBind={DomBind:DomBind};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ /**
-       * Class representing a static string value which can be used to filter
-       * strings by asseting that they have been created via this class. The
-       * `value` property returns the string passed to the constructor.
-       */_exports.$domBind=domBind;var LiteralString=/*#__PURE__*/function(){function LiteralString(string){babelHelpers.classCallCheck(this,LiteralString);/** @type {string} */this.value=string.toString();}/**
+var _observer=new MutationObserver(function(){template=/** @type {HTMLTemplateElement} */_this20.querySelector('template');if(template){_observer.disconnect();_this20.render();}else{throw new Error('dom-bind requires a <template> child');}});_observer.observe(this,{childList:true});return;}this.root=this._stampTemplate(template);this.$=this.root.$;this.__children=[];for(var n=this.root.firstChild;n;n=n.nextSibling){this.__children[this.__children.length]=n;}this._enableProperties();}this.__insertChildren();this.dispatchEvent(new CustomEvent('dom-change',{bubbles:true,composed:true}));}}]);return DomBind;}(domBindBase);_exports.DomBind=DomBind;customElements.define('dom-bind',DomBind);var domBind={DomBind:DomBind};_exports.$domBind=domBind;var LiteralString=/*#__PURE__*/function(){function LiteralString(string){babelHelpers.classCallCheck(this,LiteralString);/** @type {string} */this.value=string.toString();}/**
      * @return {string} LiteralString string value
      */babelHelpers.createClass(LiteralString,[{key:"toString",value:function toString(){return this.value;}}]);return LiteralString;}();/**
    * @param {*} value Object to stringify into HTML
@@ -5905,37 +5599,7 @@ var _observer=new MutationObserver(function(){template=/** @type {HTMLTemplateEl
     * @param {!ITemplateArray} strings Constant parts of tagged template literal
     * @param {...*} values Variable parts of tagged template literal
     * @return {!LiteralString} Constructed literal string
-    */_exports.html$3=_exports.html$2=_exports.html$1=html;var htmlLiteral=function htmlLiteral(strings){for(var _len9=arguments.length,values=new Array(_len9>1?_len9-1:0),_key9=1;_key9<_len9;_key9++){values[_key9-1]=arguments[_key9];}return new LiteralString(values.reduce(function(acc,v,idx){return acc+literalValue(v)+strings[idx+1];},strings[0]));};_exports.htmlLiteral=htmlLiteral;var htmlTag={html:html,htmlLiteral:htmlLiteral};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ /**
-       * Base class that provides the core API for Polymer's meta-programming
-       * features including template stamping, data-binding, attribute deserialization,
-       * and property change observation.
-       *
-       * @customElement
-       * @polymer
-       * @constructor
-       * @implements {Polymer_ElementMixin}
-       * @extends HTMLElement
-       * @appliesMixin ElementMixin
-       * @summary Custom element base class that provides the core API for Polymer's
-       *   key meta-programming features including template stamping, data-binding,
-       *   attribute deserialization, and property change observation
-       */_exports.$htmlTag=htmlTag;var PolymerElement=ElementMixin(HTMLElement);_exports.PolymerElement=PolymerElement;var polymerElement={PolymerElement:PolymerElement,html:html};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$polymerElement=polymerElement;var TemplateInstanceBase$2=TemplateInstanceBase;// eslint-disable-line
+    */_exports.html$3=_exports.html$2=_exports.html$1=html;var htmlLiteral=function htmlLiteral(strings){for(var _len9=arguments.length,values=new Array(_len9>1?_len9-1:0),_key9=1;_key9<_len9;_key9++){values[_key9-1]=arguments[_key9];}return new LiteralString(values.reduce(function(acc,v,idx){return acc+literalValue(v)+strings[idx+1];},strings[0]));};_exports.htmlLiteral=htmlLiteral;var htmlTag={html:html,htmlLiteral:htmlLiteral};_exports.$htmlTag=htmlTag;var PolymerElement=ElementMixin(HTMLElement);_exports.PolymerElement=PolymerElement;var polymerElement={PolymerElement:PolymerElement,html:html};_exports.$polymerElement=polymerElement;var TemplateInstanceBase$2=TemplateInstanceBase;// eslint-disable-line
 /**
  * @constructor
  * @implements {Polymer_OptionalMutableData}
@@ -6111,11 +5775,11 @@ get:function get(){return'dom-repeat';}},{key:"template",get:function get(){retu
        * Setting this to a higher number allows lower latency and higher
        * throughput for event handlers and other tasks, but results in a
        * longer time for the remaining items to complete rendering.
-       */targetFramerate:{type:Number,value:20},_targetFrameTime:{type:Number,computed:'__computeFrameTime(targetFramerate)'}};}},{key:"observers",get:function get(){return['__itemsChanged(items.*)'];}}]);function DomRepeat(){var _this21;babelHelpers.classCallCheck(this,DomRepeat);_this21=babelHelpers.possibleConstructorReturn(this,(DomRepeat.__proto__||Object.getPrototypeOf(DomRepeat)).call(this));_this21.__instances=[];_this21.__limit=Infinity;_this21.__pool=[];_this21.__renderDebouncer=null;_this21.__itemsIdxToInstIdx={};_this21.__chunkCount=null;_this21.__lastChunkTime=null;_this21.__sortFn=null;_this21.__filterFn=null;_this21.__observePaths=null;_this21.__ctor=null;_this21.__isDetached=true;_this21.template=null;return _this21;}/**
+       */targetFramerate:{type:Number,value:20},_targetFrameTime:{type:Number,computed:'__computeFrameTime(targetFramerate)'}};}},{key:"observers",get:function get(){return['__itemsChanged(items.*)'];}}]);function DomRepeat(){var _this21;babelHelpers.classCallCheck(this,DomRepeat);_this21=babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(DomRepeat).call(this));_this21.__instances=[];_this21.__limit=Infinity;_this21.__pool=[];_this21.__renderDebouncer=null;_this21.__itemsIdxToInstIdx={};_this21.__chunkCount=null;_this21.__lastChunkTime=null;_this21.__sortFn=null;_this21.__filterFn=null;_this21.__observePaths=null;_this21.__ctor=null;_this21.__isDetached=true;_this21.template=null;return _this21;}/**
      * @return {void}
-     */babelHelpers.createClass(DomRepeat,[{key:"disconnectedCallback",value:function disconnectedCallback(){babelHelpers.get(DomRepeat.prototype.__proto__||Object.getPrototypeOf(DomRepeat.prototype),"disconnectedCallback",this).call(this);this.__isDetached=true;for(var _i51=0;_i51<this.__instances.length;_i51++){this.__detachInstance(_i51);}}/**
+     */babelHelpers.createClass(DomRepeat,[{key:"disconnectedCallback",value:function disconnectedCallback(){babelHelpers.get(babelHelpers.getPrototypeOf(DomRepeat.prototype),"disconnectedCallback",this).call(this);this.__isDetached=true;for(var _i51=0;_i51<this.__instances.length;_i51++){this.__detachInstance(_i51);}}/**
      * @return {void}
-     */},{key:"connectedCallback",value:function connectedCallback(){babelHelpers.get(DomRepeat.prototype.__proto__||Object.getPrototypeOf(DomRepeat.prototype),"connectedCallback",this).call(this);this.style.display='none';// only perform attachment if the element was previously detached.
+     */},{key:"connectedCallback",value:function connectedCallback(){babelHelpers.get(babelHelpers.getPrototypeOf(DomRepeat.prototype),"connectedCallback",this).call(this);this.style.display='none';// only perform attachment if the element was previously detached.
 if(this.__isDetached){this.__isDetached=false;var parent=this.parentNode;for(var _i52=0;_i52<this.__instances.length;_i52++){this.__attachInstance(_i52,parent);}}}},{key:"__ensureTemplatized",value:function __ensureTemplatized(){var _this22=this;// Templatizing (generating the instance constructor) needs to wait
 // until ready, since won't have its template content handed back to
 // it until then
@@ -6228,35 +5892,7 @@ inst._setPendingPropertyOrPath(itemPath,value,false,true);inst._flushProperties(
      * @param {!HTMLElement} el Element for which to return a template model.
      * @return {TemplateInstanceBase} Model representing the binding scope for
      *   the element.
-     */},{key:"modelForElement",value:function modelForElement(el){return _modelForElement(this.template,el);}}]);return DomRepeat;}(domRepeatBase);_exports.DomRepeat=DomRepeat;customElements.define(DomRepeat.is,DomRepeat);var domRepeat={DomRepeat:DomRepeat};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ /**
-       * The `<dom-if>` element will stamp a light-dom `<template>` child when
-       * the `if` property becomes truthy, and the template can use Polymer
-       * data-binding and declarative event features when used in the context of
-       * a Polymer element's template.
-       *
-       * When `if` becomes falsy, the stamped content is hidden but not
-       * removed from dom. When `if` subsequently becomes truthy again, the content
-       * is simply re-shown. This approach is used due to its favorable performance
-       * characteristics: the expense of creating template content is paid only
-       * once and lazily.
-       *
-       * Set the `restamp` property to true to force the stamped content to be
-       * created / destroyed when the `if` condition changes.
-       *
-       * @customElement
-       * @polymer
-       * @extends PolymerElement
-       * @summary Custom element that conditionally stamps and hides or removes
-       *   template content based on a boolean flag.
-       */_exports.$domRepeat=domRepeat;var DomIf=/*#__PURE__*/function(_PolymerElement){babelHelpers.inherits(DomIf,_PolymerElement);babelHelpers.createClass(DomIf,null,[{key:"is",// Not needed to find template; can be removed once the analyzer
+     */},{key:"modelForElement",value:function modelForElement(el){return _modelForElement(this.template,el);}}]);return DomRepeat;}(domRepeatBase);_exports.DomRepeat=DomRepeat;customElements.define(DomRepeat.is,DomRepeat);var domRepeat={DomRepeat:DomRepeat};_exports.$domRepeat=domRepeat;var DomIf=/*#__PURE__*/function(_PolymerElement){babelHelpers.inherits(DomIf,_PolymerElement);babelHelpers.createClass(DomIf,null,[{key:"is",// Not needed to find template; can be removed once the analyzer
 // can find the tag name from customElements.define call
 get:function get(){return'dom-if';}},{key:"template",get:function get(){return null;}},{key:"properties",get:function get(){return{/**
        * Fired whenever DOM is added or removed/hidden by this template (by
@@ -6272,7 +5908,7 @@ get:function get(){return'dom-if';}},{key:"template",get:function get(){return n
        * becomes true.  By default, stamped elements will be hidden but left
        * in the DOM when `if` becomes false, which is generally results
        * in better performance.
-       */restamp:{type:Boolean,observer:'__debounceRender'}};}}]);function DomIf(){var _this25;babelHelpers.classCallCheck(this,DomIf);_this25=babelHelpers.possibleConstructorReturn(this,(DomIf.__proto__||Object.getPrototypeOf(DomIf)).call(this));_this25.__renderDebouncer=null;_this25.__invalidProps=null;_this25.__instance=null;_this25._lastIf=false;_this25.__ctor=null;return _this25;}babelHelpers.createClass(DomIf,[{key:"__debounceRender",value:function __debounceRender(){var _this26=this;// Render is async for 2 reasons:
+       */restamp:{type:Boolean,observer:'__debounceRender'}};}}]);function DomIf(){var _this25;babelHelpers.classCallCheck(this,DomIf);_this25=babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(DomIf).call(this));_this25.__renderDebouncer=null;_this25.__invalidProps=null;_this25.__instance=null;_this25._lastIf=false;_this25.__ctor=null;return _this25;}babelHelpers.createClass(DomIf,[{key:"__debounceRender",value:function __debounceRender(){var _this26=this;// Render is async for 2 reasons:
 // 1. To eliminate dom creation trashing if user code thrashes `if` in the
 //    same turn. This was more common in 1.x where a compound computed
 //    property could result in the result changing multiple times, but is
@@ -6290,9 +5926,9 @@ get:function get(){return'dom-if';}},{key:"template",get:function get(){return n
 //    the instance would also avoid the problem.
 this.__renderDebouncer=Debouncer.debounce(this.__renderDebouncer,microTask,function(){return _this26.__render();});enqueueDebouncer(this.__renderDebouncer);}/**
      * @return {void}
-     */},{key:"disconnectedCallback",value:function disconnectedCallback(){babelHelpers.get(DomIf.prototype.__proto__||Object.getPrototypeOf(DomIf.prototype),"disconnectedCallback",this).call(this);if(!this.parentNode||this.parentNode.nodeType==Node.DOCUMENT_FRAGMENT_NODE&&!this.parentNode.host){this.__teardownInstance();}}/**
+     */},{key:"disconnectedCallback",value:function disconnectedCallback(){babelHelpers.get(babelHelpers.getPrototypeOf(DomIf.prototype),"disconnectedCallback",this).call(this);if(!this.parentNode||this.parentNode.nodeType==Node.DOCUMENT_FRAGMENT_NODE&&!this.parentNode.host){this.__teardownInstance();}}/**
      * @return {void}
-     */},{key:"connectedCallback",value:function connectedCallback(){babelHelpers.get(DomIf.prototype.__proto__||Object.getPrototypeOf(DomIf.prototype),"connectedCallback",this).call(this);this.style.display='none';if(this.if){this.__debounceRender();}}/**
+     */},{key:"connectedCallback",value:function connectedCallback(){babelHelpers.get(babelHelpers.getPrototypeOf(DomIf.prototype),"connectedCallback",this).call(this);this.style.display='none';if(this.if){this.__debounceRender();}}/**
      * Forces the element to render its content. Normally rendering is
      * asynchronous to a provoking change. This is done for efficiency so
      * that multiple changes trigger only a single render. The render method
@@ -6320,34 +5956,7 @@ var parent=c$[0].parentNode;for(var _i60=0,n;_i60<c$.length&&(n=c$[_i60]);_i60++
      * "shown."
      * @return {void}
      * @protected
-     */},{key:"_showHideChildren",value:function _showHideChildren(){var hidden=this.__hideTemplateChildren__||!this.if;if(this.__instance){this.__instance._showHideChildren(hidden);}}}]);return DomIf;}(PolymerElement);_exports.DomIf=DomIf;customElements.define(DomIf.is,DomIf);var domIf={DomIf:DomIf};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ /**
-       * Element mixin for recording dynamic associations between item paths in a
-       * master `items` array and a `selected` array such that path changes to the
-       * master array (at the host) element or elsewhere via data-binding) are
-       * correctly propagated to items in the selected array and vice-versa.
-       *
-       * The `items` property accepts an array of user data, and via the
-       * `select(item)` and `deselect(item)` API, updates the `selected` property
-       * which may be bound to other parts of the application, and any changes to
-       * sub-fields of `selected` item(s) will be kept in sync with items in the
-       * `items` array.  When `multi` is false, `selected` is a property
-       * representing the last selected item.  When `multi` is true, `selected`
-       * is an array of multiply selected items.
-       *
-       * @polymer
-       * @mixinFunction
-       * @appliesMixin ElementMixin
-       * @summary Element mixin for recording dynamic associations between item paths in a
-       * master `items` array and a `selected` array
-       */_exports.$domIf=domIf;var ArraySelectorMixin=dedupingMixin(function(superClass){/**
+     */},{key:"_showHideChildren",value:function _showHideChildren(){var hidden=this.__hideTemplateChildren__||!this.if;if(this.__instance){this.__instance._showHideChildren(hidden);}}}]);return DomIf;}(PolymerElement);_exports.DomIf=DomIf;customElements.define(DomIf.is,DomIf);var domIf={DomIf:DomIf};_exports.$domIf=domIf;var ArraySelectorMixin=dedupingMixin(function(superClass){/**
    * @constructor
    * @extends {superClass}
    * @implements {Polymer_ElementMixin}
@@ -6374,7 +5983,7 @@ var parent=c$[0].parentNode;for(var _i60=0,n;_i60<c$.length&&(n=c$[_i60]);_i60++
          */selectedItem:{type:Object,notify:true},/**
          * When `true`, calling `select` on an item that is already selected
          * will deselect the item.
-         */toggle:{type:Boolean,value:false}};}},{key:"observers",get:function get(){return['__updateSelection(multi, items.*)'];}}]);function ArraySelectorMixin(){var _this28;babelHelpers.classCallCheck(this,ArraySelectorMixin);_this28=babelHelpers.possibleConstructorReturn(this,(ArraySelectorMixin.__proto__||Object.getPrototypeOf(ArraySelectorMixin)).call(this));_this28.__lastItems=null;_this28.__lastMulti=null;_this28.__selectedMap=null;return _this28;}babelHelpers.createClass(ArraySelectorMixin,[{key:"__updateSelection",value:function __updateSelection(multi,itemsInfo){var path=itemsInfo.path;if(path=='items'){// Case 1 - items array changed, so diff against previous array and
+         */toggle:{type:Boolean,value:false}};}},{key:"observers",get:function get(){return['__updateSelection(multi, items.*)'];}}]);function ArraySelectorMixin(){var _this28;babelHelpers.classCallCheck(this,ArraySelectorMixin);_this28=babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(ArraySelectorMixin).call(this));_this28.__lastItems=null;_this28.__lastMulti=null;_this28.__selectedMap=null;return _this28;}babelHelpers.createClass(ArraySelectorMixin,[{key:"__updateSelection",value:function __updateSelection(multi,itemsInfo){var path=itemsInfo.path;if(path=='items'){// Case 1 - items array changed, so diff against previous array and
 // deselect any removed items and adjust selected indices
 var newItems=itemsInfo.base||[];var lastItems=this.__lastItems;var lastMulti=this.__lastMulti;if(multi!==lastMulti){this.clearSelection();}if(lastItems){var splices=calculateSplices(newItems,lastItems);this.__applySplices(splices);}this.__lastItems=newItems;this.__lastMulti=multi;}else if(itemsInfo.path=='items.splices'){// Case 2 - got specific splice information describing the array mutation:
 // deselect any removed items and adjust selected indices
@@ -6427,11 +6036,8 @@ this.selected=this.multi?[]:null;this.selectedItem=null;}/**
        *
        * @param {number} idx Index from `items` array to select
        * @return {void}
-       */},{key:"selectIndex",value:function selectIndex(idx){var item=this.items[idx];if(!this.isSelected(item)){if(!this.multi){this.__selectedMap.clear();}this.__selectedMap.set(item,idx);this.__updateLinks();if(this.multi){this.push('selected',item);}else{this.selected=this.selectedItem=item;}}else if(this.toggle){this.deselectIndex(idx);}}}]);return ArraySelectorMixin;}(elementBase);return ArraySelectorMixin;});/**
-     * @constructor
-     * @extends {PolymerElement}
-     * @implements {Polymer_ArraySelectorMixin}
-     */_exports.ArraySelectorMixin=ArraySelectorMixin;var baseArraySelector=ArraySelectorMixin(PolymerElement);/**
+       */},{key:"selectIndex",value:function selectIndex(idx){var item=this.items[idx];if(!this.isSelected(item)){if(!this.multi){this.__selectedMap.clear();}this.__selectedMap.set(item,idx);this.__updateLinks();if(this.multi){this.push('selected',item);}else{this.selected=this.selectedItem=item;}}else if(this.toggle){this.deselectIndex(idx);}}}]);return ArraySelectorMixin;}(elementBase);return ArraySelectorMixin;});// export mixin
+_exports.ArraySelectorMixin=ArraySelectorMixin;var baseArraySelector=ArraySelectorMixin(PolymerElement);/**
                                                              * Element implementing the `ArraySelector` mixin, which records
                                                              * dynamic associations between item paths in a master `items` array and a
                                                              * `selected` array such that path changes to the master array (at the host)
@@ -6504,7 +6110,7 @@ this.selected=this.multi?[]:null;this.selectedItem=null;}/**
                                                              * @appliesMixin ArraySelectorMixin
                                                              * @summary Custom element that links paths between an input `items` array and
                                                              *   an output `selected` item or array based on calls to its selection API.
-                                                             */var ArraySelector=/*#__PURE__*/function(_baseArraySelector){babelHelpers.inherits(ArraySelector,_baseArraySelector);function ArraySelector(){babelHelpers.classCallCheck(this,ArraySelector);return babelHelpers.possibleConstructorReturn(this,(ArraySelector.__proto__||Object.getPrototypeOf(ArraySelector)).apply(this,arguments));}babelHelpers.createClass(ArraySelector,null,[{key:"is",// Not needed to find template; can be removed once the analyzer
+                                                             */var ArraySelector=/*#__PURE__*/function(_baseArraySelector){babelHelpers.inherits(ArraySelector,_baseArraySelector);function ArraySelector(){babelHelpers.classCallCheck(this,ArraySelector);return babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(ArraySelector).apply(this,arguments));}babelHelpers.createClass(ArraySelector,null,[{key:"is",// Not needed to find template; can be removed once the analyzer
 // can find the tag name from customElements.define call
 get:function get(){return'array-selector';}}]);return ArraySelector;}(baseArraySelector);_exports.ArraySelector=ArraySelector;customElements.define(ArraySelector.is,ArraySelector);var arraySelector={ArraySelectorMixin:ArraySelectorMixin,ArraySelector:ArraySelector};/**
    @license
@@ -6531,60 +6137,52 @@ customStyleInterface$1.processStyles();},/**
      * @param {Element} element
      * @param {string} property
      * @return {string}
-     */getComputedStyleValue:function getComputedStyleValue(element,property){return _getComputedStyleValue(element,property);},flushCustomStyles:function flushCustomStyles(){},nativeCss:nativeCssVariables,nativeShadow:nativeShadow};}window.ShadyCSS.CustomStyleInterface=customStyleInterface$1;/**
-                                                               @license
-                                                               Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-                                                               This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-                                                               The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-                                                               The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-                                                               Code distributed by Google as part of the polymer project is also
-                                                               subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-                                                               */var attr='include';var CustomStyleInterface$1=window.ShadyCSS.CustomStyleInterface;/**
-                                                                      * Custom element for defining styles in the main document that can take
-                                                                      * advantage of [shady DOM](https://github.com/webcomponents/shadycss) shims
-                                                                      * for style encapsulation, custom properties, and custom mixins.
-                                                                      *
-                                                                      * - Document styles defined in a `<custom-style>` are shimmed to ensure they
-                                                                      *   do not leak into local DOM when running on browsers without native
-                                                                      *   Shadow DOM.
-                                                                      * - Custom properties can be defined in a `<custom-style>`. Use the `html` selector
-                                                                      *   to define custom properties that apply to all custom elements.
-                                                                      * - Custom mixins can be defined in a `<custom-style>`, if you import the optional
-                                                                      *   [apply shim](https://github.com/webcomponents/shadycss#about-applyshim)
-                                                                      *   (`shadycss/apply-shim.html`).
-                                                                      *
-                                                                      * To use:
-                                                                      *
-                                                                      * - Import `custom-style.html`.
-                                                                      * - Place a `<custom-style>` element in the main document, wrapping an inline `<style>` tag that
-                                                                      *   contains the CSS rules you want to shim.
-                                                                      *
-                                                                      * For example:
-                                                                      *
-                                                                      * ```html
-                                                                      * <!-- import apply shim--only required if using mixins -->
-                                                                      * <link rel="import" href="bower_components/shadycss/apply-shim.html">
-                                                                      * <!-- import custom-style element -->
-                                                                      * <link rel="import" href="bower_components/polymer/lib/elements/custom-style.html">
-                                                                      *
-                                                                      * <custom-style>
-                                                                      *   <style>
-                                                                      *     html {
-                                                                      *       --custom-color: blue;
-                                                                      *       --custom-mixin: {
-                                                                      *         font-weight: bold;
-                                                                      *         color: red;
-                                                                      *       };
-                                                                      *     }
-                                                                      *   </style>
-                                                                      * </custom-style>
-                                                                      * ```
-                                                                      *
-                                                                      * @customElement
-                                                                      * @extends HTMLElement
-                                                                      * @summary Custom element for defining styles in the main document that can
-                                                                      *   take advantage of Polymer's style scoping and custom properties shims.
-                                                                      */var CustomStyle=/*#__PURE__*/function(_HTMLElement2){babelHelpers.inherits(CustomStyle,_HTMLElement2);function CustomStyle(){var _this32;babelHelpers.classCallCheck(this,CustomStyle);_this32=babelHelpers.possibleConstructorReturn(this,(CustomStyle.__proto__||Object.getPrototypeOf(CustomStyle)).call(this));_this32._style=null;CustomStyleInterface$1.addCustomStyle(babelHelpers.assertThisInitialized(_this32));return _this32;}/**
+     */getComputedStyleValue:function getComputedStyleValue(element,property){return _getComputedStyleValue(element,property);},flushCustomStyles:function flushCustomStyles(){},nativeCss:nativeCssVariables,nativeShadow:nativeShadow};}window.ShadyCSS.CustomStyleInterface=customStyleInterface$1;var attr='include';var CustomStyleInterface$1=window.ShadyCSS.CustomStyleInterface;/**
+                                                                     * Custom element for defining styles in the main document that can take
+                                                                     * advantage of [shady DOM](https://github.com/webcomponents/shadycss) shims
+                                                                     * for style encapsulation, custom properties, and custom mixins.
+                                                                     *
+                                                                     * - Document styles defined in a `<custom-style>` are shimmed to ensure they
+                                                                     *   do not leak into local DOM when running on browsers without native
+                                                                     *   Shadow DOM.
+                                                                     * - Custom properties can be defined in a `<custom-style>`. Use the `html` selector
+                                                                     *   to define custom properties that apply to all custom elements.
+                                                                     * - Custom mixins can be defined in a `<custom-style>`, if you import the optional
+                                                                     *   [apply shim](https://github.com/webcomponents/shadycss#about-applyshim)
+                                                                     *   (`shadycss/apply-shim.html`).
+                                                                     *
+                                                                     * To use:
+                                                                     *
+                                                                     * - Import `custom-style.html`.
+                                                                     * - Place a `<custom-style>` element in the main document, wrapping an inline `<style>` tag that
+                                                                     *   contains the CSS rules you want to shim.
+                                                                     *
+                                                                     * For example:
+                                                                     *
+                                                                     * ```html
+                                                                     * <!-- import apply shim--only required if using mixins -->
+                                                                     * <link rel="import" href="bower_components/shadycss/apply-shim.html">
+                                                                     * <!-- import custom-style element -->
+                                                                     * <link rel="import" href="bower_components/polymer/lib/elements/custom-style.html">
+                                                                     *
+                                                                     * <custom-style>
+                                                                     *   <style>
+                                                                     *     html {
+                                                                     *       --custom-color: blue;
+                                                                     *       --custom-mixin: {
+                                                                     *         font-weight: bold;
+                                                                     *         color: red;
+                                                                     *       };
+                                                                     *     }
+                                                                     *   </style>
+                                                                     * </custom-style>
+                                                                     * ```
+                                                                     *
+                                                                     * @customElement
+                                                                     * @extends HTMLElement
+                                                                     * @summary Custom element for defining styles in the main document that can
+                                                                     *   take advantage of Polymer's style scoping and custom properties shims.
+                                                                     */var CustomStyle=/*#__PURE__*/function(_HTMLElement2){babelHelpers.inherits(CustomStyle,_HTMLElement2);function CustomStyle(){var _this32;babelHelpers.classCallCheck(this,CustomStyle);_this32=babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(CustomStyle).call(this));_this32._style=null;CustomStyleInterface$1.addCustomStyle(babelHelpers.assertThisInitialized(babelHelpers.assertThisInitialized(_this32)));return _this32;}/**
      * Returns the light-DOM `<style>` child this element wraps.  Upon first
      * call any style modules referenced via the `include` attribute will be
      * concatenated to this element's `<style>`.
@@ -6597,15 +6195,7 @@ customStyleInterface$1.processStyles();},/**
       In that case, move the custom style to the main document.
        The ordering of `<custom-style>` should stay the same as when loaded by HTML Imports, but there may be odd
       cases of ordering w.r.t the main document styles.
-      */if(this.ownerDocument!==window.document){window.document.head.appendChild(this);}return this._style;}}]);return CustomStyle;}(HTMLElement);_exports.CustomStyle=CustomStyle;window.customElements.define('custom-style',CustomStyle);var customStyle={CustomStyle:CustomStyle};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$customStyle=customStyle;var mutablePropertyChange$1;/** @suppress {missingProperties} */(function(){mutablePropertyChange$1=MutableData._mutablePropertyChange;})();/**
+      */if(this.ownerDocument!==window.document){window.document.head.appendChild(this);}return this._style;}}]);return CustomStyle;}(babelHelpers.wrapNativeSuper(HTMLElement));_exports.CustomStyle=CustomStyle;window.customElements.define('custom-style',CustomStyle);var customStyle={CustomStyle:CustomStyle};_exports.$customStyle=customStyle;var mutablePropertyChange$1;/** @suppress {missingProperties} */(function(){mutablePropertyChange$1=MutableData._mutablePropertyChange;})();/**
        * Legacy element behavior to skip strict dirty-checking for objects and arrays,
        * (always consider them to be "dirty") for use on legacy API Polymer elements.
        *
@@ -6716,24 +6306,7 @@ customStyleInterface$1.processStyles();},/**
    * @return {boolean} Whether the property should be considered a change
    * @this {this}
    * @protected
-   */_shouldPropertyChange:function _shouldPropertyChange(property,value,old){return mutablePropertyChange$1(this,property,value,old,this.mutableData);}};_exports.OptionalMutableDataBehavior=OptionalMutableDataBehavior;var mutableDataBehavior={MutableDataBehavior:MutableDataBehavior,OptionalMutableDataBehavior:OptionalMutableDataBehavior};/**
-   @license
-   Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ // bc
-_exports.$mutableDataBehavior=mutableDataBehavior;var Base=LegacyElementMixin(HTMLElement).prototype;_exports.Base=Base;var polymerLegacy={Base:Base,Polymer:Polymer$1,html:html};/**
-   @license
-   Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$polymerLegacy=polymerLegacy;Polymer$1({is:'iron-media-query',properties:{/**
+   */_shouldPropertyChange:function _shouldPropertyChange(property,value,old){return mutablePropertyChange$1(this,property,value,old,this.mutableData);}};_exports.OptionalMutableDataBehavior=OptionalMutableDataBehavior;var mutableDataBehavior={MutableDataBehavior:MutableDataBehavior,OptionalMutableDataBehavior:OptionalMutableDataBehavior};_exports.$mutableDataBehavior=mutableDataBehavior;var Base=LegacyElementMixin(HTMLElement).prototype;_exports.Base=Base;var polymerLegacy={Base:Base,Polymer:Polymer$1,html:html};_exports.$polymerLegacy=polymerLegacy;Polymer$1({is:'iron-media-query',properties:{/**
      * The Boolean return value of the media query.
      */queryMatches:{type:Boolean,value:false,readOnly:true,notify:true},/**
      * The CSS media query to evaluate.
@@ -6744,32 +6317,7 @@ _exports.$mutableDataBehavior=mutableDataBehavior;var Base=LegacyElementMixin(HT
      * @type {function(MediaQueryList)}
      */_boundMQHandler:{value:function value(){return this.queryHandler.bind(this);}},/**
      * @type {MediaQueryList}
-     */_mq:{value:null}},attached:function attached(){this.style.display='none';this.queryChanged();},detached:function detached(){this._remove();},_add:function _add(){if(this._mq){this._mq.addListener(this._boundMQHandler);}},_remove:function _remove(){if(this._mq){this._mq.removeListener(this._boundMQHandler);}this._mq=null;},queryChanged:function queryChanged(){this._remove();var query=this.query;if(!query){return;}if(!this.full&&query[0]!=='('){query='('+query+')';}this._mq=window.matchMedia(query);this._add();this.queryHandler(this._mq);},queryHandler:function queryHandler(mq){this._setQueryMatches(mq.matches);}});/**
-    @license
-    Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-    Code distributed by Google as part of the polymer project is also
-    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-    */ /**
-        * `IronResizableBehavior` is a behavior that can be used in Polymer elements to
-        * coordinate the flow of resize events between "resizers" (elements that
-        *control the size or hidden state of their children) and "resizables" (elements
-        *that need to be notified when they are resized or un-hidden by their parents
-        *in order to take action on their new measurements).
-        *
-        * Elements that perform measurement should add the `IronResizableBehavior`
-        *behavior to their element definition and listen for the `iron-resize` event on
-        *themselves. This event will be fired when they become showing after having
-        *been hidden, when they are resized explicitly by another resizable, or when
-        *the window has been resized.
-        *
-        * Note, the `iron-resize` event is non-bubbling.
-        *
-        * @polymerBehavior Polymer.IronResizableBehavior
-        * @demo demo/index.html
-        **/var IronResizableBehavior={properties:{/**
+     */_mq:{value:null}},attached:function attached(){this.style.display='none';this.queryChanged();},detached:function detached(){this._remove();},_add:function _add(){if(this._mq){this._mq.addListener(this._boundMQHandler);}},_remove:function _remove(){if(this._mq){this._mq.removeListener(this._boundMQHandler);}this._mq=null;},queryChanged:function queryChanged(){this._remove();var query=this.query;if(!query){return;}if(!this.full&&query[0]!=='('){query='('+query+')';}this._mq=window.matchMedia(query);this._add();this.queryHandler(this._mq);},queryHandler:function queryHandler(mq){this._setQueryMatches(mq.matches);}});var IronResizableBehavior={properties:{/**
      * The closest ancestor element that implements `IronResizableBehavior`.
      */_parentResizable:{type:Object,observer:'_parentResizableChanged'},/**
      * True if this element is currently notifying its descendant elements of
@@ -6806,17 +6354,7 @@ if(!this.isAttached){return;}this._notifyingDescendant=true;descendant.notifyRes
 // a parent not able to keep track of the `_interestedResizables`. To solve
 // this, we wait for the document to be done loading before firing the
 // event.
-if(document.readyState==='loading'){var _requestResizeNotifications=this._requestResizeNotifications.bind(this);document.addEventListener('readystatechange',function readystatechanged(){document.removeEventListener('readystatechange',readystatechanged);_requestResizeNotifications();});}else{this.fire('iron-request-resize-notifications',null,{node:this,bubbles:true,cancelable:true});if(!this._parentResizable){window.addEventListener('resize',this._boundNotifyResize);this.notifyResize();}}}};_exports.IronResizableBehavior=IronResizableBehavior;var ironResizableBehavior={IronResizableBehavior:IronResizableBehavior};/**
-   @license
-   Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ /**
-       * @polymerBehavior Polymer.AppLayoutBehavior
-       **/_exports.$ironResizableBehavior=ironResizableBehavior;var AppLayoutBehavior=[IronResizableBehavior,{listeners:{'app-reset-layout':'_appResetLayoutHandler','iron-resize':'resetLayout'},attached:function attached(){this.fire('app-reset-layout');},_appResetLayoutHandler:function _appResetLayoutHandler(e){if(dom(e).path[0]===this){return;}this.resetLayout();e.stopPropagation();},_updateLayoutStates:function _updateLayoutStates(){console.error('unimplemented');},/**
+if(document.readyState==='loading'){var _requestResizeNotifications=this._requestResizeNotifications.bind(this);document.addEventListener('readystatechange',function readystatechanged(){document.removeEventListener('readystatechange',readystatechanged);_requestResizeNotifications();});}else{this.fire('iron-request-resize-notifications',null,{node:this,bubbles:true,cancelable:true});if(!this._parentResizable){window.addEventListener('resize',this._boundNotifyResize);this.notifyResize();}}}};_exports.IronResizableBehavior=IronResizableBehavior;var ironResizableBehavior={IronResizableBehavior:IronResizableBehavior};_exports.$ironResizableBehavior=ironResizableBehavior;var AppLayoutBehavior=[IronResizableBehavior,{listeners:{'app-reset-layout':'_appResetLayoutHandler','iron-resize':'resetLayout'},attached:function attached(){this.fire('app-reset-layout');},_appResetLayoutHandler:function _appResetLayoutHandler(e){if(dom(e).path[0]===this){return;}this.resetLayout();e.stopPropagation();},_updateLayoutStates:function _updateLayoutStates(){console.error('unimplemented');},/**
    * Resets the layout. If you changed the size of this element via CSS
    * you can notify the changes by either firing the `iron-resize` event
    * or calling `resetLayout` directly.
@@ -6827,15 +6365,7 @@ var self=this;var cb=this._updateLayoutStates.bind(this);if(async&&animationFram
 else{this.debounce('resetLayout',cb);}this._notifyDescendantResize();},_notifyLayoutChanged:function _notifyLayoutChanged(){var self=this;// TODO: the event `app-reset-layout` can be fired synchronously
 // as long as `_updateLayoutStates` waits for all the microtasks after
 // rAF. E.g. requestAnimationFrame(setTimeOut())
-requestAnimationFrame(function(){self.fire('app-reset-layout');});},_notifyDescendantResize:function _notifyDescendantResize(){if(!this.isAttached){return;}this._interestedResizables.forEach(function(resizable){if(this.resizerShouldNotify(resizable)){this._notifyDescendant(resizable);}},this);}}];_exports.AppLayoutBehavior=AppLayoutBehavior;var appLayoutBehavior={AppLayoutBehavior:AppLayoutBehavior};/**
-   @license
-   Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$appLayoutBehavior=appLayoutBehavior;Polymer$1({_template:html(_templateObject_d2a108606de411e888c72fe2f0a2f265),is:'app-drawer-layout',behaviors:[AppLayoutBehavior],properties:{/**
+requestAnimationFrame(function(){self.fire('app-reset-layout');});},_notifyDescendantResize:function _notifyDescendantResize(){if(!this.isAttached){return;}this._interestedResizables.forEach(function(resizable){if(this.resizerShouldNotify(resizable)){this._notifyDescendant(resizable);}},this);}}];_exports.AppLayoutBehavior=AppLayoutBehavior;var appLayoutBehavior={AppLayoutBehavior:AppLayoutBehavior};_exports.$appLayoutBehavior=appLayoutBehavior;Polymer$1({_template:html(_templateObject_da5be4e02b3411e9984959bc9413e8f2()),is:'app-drawer-layout',behaviors:[AppLayoutBehavior],properties:{/**
      * If true, ignore `responsiveWidth` setting and force the narrow layout.
      */forceNarrow:{type:Boolean,value:false},/**
      * If the viewport's width is smaller than this value, the panel will change
@@ -6853,23 +6383,7 @@ requestAnimationFrame(function(){self.fire('app-reset-layout');});},_notifyDesce
 // opened state.
 var drawer=this.drawer;if(drawer){drawer.setAttribute('no-transition','');}},_clickHandler:function _clickHandler(e){var target=dom(e).localTarget;if(target&&target.hasAttribute('drawer-toggle')){var drawer=this.drawer;if(drawer&&!drawer.persistent){drawer.toggle();}}},_updateLayoutStates:function _updateLayoutStates(){var drawer=this.drawer;if(!this.isAttached||!drawer){return;}this._drawerPosition=this.narrow?null:drawer.position;if(this._drawerNeedsReset){if(this.narrow){drawer.opened=this.openedWhenNarrow;drawer.persistent=false;}else{drawer.opened=drawer.persistent=true;}if(drawer.hasAttribute('no-transition')){// Enable drawer transitions after app-drawer-layout sets the initial
 // opened state.
-afterNextRender(this,function(){drawer.removeAttribute('no-transition');});}this._drawerNeedsReset=false;}},_narrowChanged:function _narrowChanged(){this._drawerNeedsReset=true;this.resetLayout();},_onQueryMatchesChanged:function _onQueryMatchesChanged(event){this._setNarrow(event.detail.value);},_computeMediaQuery:function _computeMediaQuery(forceNarrow,responsiveWidth){return forceNarrow?'(min-width: 0px)':'(max-width: '+responsiveWidth+')';}});/**
-    @license
-    Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-    Code distributed by Google as part of the polymer project is also
-    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-    */var $_documentContainer=document.createElement('template');$_documentContainer.setAttribute('style','display: none;');$_documentContainer.innerHTML="<custom-style>\n  <style is=\"custom-style\">\n    [hidden] {\n      display: none !important;\n    }\n  </style>\n</custom-style><custom-style>\n  <style is=\"custom-style\">\n    html {\n\n      --layout: {\n        display: -ms-flexbox;\n        display: -webkit-flex;\n        display: flex;\n      };\n\n      --layout-inline: {\n        display: -ms-inline-flexbox;\n        display: -webkit-inline-flex;\n        display: inline-flex;\n      };\n\n      --layout-horizontal: {\n        @apply --layout;\n\n        -ms-flex-direction: row;\n        -webkit-flex-direction: row;\n        flex-direction: row;\n      };\n\n      --layout-horizontal-reverse: {\n        @apply --layout;\n\n        -ms-flex-direction: row-reverse;\n        -webkit-flex-direction: row-reverse;\n        flex-direction: row-reverse;\n      };\n\n      --layout-vertical: {\n        @apply --layout;\n\n        -ms-flex-direction: column;\n        -webkit-flex-direction: column;\n        flex-direction: column;\n      };\n\n      --layout-vertical-reverse: {\n        @apply --layout;\n\n        -ms-flex-direction: column-reverse;\n        -webkit-flex-direction: column-reverse;\n        flex-direction: column-reverse;\n      };\n\n      --layout-wrap: {\n        -ms-flex-wrap: wrap;\n        -webkit-flex-wrap: wrap;\n        flex-wrap: wrap;\n      };\n\n      --layout-wrap-reverse: {\n        -ms-flex-wrap: wrap-reverse;\n        -webkit-flex-wrap: wrap-reverse;\n        flex-wrap: wrap-reverse;\n      };\n\n      --layout-flex-auto: {\n        -ms-flex: 1 1 auto;\n        -webkit-flex: 1 1 auto;\n        flex: 1 1 auto;\n      };\n\n      --layout-flex-none: {\n        -ms-flex: none;\n        -webkit-flex: none;\n        flex: none;\n      };\n\n      --layout-flex: {\n        -ms-flex: 1 1 0.000000001px;\n        -webkit-flex: 1;\n        flex: 1;\n        -webkit-flex-basis: 0.000000001px;\n        flex-basis: 0.000000001px;\n      };\n\n      --layout-flex-2: {\n        -ms-flex: 2;\n        -webkit-flex: 2;\n        flex: 2;\n      };\n\n      --layout-flex-3: {\n        -ms-flex: 3;\n        -webkit-flex: 3;\n        flex: 3;\n      };\n\n      --layout-flex-4: {\n        -ms-flex: 4;\n        -webkit-flex: 4;\n        flex: 4;\n      };\n\n      --layout-flex-5: {\n        -ms-flex: 5;\n        -webkit-flex: 5;\n        flex: 5;\n      };\n\n      --layout-flex-6: {\n        -ms-flex: 6;\n        -webkit-flex: 6;\n        flex: 6;\n      };\n\n      --layout-flex-7: {\n        -ms-flex: 7;\n        -webkit-flex: 7;\n        flex: 7;\n      };\n\n      --layout-flex-8: {\n        -ms-flex: 8;\n        -webkit-flex: 8;\n        flex: 8;\n      };\n\n      --layout-flex-9: {\n        -ms-flex: 9;\n        -webkit-flex: 9;\n        flex: 9;\n      };\n\n      --layout-flex-10: {\n        -ms-flex: 10;\n        -webkit-flex: 10;\n        flex: 10;\n      };\n\n      --layout-flex-11: {\n        -ms-flex: 11;\n        -webkit-flex: 11;\n        flex: 11;\n      };\n\n      --layout-flex-12: {\n        -ms-flex: 12;\n        -webkit-flex: 12;\n        flex: 12;\n      };\n\n      /* alignment in cross axis */\n\n      --layout-start: {\n        -ms-flex-align: start;\n        -webkit-align-items: flex-start;\n        align-items: flex-start;\n      };\n\n      --layout-center: {\n        -ms-flex-align: center;\n        -webkit-align-items: center;\n        align-items: center;\n      };\n\n      --layout-end: {\n        -ms-flex-align: end;\n        -webkit-align-items: flex-end;\n        align-items: flex-end;\n      };\n\n      --layout-baseline: {\n        -ms-flex-align: baseline;\n        -webkit-align-items: baseline;\n        align-items: baseline;\n      };\n\n      /* alignment in main axis */\n\n      --layout-start-justified: {\n        -ms-flex-pack: start;\n        -webkit-justify-content: flex-start;\n        justify-content: flex-start;\n      };\n\n      --layout-center-justified: {\n        -ms-flex-pack: center;\n        -webkit-justify-content: center;\n        justify-content: center;\n      };\n\n      --layout-end-justified: {\n        -ms-flex-pack: end;\n        -webkit-justify-content: flex-end;\n        justify-content: flex-end;\n      };\n\n      --layout-around-justified: {\n        -ms-flex-pack: distribute;\n        -webkit-justify-content: space-around;\n        justify-content: space-around;\n      };\n\n      --layout-justified: {\n        -ms-flex-pack: justify;\n        -webkit-justify-content: space-between;\n        justify-content: space-between;\n      };\n\n      --layout-center-center: {\n        @apply --layout-center;\n        @apply --layout-center-justified;\n      };\n\n      /* self alignment */\n\n      --layout-self-start: {\n        -ms-align-self: flex-start;\n        -webkit-align-self: flex-start;\n        align-self: flex-start;\n      };\n\n      --layout-self-center: {\n        -ms-align-self: center;\n        -webkit-align-self: center;\n        align-self: center;\n      };\n\n      --layout-self-end: {\n        -ms-align-self: flex-end;\n        -webkit-align-self: flex-end;\n        align-self: flex-end;\n      };\n\n      --layout-self-stretch: {\n        -ms-align-self: stretch;\n        -webkit-align-self: stretch;\n        align-self: stretch;\n      };\n\n      --layout-self-baseline: {\n        -ms-align-self: baseline;\n        -webkit-align-self: baseline;\n        align-self: baseline;\n      };\n\n      /* multi-line alignment in main axis */\n\n      --layout-start-aligned: {\n        -ms-flex-line-pack: start;  /* IE10 */\n        -ms-align-content: flex-start;\n        -webkit-align-content: flex-start;\n        align-content: flex-start;\n      };\n\n      --layout-end-aligned: {\n        -ms-flex-line-pack: end;  /* IE10 */\n        -ms-align-content: flex-end;\n        -webkit-align-content: flex-end;\n        align-content: flex-end;\n      };\n\n      --layout-center-aligned: {\n        -ms-flex-line-pack: center;  /* IE10 */\n        -ms-align-content: center;\n        -webkit-align-content: center;\n        align-content: center;\n      };\n\n      --layout-between-aligned: {\n        -ms-flex-line-pack: justify;  /* IE10 */\n        -ms-align-content: space-between;\n        -webkit-align-content: space-between;\n        align-content: space-between;\n      };\n\n      --layout-around-aligned: {\n        -ms-flex-line-pack: distribute;  /* IE10 */\n        -ms-align-content: space-around;\n        -webkit-align-content: space-around;\n        align-content: space-around;\n      };\n\n      /*******************************\n                Other Layout\n      *******************************/\n\n      --layout-block: {\n        display: block;\n      };\n\n      --layout-invisible: {\n        visibility: hidden !important;\n      };\n\n      --layout-relative: {\n        position: relative;\n      };\n\n      --layout-fit: {\n        position: absolute;\n        top: 0;\n        right: 0;\n        bottom: 0;\n        left: 0;\n      };\n\n      --layout-scroll: {\n        -webkit-overflow-scrolling: touch;\n        overflow: auto;\n      };\n\n      --layout-fullbleed: {\n        margin: 0;\n        height: 100vh;\n      };\n\n      /* fixed position */\n\n      --layout-fixed-top: {\n        position: fixed;\n        top: 0;\n        left: 0;\n        right: 0;\n      };\n\n      --layout-fixed-right: {\n        position: fixed;\n        top: 0;\n        right: 0;\n        bottom: 0;\n      };\n\n      --layout-fixed-bottom: {\n        position: fixed;\n        right: 0;\n        bottom: 0;\n        left: 0;\n      };\n\n      --layout-fixed-left: {\n        position: fixed;\n        top: 0;\n        bottom: 0;\n        left: 0;\n      };\n\n    }\n  </style>\n</custom-style>";document.head.appendChild($_documentContainer.content);var style=document.createElement('style');style.textContent='[hidden] { display: none !important; }';document.head.appendChild(style);/**
-                                  @license
-                                  Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-                                  This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-                                  The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-                                  The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-                                  Code distributed by Google as part of the polymer project is also
-                                  subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-                                  */Polymer$1({_template:html(_templateObject2_d2a108606de411e888c72fe2f0a2f265),is:'app-drawer',properties:{/**
+afterNextRender(this,function(){drawer.removeAttribute('no-transition');});}this._drawerNeedsReset=false;}},_narrowChanged:function _narrowChanged(){this._drawerNeedsReset=true;this.resetLayout();},_onQueryMatchesChanged:function _onQueryMatchesChanged(event){this._setNarrow(event.detail.value);},_computeMediaQuery:function _computeMediaQuery(forceNarrow,responsiveWidth){return forceNarrow?'(min-width: 0px)':'(max-width: '+responsiveWidth+')';}});var $_documentContainer=document.createElement('template');$_documentContainer.setAttribute('style','display: none;');$_documentContainer.innerHTML="<custom-style>\n  <style is=\"custom-style\">\n    [hidden] {\n      display: none !important;\n    }\n  </style>\n</custom-style><custom-style>\n  <style is=\"custom-style\">\n    html {\n\n      --layout: {\n        display: -ms-flexbox;\n        display: -webkit-flex;\n        display: flex;\n      };\n\n      --layout-inline: {\n        display: -ms-inline-flexbox;\n        display: -webkit-inline-flex;\n        display: inline-flex;\n      };\n\n      --layout-horizontal: {\n        @apply --layout;\n\n        -ms-flex-direction: row;\n        -webkit-flex-direction: row;\n        flex-direction: row;\n      };\n\n      --layout-horizontal-reverse: {\n        @apply --layout;\n\n        -ms-flex-direction: row-reverse;\n        -webkit-flex-direction: row-reverse;\n        flex-direction: row-reverse;\n      };\n\n      --layout-vertical: {\n        @apply --layout;\n\n        -ms-flex-direction: column;\n        -webkit-flex-direction: column;\n        flex-direction: column;\n      };\n\n      --layout-vertical-reverse: {\n        @apply --layout;\n\n        -ms-flex-direction: column-reverse;\n        -webkit-flex-direction: column-reverse;\n        flex-direction: column-reverse;\n      };\n\n      --layout-wrap: {\n        -ms-flex-wrap: wrap;\n        -webkit-flex-wrap: wrap;\n        flex-wrap: wrap;\n      };\n\n      --layout-wrap-reverse: {\n        -ms-flex-wrap: wrap-reverse;\n        -webkit-flex-wrap: wrap-reverse;\n        flex-wrap: wrap-reverse;\n      };\n\n      --layout-flex-auto: {\n        -ms-flex: 1 1 auto;\n        -webkit-flex: 1 1 auto;\n        flex: 1 1 auto;\n      };\n\n      --layout-flex-none: {\n        -ms-flex: none;\n        -webkit-flex: none;\n        flex: none;\n      };\n\n      --layout-flex: {\n        -ms-flex: 1 1 0.000000001px;\n        -webkit-flex: 1;\n        flex: 1;\n        -webkit-flex-basis: 0.000000001px;\n        flex-basis: 0.000000001px;\n      };\n\n      --layout-flex-2: {\n        -ms-flex: 2;\n        -webkit-flex: 2;\n        flex: 2;\n      };\n\n      --layout-flex-3: {\n        -ms-flex: 3;\n        -webkit-flex: 3;\n        flex: 3;\n      };\n\n      --layout-flex-4: {\n        -ms-flex: 4;\n        -webkit-flex: 4;\n        flex: 4;\n      };\n\n      --layout-flex-5: {\n        -ms-flex: 5;\n        -webkit-flex: 5;\n        flex: 5;\n      };\n\n      --layout-flex-6: {\n        -ms-flex: 6;\n        -webkit-flex: 6;\n        flex: 6;\n      };\n\n      --layout-flex-7: {\n        -ms-flex: 7;\n        -webkit-flex: 7;\n        flex: 7;\n      };\n\n      --layout-flex-8: {\n        -ms-flex: 8;\n        -webkit-flex: 8;\n        flex: 8;\n      };\n\n      --layout-flex-9: {\n        -ms-flex: 9;\n        -webkit-flex: 9;\n        flex: 9;\n      };\n\n      --layout-flex-10: {\n        -ms-flex: 10;\n        -webkit-flex: 10;\n        flex: 10;\n      };\n\n      --layout-flex-11: {\n        -ms-flex: 11;\n        -webkit-flex: 11;\n        flex: 11;\n      };\n\n      --layout-flex-12: {\n        -ms-flex: 12;\n        -webkit-flex: 12;\n        flex: 12;\n      };\n\n      /* alignment in cross axis */\n\n      --layout-start: {\n        -ms-flex-align: start;\n        -webkit-align-items: flex-start;\n        align-items: flex-start;\n      };\n\n      --layout-center: {\n        -ms-flex-align: center;\n        -webkit-align-items: center;\n        align-items: center;\n      };\n\n      --layout-end: {\n        -ms-flex-align: end;\n        -webkit-align-items: flex-end;\n        align-items: flex-end;\n      };\n\n      --layout-baseline: {\n        -ms-flex-align: baseline;\n        -webkit-align-items: baseline;\n        align-items: baseline;\n      };\n\n      /* alignment in main axis */\n\n      --layout-start-justified: {\n        -ms-flex-pack: start;\n        -webkit-justify-content: flex-start;\n        justify-content: flex-start;\n      };\n\n      --layout-center-justified: {\n        -ms-flex-pack: center;\n        -webkit-justify-content: center;\n        justify-content: center;\n      };\n\n      --layout-end-justified: {\n        -ms-flex-pack: end;\n        -webkit-justify-content: flex-end;\n        justify-content: flex-end;\n      };\n\n      --layout-around-justified: {\n        -ms-flex-pack: distribute;\n        -webkit-justify-content: space-around;\n        justify-content: space-around;\n      };\n\n      --layout-justified: {\n        -ms-flex-pack: justify;\n        -webkit-justify-content: space-between;\n        justify-content: space-between;\n      };\n\n      --layout-center-center: {\n        @apply --layout-center;\n        @apply --layout-center-justified;\n      };\n\n      /* self alignment */\n\n      --layout-self-start: {\n        -ms-align-self: flex-start;\n        -webkit-align-self: flex-start;\n        align-self: flex-start;\n      };\n\n      --layout-self-center: {\n        -ms-align-self: center;\n        -webkit-align-self: center;\n        align-self: center;\n      };\n\n      --layout-self-end: {\n        -ms-align-self: flex-end;\n        -webkit-align-self: flex-end;\n        align-self: flex-end;\n      };\n\n      --layout-self-stretch: {\n        -ms-align-self: stretch;\n        -webkit-align-self: stretch;\n        align-self: stretch;\n      };\n\n      --layout-self-baseline: {\n        -ms-align-self: baseline;\n        -webkit-align-self: baseline;\n        align-self: baseline;\n      };\n\n      /* multi-line alignment in main axis */\n\n      --layout-start-aligned: {\n        -ms-flex-line-pack: start;  /* IE10 */\n        -ms-align-content: flex-start;\n        -webkit-align-content: flex-start;\n        align-content: flex-start;\n      };\n\n      --layout-end-aligned: {\n        -ms-flex-line-pack: end;  /* IE10 */\n        -ms-align-content: flex-end;\n        -webkit-align-content: flex-end;\n        align-content: flex-end;\n      };\n\n      --layout-center-aligned: {\n        -ms-flex-line-pack: center;  /* IE10 */\n        -ms-align-content: center;\n        -webkit-align-content: center;\n        align-content: center;\n      };\n\n      --layout-between-aligned: {\n        -ms-flex-line-pack: justify;  /* IE10 */\n        -ms-align-content: space-between;\n        -webkit-align-content: space-between;\n        align-content: space-between;\n      };\n\n      --layout-around-aligned: {\n        -ms-flex-line-pack: distribute;  /* IE10 */\n        -ms-align-content: space-around;\n        -webkit-align-content: space-around;\n        align-content: space-around;\n      };\n\n      /*******************************\n                Other Layout\n      *******************************/\n\n      --layout-block: {\n        display: block;\n      };\n\n      --layout-invisible: {\n        visibility: hidden !important;\n      };\n\n      --layout-relative: {\n        position: relative;\n      };\n\n      --layout-fit: {\n        position: absolute;\n        top: 0;\n        right: 0;\n        bottom: 0;\n        left: 0;\n      };\n\n      --layout-scroll: {\n        -webkit-overflow-scrolling: touch;\n        overflow: auto;\n      };\n\n      --layout-fullbleed: {\n        margin: 0;\n        height: 100vh;\n      };\n\n      /* fixed position */\n\n      --layout-fixed-top: {\n        position: fixed;\n        top: 0;\n        left: 0;\n        right: 0;\n      };\n\n      --layout-fixed-right: {\n        position: fixed;\n        top: 0;\n        right: 0;\n        bottom: 0;\n      };\n\n      --layout-fixed-bottom: {\n        position: fixed;\n        right: 0;\n        bottom: 0;\n        left: 0;\n      };\n\n      --layout-fixed-left: {\n        position: fixed;\n        top: 0;\n        bottom: 0;\n        left: 0;\n      };\n\n    }\n  </style>\n</custom-style>";document.head.appendChild($_documentContainer.content);var style=document.createElement('style');style.textContent='[hidden] { display: none !important; }';document.head.appendChild(style);Polymer$1({_template:html(_templateObject2_da5be4e02b3411e9984959bc9413e8f2()),is:'app-drawer',properties:{/**
      * The opened state of the drawer.
      */opened:{type:Boolean,value:false,notify:true,reflectToAttribute:true},/**
      * The drawer does not have a scrim and cannot be swiped close.
@@ -6940,15 +6454,7 @@ this.debounce('_resetDrawerState',this._resetDrawerState,this.transitionDuration
                      * Fired when app-drawer has finished transitioning.
                      *
                      * @event app-drawer-transitioned
-                     */}});/**
-    @license
-    Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-    Code distributed by Google as part of the polymer project is also
-    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-    */Polymer$1({_template:html(_templateObject3_d2a108606de411e888c72fe2f0a2f265),is:'app-header-layout',behaviors:[AppLayoutBehavior],properties:{/**
+                     */}});Polymer$1({_template:html(_templateObject3_da5be4e02b3411e9984959bc9413e8f2()),is:'app-header-layout',behaviors:[AppLayoutBehavior],properties:{/**
      * If true, the current element will have its own scrolling region.
      * Otherwise, it will use the document scroll to control the header.
      */hasScrollingRegion:{type:Boolean,value:false,reflectToAttribute:true}},observers:['resetLayout(isAttached, hasScrollingRegion)'],/**
@@ -6965,25 +6471,7 @@ if(!this.hasScrollingRegion){requestAnimationFrame(function(){var rect=this.getB
 var containerStyle=this.$.contentContainer.style;if(header.fixed&&!header.condenses&&this.hasScrollingRegion){// If the header size does not change and we're using a scrolling region,
 // exclude the header area from the scrolling region so that the header
 // doesn't overlap the scrollbar.
-containerStyle.marginTop=headerHeight+'px';containerStyle.paddingTop='';}else{containerStyle.paddingTop=headerHeight+'px';containerStyle.marginTop='';}}});/**
-    @license
-    Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
-    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-    Code distributed by Google as part of the polymer project is also
-    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-    */ /**
-        * `Polymer.IronScrollTargetBehavior` allows an element to respond to scroll
-        * events from a designated scroll target.
-        *
-        * Elements that consume this behavior can override the `_scrollHandler`
-        * method to add logic on the scroll event.
-        *
-        * @demo demo/scrolling-region.html Scrolling Region
-        * @demo demo/document.html Document Element
-        * @polymerBehavior
-        */var IronScrollTargetBehavior={properties:{/**
+containerStyle.marginTop=headerHeight+'px';containerStyle.paddingTop='';}else{containerStyle.paddingTop=headerHeight+'px';containerStyle.marginTop='';}}});var IronScrollTargetBehavior={properties:{/**
      * Specifies the element that will handle the scroll event
      * on the behalf of the current element. This is typically a reference to an
      *element, but there are a few more posibilities:
@@ -7077,15 +6565,7 @@ if(scrollTarget==='document'){this.scrollTarget=this._doc;}else if(typeof scroll
    * Enables or disables the scroll event listener.
    *
    * @param {boolean} yes True to add the event, False to remove it.
-   */toggleScrollListener:function toggleScrollListener(yes){this._shouldHaveListener=yes;this._toggleScrollListener(yes,this.scrollTarget);}};_exports.IronScrollTargetBehavior=IronScrollTargetBehavior;var ironScrollTargetBehavior={IronScrollTargetBehavior:IronScrollTargetBehavior};/**
-   @license
-   Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$ironScrollTargetBehavior=ironScrollTargetBehavior;var _scrollEffects={};_exports._scrollEffects=_scrollEffects;var _scrollTimer=null;_exports._scrollTimer=_scrollTimer;var scrollTimingFunction=function easeOutQuad(t,b,c,d){t/=d;return-c*t*(t-2)+b;};/**
+   */toggleScrollListener:function toggleScrollListener(yes){this._shouldHaveListener=yes;this._toggleScrollListener(yes,this.scrollTarget);}};_exports.IronScrollTargetBehavior=IronScrollTargetBehavior;var ironScrollTargetBehavior={IronScrollTargetBehavior:IronScrollTargetBehavior};_exports.$ironScrollTargetBehavior=ironScrollTargetBehavior;var _scrollEffects={};_exports._scrollEffects=_scrollEffects;var _scrollTimer=null;_exports._scrollTimer=_scrollTimer;var scrollTimingFunction=function easeOutQuad(t,b,c,d){t/=d;return-c*t*(t-2)+b;};/**
     * Registers a scroll effect to be used in elements that implement the
     * `Polymer.AppScrollEffectsBehavior` behavior.
     *
@@ -7119,108 +6599,7 @@ if(scrollTarget==='document'){this.scrollTarget=this._doc;}else if(typeof scroll
 // events and thus scroll effects. This seems to only apply when using
 // document scrolling. Therefore, when should we remove the class from the
 // document element?
-if(_scrollTimer){window.cancelAnimationFrame(_scrollTimer);}_exports._scrollTimer=_scrollTimer=window.requestAnimationFrame(function(){headers.forEach(function(header){header.removeAttribute('silent-scroll');});_exports._scrollTimer=_scrollTimer=null;});scrollTo(scrollLeft,scrollTop);}else{scrollTo(scrollLeft,scrollTop);}};_exports.scroll=scroll;var helpers={_scrollEffects:_scrollEffects,get _scrollTimer(){return _scrollTimer;},scrollTimingFunction:scrollTimingFunction,registerEffect:registerEffect,queryAllRoot:queryAllRoot,scroll:scroll};/**
-   @license
-   Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ /**
-       * `Polymer.AppScrollEffectsBehavior` provides an interface that allows an
-       * element to use scrolls effects.
-       *
-       * ### Importing the app-layout effects
-       *
-       * app-layout provides a set of scroll effects that can be used by explicitly
-       * importing `app-scroll-effects.html`:
-       *
-       * ```html
-       * <link rel="import"
-       * href="/bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
-       * ```
-       *
-       * The scroll effects can also be used by individually importing
-       * `app-layout/app-scroll-effects/effects/[effectName].html`. For example:
-       *
-       * ```html
-       *  <link rel="import"
-       * href="/bower_components/app-layout/app-scroll-effects/effects/waterfall.html">
-       * ```
-       *
-       * ### Consuming effects
-       *
-       * Effects can be consumed via the `effects` property. For example:
-       *
-       * ```html
-       * <app-header effects="waterfall"></app-header>
-       * ```
-       *
-       * ### Creating scroll effects
-       *
-       * You may want to create a custom scroll effect if you need to modify the CSS
-       * of an element based on the scroll position.
-       *
-       * A scroll effect definition is an object with `setUp()`, `tearDown()` and
-       * `run()` functions.
-       *
-       * To register the effect, you can use
-       * `Polymer.AppLayout.registerEffect(effectName, effectDef)` For example, let's
-       * define an effect that resizes the header's logo:
-       *
-       * ```js
-       * Polymer.AppLayout.registerEffect('resizable-logo', {
-       *   setUp: function(config) {
-       *     // the effect's config is passed to the setUp.
-       *     this._fxResizeLogo = { logo: Polymer.dom(this).querySelector('[logo]') };
-       *   },
-       *
-       *   run: function(progress) {
-       *      // the progress of the effect
-       *      this.transform('scale3d(' + progress + ', '+ progress +', 1)',
-       * this._fxResizeLogo.logo);
-       *   },
-       *
-       *   tearDown: function() {
-       *      // clean up and reset of states
-       *      delete this._fxResizeLogo;
-       *   }
-       * });
-       * ```
-       * Now, you can consume the effect:
-       *
-       * ```html
-       * <app-header id="appHeader" effects="resizable-logo">
-       *   <img logo src="logo.svg">
-       * </app-header>
-       * ```
-       *
-       * ### Imperative API
-       *
-       * ```js
-       * var logoEffect = appHeader.createEffect('resizable-logo', effectConfig);
-       * // run the effect: logoEffect.run(progress);
-       * // tear down the effect: logoEffect.tearDown();
-       * ```
-       *
-       * ### Configuring effects
-       *
-       * For effects installed via the `effects` property, their configuration can be
-       * set via the `effectsConfig` property. For example:
-       *
-       * ```html
-       * <app-header effects="waterfall"
-       *   effects-config='{"waterfall": {"startsAt": 0, "endsAt": 0.5}}'>
-       * </app-header>
-       * ```
-       *
-       * All effects have a `startsAt` and `endsAt` config property. They specify at
-       * what point the effect should start and end. This value goes from 0 to 1
-       * inclusive.
-       *
-       * @polymerBehavior
-       */_exports.$helpers=helpers;var AppScrollEffectsBehavior=[IronScrollTargetBehavior,{properties:{/**
+if(_scrollTimer){window.cancelAnimationFrame(_scrollTimer);}_exports._scrollTimer=_scrollTimer=window.requestAnimationFrame(function(){headers.forEach(function(header){header.removeAttribute('silent-scroll');});_exports._scrollTimer=_scrollTimer=null;});scrollTo(scrollLeft,scrollTop);}else{scrollTo(scrollLeft,scrollTop);}};_exports.scroll=scroll;var helpers={_scrollEffects:_scrollEffects,get _scrollTimer(){return _scrollTimer;},scrollTimingFunction:scrollTimingFunction,registerEffect:registerEffect,queryAllRoot:queryAllRoot,scroll:scroll};_exports.$helpers=helpers;var AppScrollEffectsBehavior=[IronScrollTargetBehavior,{properties:{/**
      * A space-separated list of the effects names that will be triggered when
      * the user scrolls. e.g. `waterfall parallax-background` installs the
      * `waterfall` and `parallax-background`.
@@ -7332,15 +6711,7 @@ if(effectDef.setUp()!==false){this._effectsRunFn.push(effectDef.run);}},this);}}
    * The node is consumed by a scroll effect.
    *
    * @param {string} id The id for the node.
-   */_getDOMRef:function _getDOMRef(id){console.warn('_getDOMRef','`'+id+'` is undefined');},_getUndefinedMsg:function _getUndefinedMsg(effectName){return'Scroll effect `'+effectName+'` is undefined. '+'Did you forget to import app-layout/app-scroll-effects/effects/'+effectName+'.html ?';}}];_exports.AppScrollEffectsBehavior=AppScrollEffectsBehavior;var appScrollEffectsBehavior={AppScrollEffectsBehavior:AppScrollEffectsBehavior};/**
-   @license
-   Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$appScrollEffectsBehavior=appScrollEffectsBehavior;Polymer$1({_template:html(_templateObject4_d2a108606de411e888c72fe2f0a2f265),is:'app-header',behaviors:[AppScrollEffectsBehavior,AppLayoutBehavior],properties:{/**
+   */_getDOMRef:function _getDOMRef(id){console.warn('_getDOMRef','`'+id+'` is undefined');},_getUndefinedMsg:function _getUndefinedMsg(effectName){return'Scroll effect `'+effectName+'` is undefined. '+'Did you forget to import app-layout/app-scroll-effects/effects/'+effectName+'.html ?';}}];_exports.AppScrollEffectsBehavior=AppScrollEffectsBehavior;var appScrollEffectsBehavior={AppScrollEffectsBehavior:AppScrollEffectsBehavior};_exports.$appScrollEffectsBehavior=appScrollEffectsBehavior;Polymer$1({_template:html(_templateObject4_da5be4e02b3411e9984959bc9413e8f2()),is:'app-header',behaviors:[AppScrollEffectsBehavior,AppLayoutBehavior],properties:{/**
      * If true, the header will automatically collapse when scrolling down.
      * That is, the `sticky` element remains visible when the header is fully
      *condensed whereas the rest of the elements will collapse below `sticky`
@@ -7449,23 +6820,7 @@ if(Math.abs(this._initScrollTop-scrollTop)>30||absDScrollTop>10){if(isScrollingD
    *
    * @method getScrollState
    * @return {Object}
-   */getScrollState:function getScrollState(){return{progress:this._progress,top:this._top};}});/**
-    @license
-    Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-    Code distributed by Google as part of the polymer project is also
-    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-    */Polymer$1({_template:html(_templateObject5_d2a108606de411e888c72fe2f0a2f265),is:'app-toolbar'});/**
-    @license
-    Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-    Code distributed by Google as part of the polymer project is also
-    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-    */var workingURL$1;var urlDoc,urlBase,anchor;/**
+   */getScrollState:function getScrollState(){return{progress:this._progress,top:this._top};}});Polymer$1({_template:html(_templateObject5_da5be4e02b3411e9984959bc9413e8f2()),is:'app-toolbar'});var workingURL$1;var urlDoc,urlBase,anchor;/**
                               * @param {string} path
                               * @param {string=} base
                               * @return {!URL|!HTMLAnchorElement}
@@ -7546,17 +6901,7 @@ if(this.__location.origin){origin=this.__location.origin;}else{origin=this.__loc
 var urlHost=url.host;var urlPort=url.port;var urlProtocol=url.protocol;var isExtraneousHTTPS=urlProtocol==='https:'&&urlPort==='443';var isExtraneousHTTP=urlProtocol==='http:'&&urlPort==='80';if(isExtraneousHTTPS||isExtraneousHTTP){urlHost=url.hostname;}urlOrigin=urlProtocol+'//'+urlHost;}if(urlOrigin!==origin){return null;}var normalizedHref=url.pathname+url.search+url.hash;// pathname should start with '/', but may not if `new URL` is not supported
 if(normalizedHref[0]!=='/'){normalizedHref='/'+normalizedHref;}// If we've been configured not to handle this url... don't handle it!
 if(this._urlSpaceRegExp&&!this._urlSpaceRegExp.test(normalizedHref)){return null;}// Need to use a full URL in case the containing page has a base URI.
-var fullNormalizedHref=resolveURL(normalizedHref,this.__location.href).href;return fullNormalizedHref;},_makeRegExp:function _makeRegExp(urlSpaceRegex){return RegExp(urlSpaceRegex);}});/**
-    @license
-    Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-    Code distributed by Google as part of the polymer project is also
-    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-    
-    @demo demo/iron-query-params.html
-    */Polymer$1({is:'iron-query-params',properties:{/**
+var fullNormalizedHref=resolveURL(normalizedHref,this.__location.href).href;return fullNormalizedHref;},_makeRegExp:function _makeRegExp(urlSpaceRegex){return RegExp(urlSpaceRegex);}});Polymer$1({is:'iron-query-params',properties:{/**
      * @type{string|undefined}
      */paramsString:{type:String,notify:true,observer:'paramsStringChanged'},/**
      * @type{Object|undefined}
@@ -7603,15 +6948,7 @@ paramString=(paramString||'').replace(/\+/g,'%20');var paramList=paramString.spl
    *
    * @param  {Object} queryParams A set of key/value pairs that are
    * universally accessible to branches of the route tree.
-   */_routeQueryParamsChanged:function _routeQueryParamsChanged(queryParams){if(!this.route){return;}this.queryParams=queryParams;}};_exports.AppRouteConverterBehavior=AppRouteConverterBehavior;var appRouteConverterBehavior={AppRouteConverterBehavior:AppRouteConverterBehavior};/**
-   @license
-   Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$appRouteConverterBehavior=appRouteConverterBehavior;Polymer$1({_template:html(_templateObject6_d2a108606de411e888c72fe2f0a2f265),is:'app-location',properties:{/**
+   */_routeQueryParamsChanged:function _routeQueryParamsChanged(queryParams){if(!this.route){return;}this.queryParams=queryParams;}};_exports.AppRouteConverterBehavior=AppRouteConverterBehavior;var appRouteConverterBehavior={AppRouteConverterBehavior:AppRouteConverterBehavior};_exports.$appRouteConverterBehavior=appRouteConverterBehavior;Polymer$1({_template:html(_templateObject6_da5be4e02b3411e9984959bc9413e8f2()),is:'app-location',properties:{/**
      * A model representing the deserialized path through the route tree, as
      * well as the current queryParams.
      */route:{type:Object,notify:true},/**
@@ -7658,15 +6995,7 @@ paramString=(paramString||'').replace(/\+/g,'%20');var paramList=paramString.spl
      * user's browser history. Disable by setting to a negative number.
      *
      * See `iron-location` for more information.
-     */dwellTime:{type:Number}},behaviors:[AppRouteConverterBehavior],observers:['__computeRoutePath(useHashAsPath, __hash, __path)'],ready:function ready(){this._isReady=true;},__computeRoutePath:function __computeRoutePath(){this.path=this.useHashAsPath?this.__hash:this.__path;},__onPathChanged:function __onPathChanged(){if(!this._isReady){return;}if(this.useHashAsPath){this.__hash=this.path;}else{this.__path=this.path;}}});/**
-    @license
-    Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
-    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-    Code distributed by Google as part of the polymer project is also
-    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-    */Polymer$1({is:'app-route',properties:{/**
+     */dwellTime:{type:Number}},behaviors:[AppRouteConverterBehavior],observers:['__computeRoutePath(useHashAsPath, __hash, __path)'],ready:function ready(){this._isReady=true;},__computeRoutePath:function __computeRoutePath(){this.path=this.useHashAsPath?this.__hash:this.__path;},__onPathChanged:function __onPathChanged(){if(!this._isReady){return;}if(this.useHashAsPath){this.__hash=this.path;}else{this.__path=this.path;}}});Polymer$1({is:'app-route',properties:{/**
      * The URL component managed by this element.
      */route:{type:Object,notify:true},/**
      * The pattern of slash-separated segments to match `route.path` against.
@@ -7713,21 +7042,7 @@ this.setProperties(propertyUpdates,true);}else{this.__setMulti(propertyUpdates);
 //
 //     Be ye so warned.
 for(var property in setObj){this._propertySetter(property,setObj[property]);}// notify in a specific order
-if(setObj.data!==undefined){this._pathEffector('data',this.data);this._notifyChange('data');}if(setObj.active!==undefined){this._pathEffector('active',this.active);this._notifyChange('active');}if(setObj.tail!==undefined){this._pathEffector('tail',this.tail);this._notifyChange('tail');}}});/**
-    @license
-    Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-    Code distributed by Google as part of the polymer project is also
-    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-    */ /**
-        * Chrome uses an older version of DOM Level 3 Keyboard Events
-        *
-        * Most keys are labeled as text, but some are Unicode codepoints.
-        * Values taken from:
-        * http://www.w3.org/TR/2007/WD-DOM-Level-3-Events-20071221/keyset.html#KeySet-Set
-        */var KEY_IDENTIFIER={'U+0008':'backspace','U+0009':'tab','U+001B':'esc','U+0020':'space','U+007F':'del'};/**
+if(setObj.data!==undefined){this._pathEffector('data',this.data);this._notifyChange('data');}if(setObj.active!==undefined){this._pathEffector('active',this.active);this._notifyChange('active');}if(setObj.tail!==undefined){this._pathEffector('tail',this.tail);this._notifyChange('tail');}}});var KEY_IDENTIFIER={'U+0008':'backspace','U+0009':'tab','U+001B':'esc','U+0020':'space','U+007F':'del'};/**
     * Special table for KeyboardEvent.keyCode.
     * KeyboardEvent.keyIdentifier is better, and KeyBoardEvent.key is even better
     * than that.
@@ -7848,18 +7163,7 @@ _imperativeKeyBindings:{type:Object,value:function value(){return{};}}},observer
 for(var eventName in this._keyBindings){this._keyBindings[eventName].sort(function(kb1,kb2){var b1=kb1[0].hasModifiers;var b2=kb2[0].hasModifiers;return b1===b2?0:b1?-1:1;});}},_addKeyBinding:function _addKeyBinding(eventString,handlerName){parseEventString(eventString).forEach(function(keyCombo){this._keyBindings[keyCombo.event]=this._keyBindings[keyCombo.event]||[];this._keyBindings[keyCombo.event].push([keyCombo,handlerName]);},this);},_resetKeyEventListeners:function _resetKeyEventListeners(){this._unlistenKeyEventListeners();if(this.isAttached){this._listenKeyEventListeners();}},_listenKeyEventListeners:function _listenKeyEventListeners(){if(!this.keyEventTarget){return;}Object.keys(this._keyBindings).forEach(function(eventName){var keyBindings=this._keyBindings[eventName];var boundKeyHandler=this._onKeyBindingEvent.bind(this,keyBindings);this._boundKeyHandlers.push([this.keyEventTarget,eventName,boundKeyHandler]);this.keyEventTarget.addEventListener(eventName,boundKeyHandler);},this);},_unlistenKeyEventListeners:function _unlistenKeyEventListeners(){var keyHandlerTuple;var keyEventTarget;var eventName;var boundKeyHandler;while(this._boundKeyHandlers.length){// My kingdom for block-scope binding and destructuring assignment..
 keyHandlerTuple=this._boundKeyHandlers.pop();keyEventTarget=keyHandlerTuple[0];eventName=keyHandlerTuple[1];boundKeyHandler=keyHandlerTuple[2];keyEventTarget.removeEventListener(eventName,boundKeyHandler);}},_onKeyBindingEvent:function _onKeyBindingEvent(keyBindings,event){if(this.stopKeyboardEventPropagation){event.stopPropagation();}// if event has been already prevented, don't do anything
 if(event.defaultPrevented){return;}for(var i=0;i<keyBindings.length;i++){var keyCombo=keyBindings[i][0];var handlerName=keyBindings[i][1];if(keyComboMatchesEvent(keyCombo,event)){this._triggerKeyHandler(keyCombo,handlerName,event);// exit the loop if eventDefault was prevented
-if(event.defaultPrevented){return;}}}},_triggerKeyHandler:function _triggerKeyHandler(keyCombo,handlerName,keyboardEvent){var detail=Object.create(keyCombo);detail.keyboardEvent=keyboardEvent;var event=new CustomEvent(keyCombo.event,{detail:detail,cancelable:true});this[handlerName].call(this,event);if(event.defaultPrevented){keyboardEvent.preventDefault();}}};_exports.IronA11yKeysBehavior=IronA11yKeysBehavior;var ironA11yKeysBehavior={IronA11yKeysBehavior:IronA11yKeysBehavior};/**
-   @license
-   Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ /**
-       * @demo demo/index.html
-       * @polymerBehavior
-       */_exports.$ironA11yKeysBehavior=ironA11yKeysBehavior;var IronControlState={properties:{/**
+if(event.defaultPrevented){return;}}}},_triggerKeyHandler:function _triggerKeyHandler(keyCombo,handlerName,keyboardEvent){var detail=Object.create(keyCombo);detail.keyboardEvent=keyboardEvent;var event=new CustomEvent(keyCombo.event,{detail:detail,cancelable:true});this[handlerName].call(this,event);if(event.defaultPrevented){keyboardEvent.preventDefault();}}};_exports.IronA11yKeysBehavior=IronA11yKeysBehavior;var ironA11yKeysBehavior={IronA11yKeysBehavior:IronA11yKeysBehavior};_exports.$ironA11yKeysBehavior=ironA11yKeysBehavior;var IronControlState={properties:{/**
      * If true, the element currently has focus.
      */focused:{type:Boolean,value:false,notify:true,readOnly:true,reflectToAttribute:true},/**
      * If true, the user cannot interact with this element.
@@ -7880,18 +7184,7 @@ if(event.target===this){this._setFocused(event.type==='focus');}else if(this.__h
 // This distinction is important when restoring the value because
 // leaving `-1` hides shadow root children from the tab order.
 this._oldTabIndex=this.getAttribute('tabindex');this._setFocused(false);this.tabIndex=-1;this.blur();}else if(this._oldTabIndex!==undefined){if(this._oldTabIndex===null){this.removeAttribute('tabindex');}else{this.setAttribute('tabindex',this._oldTabIndex);}}},_changedControlState:function _changedControlState(){// _controlStateChanged is abstract, follow-on behaviors may implement it
-if(this._controlStateChanged){this._controlStateChanged();}}};_exports.IronControlState=IronControlState;var ironControlState={IronControlState:IronControlState};/**
-   @license
-   Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ /**
-       * @demo demo/index.html
-       * @polymerBehavior Polymer.IronButtonState
-       */_exports.$ironControlState=ironControlState;var IronButtonStateImpl={properties:{/**
+if(this._controlStateChanged){this._controlStateChanged();}}};_exports.IronControlState=IronControlState;var ironControlState={IronControlState:IronControlState};_exports.$ironControlState=ironControlState;var IronButtonStateImpl={properties:{/**
      * If true, the user is currently holding down the button.
      */pressed:{type:Boolean,readOnly:true,value:false,reflectToAttribute:true,observer:'_pressedChanged'},/**
      * If true, the button toggles the active state with each tap or press
@@ -7926,22 +7219,7 @@ if(this.isLightDescendant(/** @type {Node} */target))return;if(this.pressed){thi
 _asyncClick:function _asyncClick(){this.async(function(){this.click();},1);},// any of these changes are considered a change to button state
 _pressedChanged:function _pressedChanged(pressed){this._changedButtonState();},_ariaActiveAttributeChanged:function _ariaActiveAttributeChanged(value,oldValue){if(oldValue&&oldValue!=value&&this.hasAttribute(oldValue)){this.removeAttribute(oldValue);}},_activeChanged:function _activeChanged(active,ariaActiveAttribute){if(this.toggles){this.setAttribute(this.ariaActiveAttribute,active?'true':'false');}else{this.removeAttribute(this.ariaActiveAttribute);}this._changedButtonState();},_controlStateChanged:function _controlStateChanged(){if(this.disabled){this._setPressed(false);}else{this._changedButtonState();}},// provide hook for follow-on behaviors to react to button-state
 _changedButtonState:function _changedButtonState(){if(this._buttonStateChanged){this._buttonStateChanged();// abstract
-}}};/** @polymerBehavior */_exports.IronButtonStateImpl=IronButtonStateImpl;var IronButtonState=[IronA11yKeysBehavior,IronButtonStateImpl];_exports.IronButtonState=IronButtonState;var ironButtonState={IronButtonStateImpl:IronButtonStateImpl,IronButtonState:IronButtonState};/**
-   @license
-   Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ /**
-       * @constructor
-       * @param {{
-       *   type: (string|null|undefined),
-       *   key: (string|null|undefined),
-       *   value: *,
-       * }=} options
-       */_exports.$ironButtonState=ironButtonState;var IronMeta=function IronMeta(options){IronMeta[' '](options);this.type=options&&options.type||'default';this.key=options&&options.key;if(options&&'value'in options){this.value=options.value;}};// This function is used to convince Closure not to remove constructor calls
+}}};/** @polymerBehavior */_exports.IronButtonStateImpl=IronButtonStateImpl;var IronButtonState=[IronA11yKeysBehavior,IronButtonStateImpl];_exports.IronButtonState=IronButtonState;var ironButtonState={IronButtonStateImpl:IronButtonStateImpl,IronButtonState:IronButtonState};_exports.$ironButtonState=ironButtonState;var IronMeta=function IronMeta(options){IronMeta[' '](options);this.type=options&&options.type||'default';this.key=options&&options.key;if(options&&'value'in options){this.value=options.value;}};// This function is used to convince Closure not to remove constructor calls
 // for instances that are not held anywhere. For example, when
 // `new Polymer.IronMeta({...})` is used only for the side effect of adding
 // a value.
@@ -7963,15 +7241,7 @@ _exports.IronMeta=IronMeta;IronMeta[' ']=function(){};IronMeta.types={};IronMeta
    * @method byKey
    * @param {string} key The key of the meta-data to be returned.
    * @return {*}
-   */byKey:function byKey(key){return new IronMeta({type:this.type,key:key}).value;}});var ironMeta={IronMeta:IronMeta};/**
-   @license
-   Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$ironMeta=ironMeta;Polymer$1({_template:html(_templateObject7_d2a108606de411e888c72fe2f0a2f265),is:'iron-icon',properties:{/**
+   */byKey:function byKey(key){return new IronMeta({type:this.type,key:key}).value;}});var ironMeta={IronMeta:IronMeta};_exports.$ironMeta=ironMeta;Polymer$1({_template:html(_templateObject7_da5be4e02b3411e9984959bc9413e8f2()),is:'iron-icon',properties:{/**
      * The name of the icon to use. The name should be of the form:
      * `iconset_name:icon_name`.
      */icon:{type:String},/**
@@ -7983,49 +7253,7 @@ _exports.IronMeta=IronMeta;IronMeta[' ']=function(){};IronMeta.types={};IronMeta
      * precedence over a given icon attribute.
      */src:{type:String},/**
      * @type {!Polymer.IronMeta}
-     */_meta:{value:Base.create('iron-meta',{type:'iconset'})}},observers:['_updateIcon(_meta, isAttached)','_updateIcon(theme, isAttached)','_srcChanged(src, isAttached)','_iconChanged(icon, isAttached)'],_DEFAULT_ICONSET:'icons',_iconChanged:function _iconChanged(icon){var parts=(icon||'').split(':');this._iconName=parts.pop();this._iconsetName=parts.pop()||this._DEFAULT_ICONSET;this._updateIcon();},_srcChanged:function _srcChanged(src){this._updateIcon();},_usesIconset:function _usesIconset(){return this.icon||!this.src;},/** @suppress {visibility} */_updateIcon:function _updateIcon(){if(this._usesIconset()){if(this._img&&this._img.parentNode){dom(this.root).removeChild(this._img);}if(this._iconName===''){if(this._iconset){this._iconset.removeIcon(this);}}else if(this._iconsetName&&this._meta){this._iconset=/** @type {?Polymer.Iconset} */this._meta.byKey(this._iconsetName);if(this._iconset){this._iconset.applyIcon(this,this._iconName,this.theme);this.unlisten(window,'iron-iconset-added','_updateIcon');}else{this.listen(window,'iron-iconset-added','_updateIcon');}}}else{if(this._iconset){this._iconset.removeIcon(this);}if(!this._img){this._img=document.createElement('img');this._img.style.width='100%';this._img.style.height='100%';this._img.draggable=false;}this._img.src=this.src;dom(this.root).appendChild(this._img);}}});/**
-    @license
-    Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-    Code distributed by Google as part of the polymer project is also
-    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-    */ /**
-        * The `iron-iconset-svg` element allows users to define their own icon sets
-        * that contain svg icons. The svg icon elements should be children of the
-        * `iron-iconset-svg` element. Multiple icons should be given distinct id's.
-        *
-        * Using svg elements to create icons has a few advantages over traditional
-        * bitmap graphics like jpg or png. Icons that use svg are vector based so
-        * they are resolution independent and should look good on any device. They
-        * are stylable via css. Icons can be themed, colorized, and even animated.
-        *
-        * Example:
-        *
-        *     <iron-iconset-svg name="my-svg-icons" size="24">
-        *       <svg>
-        *         <defs>
-        *           <g id="shape">
-        *             <rect x="12" y="0" width="12" height="24" />
-        *             <circle cx="12" cy="12" r="12" />
-        *           </g>
-        *         </defs>
-        *       </svg>
-        *     </iron-iconset-svg>
-        *
-        * This will automatically register the icon set "my-svg-icons" to the iconset
-        * database.  To use these icons from within another element, make a
-        * `iron-iconset` element and call the `byId` method
-        * to retrieve a given iconset. To apply a particular icon inside an
-        * element use the `applyIcon` method. For example:
-        *
-        *     iconset.applyIcon(iconNode, 'car');
-        *
-        * @element iron-iconset-svg
-        * @demo demo/index.html
-        * @implements {Polymer.Iconset}
-        */Polymer$1({is:'iron-iconset-svg',properties:{/**
+     */_meta:{value:Base.create('iron-meta',{type:'iconset'})}},observers:['_updateIcon(_meta, isAttached)','_updateIcon(theme, isAttached)','_srcChanged(src, isAttached)','_iconChanged(icon, isAttached)'],_DEFAULT_ICONSET:'icons',_iconChanged:function _iconChanged(icon){var parts=(icon||'').split(':');this._iconName=parts.pop();this._iconsetName=parts.pop()||this._DEFAULT_ICONSET;this._updateIcon();},_srcChanged:function _srcChanged(src){this._updateIcon();},_usesIconset:function _usesIconset(){return this.icon||!this.src;},/** @suppress {visibility} */_updateIcon:function _updateIcon(){if(this._usesIconset()){if(this._img&&this._img.parentNode){dom(this.root).removeChild(this._img);}if(this._iconName===''){if(this._iconset){this._iconset.removeIcon(this);}}else if(this._iconsetName&&this._meta){this._iconset=/** @type {?Polymer.Iconset} */this._meta.byKey(this._iconsetName);if(this._iconset){this._iconset.applyIcon(this,this._iconName,this.theme);this.unlisten(window,'iron-iconset-added','_updateIcon');}else{this.listen(window,'iron-iconset-added','_updateIcon');}}}else{if(this._iconset){this._iconset.removeIcon(this);}if(!this._img){this._img=document.createElement('img');this._img.style.width='100%';this._img.style.height='100%';this._img.draggable=false;}this._img.src=this.src;dom(this.root).appendChild(this._img);}}});Polymer$1({is:'iron-iconset-svg',properties:{/**
      * The name of the iconset.
      */name:{type:String,observer:'_nameChanged'},/**
      * The size of an individual icon. Note that icons must be square.
@@ -8142,15 +7370,7 @@ svg.style.cssText=cssText;svg.appendChild(content).removeAttribute('id');return 
                                                                   FIXME(polymer-modulizer): the above comments were extracted
                                                                   from HTML and may be out of place here. Review them and
                                                                   then delete this comment!
-                                                                */ /**
-                                                                   @license
-                                                                   Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
-                                                                   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-                                                                   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-                                                                   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-                                                                   Code distributed by Google as part of the polymer project is also
-                                                                   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-                                                                   */var IOS=navigator.userAgent.match(/iP(?:hone|ad;(?: U;)? CPU) OS (\d+)/);var IOS_TOUCH_SCROLLING=IOS&&IOS[1]>=8;var DEFAULT_PHYSICAL_COUNT=3;var HIDDEN_Y='-10000px';var ITEM_WIDTH=0;var ITEM_HEIGHT=1;var SECRET_TABINDEX=-100;var IS_V2=flush$1!=null;var ANIMATION_FRAME=IS_V2?animationFrame:0;var IDLE_TIME=IS_V2?idlePeriod:1;var MICRO_TASK=IS_V2?microTask:2;/* Polymer.OptionalMutableDataBehavior is only available with Polymer 2.0. */if(!OptionalMutableDataBehavior){/** @polymerBehavior */Polymer.OptionalMutableDataBehavior={};}Polymer$1({_template:html(_templateObject8_d2a108606de411e888c72fe2f0a2f265),is:'iron-list',properties:{/**
+                                                                */var IOS=navigator.userAgent.match(/iP(?:hone|ad;(?: U;)? CPU) OS (\d+)/);var IOS_TOUCH_SCROLLING=IOS&&IOS[1]>=8;var DEFAULT_PHYSICAL_COUNT=3;var HIDDEN_Y='-10000px';var ITEM_WIDTH=0;var ITEM_HEIGHT=1;var SECRET_TABINDEX=-100;var IS_V2=flush$1!=null;var ANIMATION_FRAME=IS_V2?animationFrame:0;var IDLE_TIME=IS_V2?idlePeriod:1;var MICRO_TASK=IS_V2?microTask:2;/* Polymer.OptionalMutableDataBehavior is only available with Polymer 2.0. */if(!OptionalMutableDataBehavior){/** @polymerBehavior */Polymer.OptionalMutableDataBehavior={};}Polymer$1({_template:html(_templateObject8_da5be4e02b3411e9984959bc9413e8f2()),is:'iron-list',properties:{/**
      * An array containing items determining how many instances of the template
      * to stamp and that that each template instance should bind to.
      */items:{type:Array},/**
@@ -8525,19 +7745,7 @@ this._physicalItems[fpidx]=this._offscreenFocusedItem;// Hide the physical item 
 this.translate3d(0,HIDDEN_Y,0,this._focusBackfillItem);}else{this._removeFocusedItem();this._focusBackfillItem=null;}this._offscreenFocusedItem=null;},_didFocus:function _didFocus(e){var targetModel=this.modelForElement(e.target);var focusedModel=this.modelForElement(this._focusedItem);var hasOffscreenFocusedItem=this._offscreenFocusedItem!==null;var fidx=this._focusedVirtualIndex;if(!targetModel){return;}if(focusedModel===targetModel){// If the user focused the same item, then bring it into view if it's not visible.
 if(!this._isIndexVisible(fidx)){this.scrollToIndex(fidx);}}else{this._restoreFocusedItem();// Restore tabIndex for the currently focused item.
 if(focusedModel){focusedModel.tabIndex=-1;}// Set the tabIndex for the next focused item.
-targetModel.tabIndex=0;fidx=targetModel[this.indexAs];this._focusedVirtualIndex=fidx;this._focusedPhysicalIndex=this._getPhysicalIndex(fidx);this._focusedItem=this._physicalItems[this._focusedPhysicalIndex];if(hasOffscreenFocusedItem&&!this._offscreenFocusedItem){this._update();}}},_keydownHandler:function _keydownHandler(e){switch(e.keyCode){case/* ARROW_DOWN */40:e.preventDefault();this._focusPhysicalItem(this._focusedVirtualIndex+(this.grid?this._itemsPerRow:1));break;case/* ARROW_RIGHT */39:if(this.grid)this._focusPhysicalItem(this._focusedVirtualIndex+(this._isRTL?-1:1));break;case/* ARROW_UP */38:this._focusPhysicalItem(this._focusedVirtualIndex-(this.grid?this._itemsPerRow:1));break;case/* ARROW_LEFT */37:if(this.grid)this._focusPhysicalItem(this._focusedVirtualIndex+(this._isRTL?1:-1));break;case/* ENTER */13:this._focusPhysicalItem(this._focusedVirtualIndex);this._selectionHandler(e);break;}},_clamp:function _clamp(v,min,max){return Math.min(max,Math.max(min,v));},_debounce:function _debounce(name,cb,asyncModule){if(IS_V2){this._debouncers=this._debouncers||{};this._debouncers[name]=Debouncer.debounce(this._debouncers[name],asyncModule,cb.bind(this));enqueueDebouncer(this._debouncers[name]);}else{enqueueDebouncer(this.debounce(name,cb));}},_forwardProperty:function _forwardProperty(inst,name,value){if(IS_V2){inst._setPendingProperty(name,value);}else{inst[name]=value;}},/* Templatizer bindings for v2 */_forwardHostPropV2:function _forwardHostPropV2(prop,value){(this._physicalItems||[]).concat([this._offscreenFocusedItem,this._focusBackfillItem]).forEach(function(item){if(item){this.modelForElement(item).forwardHostProp(prop,value);}},this);},_notifyInstancePropV2:function _notifyInstancePropV2(inst,prop,value){if(matches(this.as,prop)){var idx=inst[this.indexAs];if(prop==this.as){this.items[idx]=value;}this.notifyPath(translate(this.as,'items.'+idx,prop),value);}},/* Templatizer bindings for v1 */_getStampedChildren:function _getStampedChildren(){return this._physicalItems;},_forwardInstancePath:function _forwardInstancePath(inst,path,value){if(path.indexOf(this.as+'.')===0){this.notifyPath('items.'+inst.__key__+'.'+path.slice(this.as.length+1),value);}},_forwardParentPath:function _forwardParentPath(path,value){(this._physicalItems||[]).concat([this._offscreenFocusedItem,this._focusBackfillItem]).forEach(function(item){if(item){this.modelForElement(item).notifyPath(path,value,true);}},this);},_forwardParentProp:function _forwardParentProp(prop,value){(this._physicalItems||[]).concat([this._offscreenFocusedItem,this._focusBackfillItem]).forEach(function(item){if(item){this.modelForElement(item)[prop]=value;}},this);},/* Gets the activeElement of the shadow root/host that contains the list. */_getActiveElement:function _getActiveElement(){var itemsHost=this._itemsParent.node.domHost;return dom(itemsHost?itemsHost.root:document).activeElement;}});/**
-    @license
-    Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-    Code distributed by Google as part of the polymer project is also
-    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-    */ /**
-        * @param {!Function} selectCallback
-        * @constructor
-        * @suppress {missingProvide}
-        */var IronSelection=function IronSelection(selectCallback){this.selection=[];this.selectCallback=selectCallback;};_exports.IronSelection=IronSelection;IronSelection.prototype={/**
+targetModel.tabIndex=0;fidx=targetModel[this.indexAs];this._focusedVirtualIndex=fidx;this._focusedPhysicalIndex=this._getPhysicalIndex(fidx);this._focusedItem=this._physicalItems[this._focusedPhysicalIndex];if(hasOffscreenFocusedItem&&!this._offscreenFocusedItem){this._update();}}},_keydownHandler:function _keydownHandler(e){switch(e.keyCode){case/* ARROW_DOWN */40:e.preventDefault();this._focusPhysicalItem(this._focusedVirtualIndex+(this.grid?this._itemsPerRow:1));break;case/* ARROW_RIGHT */39:if(this.grid)this._focusPhysicalItem(this._focusedVirtualIndex+(this._isRTL?-1:1));break;case/* ARROW_UP */38:this._focusPhysicalItem(this._focusedVirtualIndex-(this.grid?this._itemsPerRow:1));break;case/* ARROW_LEFT */37:if(this.grid)this._focusPhysicalItem(this._focusedVirtualIndex+(this._isRTL?1:-1));break;case/* ENTER */13:this._focusPhysicalItem(this._focusedVirtualIndex);this._selectionHandler(e);break;}},_clamp:function _clamp(v,min,max){return Math.min(max,Math.max(min,v));},_debounce:function _debounce(name,cb,asyncModule){if(IS_V2){this._debouncers=this._debouncers||{};this._debouncers[name]=Debouncer.debounce(this._debouncers[name],asyncModule,cb.bind(this));enqueueDebouncer(this._debouncers[name]);}else{enqueueDebouncer(this.debounce(name,cb));}},_forwardProperty:function _forwardProperty(inst,name,value){if(IS_V2){inst._setPendingProperty(name,value);}else{inst[name]=value;}},/* Templatizer bindings for v2 */_forwardHostPropV2:function _forwardHostPropV2(prop,value){(this._physicalItems||[]).concat([this._offscreenFocusedItem,this._focusBackfillItem]).forEach(function(item){if(item){this.modelForElement(item).forwardHostProp(prop,value);}},this);},_notifyInstancePropV2:function _notifyInstancePropV2(inst,prop,value){if(matches(this.as,prop)){var idx=inst[this.indexAs];if(prop==this.as){this.items[idx]=value;}this.notifyPath(translate(this.as,'items.'+idx,prop),value);}},/* Templatizer bindings for v1 */_getStampedChildren:function _getStampedChildren(){return this._physicalItems;},_forwardInstancePath:function _forwardInstancePath(inst,path,value){if(path.indexOf(this.as+'.')===0){this.notifyPath('items.'+inst.__key__+'.'+path.slice(this.as.length+1),value);}},_forwardParentPath:function _forwardParentPath(path,value){(this._physicalItems||[]).concat([this._offscreenFocusedItem,this._focusBackfillItem]).forEach(function(item){if(item){this.modelForElement(item).notifyPath(path,value,true);}},this);},_forwardParentProp:function _forwardParentProp(prop,value){(this._physicalItems||[]).concat([this._offscreenFocusedItem,this._focusBackfillItem]).forEach(function(item){if(item){this.modelForElement(item)[prop]=value;}},this);},/* Gets the activeElement of the shadow root/host that contains the list. */_getActiveElement:function _getActiveElement(){var itemsHost=this._itemsParent.node.domHost;return dom(itemsHost?itemsHost.root:document).activeElement;}});var IronSelection=function IronSelection(selectCallback){this.selection=[];this.selectCallback=selectCallback;};_exports.IronSelection=IronSelection;IronSelection.prototype={/**
    * Retrieves the selected item(s).
    *
    * @method get
@@ -8574,17 +7782,7 @@ if(isSelected){this.selection.push(item);}else{var i=this.selection.indexOf(item
    *
    * @method toggle
    * @param {*} item The item to toggle.
-   */toggle:function toggle(item){this.setItemSelected(item,!this.isSelected(item));}};var ironSelection={IronSelection:IronSelection};/**
-   @license
-   Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ /**
-       * @polymerBehavior Polymer.IronSelectableBehavior
-       */_exports.$ironSelection=ironSelection;var IronSelectableBehavior={/**
+   */toggle:function toggle(item){this.setItemSelected(item,!this.isSelected(item));}};var ironSelection={IronSelection:IronSelection};_exports.$ironSelection=ironSelection;var IronSelectableBehavior={/**
    * Fired when iron-selector is activated (selected or deselected).
    * It is fired before the selected items are changed.
    * Cancel the event to abort selection.
@@ -8687,29 +7885,11 @@ get _shouldUpdateSelection(){return this.selected!=null;},_checkFallback:functio
 if(this.fallbackSelection&&this.items.length&&this._selection.get()===undefined){this.selected=this.fallbackSelection;}},_filterItem:function _filterItem(node){return!this._excludedLocalNames[node.localName];},_valueToItem:function _valueToItem(value){return value==null?null:this.items[this._valueToIndex(value)];},_valueToIndex:function _valueToIndex(value){if(this.attrForSelected){for(var i=0,item;item=this.items[i];i++){if(this._valueForItem(item)==value){return i;}}}else{return Number(value);}},_indexToValue:function _indexToValue(index){if(this.attrForSelected){var item=this.items[index];if(item){return this._valueForItem(item);}}else{return index;}},_valueForItem:function _valueForItem(item){if(!item){return null;}if(!this.attrForSelected){var i=this.indexOf(item);return i===-1?null:i;}var propValue=item[dashToCamelCase(this.attrForSelected)];return propValue!=undefined?propValue:item.getAttribute(this.attrForSelected);},_applySelection:function _applySelection(item,isSelected){if(this.selectedClass){this.toggleClass(this.selectedClass,isSelected,item);}if(this.selectedAttribute){this.toggleAttribute(this.selectedAttribute,isSelected,item);}this._selectionChange();this.fire('iron-'+(isSelected?'select':'deselect'),{item:item});},_selectionChange:function _selectionChange(){this._setSelectedItem(this._selection.get());},// observe items change under the given node.
 _observeItems:function _observeItems(node){return dom(node).observeNodes(function(mutation){this._updateItems();this._updateSelected();// Let other interested parties know about the change so that
 // we don't have to recreate mutation observers everywhere.
-this.fire('iron-items-changed',mutation,{bubbles:false,cancelable:false});});},_activateHandler:function _activateHandler(e){var t=e.target;var items=this.items;while(t&&t!=this){var i=items.indexOf(t);if(i>=0){var value=this._indexToValue(i);this._itemActivate(value,t);return;}t=t.parentNode;}},_itemActivate:function _itemActivate(value,item){if(!this.fire('iron-activate',{selected:value,item:item},{cancelable:true}).defaultPrevented){this.select(value);}}};_exports.IronSelectableBehavior=IronSelectableBehavior;var ironSelectable={IronSelectableBehavior:IronSelectableBehavior};/**
-   @license
-   Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$ironSelectable=ironSelectable;Polymer$1({_template:html(_templateObject9_d2a108606de411e888c72fe2f0a2f265),is:'iron-pages',behaviors:[IronResizableBehavior,IronSelectableBehavior],properties:{// as the selected page is the only one visible, activateEvent
+this.fire('iron-items-changed',mutation,{bubbles:false,cancelable:false});});},_activateHandler:function _activateHandler(e){var t=e.target;var items=this.items;while(t&&t!=this){var i=items.indexOf(t);if(i>=0){var value=this._indexToValue(i);this._itemActivate(value,t);return;}t=t.parentNode;}},_itemActivate:function _itemActivate(value,item){if(!this.fire('iron-activate',{selected:value,item:item},{cancelable:true}).defaultPrevented){this.select(value);}}};_exports.IronSelectableBehavior=IronSelectableBehavior;var ironSelectable={IronSelectableBehavior:IronSelectableBehavior};_exports.$ironSelectable=ironSelectable;Polymer$1({_template:html(_templateObject9_da5be4e02b3411e9984959bc9413e8f2()),is:'iron-pages',behaviors:[IronResizableBehavior,IronSelectableBehavior],properties:{// as the selected page is the only one visible, activateEvent
 // is both non-sensical and problematic; e.g. in cases where a user
 // handler attempts to change the page and the activateEvent
 // handler immediately changes it back
-activateEvent:{type:String,value:null}},observers:['_selectedPageChanged(selected)'],_selectedPageChanged:function _selectedPageChanged(selected,old){this.async(this.notifyResize);}});/**
-    @license
-    Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-    Code distributed by Google as part of the polymer project is also
-    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-    */ /**
-        * @polymerBehavior Polymer.IronMultiSelectableBehavior
-        */var IronMultiSelectableBehaviorImpl={properties:{/**
+activateEvent:{type:String,value:null}},observers:['_selectedPageChanged(selected)'],_selectedPageChanged:function _selectedPageChanged(selected,old){this.async(this.notifyResize);}});var IronMultiSelectableBehaviorImpl={properties:{/**
      * If true, multiple selections are allowed.
      */multi:{type:Boolean,value:false,observer:'multiChanged'},/**
      * Gets or sets the selected elements. This is used instead of `selected` when `multi`
@@ -8726,74 +7906,7 @@ activateEvent:{type:String,value:null}},observers:['_selectedPageChanged(selecte
 get _shouldUpdateSelection(){return this.selected!=null||this.selectedValues!=null&&this.selectedValues.length;},_updateAttrForSelected:function _updateAttrForSelected(){if(!this.multi){IronSelectableBehavior._updateAttrForSelected.apply(this);}else if(this.selectedItems&&this.selectedItems.length>0){this.selectedValues=this.selectedItems.map(function(selectedItem){return this._indexToValue(this.indexOf(selectedItem));},this).filter(function(unfilteredValue){return unfilteredValue!=null;},this);}},_updateSelected:function _updateSelected(){if(this.multi){this._selectMulti(this.selectedValues);}else{this._selectSelected(this.selected);}},_selectMulti:function _selectMulti(values){values=values||[];var selectedItems=(this._valuesToItems(values)||[]).filter(function(item){return item!==null&&item!==undefined;});// clear all but the current selected items
 this._selection.clear(selectedItems);// select only those not selected yet
 for(var i=0;i<selectedItems.length;i++){this._selection.setItemSelected(selectedItems[i],true);}// Check for items, since this array is populated only when attached
-if(this.fallbackSelection&&!this._selection.get().length){var fallback=this._valueToItem(this.fallbackSelection);if(fallback){this.select(this.fallbackSelection);}}},_selectionChange:function _selectionChange(){var s=this._selection.get();if(this.multi){this._setSelectedItems(s);this._setSelectedItem(s.length?s[0]:null);}else{if(s!==null&&s!==undefined){this._setSelectedItems([s]);this._setSelectedItem(s);}else{this._setSelectedItems([]);this._setSelectedItem(null);}}},_toggleSelected:function _toggleSelected(value){var i=this.selectedValues.indexOf(value);var unselected=i<0;if(unselected){this.push('selectedValues',value);}else{this.splice('selectedValues',i,1);}},_valuesToItems:function _valuesToItems(values){return values==null?null:values.map(function(value){return this._valueToItem(value);},this);}};/** @polymerBehavior */_exports.IronMultiSelectableBehaviorImpl=IronMultiSelectableBehaviorImpl;var IronMultiSelectableBehavior=[IronSelectableBehavior,IronMultiSelectableBehaviorImpl];_exports.IronMultiSelectableBehavior=IronMultiSelectableBehavior;var ironMultiSelectable={IronMultiSelectableBehaviorImpl:IronMultiSelectableBehaviorImpl,IronMultiSelectableBehavior:IronMultiSelectableBehavior};/**
-   @license
-   Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ /**
-      `iron-selector` is an element which can be used to manage a list of elements
-      that can be selected.  Tapping on the item will make the item selected.  The `selected` indicates
-      which item is being selected.  The default is to use the index of the item.
-      
-      Example:
-      
-          <iron-selector selected="0">
-            <div>Item 1</div>
-            <div>Item 2</div>
-            <div>Item 3</div>
-          </iron-selector>
-      
-      If you want to use the attribute value of an element for `selected` instead of the index,
-      set `attrForSelected` to the name of the attribute.  For example, if you want to select item by
-      `name`, set `attrForSelected` to `name`.
-      
-      Example:
-      
-          <iron-selector attr-for-selected="name" selected="foo">
-            <div name="foo">Foo</div>
-            <div name="bar">Bar</div>
-            <div name="zot">Zot</div>
-          </iron-selector>
-      
-      You can specify a default fallback with `fallbackSelection` in case the `selected` attribute does
-      not match the `attrForSelected` attribute of any elements.
-      
-      Example:
-      
-            <iron-selector attr-for-selected="name" selected="non-existing"
-                           fallback-selection="default">
-              <div name="foo">Foo</div>
-              <div name="bar">Bar</div>
-              <div name="default">Default</div>
-            </iron-selector>
-      
-      Note: When the selector is multi, the selection will set to `fallbackSelection` iff
-      the number of matching elements is zero.
-      
-      `iron-selector` is not styled. Use the `iron-selected` CSS class to style the selected element.
-      
-      Example:
-      
-          <style>
-            .iron-selected {
-              background: #eee;
-            }
-          </style>
-      
-          ...
-      
-          <iron-selector selected="0">
-            <div>Item 1</div>
-            <div>Item 2</div>
-            <div>Item 3</div>
-          </iron-selector>
-      
-      @demo demo/index.html
-      */_exports.$ironMultiSelectable=ironMultiSelectable;Polymer$1({is:'iron-selector',behaviors:[IronMultiSelectableBehavior]});/**
+if(this.fallbackSelection&&!this._selection.get().length){var fallback=this._valueToItem(this.fallbackSelection);if(fallback){this.select(this.fallbackSelection);}}},_selectionChange:function _selectionChange(){var s=this._selection.get();if(this.multi){this._setSelectedItems(s);this._setSelectedItem(s.length?s[0]:null);}else{if(s!==null&&s!==undefined){this._setSelectedItems([s]);this._setSelectedItem(s);}else{this._setSelectedItems([]);this._setSelectedItem(null);}}},_toggleSelected:function _toggleSelected(value){var i=this.selectedValues.indexOf(value);var unselected=i<0;if(unselected){this.push('selectedValues',value);}else{this.splice('selectedValues',i,1);}},_valuesToItems:function _valuesToItems(values){return values==null?null:values.map(function(value){return this._valueToItem(value);},this);}};/** @polymerBehavior */_exports.IronMultiSelectableBehaviorImpl=IronMultiSelectableBehaviorImpl;var IronMultiSelectableBehavior=[IronSelectableBehavior,IronMultiSelectableBehaviorImpl];_exports.IronMultiSelectableBehavior=IronMultiSelectableBehavior;var ironMultiSelectable={IronMultiSelectableBehaviorImpl:IronMultiSelectableBehaviorImpl,IronMultiSelectableBehavior:IronMultiSelectableBehavior};_exports.$ironMultiSelectable=ironMultiSelectable;Polymer$1({is:'iron-selector',behaviors:[IronMultiSelectableBehavior]});/**
      * @license
      * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
      * This code may only be used under the BSD style license found at
@@ -8809,15 +7922,15 @@ if(this.fallbackSelection&&!this._selection.get().length){var fallback=this._val
 // calls to a tag for the same literal, so we can cache work done per literal
 // in a Map.
 var templateCaches=new Map();/**
-                                   * Interprets a template literal as an HTML template that can efficiently
-                                   * render to and update a container.
-                                   */_exports.templateCaches=templateCaches;var html$1=function html$1(strings){for(var _len10=arguments.length,values=new Array(_len10>1?_len10-1:0),_key10=1;_key10<_len10;_key10++){values[_key10-1]=arguments[_key10];}return new TemplateResult(strings,values,'html');};/**
-                                                                                     * Interprets a template literal as an SVG template that can efficiently
-                                                                                     * render to and update a container.
-                                                                                     */_exports.html$6=_exports.html$5=html$1;var svg=function svg(strings){for(var _len11=arguments.length,values=new Array(_len11>1?_len11-1:0),_key11=1;_key11<_len11;_key11++){values[_key11-1]=arguments[_key11];}return new SVGTemplateResult(strings,values,'svg');};/**
-                                                                                    * The return type of `html`, which holds a Template and the values from
-                                                                                    * interpolated expressions.
-                                                                                    */_exports.svg$2=_exports.svg$1=svg;var TemplateResult=/*#__PURE__*/function(){function TemplateResult(strings,values,type){var partCallback=arguments.length>3&&arguments[3]!==undefined?arguments[3]:defaultPartCallback;babelHelpers.classCallCheck(this,TemplateResult);this.strings=strings;this.values=values;this.type=type;this.partCallback=partCallback;}/**
+                                          * Interprets a template literal as an HTML template that can efficiently
+                                          * render to and update a container.
+                                          */_exports.templateCaches=templateCaches;var html$1=function html$1(strings){for(var _len10=arguments.length,values=new Array(_len10>1?_len10-1:0),_key10=1;_key10<_len10;_key10++){values[_key10-1]=arguments[_key10];}return new TemplateResult(strings,values,'html');};/**
+                                                                                          * Interprets a template literal as an SVG template that can efficiently
+                                                                                          * render to and update a container.
+                                                                                          */_exports.html$6=_exports.html$5=html$1;var svg=function svg(strings){for(var _len11=arguments.length,values=new Array(_len11>1?_len11-1:0),_key11=1;_key11<_len11;_key11++){values[_key11-1]=arguments[_key11];}return new SVGTemplateResult(strings,values,'svg');};/**
+                                                                                           * The return type of `html`, which holds a Template and the values from
+                                                                                           * interpolated expressions.
+                                                                                           */_exports.svg$2=_exports.svg$1=svg;var TemplateResult=/*#__PURE__*/function(){function TemplateResult(strings,values,type){var partCallback=arguments.length>3&&arguments[3]!==undefined?arguments[3]:defaultPartCallback;babelHelpers.classCallCheck(this,TemplateResult);this.strings=strings;this.values=values;this.type=type;this.partCallback=partCallback;}/**
      * Returns a string of HTML used to create a <template> element.
      */babelHelpers.createClass(TemplateResult,[{key:"getHTML",value:function getHTML(){var l=this.strings.length-1;var html='';var isTextBinding=true;for(var _i63=0;_i63<l;_i63++){var s=this.strings[_i63];html+=s;// We're in a text position if the previous string closed its tags.
 // If it doesn't have any tags, then we use the previous text position
@@ -8828,7 +7941,7 @@ var closing=findTagClose(s);isTextBinding=closing>-1?closing<s.length:isTextBind
    * This class wraps HTMl in an <svg> tag in order to parse its contents in the
    * SVG namespace, then modifies the template to remove the <svg> tag so that
    * clones only container the original fragment.
-   */_exports.TemplateResult$1=_exports.TemplateResult=TemplateResult;var SVGTemplateResult=/*#__PURE__*/function(_TemplateResult){babelHelpers.inherits(SVGTemplateResult,_TemplateResult);function SVGTemplateResult(){babelHelpers.classCallCheck(this,SVGTemplateResult);return babelHelpers.possibleConstructorReturn(this,(SVGTemplateResult.__proto__||Object.getPrototypeOf(SVGTemplateResult)).apply(this,arguments));}babelHelpers.createClass(SVGTemplateResult,[{key:"getHTML",value:function getHTML(){return"<svg>".concat(babelHelpers.get(SVGTemplateResult.prototype.__proto__||Object.getPrototypeOf(SVGTemplateResult.prototype),"getHTML",this).call(this),"</svg>");}},{key:"getTemplateElement",value:function getTemplateElement(){var template=babelHelpers.get(SVGTemplateResult.prototype.__proto__||Object.getPrototypeOf(SVGTemplateResult.prototype),"getTemplateElement",this).call(this);var content=template.content;var svgElement=content.firstChild;content.removeChild(svgElement);reparentNodes(content,svgElement.firstChild);return template;}}]);return SVGTemplateResult;}(TemplateResult);/**
+   */_exports.TemplateResult$1=_exports.TemplateResult=TemplateResult;var SVGTemplateResult=/*#__PURE__*/function(_TemplateResult){babelHelpers.inherits(SVGTemplateResult,_TemplateResult);function SVGTemplateResult(){babelHelpers.classCallCheck(this,SVGTemplateResult);return babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(SVGTemplateResult).apply(this,arguments));}babelHelpers.createClass(SVGTemplateResult,[{key:"getHTML",value:function getHTML(){return"<svg>".concat(babelHelpers.get(babelHelpers.getPrototypeOf(SVGTemplateResult.prototype),"getHTML",this).call(this),"</svg>");}},{key:"getTemplateElement",value:function getTemplateElement(){var template=babelHelpers.get(babelHelpers.getPrototypeOf(SVGTemplateResult.prototype),"getTemplateElement",this).call(this);var content=template.content;var svgElement=content.firstChild;content.removeChild(svgElement);reparentNodes(content,svgElement.firstChild);return template;}}]);return SVGTemplateResult;}(TemplateResult);/**
    * The default TemplateFactory which caches Templates keyed on
    * result.type and result.strings.
    */_exports.SVGTemplateResult=SVGTemplateResult;function defaultTemplateFactory(result){var templateCache=templateCaches.get(result.type);if(templateCache===undefined){templateCache=new Map();templateCaches.set(result.type,templateCache);}var template=templateCache.get(result.strings);if(template===undefined){template=new Template(result,result.getTemplateElement());templateCache.set(result.strings,template);}return template;}/**
@@ -8983,73 +8096,42 @@ var _walker=document.createTreeWalker(fragment,133/* NodeFilter.SHOW_ELEMENT | N
    */_exports.TemplateInstance=TemplateInstance;var reparentNodes=function reparentNodes(container,start){var end=arguments.length>2&&arguments[2]!==undefined?arguments[2]:null;var before=arguments.length>3&&arguments[3]!==undefined?arguments[3]:null;var node=start;while(node!==end){var n=node.nextSibling;container.insertBefore(node,before);node=n;}};/**
     * Removes nodes, starting from `startNode` (inclusive) to `endNode`
     * (exclusive), from `container`.
-    */_exports.reparentNodes=reparentNodes;var removeNodes=function removeNodes(container,startNode){var endNode=arguments.length>2&&arguments[2]!==undefined?arguments[2]:null;var node=startNode;while(node!==endNode){var n=node.nextSibling;container.removeChild(node);node=n;}};_exports.removeNodes=removeNodes;var litHtml={templateCaches:templateCaches,html:html$1,svg:svg,TemplateResult:TemplateResult,SVGTemplateResult:SVGTemplateResult,defaultTemplateFactory:defaultTemplateFactory,render:render,TemplatePart:TemplatePart,Template:Template,getValue:getValue,directive:directive,directiveValue:directiveValue,AttributePart:AttributePart,NodePart:NodePart,defaultPartCallback:defaultPartCallback,TemplateInstance:TemplateInstance,reparentNodes:reparentNodes,removeNodes:removeNodes};/**
-    * @license
-    * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-    * This code may only be used under the BSD style license found at
-    * http://polymer.github.io/LICENSE.txt
-    * The complete set of authors may be found at
-    * http://polymer.github.io/AUTHORS.txt
-    * The complete set of contributors may be found at
-    * http://polymer.github.io/CONTRIBUTORS.txt
-    * Code distributed by Google as part of the polymer project is also
-    * subject to an additional IP rights grant found at
-    * http://polymer.github.io/PATENTS.txt
-    */_exports.$litHtml=litHtml;var shadyTemplateFactory=function shadyTemplateFactory(scopeName){return function(result){var cacheKey="".concat(result.type,"--").concat(scopeName);var templateCache=templateCaches.get(cacheKey);if(templateCache===undefined){templateCache=new Map();templateCaches.set(cacheKey,templateCache);}var template=templateCache.get(result.strings);if(template===undefined){var element=result.getTemplateElement();if(babelHelpers.typeof(window.ShadyCSS)==='object'){window.ShadyCSS.prepareTemplate(element,scopeName);}template=new Template(result,element);templateCache.set(result.strings,template);}return template;};};function render$1(result,container,scopeName){return render(result,container,shadyTemplateFactory(scopeName));}var shadyRender={render:render$1,html:html$1,svg:svg,TemplateResult:TemplateResult};/**
-    * @license
-    * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
-    * This code may only be used under the BSD style license found at
-    * http://polymer.github.io/LICENSE.txt
-    * The complete set of authors may be found at
-    * http://polymer.github.io/AUTHORS.txt
-    * The complete set of contributors may be found at
-    * http://polymer.github.io/CONTRIBUTORS.txt
-    * Code distributed by Google as part of the polymer project is also
-    * subject to an additional IP rights grant found at
-    * http://polymer.github.io/PATENTS.txt
-    */ /**
-        * Interprets a template literal as a lit-extended HTML template.
-        */_exports.$shadyRender=shadyRender;var html$2=function html$2(strings){for(var _len12=arguments.length,values=new Array(_len12>1?_len12-1:0),_key12=1;_key12<_len12;_key12++){values[_key12-1]=arguments[_key12];}return new TemplateResult(strings,values,'html',extendedPartCallback);};/**
-                                                                                                           * Interprets a template literal as a lit-extended SVG template.
-                                                                                                           */_exports.html$4=_exports.html=html$2;var svg$1=function svg$1(strings){for(var _len13=arguments.length,values=new Array(_len13>1?_len13-1:0),_key13=1;_key13<_len13;_key13++){values[_key13-1]=arguments[_key13];}return new SVGTemplateResult(strings,values,'svg',extendedPartCallback);};/**
-                                                                                                            * A PartCallback which allows templates to set properties and declarative
-                                                                                                            * event handlers.
-                                                                                                            *
-                                                                                                            * Properties are set by default, instead of attributes. Attribute names in
-                                                                                                            * lit-html templates preserve case, so properties are case sensitive. If an
-                                                                                                            * expression takes up an entire attribute value, then the property is set to
-                                                                                                            * that value. If an expression is interpolated with a string or other
-                                                                                                            * expressions then the property is set to the string result of the
-                                                                                                            * interpolation.
-                                                                                                            *
-                                                                                                            * To set an attribute instead of a property, append a `$` suffix to the
-                                                                                                            * attribute name.
-                                                                                                            *
-                                                                                                            * Example:
-                                                                                                            *
-                                                                                                            *     html`<button class$="primary">Buy Now</button>`
-                                                                                                            *
-                                                                                                            * To set an event handler, prefix the attribute name with `on-`:
-                                                                                                            *
-                                                                                                            * Example:
-                                                                                                            *
-                                                                                                            *     html`<button on-click=${(e)=> this.onClickHandler(e)}>Buy Now</button>`
-                                                                                                            *
-                                                                                                            */_exports.svg=svg$1;var extendedPartCallback=function extendedPartCallback(instance,templatePart,node){if(templatePart.type==='attribute'){if(templatePart.rawName.substr(0,3)==='on-'){var eventName=templatePart.rawName.slice(3);return new EventPart(instance,node,eventName);}var lastChar=templatePart.name.substr(templatePart.name.length-1);if(lastChar==='$'){var name=templatePart.name.slice(0,-1);return new AttributePart(instance,node,name,templatePart.strings);}if(lastChar==='?'){var _name=templatePart.name.slice(0,-1);return new BooleanAttributePart(instance,node,_name,templatePart.strings);}return new PropertyPart(instance,node,templatePart.rawName,templatePart.strings);}return defaultPartCallback(instance,templatePart,node);};/**
+    */_exports.reparentNodes=reparentNodes;var removeNodes=function removeNodes(container,startNode){var endNode=arguments.length>2&&arguments[2]!==undefined?arguments[2]:null;var node=startNode;while(node!==endNode){var n=node.nextSibling;container.removeChild(node);node=n;}};_exports.removeNodes=removeNodes;var litHtml={templateCaches:templateCaches,html:html$1,svg:svg,TemplateResult:TemplateResult,SVGTemplateResult:SVGTemplateResult,defaultTemplateFactory:defaultTemplateFactory,render:render,TemplatePart:TemplatePart,Template:Template,getValue:getValue,directive:directive,directiveValue:directiveValue,AttributePart:AttributePart,NodePart:NodePart,defaultPartCallback:defaultPartCallback,TemplateInstance:TemplateInstance,reparentNodes:reparentNodes,removeNodes:removeNodes};_exports.$litHtml=litHtml;var shadyTemplateFactory=function shadyTemplateFactory(scopeName){return function(result){var cacheKey="".concat(result.type,"--").concat(scopeName);var templateCache=templateCaches.get(cacheKey);if(templateCache===undefined){templateCache=new Map();templateCaches.set(cacheKey,templateCache);}var template=templateCache.get(result.strings);if(template===undefined){var element=result.getTemplateElement();if(babelHelpers.typeof(window.ShadyCSS)==='object'){window.ShadyCSS.prepareTemplate(element,scopeName);}template=new Template(result,element);templateCache.set(result.strings,template);}return template;};};function render$1(result,container,scopeName){return render(result,container,shadyTemplateFactory(scopeName));}var shadyRender={render:render$1,html:html$1,svg:svg,TemplateResult:TemplateResult};_exports.$shadyRender=shadyRender;var html$2=function html$2(strings){for(var _len12=arguments.length,values=new Array(_len12>1?_len12-1:0),_key12=1;_key12<_len12;_key12++){values[_key12-1]=arguments[_key12];}return new TemplateResult(strings,values,'html',extendedPartCallback);};/**
+                                                                                                                * Interprets a template literal as a lit-extended SVG template.
+                                                                                                                */_exports.html$4=_exports.html=html$2;var svg$1=function svg$1(strings){for(var _len13=arguments.length,values=new Array(_len13>1?_len13-1:0),_key13=1;_key13<_len13;_key13++){values[_key13-1]=arguments[_key13];}return new SVGTemplateResult(strings,values,'svg',extendedPartCallback);};/**
+                                                                                                                 * A PartCallback which allows templates to set properties and declarative
+                                                                                                                 * event handlers.
+                                                                                                                 *
+                                                                                                                 * Properties are set by default, instead of attributes. Attribute names in
+                                                                                                                 * lit-html templates preserve case, so properties are case sensitive. If an
+                                                                                                                 * expression takes up an entire attribute value, then the property is set to
+                                                                                                                 * that value. If an expression is interpolated with a string or other
+                                                                                                                 * expressions then the property is set to the string result of the
+                                                                                                                 * interpolation.
+                                                                                                                 *
+                                                                                                                 * To set an attribute instead of a property, append a `$` suffix to the
+                                                                                                                 * attribute name.
+                                                                                                                 *
+                                                                                                                 * Example:
+                                                                                                                 *
+                                                                                                                 *     html`<button class$="primary">Buy Now</button>`
+                                                                                                                 *
+                                                                                                                 * To set an event handler, prefix the attribute name with `on-`:
+                                                                                                                 *
+                                                                                                                 * Example:
+                                                                                                                 *
+                                                                                                                 *     html`<button on-click=${(e)=> this.onClickHandler(e)}>Buy Now</button>`
+                                                                                                                 *
+                                                                                                                 */_exports.svg=svg$1;var extendedPartCallback=function extendedPartCallback(instance,templatePart,node){if(templatePart.type==='attribute'){if(templatePart.rawName.substr(0,3)==='on-'){var eventName=templatePart.rawName.slice(3);return new EventPart(instance,node,eventName);}var lastChar=templatePart.name.substr(templatePart.name.length-1);if(lastChar==='$'){var name=templatePart.name.slice(0,-1);return new AttributePart(instance,node,name,templatePart.strings);}if(lastChar==='?'){var _name=templatePart.name.slice(0,-1);return new BooleanAttributePart(instance,node,_name,templatePart.strings);}return new PropertyPart(instance,node,templatePart.rawName,templatePart.strings);}return defaultPartCallback(instance,templatePart,node);};/**
     * Implements a boolean attribute, roughly as defined in the HTML
     * specification.
     *
     * If the value is truthy, then the attribute is present with a value of
     * ''. If the value is falsey, the attribute is removed.
-    */_exports.extendedPartCallback=extendedPartCallback;var BooleanAttributePart=/*#__PURE__*/function(_AttributePart){babelHelpers.inherits(BooleanAttributePart,_AttributePart);function BooleanAttributePart(){babelHelpers.classCallCheck(this,BooleanAttributePart);return babelHelpers.possibleConstructorReturn(this,(BooleanAttributePart.__proto__||Object.getPrototypeOf(BooleanAttributePart)).apply(this,arguments));}babelHelpers.createClass(BooleanAttributePart,[{key:"setValue",value:function setValue(values,startIndex){var s=this.strings;if(s.length===2&&s[0]===''&&s[1]===''){var value=getValue(this,values[startIndex]);if(value===directiveValue){return;}if(value){this.element.setAttribute(this.name,'');}else{this.element.removeAttribute(this.name);}}else{throw new Error('boolean attributes can only contain a single expression');}}}]);return BooleanAttributePart;}(AttributePart);_exports.BooleanAttributePart=BooleanAttributePart;var PropertyPart=/*#__PURE__*/function(_AttributePart2){babelHelpers.inherits(PropertyPart,_AttributePart2);function PropertyPart(){babelHelpers.classCallCheck(this,PropertyPart);return babelHelpers.possibleConstructorReturn(this,(PropertyPart.__proto__||Object.getPrototypeOf(PropertyPart)).apply(this,arguments));}babelHelpers.createClass(PropertyPart,[{key:"setValue",value:function setValue(values,startIndex){var s=this.strings;var value;if(this._equalToPreviousValues(values,startIndex)){return;}if(s.length===2&&s[0]===''&&s[1]===''){// An expression that occupies the whole attribute value will leave
+    */_exports.extendedPartCallback=extendedPartCallback;var BooleanAttributePart=/*#__PURE__*/function(_AttributePart){babelHelpers.inherits(BooleanAttributePart,_AttributePart);function BooleanAttributePart(){babelHelpers.classCallCheck(this,BooleanAttributePart);return babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(BooleanAttributePart).apply(this,arguments));}babelHelpers.createClass(BooleanAttributePart,[{key:"setValue",value:function setValue(values,startIndex){var s=this.strings;if(s.length===2&&s[0]===''&&s[1]===''){var value=getValue(this,values[startIndex]);if(value===directiveValue){return;}if(value){this.element.setAttribute(this.name,'');}else{this.element.removeAttribute(this.name);}}else{throw new Error('boolean attributes can only contain a single expression');}}}]);return BooleanAttributePart;}(AttributePart);_exports.BooleanAttributePart=BooleanAttributePart;var PropertyPart=/*#__PURE__*/function(_AttributePart2){babelHelpers.inherits(PropertyPart,_AttributePart2);function PropertyPart(){babelHelpers.classCallCheck(this,PropertyPart);return babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(PropertyPart).apply(this,arguments));}babelHelpers.createClass(PropertyPart,[{key:"setValue",value:function setValue(values,startIndex){var s=this.strings;var value;if(this._equalToPreviousValues(values,startIndex)){return;}if(s.length===2&&s[0]===''&&s[1]===''){// An expression that occupies the whole attribute value will leave
 // leading and trailing empty strings.
 value=getValue(this,values[startIndex]);}else{// Interpolation, so interpolate
-value=this._interpolate(values,startIndex);}if(value!==directiveValue){this.element[this.name]=value;}this._previousValues=values;}}]);return PropertyPart;}(AttributePart);_exports.PropertyPart=PropertyPart;var EventPart=/*#__PURE__*/function(){function EventPart(instance,element,eventName){babelHelpers.classCallCheck(this,EventPart);this.instance=instance;this.element=element;this.eventName=eventName;}babelHelpers.createClass(EventPart,[{key:"setValue",value:function setValue(value){var listener=getValue(this,value);if(listener===this._listener){return;}if(listener==null){this.element.removeEventListener(this.eventName,this);}else if(this._listener==null){this.element.addEventListener(this.eventName,this);}this._listener=listener;}},{key:"handleEvent",value:function handleEvent(event){if(typeof this._listener==='function'){this._listener.call(this.element,event);}else if(typeof this._listener.handleEvent==='function'){this._listener.handleEvent(event);}}}]);return EventPart;}();_exports.EventPart=EventPart;var litExtended={html:html$2,svg:svg$1,extendedPartCallback:extendedPartCallback,BooleanAttributePart:BooleanAttributePart,PropertyPart:PropertyPart,EventPart:EventPart,render:render};/**
-    * Renders attributes to the given element based on the `attrInfo` object where
-    * boolean values are added/removed as attributes.
-    * @param element Element on which to set attributes.
-    * @param attrInfo Object describing attributes.
-    */_exports.$litExtended=litExtended;function renderAttributes(element,attrInfo){for(var a in attrInfo){var v=attrInfo[a]===true?'':attrInfo[a];if(v||v===''||v===0){if(element.getAttribute(a)!==v){element.setAttribute(a,v);}}else if(element.hasAttribute(a)){element.removeAttribute(a);}}}/**
+value=this._interpolate(values,startIndex);}if(value!==directiveValue){this.element[this.name]=value;}this._previousValues=values;}}]);return PropertyPart;}(AttributePart);_exports.PropertyPart=PropertyPart;var EventPart=/*#__PURE__*/function(){function EventPart(instance,element,eventName){babelHelpers.classCallCheck(this,EventPart);this.instance=instance;this.element=element;this.eventName=eventName;}babelHelpers.createClass(EventPart,[{key:"setValue",value:function setValue(value){var listener=getValue(this,value);if(listener===this._listener){return;}if(listener==null){this.element.removeEventListener(this.eventName,this);}else if(this._listener==null){this.element.addEventListener(this.eventName,this);}this._listener=listener;}},{key:"handleEvent",value:function handleEvent(event){if(typeof this._listener==='function'){this._listener.call(this.element,event);}else if(typeof this._listener.handleEvent==='function'){this._listener.handleEvent(event);}}}]);return EventPart;}();_exports.EventPart=EventPart;var litExtended={html:html$2,svg:svg$1,extendedPartCallback:extendedPartCallback,BooleanAttributePart:BooleanAttributePart,PropertyPart:PropertyPart,EventPart:EventPart,render:render};_exports.$litExtended=litExtended;function renderAttributes(element,attrInfo){for(var a in attrInfo){var v=attrInfo[a]===true?'':attrInfo[a];if(v||v===''||v===0){if(element.getAttribute(a)!==v){element.setAttribute(a,v);}}else if(element.hasAttribute(a)){element.removeAttribute(a);}}}/**
    * Returns a string of css class names formed by taking the properties
    * in the `classInfo` object and appending the property name to the string of
    * class names if the property value is truthy.
@@ -9059,10 +8141,10 @@ value=this._interpolate(values,startIndex);}if(value!==directiveValue){this.elem
    * object and appending the property name (dash-cased) colon the
    * property value. Properties are separated by a semi-colon.
    * @param styleInfo
-   */function styleString(styleInfo){var o=[];for(var name in styleInfo){var v=styleInfo[name];if(v||v===0){o.push("".concat(camelToDashCase(name),": ").concat(v));}}return o.join('; ');}var LitElement=/*#__PURE__*/function(_PropertiesMixin){babelHelpers.inherits(LitElement,_PropertiesMixin);function LitElement(){var _this34;babelHelpers.classCallCheck(this,LitElement);_this34=babelHelpers.possibleConstructorReturn(this,(LitElement.__proto__||Object.getPrototypeOf(LitElement)).apply(this,arguments));_this34.__renderComplete=null;_this34.__resolveRenderComplete=null;_this34.__isInvalid=false;_this34.__isChanging=false;return _this34;}/**
+   */function styleString(styleInfo){var o=[];for(var name in styleInfo){var v=styleInfo[name];if(v||v===0){o.push("".concat(camelToDashCase(name),": ").concat(v));}}return o.join('; ');}var LitElement=/*#__PURE__*/function(_PropertiesMixin){babelHelpers.inherits(LitElement,_PropertiesMixin);function LitElement(){var _this34;babelHelpers.classCallCheck(this,LitElement);_this34=babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(LitElement).apply(this,arguments));_this34.__renderComplete=null;_this34.__resolveRenderComplete=null;_this34.__isInvalid=false;_this34.__isChanging=false;return _this34;}/**
      * Override which sets up element rendering by calling* `_createRoot`
      * and `_firstRendered`.
-     */babelHelpers.createClass(LitElement,[{key:"ready",value:function ready(){this._root=this._createRoot();babelHelpers.get(LitElement.prototype.__proto__||Object.getPrototypeOf(LitElement.prototype),"ready",this).call(this);this._firstRendered();}/**
+     */babelHelpers.createClass(LitElement,[{key:"ready",value:function ready(){this._root=this._createRoot();babelHelpers.get(babelHelpers.getPrototypeOf(LitElement.prototype),"ready",this).call(this);this._firstRendered();}/**
      * Called after the element DOM is rendered for the first time.
      * Implement to perform tasks after first rendering like capturing a
      * reference to a static node which must be directly manipulated.
@@ -9098,13 +8180,13 @@ value=this._interpolate(values,startIndex);}if(value!==directiveValue){this.elem
      * @param props Current element properties
      * @param changedProps Changing element properties
      * @param prevProps Previous element properties
-     */},{key:"_propertiesChanged",value:function _propertiesChanged(props,changedProps,prevProps){babelHelpers.get(LitElement.prototype.__proto__||Object.getPrototypeOf(LitElement.prototype),"_propertiesChanged",this).call(this,props,changedProps,prevProps);var result=this._render(props);if(result&&this._root!==undefined){this._applyRender(result,this._root);}this._didRender(props,changedProps,prevProps);if(this.__resolveRenderComplete){this.__resolveRenderComplete(true);}}},{key:"_flushProperties",value:function _flushProperties(){this.__isChanging=true;this.__isInvalid=false;babelHelpers.get(LitElement.prototype.__proto__||Object.getPrototypeOf(LitElement.prototype),"_flushProperties",this).call(this);this.__isChanging=false;}/**
+     */},{key:"_propertiesChanged",value:function _propertiesChanged(props,changedProps,prevProps){babelHelpers.get(babelHelpers.getPrototypeOf(LitElement.prototype),"_propertiesChanged",this).call(this,props,changedProps,prevProps);var result=this._render(props);if(result&&this._root!==undefined){this._applyRender(result,this._root);}this._didRender(props,changedProps,prevProps);if(this.__resolveRenderComplete){this.__resolveRenderComplete(true);}}},{key:"_flushProperties",value:function _flushProperties(){this.__isChanging=true;this.__isInvalid=false;babelHelpers.get(babelHelpers.getPrototypeOf(LitElement.prototype),"_flushProperties",this).call(this);this.__isChanging=false;}/**
      * Override which warns when a user attempts to change a property during
      * the rendering lifecycle. This is an anti-pattern and should be avoided.
      * @param property {string}
      * @param value {any}
      * @param old {any}
-     */},{key:"_shouldPropertyChange",value:function _shouldPropertyChange(property,value,old){var change=babelHelpers.get(LitElement.prototype.__proto__||Object.getPrototypeOf(LitElement.prototype),"_shouldPropertyChange",this).call(this,property,value,old);if(change&&this.__isChanging){console.trace("Setting properties in response to other properties changing "+"considered harmful. Setting '".concat(property,"' from ")+"'".concat(this._getProperty(property),"' to '").concat(value,"'."));}return change;}/**
+     */},{key:"_shouldPropertyChange",value:function _shouldPropertyChange(property,value,old){var change=babelHelpers.get(babelHelpers.getPrototypeOf(LitElement.prototype),"_shouldPropertyChange",this).call(this,property,value,old);if(change&&this.__isChanging){console.trace("Setting properties in response to other properties changing "+"considered harmful. Setting '".concat(property,"' from ")+"'".concat(this._getProperty(property),"' to '").concat(value,"'."));}return change;}/**
      * Implement to describe the DOM which should be rendered in the element.
      * Ideally, the implementation is a pure function using only props to describe
      * the element template. The implementation must a `lit-html` TemplateResult.
@@ -9133,7 +8215,7 @@ value=this._interpolate(values,startIndex);}if(value!==directiveValue){this.elem
                                                     * of whether or not any property changes are pending.
                                                     */},{key:"_requestRender",value:function _requestRender(){this._invalidateProperties();}/**
      * Override which provides tracking of invalidated state.
-     */},{key:"_invalidateProperties",value:function _invalidateProperties(){this.__isInvalid=true;babelHelpers.get(LitElement.prototype.__proto__||Object.getPrototypeOf(LitElement.prototype),"_invalidateProperties",this).call(this);}/**
+     */},{key:"_invalidateProperties",value:function _invalidateProperties(){this.__isInvalid=true;babelHelpers.get(babelHelpers.getPrototypeOf(LitElement.prototype),"_invalidateProperties",this).call(this);}/**
      * Returns a promise which resolves after the element next renders.
      * The promise resolves to `true` if the element rendered and `false` if the
      * element did not render.
@@ -9143,15 +8225,7 @@ value=this._interpolate(values,startIndex);}if(value!==directiveValue){this.elem
      * to send an event until after rendering. If possible implement the
      * `_didRender` method to directly respond to rendering within the
      * rendering lifecycle.
-     */},{key:"renderComplete",get:function get(){var _this35=this;if(!this.__renderComplete){this.__renderComplete=new Promise(function(resolve){_this35.__resolveRenderComplete=function(value){_this35.__resolveRenderComplete=_this35.__renderComplete=null;resolve(value);};});if(!this.__isInvalid&&this.__resolveRenderComplete){Promise.resolve().then(function(){return _this35.__resolveRenderComplete(false);});}}return this.__renderComplete;}}]);return LitElement;}(PropertiesMixin(HTMLElement));_exports.LitElement=LitElement;var litElement={renderAttributes:renderAttributes,classString:classString,styleString:styleString,LitElement:LitElement,html:html$2};/**
-   @license
-   Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */_exports.$litElement=litElement;var Utility={distance:function distance(x1,y1,x2,y2){var xDelta=x1-x2;var yDelta=y1-y2;return Math.sqrt(xDelta*xDelta+yDelta*yDelta);},now:window.performance&&window.performance.now?window.performance.now.bind(window.performance):Date.now};/**
+     */},{key:"renderComplete",get:function get(){var _this35=this;if(!this.__renderComplete){this.__renderComplete=new Promise(function(resolve){_this35.__resolveRenderComplete=function(value){_this35.__resolveRenderComplete=_this35.__renderComplete=null;resolve(value);};});if(!this.__isInvalid&&this.__resolveRenderComplete){Promise.resolve().then(function(){return _this35.__resolveRenderComplete(false);});}}return this.__renderComplete;}}]);return LitElement;}(PropertiesMixin(HTMLElement));_exports.LitElement=LitElement;var litElement={renderAttributes:renderAttributes,classString:classString,styleString:styleString,LitElement:LitElement,html:html$2};_exports.$litElement=litElement;var Utility={distance:function distance(x1,y1,x2,y2){var xDelta=x1-x2;var yDelta=y1-y2;return Math.sqrt(xDelta*xDelta+yDelta*yDelta);},now:window.performance&&window.performance.now?window.performance.now.bind(window.performance):Date.now};/**
     * @param {HTMLElement} element
     * @constructor
     */function ElementMetrics(element){this.element=element;this.width=this.boundingRect.width;this.height=this.boundingRect.height;this.size=Math.max(this.width,this.height);}ElementMetrics.prototype={get boundingRect(){return this.element.getBoundingClientRect();},furthestCornerDistanceFrom:function furthestCornerDistanceFrom(x,y){var topLeft=Utility.distance(x,y,0,0);var topRight=Utility.distance(x,y,this.width,0);var bottomLeft=Utility.distance(x,y,0,this.height);var bottomRight=Utility.distance(x,y,this.width,this.height);return Math.max(topLeft,topRight,bottomLeft,bottomRight);}};/**
@@ -9161,7 +8235,7 @@ value=this._interpolate(values,startIndex);}if(value!==directiveValue){this.elem
 // of the wavefront (waveOpacity).
 var outerOpacity=this.mouseUpElapsedSeconds*0.3;var waveOpacity=this.opacity;return Math.max(0,Math.min(outerOpacity,waveOpacity));},get isOpacityFullyDecayed(){return this.opacity<0.01&&this.radius>=Math.min(this.maxRadius,Ripple.MAX_RADIUS);},get isRestingAtMaxRadius(){return this.opacity>=this.initialOpacity&&this.radius>=Math.min(this.maxRadius,Ripple.MAX_RADIUS);},get isAnimationComplete(){return this.mouseUpStart?this.isOpacityFullyDecayed:this.isRestingAtMaxRadius;},get translationFraction(){return Math.min(1,this.radius/this.containerMetrics.size*2/Math.sqrt(2));},get xNow(){if(this.xEnd){return this.xStart+this.translationFraction*(this.xEnd-this.xStart);}return this.xStart;},get yNow(){if(this.yEnd){return this.yStart+this.translationFraction*(this.yEnd-this.yStart);}return this.yStart;},get isMouseDown(){return this.mouseDownStart&&!this.mouseUpStart;},resetInteractionState:function resetInteractionState(){this.maxRadius=0;this.mouseDownStart=0;this.mouseUpStart=0;this.xStart=0;this.yStart=0;this.xEnd=0;this.yEnd=0;this.slideDistance=0;this.containerMetrics=new ElementMetrics(this.element);},draw:function draw(){var scale;var dx;var dy;this.wave.style.opacity=this.opacity;scale=this.radius/(this.containerMetrics.size/2);dx=this.xNow-this.containerMetrics.width/2;dy=this.yNow-this.containerMetrics.height/2;// 2d transform for safari because of border-radius and overflow:hidden
 // clipping bug. https://bugs.webkit.org/show_bug.cgi?id=98538
-this.waveContainer.style.webkitTransform='translate('+dx+'px, '+dy+'px)';this.waveContainer.style.transform='translate3d('+dx+'px, '+dy+'px, 0)';this.wave.style.webkitTransform='scale('+scale+','+scale+')';this.wave.style.transform='scale3d('+scale+','+scale+',1)';},/** @param {Event=} event */downAction:function downAction(event){var xCenter=this.containerMetrics.width/2;var yCenter=this.containerMetrics.height/2;this.resetInteractionState();this.mouseDownStart=Utility.now();if(this.center){this.xStart=xCenter;this.yStart=yCenter;this.slideDistance=Utility.distance(this.xStart,this.yStart,this.xEnd,this.yEnd);}else{this.xStart=event?event.detail.x-this.containerMetrics.boundingRect.left:this.containerMetrics.width/2;this.yStart=event?event.detail.y-this.containerMetrics.boundingRect.top:this.containerMetrics.height/2;}if(this.recenters){this.xEnd=xCenter;this.yEnd=yCenter;this.slideDistance=Utility.distance(this.xStart,this.yStart,this.xEnd,this.yEnd);}this.maxRadius=this.containerMetrics.furthestCornerDistanceFrom(this.xStart,this.yStart);this.waveContainer.style.top=(this.containerMetrics.height-this.containerMetrics.size)/2+'px';this.waveContainer.style.left=(this.containerMetrics.width-this.containerMetrics.size)/2+'px';this.waveContainer.style.width=this.containerMetrics.size+'px';this.waveContainer.style.height=this.containerMetrics.size+'px';},/** @param {Event=} event */upAction:function upAction(event){if(!this.isMouseDown){return;}this.mouseUpStart=Utility.now();},remove:function remove(){dom(this.waveContainer.parentNode).removeChild(this.waveContainer);}};Polymer$1({_template:html(_templateObject10_d2a108606de411e888c72fe2f0a2f265),is:'paper-ripple',behaviors:[IronA11yKeysBehavior],properties:{/**
+this.waveContainer.style.webkitTransform='translate('+dx+'px, '+dy+'px)';this.waveContainer.style.transform='translate3d('+dx+'px, '+dy+'px, 0)';this.wave.style.webkitTransform='scale('+scale+','+scale+')';this.wave.style.transform='scale3d('+scale+','+scale+',1)';},/** @param {Event=} event */downAction:function downAction(event){var xCenter=this.containerMetrics.width/2;var yCenter=this.containerMetrics.height/2;this.resetInteractionState();this.mouseDownStart=Utility.now();if(this.center){this.xStart=xCenter;this.yStart=yCenter;this.slideDistance=Utility.distance(this.xStart,this.yStart,this.xEnd,this.yEnd);}else{this.xStart=event?event.detail.x-this.containerMetrics.boundingRect.left:this.containerMetrics.width/2;this.yStart=event?event.detail.y-this.containerMetrics.boundingRect.top:this.containerMetrics.height/2;}if(this.recenters){this.xEnd=xCenter;this.yEnd=yCenter;this.slideDistance=Utility.distance(this.xStart,this.yStart,this.xEnd,this.yEnd);}this.maxRadius=this.containerMetrics.furthestCornerDistanceFrom(this.xStart,this.yStart);this.waveContainer.style.top=(this.containerMetrics.height-this.containerMetrics.size)/2+'px';this.waveContainer.style.left=(this.containerMetrics.width-this.containerMetrics.size)/2+'px';this.waveContainer.style.width=this.containerMetrics.size+'px';this.waveContainer.style.height=this.containerMetrics.size+'px';},/** @param {Event=} event */upAction:function upAction(event){if(!this.isMouseDown){return;}this.mouseUpStart=Utility.now();},remove:function remove(){dom(this.waveContainer.parentNode).removeChild(this.waveContainer);}};Polymer$1({_template:html(_templateObject10_da5be4e02b3411e9984959bc9413e8f2()),is:'paper-ripple',behaviors:[IronA11yKeysBehavior],properties:{/**
      * The initial opacity set on the wave.
      *
      * @attribute initialOpacity
@@ -9238,23 +8312,7 @@ _holdDownChanged:function _holdDownChanged(newVal,oldVal){if(oldVal===undefined)
     the ripple animation finishes to perform some action.
      @event transitionend
     @param {{node: Object}} detail Contains the animated node.
-    */});/**
-    @license
-    Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-    Code distributed by Google as part of the polymer project is also
-    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-    */ /**
-        * `Polymer.PaperRippleBehavior` dynamically implements a ripple
-        * when the element has focus via pointer or keyboard.
-        *
-        * NOTE: This behavior is intended to be used in conjunction with and after
-        * `Polymer.IronButtonState` and `Polymer.IronControlState`.
-        *
-        * @polymerBehavior Polymer.PaperRippleBehavior
-        */var PaperRippleBehavior={properties:{/**
+    */});var PaperRippleBehavior={properties:{/**
      * If true, the element will not produce a ripple effect when interacted
      * with via the pointer.
      */noink:{type:Boolean,observer:'_noinkChanged'},/**
@@ -9285,20 +8343,7 @@ var domContainer=dom(this._rippleContainer||this);var target=dom(optTriggeringEv
    * Create the element's ripple effect via creating a `<paper-ripple>`.
    * Override this method to customize the ripple element.
    * @return {!PaperRippleElement} Returns a `<paper-ripple>` element.
-   */_createRipple:function _createRipple(){var element=/** @type {!PaperRippleElement} */document.createElement('paper-ripple');return element;},_noinkChanged:function _noinkChanged(noink){if(this.hasRipple()){this._ripple.noink=noink;}}};_exports.PaperRippleBehavior=PaperRippleBehavior;var paperRippleBehavior={PaperRippleBehavior:PaperRippleBehavior};/**
-   @license
-   Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-   This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   Code distributed by Google as part of the polymer project is also
-   subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */ /**
-       * `Polymer.PaperInkyFocusBehavior` implements a ripple when the element has
-       * keyboard focus.
-       *
-       * @polymerBehavior Polymer.PaperInkyFocusBehavior
-       */_exports.$paperRippleBehavior=paperRippleBehavior;var PaperInkyFocusBehaviorImpl={observers:['_focusedChanged(receivedFocusFromKeyboard)'],_focusedChanged:function _focusedChanged(receivedFocusFromKeyboard){if(receivedFocusFromKeyboard){this.ensureRipple();}if(this.hasRipple()){this._ripple.holdDown=receivedFocusFromKeyboard;}},_createRipple:function _createRipple(){var ripple=PaperRippleBehavior._createRipple();ripple.id='ink';ripple.setAttribute('center','');ripple.classList.add('circle');return ripple;}};/** @polymerBehavior Polymer.PaperInkyFocusBehavior */_exports.PaperInkyFocusBehaviorImpl=PaperInkyFocusBehaviorImpl;var PaperInkyFocusBehavior=[IronButtonState,IronControlState,PaperRippleBehavior,PaperInkyFocusBehaviorImpl];_exports.PaperInkyFocusBehavior=PaperInkyFocusBehavior;var paperInkyFocusBehavior={PaperInkyFocusBehaviorImpl:PaperInkyFocusBehaviorImpl,PaperInkyFocusBehavior:PaperInkyFocusBehavior};_exports.$paperInkyFocusBehavior=paperInkyFocusBehavior;var $_documentContainer$2=document.createElement('template');$_documentContainer$2.setAttribute('style','display: none;');$_documentContainer$2.innerHTML="<custom-style>\n  <style is=\"custom-style\">\n    html {\n\n      /* Material Design color palette for Google products */\n\n      --google-red-100: #f4c7c3;\n      --google-red-300: #e67c73;\n      --google-red-500: #db4437;\n      --google-red-700: #c53929;\n\n      --google-blue-100: #c6dafc;\n      --google-blue-300: #7baaf7;\n      --google-blue-500: #4285f4;\n      --google-blue-700: #3367d6;\n\n      --google-green-100: #b7e1cd;\n      --google-green-300: #57bb8a;\n      --google-green-500: #0f9d58;\n      --google-green-700: #0b8043;\n\n      --google-yellow-100: #fce8b2;\n      --google-yellow-300: #f7cb4d;\n      --google-yellow-500: #f4b400;\n      --google-yellow-700: #f09300;\n\n      --google-grey-100: #f5f5f5;\n      --google-grey-300: #e0e0e0;\n      --google-grey-500: #9e9e9e;\n      --google-grey-700: #616161;\n\n      /* Material Design color palette from online spec document */\n\n      --paper-red-50: #ffebee;\n      --paper-red-100: #ffcdd2;\n      --paper-red-200: #ef9a9a;\n      --paper-red-300: #e57373;\n      --paper-red-400: #ef5350;\n      --paper-red-500: #f44336;\n      --paper-red-600: #e53935;\n      --paper-red-700: #d32f2f;\n      --paper-red-800: #c62828;\n      --paper-red-900: #b71c1c;\n      --paper-red-a100: #ff8a80;\n      --paper-red-a200: #ff5252;\n      --paper-red-a400: #ff1744;\n      --paper-red-a700: #d50000;\n\n      --paper-pink-50: #fce4ec;\n      --paper-pink-100: #f8bbd0;\n      --paper-pink-200: #f48fb1;\n      --paper-pink-300: #f06292;\n      --paper-pink-400: #ec407a;\n      --paper-pink-500: #e91e63;\n      --paper-pink-600: #d81b60;\n      --paper-pink-700: #c2185b;\n      --paper-pink-800: #ad1457;\n      --paper-pink-900: #880e4f;\n      --paper-pink-a100: #ff80ab;\n      --paper-pink-a200: #ff4081;\n      --paper-pink-a400: #f50057;\n      --paper-pink-a700: #c51162;\n\n      --paper-purple-50: #f3e5f5;\n      --paper-purple-100: #e1bee7;\n      --paper-purple-200: #ce93d8;\n      --paper-purple-300: #ba68c8;\n      --paper-purple-400: #ab47bc;\n      --paper-purple-500: #9c27b0;\n      --paper-purple-600: #8e24aa;\n      --paper-purple-700: #7b1fa2;\n      --paper-purple-800: #6a1b9a;\n      --paper-purple-900: #4a148c;\n      --paper-purple-a100: #ea80fc;\n      --paper-purple-a200: #e040fb;\n      --paper-purple-a400: #d500f9;\n      --paper-purple-a700: #aa00ff;\n\n      --paper-deep-purple-50: #ede7f6;\n      --paper-deep-purple-100: #d1c4e9;\n      --paper-deep-purple-200: #b39ddb;\n      --paper-deep-purple-300: #9575cd;\n      --paper-deep-purple-400: #7e57c2;\n      --paper-deep-purple-500: #673ab7;\n      --paper-deep-purple-600: #5e35b1;\n      --paper-deep-purple-700: #512da8;\n      --paper-deep-purple-800: #4527a0;\n      --paper-deep-purple-900: #311b92;\n      --paper-deep-purple-a100: #b388ff;\n      --paper-deep-purple-a200: #7c4dff;\n      --paper-deep-purple-a400: #651fff;\n      --paper-deep-purple-a700: #6200ea;\n\n      --paper-indigo-50: #e8eaf6;\n      --paper-indigo-100: #c5cae9;\n      --paper-indigo-200: #9fa8da;\n      --paper-indigo-300: #7986cb;\n      --paper-indigo-400: #5c6bc0;\n      --paper-indigo-500: #3f51b5;\n      --paper-indigo-600: #3949ab;\n      --paper-indigo-700: #303f9f;\n      --paper-indigo-800: #283593;\n      --paper-indigo-900: #1a237e;\n      --paper-indigo-a100: #8c9eff;\n      --paper-indigo-a200: #536dfe;\n      --paper-indigo-a400: #3d5afe;\n      --paper-indigo-a700: #304ffe;\n\n      --paper-blue-50: #e3f2fd;\n      --paper-blue-100: #bbdefb;\n      --paper-blue-200: #90caf9;\n      --paper-blue-300: #64b5f6;\n      --paper-blue-400: #42a5f5;\n      --paper-blue-500: #2196f3;\n      --paper-blue-600: #1e88e5;\n      --paper-blue-700: #1976d2;\n      --paper-blue-800: #1565c0;\n      --paper-blue-900: #0d47a1;\n      --paper-blue-a100: #82b1ff;\n      --paper-blue-a200: #448aff;\n      --paper-blue-a400: #2979ff;\n      --paper-blue-a700: #2962ff;\n\n      --paper-light-blue-50: #e1f5fe;\n      --paper-light-blue-100: #b3e5fc;\n      --paper-light-blue-200: #81d4fa;\n      --paper-light-blue-300: #4fc3f7;\n      --paper-light-blue-400: #29b6f6;\n      --paper-light-blue-500: #03a9f4;\n      --paper-light-blue-600: #039be5;\n      --paper-light-blue-700: #0288d1;\n      --paper-light-blue-800: #0277bd;\n      --paper-light-blue-900: #01579b;\n      --paper-light-blue-a100: #80d8ff;\n      --paper-light-blue-a200: #40c4ff;\n      --paper-light-blue-a400: #00b0ff;\n      --paper-light-blue-a700: #0091ea;\n\n      --paper-cyan-50: #e0f7fa;\n      --paper-cyan-100: #b2ebf2;\n      --paper-cyan-200: #80deea;\n      --paper-cyan-300: #4dd0e1;\n      --paper-cyan-400: #26c6da;\n      --paper-cyan-500: #00bcd4;\n      --paper-cyan-600: #00acc1;\n      --paper-cyan-700: #0097a7;\n      --paper-cyan-800: #00838f;\n      --paper-cyan-900: #006064;\n      --paper-cyan-a100: #84ffff;\n      --paper-cyan-a200: #18ffff;\n      --paper-cyan-a400: #00e5ff;\n      --paper-cyan-a700: #00b8d4;\n\n      --paper-teal-50: #e0f2f1;\n      --paper-teal-100: #b2dfdb;\n      --paper-teal-200: #80cbc4;\n      --paper-teal-300: #4db6ac;\n      --paper-teal-400: #26a69a;\n      --paper-teal-500: #009688;\n      --paper-teal-600: #00897b;\n      --paper-teal-700: #00796b;\n      --paper-teal-800: #00695c;\n      --paper-teal-900: #004d40;\n      --paper-teal-a100: #a7ffeb;\n      --paper-teal-a200: #64ffda;\n      --paper-teal-a400: #1de9b6;\n      --paper-teal-a700: #00bfa5;\n\n      --paper-green-50: #e8f5e9;\n      --paper-green-100: #c8e6c9;\n      --paper-green-200: #a5d6a7;\n      --paper-green-300: #81c784;\n      --paper-green-400: #66bb6a;\n      --paper-green-500: #4caf50;\n      --paper-green-600: #43a047;\n      --paper-green-700: #388e3c;\n      --paper-green-800: #2e7d32;\n      --paper-green-900: #1b5e20;\n      --paper-green-a100: #b9f6ca;\n      --paper-green-a200: #69f0ae;\n      --paper-green-a400: #00e676;\n      --paper-green-a700: #00c853;\n\n      --paper-light-green-50: #f1f8e9;\n      --paper-light-green-100: #dcedc8;\n      --paper-light-green-200: #c5e1a5;\n      --paper-light-green-300: #aed581;\n      --paper-light-green-400: #9ccc65;\n      --paper-light-green-500: #8bc34a;\n      --paper-light-green-600: #7cb342;\n      --paper-light-green-700: #689f38;\n      --paper-light-green-800: #558b2f;\n      --paper-light-green-900: #33691e;\n      --paper-light-green-a100: #ccff90;\n      --paper-light-green-a200: #b2ff59;\n      --paper-light-green-a400: #76ff03;\n      --paper-light-green-a700: #64dd17;\n\n      --paper-lime-50: #f9fbe7;\n      --paper-lime-100: #f0f4c3;\n      --paper-lime-200: #e6ee9c;\n      --paper-lime-300: #dce775;\n      --paper-lime-400: #d4e157;\n      --paper-lime-500: #cddc39;\n      --paper-lime-600: #c0ca33;\n      --paper-lime-700: #afb42b;\n      --paper-lime-800: #9e9d24;\n      --paper-lime-900: #827717;\n      --paper-lime-a100: #f4ff81;\n      --paper-lime-a200: #eeff41;\n      --paper-lime-a400: #c6ff00;\n      --paper-lime-a700: #aeea00;\n\n      --paper-yellow-50: #fffde7;\n      --paper-yellow-100: #fff9c4;\n      --paper-yellow-200: #fff59d;\n      --paper-yellow-300: #fff176;\n      --paper-yellow-400: #ffee58;\n      --paper-yellow-500: #ffeb3b;\n      --paper-yellow-600: #fdd835;\n      --paper-yellow-700: #fbc02d;\n      --paper-yellow-800: #f9a825;\n      --paper-yellow-900: #f57f17;\n      --paper-yellow-a100: #ffff8d;\n      --paper-yellow-a200: #ffff00;\n      --paper-yellow-a400: #ffea00;\n      --paper-yellow-a700: #ffd600;\n\n      --paper-amber-50: #fff8e1;\n      --paper-amber-100: #ffecb3;\n      --paper-amber-200: #ffe082;\n      --paper-amber-300: #ffd54f;\n      --paper-amber-400: #ffca28;\n      --paper-amber-500: #ffc107;\n      --paper-amber-600: #ffb300;\n      --paper-amber-700: #ffa000;\n      --paper-amber-800: #ff8f00;\n      --paper-amber-900: #ff6f00;\n      --paper-amber-a100: #ffe57f;\n      --paper-amber-a200: #ffd740;\n      --paper-amber-a400: #ffc400;\n      --paper-amber-a700: #ffab00;\n\n      --paper-orange-50: #fff3e0;\n      --paper-orange-100: #ffe0b2;\n      --paper-orange-200: #ffcc80;\n      --paper-orange-300: #ffb74d;\n      --paper-orange-400: #ffa726;\n      --paper-orange-500: #ff9800;\n      --paper-orange-600: #fb8c00;\n      --paper-orange-700: #f57c00;\n      --paper-orange-800: #ef6c00;\n      --paper-orange-900: #e65100;\n      --paper-orange-a100: #ffd180;\n      --paper-orange-a200: #ffab40;\n      --paper-orange-a400: #ff9100;\n      --paper-orange-a700: #ff6500;\n\n      --paper-deep-orange-50: #fbe9e7;\n      --paper-deep-orange-100: #ffccbc;\n      --paper-deep-orange-200: #ffab91;\n      --paper-deep-orange-300: #ff8a65;\n      --paper-deep-orange-400: #ff7043;\n      --paper-deep-orange-500: #ff5722;\n      --paper-deep-orange-600: #f4511e;\n      --paper-deep-orange-700: #e64a19;\n      --paper-deep-orange-800: #d84315;\n      --paper-deep-orange-900: #bf360c;\n      --paper-deep-orange-a100: #ff9e80;\n      --paper-deep-orange-a200: #ff6e40;\n      --paper-deep-orange-a400: #ff3d00;\n      --paper-deep-orange-a700: #dd2c00;\n\n      --paper-brown-50: #efebe9;\n      --paper-brown-100: #d7ccc8;\n      --paper-brown-200: #bcaaa4;\n      --paper-brown-300: #a1887f;\n      --paper-brown-400: #8d6e63;\n      --paper-brown-500: #795548;\n      --paper-brown-600: #6d4c41;\n      --paper-brown-700: #5d4037;\n      --paper-brown-800: #4e342e;\n      --paper-brown-900: #3e2723;\n\n      --paper-grey-50: #fafafa;\n      --paper-grey-100: #f5f5f5;\n      --paper-grey-200: #eeeeee;\n      --paper-grey-300: #e0e0e0;\n      --paper-grey-400: #bdbdbd;\n      --paper-grey-500: #9e9e9e;\n      --paper-grey-600: #757575;\n      --paper-grey-700: #616161;\n      --paper-grey-800: #424242;\n      --paper-grey-900: #212121;\n\n      --paper-blue-grey-50: #eceff1;\n      --paper-blue-grey-100: #cfd8dc;\n      --paper-blue-grey-200: #b0bec5;\n      --paper-blue-grey-300: #90a4ae;\n      --paper-blue-grey-400: #78909c;\n      --paper-blue-grey-500: #607d8b;\n      --paper-blue-grey-600: #546e7a;\n      --paper-blue-grey-700: #455a64;\n      --paper-blue-grey-800: #37474f;\n      --paper-blue-grey-900: #263238;\n\n      /* opacity for dark text on a light background */\n      --dark-divider-opacity: 0.12;\n      --dark-disabled-opacity: 0.38; /* or hint text or icon */\n      --dark-secondary-opacity: 0.54;\n      --dark-primary-opacity: 0.87;\n\n      /* opacity for light text on a dark background */\n      --light-divider-opacity: 0.12;\n      --light-disabled-opacity: 0.3; /* or hint text or icon */\n      --light-secondary-opacity: 0.7;\n      --light-primary-opacity: 1.0;\n\n    }\n\n  </style>\n</custom-style>";document.head.appendChild($_documentContainer$2.content);/**
+   */_createRipple:function _createRipple(){var element=/** @type {!PaperRippleElement} */document.createElement('paper-ripple');return element;},_noinkChanged:function _noinkChanged(noink){if(this.hasRipple()){this._ripple.noink=noink;}}};_exports.PaperRippleBehavior=PaperRippleBehavior;var paperRippleBehavior={PaperRippleBehavior:PaperRippleBehavior};_exports.$paperRippleBehavior=paperRippleBehavior;var PaperInkyFocusBehaviorImpl={observers:['_focusedChanged(receivedFocusFromKeyboard)'],_focusedChanged:function _focusedChanged(receivedFocusFromKeyboard){if(receivedFocusFromKeyboard){this.ensureRipple();}if(this.hasRipple()){this._ripple.holdDown=receivedFocusFromKeyboard;}},_createRipple:function _createRipple(){var ripple=PaperRippleBehavior._createRipple();ripple.id='ink';ripple.setAttribute('center','');ripple.classList.add('circle');return ripple;}};/** @polymerBehavior Polymer.PaperInkyFocusBehavior */_exports.PaperInkyFocusBehaviorImpl=PaperInkyFocusBehaviorImpl;var PaperInkyFocusBehavior=[IronButtonState,IronControlState,PaperRippleBehavior,PaperInkyFocusBehaviorImpl];_exports.PaperInkyFocusBehavior=PaperInkyFocusBehavior;var paperInkyFocusBehavior={PaperInkyFocusBehaviorImpl:PaperInkyFocusBehaviorImpl,PaperInkyFocusBehavior:PaperInkyFocusBehavior};_exports.$paperInkyFocusBehavior=paperInkyFocusBehavior;var $_documentContainer$2=document.createElement('template');$_documentContainer$2.setAttribute('style','display: none;');$_documentContainer$2.innerHTML="<custom-style>\n  <style is=\"custom-style\">\n    html {\n\n      /* Material Design color palette for Google products */\n\n      --google-red-100: #f4c7c3;\n      --google-red-300: #e67c73;\n      --google-red-500: #db4437;\n      --google-red-700: #c53929;\n\n      --google-blue-100: #c6dafc;\n      --google-blue-300: #7baaf7;\n      --google-blue-500: #4285f4;\n      --google-blue-700: #3367d6;\n\n      --google-green-100: #b7e1cd;\n      --google-green-300: #57bb8a;\n      --google-green-500: #0f9d58;\n      --google-green-700: #0b8043;\n\n      --google-yellow-100: #fce8b2;\n      --google-yellow-300: #f7cb4d;\n      --google-yellow-500: #f4b400;\n      --google-yellow-700: #f09300;\n\n      --google-grey-100: #f5f5f5;\n      --google-grey-300: #e0e0e0;\n      --google-grey-500: #9e9e9e;\n      --google-grey-700: #616161;\n\n      /* Material Design color palette from online spec document */\n\n      --paper-red-50: #ffebee;\n      --paper-red-100: #ffcdd2;\n      --paper-red-200: #ef9a9a;\n      --paper-red-300: #e57373;\n      --paper-red-400: #ef5350;\n      --paper-red-500: #f44336;\n      --paper-red-600: #e53935;\n      --paper-red-700: #d32f2f;\n      --paper-red-800: #c62828;\n      --paper-red-900: #b71c1c;\n      --paper-red-a100: #ff8a80;\n      --paper-red-a200: #ff5252;\n      --paper-red-a400: #ff1744;\n      --paper-red-a700: #d50000;\n\n      --paper-pink-50: #fce4ec;\n      --paper-pink-100: #f8bbd0;\n      --paper-pink-200: #f48fb1;\n      --paper-pink-300: #f06292;\n      --paper-pink-400: #ec407a;\n      --paper-pink-500: #e91e63;\n      --paper-pink-600: #d81b60;\n      --paper-pink-700: #c2185b;\n      --paper-pink-800: #ad1457;\n      --paper-pink-900: #880e4f;\n      --paper-pink-a100: #ff80ab;\n      --paper-pink-a200: #ff4081;\n      --paper-pink-a400: #f50057;\n      --paper-pink-a700: #c51162;\n\n      --paper-purple-50: #f3e5f5;\n      --paper-purple-100: #e1bee7;\n      --paper-purple-200: #ce93d8;\n      --paper-purple-300: #ba68c8;\n      --paper-purple-400: #ab47bc;\n      --paper-purple-500: #9c27b0;\n      --paper-purple-600: #8e24aa;\n      --paper-purple-700: #7b1fa2;\n      --paper-purple-800: #6a1b9a;\n      --paper-purple-900: #4a148c;\n      --paper-purple-a100: #ea80fc;\n      --paper-purple-a200: #e040fb;\n      --paper-purple-a400: #d500f9;\n      --paper-purple-a700: #aa00ff;\n\n      --paper-deep-purple-50: #ede7f6;\n      --paper-deep-purple-100: #d1c4e9;\n      --paper-deep-purple-200: #b39ddb;\n      --paper-deep-purple-300: #9575cd;\n      --paper-deep-purple-400: #7e57c2;\n      --paper-deep-purple-500: #673ab7;\n      --paper-deep-purple-600: #5e35b1;\n      --paper-deep-purple-700: #512da8;\n      --paper-deep-purple-800: #4527a0;\n      --paper-deep-purple-900: #311b92;\n      --paper-deep-purple-a100: #b388ff;\n      --paper-deep-purple-a200: #7c4dff;\n      --paper-deep-purple-a400: #651fff;\n      --paper-deep-purple-a700: #6200ea;\n\n      --paper-indigo-50: #e8eaf6;\n      --paper-indigo-100: #c5cae9;\n      --paper-indigo-200: #9fa8da;\n      --paper-indigo-300: #7986cb;\n      --paper-indigo-400: #5c6bc0;\n      --paper-indigo-500: #3f51b5;\n      --paper-indigo-600: #3949ab;\n      --paper-indigo-700: #303f9f;\n      --paper-indigo-800: #283593;\n      --paper-indigo-900: #1a237e;\n      --paper-indigo-a100: #8c9eff;\n      --paper-indigo-a200: #536dfe;\n      --paper-indigo-a400: #3d5afe;\n      --paper-indigo-a700: #304ffe;\n\n      --paper-blue-50: #e3f2fd;\n      --paper-blue-100: #bbdefb;\n      --paper-blue-200: #90caf9;\n      --paper-blue-300: #64b5f6;\n      --paper-blue-400: #42a5f5;\n      --paper-blue-500: #2196f3;\n      --paper-blue-600: #1e88e5;\n      --paper-blue-700: #1976d2;\n      --paper-blue-800: #1565c0;\n      --paper-blue-900: #0d47a1;\n      --paper-blue-a100: #82b1ff;\n      --paper-blue-a200: #448aff;\n      --paper-blue-a400: #2979ff;\n      --paper-blue-a700: #2962ff;\n\n      --paper-light-blue-50: #e1f5fe;\n      --paper-light-blue-100: #b3e5fc;\n      --paper-light-blue-200: #81d4fa;\n      --paper-light-blue-300: #4fc3f7;\n      --paper-light-blue-400: #29b6f6;\n      --paper-light-blue-500: #03a9f4;\n      --paper-light-blue-600: #039be5;\n      --paper-light-blue-700: #0288d1;\n      --paper-light-blue-800: #0277bd;\n      --paper-light-blue-900: #01579b;\n      --paper-light-blue-a100: #80d8ff;\n      --paper-light-blue-a200: #40c4ff;\n      --paper-light-blue-a400: #00b0ff;\n      --paper-light-blue-a700: #0091ea;\n\n      --paper-cyan-50: #e0f7fa;\n      --paper-cyan-100: #b2ebf2;\n      --paper-cyan-200: #80deea;\n      --paper-cyan-300: #4dd0e1;\n      --paper-cyan-400: #26c6da;\n      --paper-cyan-500: #00bcd4;\n      --paper-cyan-600: #00acc1;\n      --paper-cyan-700: #0097a7;\n      --paper-cyan-800: #00838f;\n      --paper-cyan-900: #006064;\n      --paper-cyan-a100: #84ffff;\n      --paper-cyan-a200: #18ffff;\n      --paper-cyan-a400: #00e5ff;\n      --paper-cyan-a700: #00b8d4;\n\n      --paper-teal-50: #e0f2f1;\n      --paper-teal-100: #b2dfdb;\n      --paper-teal-200: #80cbc4;\n      --paper-teal-300: #4db6ac;\n      --paper-teal-400: #26a69a;\n      --paper-teal-500: #009688;\n      --paper-teal-600: #00897b;\n      --paper-teal-700: #00796b;\n      --paper-teal-800: #00695c;\n      --paper-teal-900: #004d40;\n      --paper-teal-a100: #a7ffeb;\n      --paper-teal-a200: #64ffda;\n      --paper-teal-a400: #1de9b6;\n      --paper-teal-a700: #00bfa5;\n\n      --paper-green-50: #e8f5e9;\n      --paper-green-100: #c8e6c9;\n      --paper-green-200: #a5d6a7;\n      --paper-green-300: #81c784;\n      --paper-green-400: #66bb6a;\n      --paper-green-500: #4caf50;\n      --paper-green-600: #43a047;\n      --paper-green-700: #388e3c;\n      --paper-green-800: #2e7d32;\n      --paper-green-900: #1b5e20;\n      --paper-green-a100: #b9f6ca;\n      --paper-green-a200: #69f0ae;\n      --paper-green-a400: #00e676;\n      --paper-green-a700: #00c853;\n\n      --paper-light-green-50: #f1f8e9;\n      --paper-light-green-100: #dcedc8;\n      --paper-light-green-200: #c5e1a5;\n      --paper-light-green-300: #aed581;\n      --paper-light-green-400: #9ccc65;\n      --paper-light-green-500: #8bc34a;\n      --paper-light-green-600: #7cb342;\n      --paper-light-green-700: #689f38;\n      --paper-light-green-800: #558b2f;\n      --paper-light-green-900: #33691e;\n      --paper-light-green-a100: #ccff90;\n      --paper-light-green-a200: #b2ff59;\n      --paper-light-green-a400: #76ff03;\n      --paper-light-green-a700: #64dd17;\n\n      --paper-lime-50: #f9fbe7;\n      --paper-lime-100: #f0f4c3;\n      --paper-lime-200: #e6ee9c;\n      --paper-lime-300: #dce775;\n      --paper-lime-400: #d4e157;\n      --paper-lime-500: #cddc39;\n      --paper-lime-600: #c0ca33;\n      --paper-lime-700: #afb42b;\n      --paper-lime-800: #9e9d24;\n      --paper-lime-900: #827717;\n      --paper-lime-a100: #f4ff81;\n      --paper-lime-a200: #eeff41;\n      --paper-lime-a400: #c6ff00;\n      --paper-lime-a700: #aeea00;\n\n      --paper-yellow-50: #fffde7;\n      --paper-yellow-100: #fff9c4;\n      --paper-yellow-200: #fff59d;\n      --paper-yellow-300: #fff176;\n      --paper-yellow-400: #ffee58;\n      --paper-yellow-500: #ffeb3b;\n      --paper-yellow-600: #fdd835;\n      --paper-yellow-700: #fbc02d;\n      --paper-yellow-800: #f9a825;\n      --paper-yellow-900: #f57f17;\n      --paper-yellow-a100: #ffff8d;\n      --paper-yellow-a200: #ffff00;\n      --paper-yellow-a400: #ffea00;\n      --paper-yellow-a700: #ffd600;\n\n      --paper-amber-50: #fff8e1;\n      --paper-amber-100: #ffecb3;\n      --paper-amber-200: #ffe082;\n      --paper-amber-300: #ffd54f;\n      --paper-amber-400: #ffca28;\n      --paper-amber-500: #ffc107;\n      --paper-amber-600: #ffb300;\n      --paper-amber-700: #ffa000;\n      --paper-amber-800: #ff8f00;\n      --paper-amber-900: #ff6f00;\n      --paper-amber-a100: #ffe57f;\n      --paper-amber-a200: #ffd740;\n      --paper-amber-a400: #ffc400;\n      --paper-amber-a700: #ffab00;\n\n      --paper-orange-50: #fff3e0;\n      --paper-orange-100: #ffe0b2;\n      --paper-orange-200: #ffcc80;\n      --paper-orange-300: #ffb74d;\n      --paper-orange-400: #ffa726;\n      --paper-orange-500: #ff9800;\n      --paper-orange-600: #fb8c00;\n      --paper-orange-700: #f57c00;\n      --paper-orange-800: #ef6c00;\n      --paper-orange-900: #e65100;\n      --paper-orange-a100: #ffd180;\n      --paper-orange-a200: #ffab40;\n      --paper-orange-a400: #ff9100;\n      --paper-orange-a700: #ff6500;\n\n      --paper-deep-orange-50: #fbe9e7;\n      --paper-deep-orange-100: #ffccbc;\n      --paper-deep-orange-200: #ffab91;\n      --paper-deep-orange-300: #ff8a65;\n      --paper-deep-orange-400: #ff7043;\n      --paper-deep-orange-500: #ff5722;\n      --paper-deep-orange-600: #f4511e;\n      --paper-deep-orange-700: #e64a19;\n      --paper-deep-orange-800: #d84315;\n      --paper-deep-orange-900: #bf360c;\n      --paper-deep-orange-a100: #ff9e80;\n      --paper-deep-orange-a200: #ff6e40;\n      --paper-deep-orange-a400: #ff3d00;\n      --paper-deep-orange-a700: #dd2c00;\n\n      --paper-brown-50: #efebe9;\n      --paper-brown-100: #d7ccc8;\n      --paper-brown-200: #bcaaa4;\n      --paper-brown-300: #a1887f;\n      --paper-brown-400: #8d6e63;\n      --paper-brown-500: #795548;\n      --paper-brown-600: #6d4c41;\n      --paper-brown-700: #5d4037;\n      --paper-brown-800: #4e342e;\n      --paper-brown-900: #3e2723;\n\n      --paper-grey-50: #fafafa;\n      --paper-grey-100: #f5f5f5;\n      --paper-grey-200: #eeeeee;\n      --paper-grey-300: #e0e0e0;\n      --paper-grey-400: #bdbdbd;\n      --paper-grey-500: #9e9e9e;\n      --paper-grey-600: #757575;\n      --paper-grey-700: #616161;\n      --paper-grey-800: #424242;\n      --paper-grey-900: #212121;\n\n      --paper-blue-grey-50: #eceff1;\n      --paper-blue-grey-100: #cfd8dc;\n      --paper-blue-grey-200: #b0bec5;\n      --paper-blue-grey-300: #90a4ae;\n      --paper-blue-grey-400: #78909c;\n      --paper-blue-grey-500: #607d8b;\n      --paper-blue-grey-600: #546e7a;\n      --paper-blue-grey-700: #455a64;\n      --paper-blue-grey-800: #37474f;\n      --paper-blue-grey-900: #263238;\n\n      /* opacity for dark text on a light background */\n      --dark-divider-opacity: 0.12;\n      --dark-disabled-opacity: 0.38; /* or hint text or icon */\n      --dark-secondary-opacity: 0.54;\n      --dark-primary-opacity: 0.87;\n\n      /* opacity for light text on a dark background */\n      --light-divider-opacity: 0.12;\n      --light-disabled-opacity: 0.3; /* or hint text or icon */\n      --light-secondary-opacity: 0.7;\n      --light-primary-opacity: 1.0;\n\n    }\n\n  </style>\n</custom-style>";document.head.appendChild($_documentContainer$2.content);/**
                                                           @license
                                                           Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
                                                           This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
@@ -9322,15 +8367,7 @@ var domContainer=dom(this._rippleContainer||this);var target=dom(optTriggeringEv
                                                                                                                                                                FIXME(polymer-modulizer): the above comments were extracted
                                                                                                                                                                from HTML and may be out of place here. Review them and
                                                                                                                                                                then delete this comment!
-                                                                                                                                                             */ /**
-                                                                                                                                                                @license
-                                                                                                                                                                Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-                                                                                                                                                                This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-                                                                                                                                                                The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-                                                                                                                                                                The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-                                                                                                                                                                Code distributed by Google as part of the polymer project is also
-                                                                                                                                                                subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-                                                                                                                                                                */var $_documentContainer$4=document.createElement('template');$_documentContainer$4.setAttribute('style','display: none;');$_documentContainer$4.innerHTML="<dom-module id=\"paper-icon-button\">\n  <template strip-whitespace=\"\">\n    <style>\n      :host {\n        display: inline-block;\n        position: relative;\n        padding: 8px;\n        outline: none;\n        -webkit-user-select: none;\n        -moz-user-select: none;\n        -ms-user-select: none;\n        user-select: none;\n        cursor: pointer;\n        z-index: 0;\n        line-height: 1;\n\n        width: 40px;\n        height: 40px;\n\n        /* NOTE: Both values are needed, since some phones require the value to be `transparent`. */\n        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n        -webkit-tap-highlight-color: transparent;\n\n        /* Because of polymer/2558, this style has lower specificity than * */\n        box-sizing: border-box !important;\n\n        @apply --paper-icon-button;\n      }\n\n      :host #ink {\n        color: var(--paper-icon-button-ink-color, var(--primary-text-color));\n        opacity: 0.6;\n      }\n\n      :host([disabled]) {\n        color: var(--paper-icon-button-disabled-text, var(--disabled-text-color));\n        pointer-events: none;\n        cursor: auto;\n\n        @apply --paper-icon-button-disabled;\n      }\n\n      :host([hidden]) {\n        display: none !important;\n      }\n\n      :host(:hover) {\n        @apply --paper-icon-button-hover;\n      }\n\n      iron-icon {\n        --iron-icon-width: 100%;\n        --iron-icon-height: 100%;\n      }\n    </style>\n\n    <iron-icon id=\"icon\" src=\"[[src]]\" icon=\"[[icon]]\" alt$=\"[[alt]]\"></iron-icon>\n  </template>\n\n  \n</dom-module>";document.head.appendChild($_documentContainer$4.content);Polymer$1({is:'paper-icon-button',hostAttributes:{role:'button',tabindex:'0'},behaviors:[PaperInkyFocusBehavior],properties:{/**
+                                                                                                                                                             */var $_documentContainer$4=document.createElement('template');$_documentContainer$4.setAttribute('style','display: none;');$_documentContainer$4.innerHTML="<dom-module id=\"paper-icon-button\">\n  <template strip-whitespace=\"\">\n    <style>\n      :host {\n        display: inline-block;\n        position: relative;\n        padding: 8px;\n        outline: none;\n        -webkit-user-select: none;\n        -moz-user-select: none;\n        -ms-user-select: none;\n        user-select: none;\n        cursor: pointer;\n        z-index: 0;\n        line-height: 1;\n\n        width: 40px;\n        height: 40px;\n\n        /* NOTE: Both values are needed, since some phones require the value to be `transparent`. */\n        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n        -webkit-tap-highlight-color: transparent;\n\n        /* Because of polymer/2558, this style has lower specificity than * */\n        box-sizing: border-box !important;\n\n        @apply --paper-icon-button;\n      }\n\n      :host #ink {\n        color: var(--paper-icon-button-ink-color, var(--primary-text-color));\n        opacity: 0.6;\n      }\n\n      :host([disabled]) {\n        color: var(--paper-icon-button-disabled-text, var(--disabled-text-color));\n        pointer-events: none;\n        cursor: auto;\n\n        @apply --paper-icon-button-disabled;\n      }\n\n      :host([hidden]) {\n        display: none !important;\n      }\n\n      :host(:hover) {\n        @apply --paper-icon-button-hover;\n      }\n\n      iron-icon {\n        --iron-icon-width: 100%;\n        --iron-icon-height: 100%;\n      }\n    </style>\n\n    <iron-icon id=\"icon\" src=\"[[src]]\" icon=\"[[icon]]\" alt$=\"[[alt]]\"></iron-icon>\n  </template>\n\n  \n</dom-module>";document.head.appendChild($_documentContainer$4.content);Polymer$1({is:'paper-icon-button',hostAttributes:{role:'button',tabindex:'0'},behaviors:[PaperInkyFocusBehavior],properties:{/**
      * The URL of an image for the icon. If the src property is specified,
      * the icon property should not be.
      */src:{type:String},/**
@@ -9340,15 +8377,7 @@ var domContainer=dom(this._rippleContainer||this);var target=dom(optTriggeringEv
      */icon:{type:String},/**
      * Specifies the alternate text for the button, for accessibility.
      */alt:{type:String,observer:'_altChanged'}},_altChanged:function _altChanged(newValue,oldValue){var label=this.getAttribute('aria-label');// Don't stomp over a user-set aria-label.
-if(!label||oldValue==label){this.setAttribute('aria-label',newValue);}}});/**
-    @license
-    Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-    Code distributed by Google as part of the polymer project is also
-    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-    */ /** @polymerBehavior */var PaperSpinnerBehavior={properties:{/**
+if(!label||oldValue==label){this.setAttribute('aria-label',newValue);}}});var PaperSpinnerBehavior={properties:{/**
      * Displays the spinner.
      */active:{type:Boolean,value:false,reflectToAttribute:true,observer:'__activeChanged'},/**
      * Alternative text content for accessibility support.
@@ -9368,13 +8397,5 @@ if(alt==='loading'){this.alt=this.getAttribute('aria-label')||alt;}else{this.__s
                                                                FIXME(polymer-modulizer): the above comments were extracted
                                                                from HTML and may be out of place here. Review them and
                                                                then delete this comment!
-                                                             */ /**
-                                                                @license
-                                                                Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
-                                                                This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-                                                                The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-                                                                The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-                                                                Code distributed by Google as part of the polymer project is also
-                                                                subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-                                                                */var $_documentContainer$6=document.createElement('template');$_documentContainer$6.setAttribute('style','display: none;');$_documentContainer$6.innerHTML="<dom-module id=\"paper-spinner\">\n  <template strip-whitespace=\"\">\n    <style include=\"paper-spinner-styles\"></style>\n\n    <div id=\"spinnerContainer\" class-name=\"[[__computeContainerClasses(active, __coolingDown)]]\" on-animationend=\"__reset\" on-webkit-animation-end=\"__reset\">\n      <div class=\"spinner-layer layer-1\">\n        <div class=\"circle-clipper left\"></div>\n        <div class=\"circle-clipper right\"></div>\n      </div>\n\n      <div class=\"spinner-layer layer-2\">\n        <div class=\"circle-clipper left\"></div>\n        <div class=\"circle-clipper right\"></div>\n      </div>\n\n      <div class=\"spinner-layer layer-3\">\n        <div class=\"circle-clipper left\"></div>\n        <div class=\"circle-clipper right\"></div>\n      </div>\n\n      <div class=\"spinner-layer layer-4\">\n        <div class=\"circle-clipper left\"></div>\n        <div class=\"circle-clipper right\"></div>\n      </div>\n    </div>\n  </template>\n\n  \n</dom-module>";document.head.appendChild($_documentContainer$6.content);Polymer$1({is:'paper-spinner',behaviors:[PaperSpinnerBehavior]});var BlogAbout=/*#__PURE__*/function(_LitElement){babelHelpers.inherits(BlogAbout,_LitElement);function BlogAbout(){babelHelpers.classCallCheck(this,BlogAbout);return babelHelpers.possibleConstructorReturn(this,(BlogAbout.__proto__||Object.getPrototypeOf(BlogAbout)).apply(this,arguments));}babelHelpers.createClass(BlogAbout,[{key:"connectedCallback",value:function connectedCallback(){babelHelpers.get(BlogAbout.prototype.__proto__||Object.getPrototypeOf(BlogAbout.prototype),"connectedCallback",this).call(this);}},{key:"disconnectedCallback",value:function disconnectedCallback(){babelHelpers.get(BlogAbout.prototype.__proto__||Object.getPrototypeOf(BlogAbout.prototype),"disconnectedCallback",this).call(this);}},{key:"_render",value:function _render(_ref){var title=_ref.title;return html$2(_templateObject11_d2a108606de411e888c72fe2f0a2f265);}}],[{key:"properties",get:function get(){return{title:{type:String,reflectToAttribute:true}};}}]);return BlogAbout;}(LitElement);_exports.BlogAbout=BlogAbout;window.customElements.define('blog-about',BlogAbout);var blogAbout={BlogAbout:BlogAbout};_exports.$blogAbout=blogAbout;var PostList=/*#__PURE__*/function(_LitElement2){babelHelpers.inherits(PostList,_LitElement2);function PostList(){babelHelpers.classCallCheck(this,PostList);return babelHelpers.possibleConstructorReturn(this,(PostList.__proto__||Object.getPrototypeOf(PostList)).apply(this,arguments));}babelHelpers.createClass(PostList,[{key:"_render",value:function _render(_ref2){var posts=_ref2.posts;return html$2(_templateObject12_d2a108606de411e888c72fe2f0a2f265,posts);}}],[{key:"properties",get:function get(){return{posts:Object};}}]);return PostList;}(LitElement);_exports.PostList=PostList;window.customElements.define('post-list',PostList);var postList={PostList:PostList};_exports.$postList=postList;var PostView=/*#__PURE__*/function(_LitElement3){babelHelpers.inherits(PostView,_LitElement3);function PostView(){babelHelpers.classCallCheck(this,PostView);return babelHelpers.possibleConstructorReturn(this,(PostView.__proto__||Object.getPrototypeOf(PostView)).apply(this,arguments));}babelHelpers.createClass(PostView,[{key:"dateFormat",value:function dateFormat(date){return window.moment(date).format('LL');}},{key:"_render",value:function _render(props){return html$2(_templateObject13_d2a108606de411e888c72fe2f0a2f265,props.content);}},{key:"post",set:function set(value){var _this36=this;var loading=html$2(["\n      <div id=\"loading\">\n        <p>Carregando...</p>\n        <paper-spinner alt=\"procurando...\" active></paper-spinner>\n      </div>\n      "]);this.content=loading;this._post=value;var p=value;window.fetch("posts/".concat(p.filename)).then(function(response){return response.text();}).then(function(content){var header="\n          <header>\n            <h1 class=\"title\">".concat(p.title,"</h1>\n            <div class=\"meta\">\n              <p class=\"author\">Escrito por ").concat(p.author,"</p>\n              <p class=\"release\">Publicado em ").concat(_this36.dateFormat(p.releaseDate),"</p>\n              <p class=\"update\">Atualizado em ").concat(_this36.dateFormat(p.lastUpdate),"</p>\n            </div>\n          </header>\n        ");_this36.content=html$2([header,content]);}).catch(function(e){return console.error(e);});},get:function get(){return this._post;}}],[{key:"properties",get:function get(){return{content:String};}}]);return PostView;}(LitElement);_exports.PostView=PostView;window.customElements.define('post-view',PostView);var postView={PostView:PostView};_exports.$postView=postView;var NotFound=/*#__PURE__*/function(_LitElement4){babelHelpers.inherits(NotFound,_LitElement4);function NotFound(){babelHelpers.classCallCheck(this,NotFound);return babelHelpers.possibleConstructorReturn(this,(NotFound.__proto__||Object.getPrototypeOf(NotFound)).apply(this,arguments));}babelHelpers.createClass(NotFound,[{key:"_render",value:function _render(props){return html$2(_templateObject14_d2a108606de411e888c72fe2f0a2f265);}}],[{key:"properties",get:function get(){return{content:String};}}]);return NotFound;}(LitElement);_exports.NotFound=NotFound;window.customElements.define('not-found',NotFound);var notFound={NotFound:NotFound};_exports.$notFound=notFound;var BlogMain=/*#__PURE__*/function(_LitElement5){babelHelpers.inherits(BlogMain,_LitElement5);function BlogMain(){var _this37;babelHelpers.classCallCheck(this,BlogMain);_this37=babelHelpers.possibleConstructorReturn(this,(BlogMain.__proto__||Object.getPrototypeOf(BlogMain)).call(this));setPassiveTouchGestures(true);return _this37;}babelHelpers.createClass(BlogMain,[{key:"goHome",value:function goHome(event){this.appLocation.path='/post-list';}},{key:"reload",value:function reload(event){window.location.reload(true);}},{key:"setRoute",value:function setRoute(){this.appRoute.route=this.appLocation.route;this.slug=this.appRoute.tail.path;this.page=this.appRoute.data.page;}},{key:"loadList",value:function loadList(){var _this38=this;return new Promise(function(resolve,reject){window.fetch('posts/post-list.json').then(function(response){return response.json();}).then(function(posts){_this38.posts=posts;resolve(posts);}).catch(function(e){return reject(e);});});}},{key:"selectPost",value:function selectPost(posts){var _this39=this;this.postView.post=posts.find(function(post){return post.slug===_this39.slug.slice(1);});}},{key:"load",value:function load(event){if(this.appDrawerLayout.narrow)this.appDrawer.close();if(event.detail.item.localName==='post-list'){if(!this.posts){this.loadList();}}if(event.detail.item.localName==='post-view'){if(!this.posts){this.loadList().then(this.selectPost.bind(this)).catch(function(e){return console.error(e);});}else{this.selectPost(this.posts);}}}},{key:"connectedCallback",value:function connectedCallback(){babelHelpers.get(BlogMain.prototype.__proto__||Object.getPrototypeOf(BlogMain.prototype),"connectedCallback",this).call(this);// this.shadowRoot.querySelector('app-drawer-layout').responsiveWidth = '10px'
-this.appDrawerLayout=this.shadowRoot.querySelector('app-drawer-layout');this.appDrawer=this.shadowRoot.querySelector('app-drawer');this.appLocation=this.shadowRoot.querySelector('app-location');this.appRoute=this.shadowRoot.querySelector('app-route');this.ironPages=this.shadowRoot.querySelector('iron-pages');this.postList=this.shadowRoot.querySelector('post-list');this.postView=this.shadowRoot.querySelector('post-view');this.appLocation.addEventListener('path-changed',this.setRoute.bind(this));this.ironPages.addEventListener('iron-select',this.load.bind(this));setInterval(this.update,1000,this);if(!this.appRoute.data.page){this.setRoute();}if(!this.page){this.appLocation.path='/post-list';}}},{key:"disconnectedCallback",value:function disconnectedCallback(){babelHelpers.get(BlogMain.prototype.__proto__||Object.getPrototypeOf(BlogMain.prototype),"disconnectedCallback",this).call(this);}},{key:"_render",value:function _render(_ref3){var _this40=this;var page=_ref3.page,posts=_ref3.posts,slug=_ref3.slug;return html$2(_templateObject15_d2a108606de411e888c72fe2f0a2f265,function(e){return _this40.goHome(e);},function(e){return _this40.reload(e);},page,posts);}}],[{key:"properties",get:function get(){return{page:String,posts:Array,slug:String,appLocation:Object,appRoute:Object};}}]);return BlogMain;}(LitElement);_exports.BlogMain=BlogMain;window.customElements.define('blog-main',BlogMain);var blogMain={BlogMain:BlogMain};_exports.$blogMain=blogMain;});
+                                                             */var $_documentContainer$6=document.createElement('template');$_documentContainer$6.setAttribute('style','display: none;');$_documentContainer$6.innerHTML="<dom-module id=\"paper-spinner\">\n  <template strip-whitespace=\"\">\n    <style include=\"paper-spinner-styles\"></style>\n\n    <div id=\"spinnerContainer\" class-name=\"[[__computeContainerClasses(active, __coolingDown)]]\" on-animationend=\"__reset\" on-webkit-animation-end=\"__reset\">\n      <div class=\"spinner-layer layer-1\">\n        <div class=\"circle-clipper left\"></div>\n        <div class=\"circle-clipper right\"></div>\n      </div>\n\n      <div class=\"spinner-layer layer-2\">\n        <div class=\"circle-clipper left\"></div>\n        <div class=\"circle-clipper right\"></div>\n      </div>\n\n      <div class=\"spinner-layer layer-3\">\n        <div class=\"circle-clipper left\"></div>\n        <div class=\"circle-clipper right\"></div>\n      </div>\n\n      <div class=\"spinner-layer layer-4\">\n        <div class=\"circle-clipper left\"></div>\n        <div class=\"circle-clipper right\"></div>\n      </div>\n    </div>\n  </template>\n\n  \n</dom-module>";document.head.appendChild($_documentContainer$6.content);Polymer$1({is:'paper-spinner',behaviors:[PaperSpinnerBehavior]});var BlogAbout=/*#__PURE__*/function(_LitElement){babelHelpers.inherits(BlogAbout,_LitElement);function BlogAbout(){babelHelpers.classCallCheck(this,BlogAbout);return babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(BlogAbout).apply(this,arguments));}babelHelpers.createClass(BlogAbout,[{key:"connectedCallback",value:function connectedCallback(){babelHelpers.get(babelHelpers.getPrototypeOf(BlogAbout.prototype),"connectedCallback",this).call(this);}},{key:"disconnectedCallback",value:function disconnectedCallback(){babelHelpers.get(babelHelpers.getPrototypeOf(BlogAbout.prototype),"disconnectedCallback",this).call(this);}},{key:"_render",value:function _render(_ref){var title=_ref.title;return html$2(_templateObject11_da5be4e02b3411e9984959bc9413e8f2());}}],[{key:"properties",get:function get(){return{title:{type:String,reflectToAttribute:true}};}}]);return BlogAbout;}(LitElement);_exports.BlogAbout=BlogAbout;window.customElements.define('blog-about',BlogAbout);var blogAbout={BlogAbout:BlogAbout};_exports.$blogAbout=blogAbout;var PostList=/*#__PURE__*/function(_LitElement2){babelHelpers.inherits(PostList,_LitElement2);function PostList(){babelHelpers.classCallCheck(this,PostList);return babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(PostList).apply(this,arguments));}babelHelpers.createClass(PostList,[{key:"_render",value:function _render(_ref2){var posts=_ref2.posts;return html$2(_templateObject12_da5be4e02b3411e9984959bc9413e8f2(),posts);}}],[{key:"properties",get:function get(){return{posts:Object};}}]);return PostList;}(LitElement);_exports.PostList=PostList;window.customElements.define('post-list',PostList);var postList={PostList:PostList};_exports.$postList=postList;var PostView=/*#__PURE__*/function(_LitElement3){babelHelpers.inherits(PostView,_LitElement3);function PostView(){babelHelpers.classCallCheck(this,PostView);return babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(PostView).apply(this,arguments));}babelHelpers.createClass(PostView,[{key:"connectedCallback",value:function connectedCallback(){babelHelpers.get(babelHelpers.getPrototypeOf(PostView.prototype),"connectedCallback",this).call(this);this.article=this.shadowRoot.querySelector('#content');}},{key:"dateFormat",value:function dateFormat(date){return window.moment(date).format('LL');}},{key:"_didRender",value:function _didRender(){if(this.article){window.Prism.highlightAllUnder(this.article,false);}}},{key:"_render",value:function _render(props){return html$2(_templateObject13_da5be4e02b3411e9984959bc9413e8f2(),props.content);}},{key:"post",set:function set(value){var _this36=this;var loading=html$2(["\n      <div id=\"loading\">\n        <p>Carregando...</p>\n        <paper-spinner alt=\"procurando...\" active></paper-spinner>\n      </div>\n      "]);this.content=loading;this._post=value;var p=value;window.fetch("posts/".concat(p.filename)).then(function(response){return response.text();}).then(function(content){var header="\n          <header>\n            <h1 class=\"title\">".concat(p.title,"</h1>\n            <div class=\"meta\">\n              <p class=\"author\">Escrito por ").concat(p.author,"</p>\n              <p class=\"release\">Publicado em ").concat(_this36.dateFormat(p.releaseDate),"</p>\n              <p class=\"update\">Atualizado em ").concat(_this36.dateFormat(p.lastUpdate),"</p>\n            </div>\n          </header>\n        ");_this36.content=html$2([header,content]);}).catch(function(e){return console.error(e);});},get:function get(){return this._post;}}],[{key:"properties",get:function get(){return{content:String};}}]);return PostView;}(LitElement);_exports.PostView=PostView;window.customElements.define('post-view',PostView);var postView={PostView:PostView};_exports.$postView=postView;var NotFound=/*#__PURE__*/function(_LitElement4){babelHelpers.inherits(NotFound,_LitElement4);function NotFound(){babelHelpers.classCallCheck(this,NotFound);return babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(NotFound).apply(this,arguments));}babelHelpers.createClass(NotFound,[{key:"_render",value:function _render(props){return html$2(_templateObject14_da5be4e02b3411e9984959bc9413e8f2());}}],[{key:"properties",get:function get(){return{content:String};}}]);return NotFound;}(LitElement);_exports.NotFound=NotFound;window.customElements.define('not-found',NotFound);var notFound={NotFound:NotFound};_exports.$notFound=notFound;var BlogMain=/*#__PURE__*/function(_LitElement5){babelHelpers.inherits(BlogMain,_LitElement5);function BlogMain(){var _this37;babelHelpers.classCallCheck(this,BlogMain);_this37=babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(BlogMain).call(this));setPassiveTouchGestures(true);return _this37;}babelHelpers.createClass(BlogMain,[{key:"goHome",value:function goHome(event){this.appLocation.path='/post-list';}},{key:"reload",value:function reload(event){window.location.reload(true);}},{key:"setRoute",value:function setRoute(){this.appRoute.route=this.appLocation.route;this.slug=this.appRoute.tail.path;this.page=this.appRoute.data.page;}},{key:"loadList",value:function loadList(){var _this38=this;return new Promise(function(resolve,reject){window.fetch('posts/post-list.json').then(function(response){return response.json();}).then(function(posts){_this38.posts=posts;resolve(posts);}).catch(function(e){return reject(e);});});}},{key:"selectPost",value:function selectPost(posts){var _this39=this;this.postView.post=posts.find(function(post){return post.slug===_this39.slug.slice(1);});}},{key:"load",value:function load(event){if(this.appDrawerLayout.narrow)this.appDrawer.close();if(event.detail.item.localName==='post-list'){if(!this.posts){this.loadList();}}if(event.detail.item.localName==='post-view'){if(!this.posts){this.loadList().then(this.selectPost.bind(this)).catch(function(e){return console.error(e);});}else{this.selectPost(this.posts);}}}},{key:"connectedCallback",value:function connectedCallback(){babelHelpers.get(babelHelpers.getPrototypeOf(BlogMain.prototype),"connectedCallback",this).call(this);// this.shadowRoot.querySelector('app-drawer-layout').responsiveWidth = '10px'
+this.appDrawerLayout=this.shadowRoot.querySelector('app-drawer-layout');this.appDrawer=this.shadowRoot.querySelector('app-drawer');this.appLocation=this.shadowRoot.querySelector('app-location');this.appRoute=this.shadowRoot.querySelector('app-route');this.ironPages=this.shadowRoot.querySelector('iron-pages');this.postList=this.shadowRoot.querySelector('post-list');this.postView=this.shadowRoot.querySelector('post-view');this.appLocation.addEventListener('path-changed',this.setRoute.bind(this));this.ironPages.addEventListener('iron-select',this.load.bind(this));if(!this.appRoute.data.page){this.setRoute();}if(!this.page){this.appLocation.path='/post-list';}}},{key:"disconnectedCallback",value:function disconnectedCallback(){babelHelpers.get(babelHelpers.getPrototypeOf(BlogMain.prototype),"disconnectedCallback",this).call(this);}},{key:"_render",value:function _render(_ref3){var _this40=this;var page=_ref3.page,posts=_ref3.posts,slug=_ref3.slug;return html$2(_templateObject15_da5be4e02b3411e9984959bc9413e8f2(),function(e){return _this40.goHome(e);},function(e){return _this40.reload(e);},page,posts);}}],[{key:"properties",get:function get(){return{page:String,posts:Array,slug:String,appLocation:Object,appRoute:Object};}}]);return BlogMain;}(LitElement);_exports.BlogMain=BlogMain;window.customElements.define('blog-main',BlogMain);var blogMain={BlogMain:BlogMain};_exports.$blogMain=blogMain;});

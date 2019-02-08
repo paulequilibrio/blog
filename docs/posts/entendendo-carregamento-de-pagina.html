@@ -1,11 +1,77 @@
-<h1>Carregamento</h1>
-<pre>  <script>document.addEventListener('WebComponentsReady', function (event) {
-  return console.log(event);
-});
-window.addEventListener('load', function (event) {
-  return console.log(event);
-});
-window.addEventListener('DOMContentLoaded', function (event) {
-  return console.log(event);
-});</script>
+<h3>Fala galera! o/</h3>
+
+<p>Considere o seguinte código:</p>
+
+<script type="text/plain" class="language-markup line-numbers"><!doctype html>
+<html lang="pt-BR" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Olá mundo!</title>
+    <script type="text/javascript">
+      const paragraph = document.querySelector('#mensagem')
+      console.log(paragraph.textContent)
+    &lt;/script>
+  </head>
+  <body>
+    <p id="mensagem">Olá mundo</p>
+  </body>
+</html>
+</script>
+
+<p>Este é um código semanticamente correto para HTML5:</p>
+<ul>
+  <li>Tem o <code class="language-markup">doctype</code> correto</li>
+  <li>Tem as tags <code class="language-markup">html</code>, <code class="language-markup">head</code> e <code class="language-markup">body</code> corretamente posicionadas</li>
+  <li>Tem a tag <code class="language-markup">script</code>corretamente dentro da tag <code class="language-markup">head</code></li>
+</ul>
+
+Entretanto, ao abrir essa página em um navegador moderno e observar a saída do console, ela vai mostrar um erro:
+
+<!-- <pre class="line-numbers" style="white-space:pre-wrap;"> -->
+<pre class="line-numbers"><code class="language-js">Uncaught TypeError: Cannot read property 'textContent' of null at teste.html:8</code>
 </pre>
+
+
+<p>Vamos analisar o erro. Ele nos informa que não foi possível ler a propriedade <code class="language-js">textContent</code> de <code class="language-js">null</code>, na linha número <code class="language-js">8</code>. Se voltarmos para o código, veremos que na linha <code class="language-js">8</code> temos:</p>
+
+<pre class="line-numbers" data-start="8"><code class="language-js">      console.log(paragraph.textContent)</code>
+</pre>
+
+Concluímos, então, que o erro está nos dizendo que o valor da variável <code class="language-js">paragraph</code> é <code class="language-js">null</code>.
+
+<p>Por que isso acontece?</p>
+
+<p></p>
+<!--
+<p>Seguinte código</p>
+<pre class="line-numbers">
+<code class="language-js">document.addEventListener('WebComponentsReady', event => console.log(event))
+window.addEventListener('load', event => console.log(event))
+window.addEventListener('DOMContentLoaded', event => console.log(event))</code>
+</pre>
+ -->
+
+
+<h3>Até mais galera! o/</h3>
+
+
+
+
+<!--
+<script>
+console.log(document.readyState)
+document.addEventListener('readystatechange', function (event) {
+  console.log(document.readyState)
+  if (document.readyState === 'interactive') {
+    console.log('app-main?')
+  }
+})
+document.addEventListener('DOMContentLoaded', function (event) {
+  console.log('DOMContentLoaded')
+  console.log(document.querySelector('app-main'))
+})
+window.addEventListener('load', function (event) {
+  console.log('load')
+})
+</script>
+-->
