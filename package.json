@@ -6,7 +6,7 @@
   "scripts": {
     "start": "polymer serve",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "precommit": "polymer build && rm -rf ./docs && cp -r ./build/es5-bundled ./docs && git add ./docs"
+    "precommit": "polymer build && rm -rf ./docs && cp -r ./build/production ./docs && git add ./docs"
   },
   "repository": {
     "type": "git",
